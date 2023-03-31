@@ -169,7 +169,7 @@ class Config:
 
     # Number of batch
     batch_num = 4
-    val_batch_num = 4
+    val_batch_num = 2
 
     # Maximal number of epochs
     max_epoch = 1000

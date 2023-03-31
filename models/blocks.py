@@ -223,14 +223,14 @@ class TriplaneConv(nn.Module):
         # TriplaneConv layer using Point convolution tricks:
         """feature transformation:"""
         x = feat_trans_pointnet(point_input=x, kernel=self.matrice, m=self.m)  # n*, m, cout
-        x = x[neighb_inds, :].view(N, k, self.m, -1) # n, k, m, cout 
+        x = x[neighb_inds[:, 0], :].view(N, self.m, -1) # n, k, m, cout 
 
         if self.method=='ScoreNet':
             score = self.scorenet(xyz, calc_scores=self.calc_scores, bias=0)
         else:
             score = self.tensor_field(xyz, self.nei_plane, self.mlp_map).view(N, k, -1) # n, k, m
         """assemble with scores:"""
-        x = torch.einsum('nkmo,nkm->no', x, score) # n, cout
+        x = torch.einsum('nmo,nkm->no', x, score) # n, cout
         return x
         
 # ----------------------------------------------------------------------------------------------------------------------
