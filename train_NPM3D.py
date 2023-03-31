@@ -26,7 +26,7 @@ import signal
 import os
 
 # Dataset
-from datasets.NPM3D import *
+from dataset.NPM3D import *
 from torch.utils.data import DataLoader
 
 from utils.config import Config

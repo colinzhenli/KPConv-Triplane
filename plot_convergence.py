@@ -37,9 +37,9 @@ from utils.metrics import IoU_from_confusions, smooth_metrics, fast_confusion
 from utils.ply import read_ply
 
 # Datasets
-from datasets.ModelNet40 import ModelNet40Dataset
-from datasets.S3DIS import S3DISDataset
-from datasets.SemanticKitti import SemanticKittiDataset
+from dataset.ModelNet40 import ModelNet40Dataset
+from dataset.S3DIS import S3DISDataset
+from dataset.SemanticKitti import SemanticKittiDataset
 
 # ----------------------------------------------------------------------------------------------------------------------
 #

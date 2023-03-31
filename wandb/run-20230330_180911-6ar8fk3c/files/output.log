@@ -1,0 +1,84 @@
+Preparing ply files
+Done in 0.0s
+Found KDTree for cloud Area_1, subsampled at 0.030
+146.6 MB loaded in 0.2s
+Found KDTree for cloud Area_2, subsampled at 0.030
+159.1 MB loaded in 0.2s
+Found KDTree for cloud Area_3, subsampled at 0.030
+62.6 MB loaded in 0.1s
+Found KDTree for cloud Area_4, subsampled at 0.030
+144.2 MB loaded in 0.1s
+Found KDTree for cloud Area_6, subsampled at 0.030
+137.9 MB loaded in 0.2s
+Preparing potentials
+Done in 0.0s
+Preparing ply files
+Done in 0.0s
+Found KDTree for cloud Area_5, subsampled at 0.030
+260.4 MB loaded in 0.4s
+Preparing potentials
+Done in 0.0s
+Preparing reprojection indices for testing
+Area_5 done in 0.2s
+Starting Calibration (use verbose=True for more details)
+Previous calibration found:
+Check batch limit dictionary
+[92m"potentials_1.200_0.030_4": 34901
+Check neighbors limit dictionary
+[92m"0.030_0.075": 28
+[92m"0.060_0.150": 32
+[92m"0.120_0.300": 40
+[92m"0.240_1.200": 152
+[92m"0.480_2.400": 68
+Calibration done in 0.0s
+Starting Calibration (use verbose=True for more details)
+Previous calibration found:
+Check batch limit dictionary
+[92m"potentials_1.200_0.030_4": 34901
+Check neighbors limit dictionary
+[92m"0.030_0.075": 28
+[92m"0.060_0.150": 32
+[92m"0.120_0.300": 40
+[92m"0.240_1.200": 152
+[92m"0.480_2.400": 68
+Calibration done in 0.0s
+Model Preparation
+*****************
+Done in 0.8s
+Start training
+**************
+Backend QtAgg is interactive backend. Turning interactive mode on.
+Traceback (most recent call last):
+  File "/home/zhenli/anaconda3/envs/mincapose/lib/python3.9/runpy.py", line 197, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/home/zhenli/anaconda3/envs/mincapose/lib/python3.9/runpy.py", line 87, in _run_code
+    exec(code, run_globals)
+  File "/home/zhenli/.vscode/extensions/ms-python.python-2023.4.1/pythonFiles/lib/python/debugpy/adapter/../../debugpy/launcher/../../debugpy/__main__.py", line 39, in <module>
+    cli.main()
+  File "/home/zhenli/.vscode/extensions/ms-python.python-2023.4.1/pythonFiles/lib/python/debugpy/adapter/../../debugpy/launcher/../../debugpy/../debugpy/server/cli.py", line 430, in main
+    run()
+  File "/home/zhenli/.vscode/extensions/ms-python.python-2023.4.1/pythonFiles/lib/python/debugpy/adapter/../../debugpy/launcher/../../debugpy/../debugpy/server/cli.py", line 284, in run_file
+    runpy.run_path(target, run_name="__main__")
+  File "/home/zhenli/.vscode/extensions/ms-python.python-2023.4.1/pythonFiles/lib/python/debugpy/_vendored/pydevd/_pydevd_bundle/pydevd_runpy.py", line 321, in run_path
+    return _run_module_code(code, init_globals, run_name,
+  File "/home/zhenli/.vscode/extensions/ms-python.python-2023.4.1/pythonFiles/lib/python/debugpy/_vendored/pydevd/_pydevd_bundle/pydevd_runpy.py", line 135, in _run_module_code
+    _run_code(code, mod_globals, init_globals,
+  File "/home/zhenli/.vscode/extensions/ms-python.python-2023.4.1/pythonFiles/lib/python/debugpy/_vendored/pydevd/_pydevd_bundle/pydevd_runpy.py", line 124, in _run_code
+    exec(code, run_globals)
+  File "train_S3DIS.py", line 340, in <module>
+    trainer.train(net, training_loader, test_loader, config)
+  File "/home/zhenli/KPConv-Triplane/utils/trainer.py", line 191, in train
+    outputs = net(batch, config)
+  File "/home/zhenli/anaconda3/envs/mincapose/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1194, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/zhenli/KPConv-Triplane/models/architectures.py", line 332, in forward
+    x = block_op(x, batch)
+  File "/home/zhenli/anaconda3/envs/mincapose/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1194, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/zhenli/KPConv-Triplane/models/blocks.py", line 663, in forward
+    x = self.TriplaneConv(q_pts, s_pts, neighb_inds, x)
+  File "/home/zhenli/anaconda3/envs/mincapose/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1194, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/zhenli/KPConv-Triplane/models/blocks.py", line 216, in forward
+    xyz = xyz - q_pts.unsqueeze(1) # Center every neighborhood: n, k, 3
+RuntimeError: CUDA error: device-side assert triggered

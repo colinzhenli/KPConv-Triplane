@@ -1,0 +1,132 @@
+Preparing ply files
+Done in 0.0s
+Found KDTree for cloud Area_1, subsampled at 0.030
+146.6 MB loaded in 0.1s
+Found KDTree for cloud Area_2, subsampled at 0.030
+159.1 MB loaded in 0.1s
+Found KDTree for cloud Area_3, subsampled at 0.030
+62.6 MB loaded in 0.0s
+Found KDTree for cloud Area_4, subsampled at 0.030
+144.2 MB loaded in 0.1s
+Found KDTree for cloud Area_6, subsampled at 0.030
+137.9 MB loaded in 0.1s
+Preparing potentials
+Done in 0.0s
+Preparing ply files
+Done in 0.0s
+Found KDTree for cloud Area_5, subsampled at 0.030
+260.4 MB loaded in 0.2s
+Preparing potentials
+Done in 0.0s
+Preparing reprojection indices for testing
+Area_5 done in 0.2s
+Starting Calibration (use verbose=True for more details)
+Previous calibration found:
+Check batch limit dictionary
+[92m"potentials_1.200_0.030_6": 43976
+Check neighbors limit dictionary
+[92m"0.030_0.075": 28
+[92m"0.060_0.150": 32
+[92m"0.120_0.300": 40
+[92m"0.240_1.200": 151
+[92m"0.480_2.400": 66
+Calibration done in 0.0s
+Starting Calibration (use verbose=True for more details)
+Previous calibration found:
+Check batch limit dictionary
+[92m"potentials_1.200_0.030_6": 43976
+Check neighbors limit dictionary
+[92m"0.030_0.075": 28
+[92m"0.060_0.150": 32
+[92m"0.120_0.300": 40
+[92m"0.240_1.200": 151
+[92m"0.480_2.400": 66
+Calibration done in 0.0s
+Model Preparation
+*****************
+Done in 0.8s
+Start training
+**************
+e000-i0000 => L=10.324 acc=  7% / t(ms): 1436.6 1137.0  98.5)
+e000-i0007 => L=9.002 acc= 59% / t(ms):   0.7  66.8 101.9)
+e000-i0013 => L=7.387 acc= 67% / t(ms):   0.6  68.5 103.8)
+e000-i0019 => L=8.007 acc= 41% / t(ms):   0.7  67.8 102.7)
+e000-i0025 => L=6.399 acc= 59% / t(ms):   0.7  68.4 106.0)
+e000-i0032 => L=6.692 acc= 53% / t(ms):   0.7  64.5 102.5)
+e000-i0038 => L=6.222 acc= 54% / t(ms):   0.8  68.4 103.9)
+e000-i0044 => L=6.460 acc= 51% / t(ms):   0.7  66.6 103.5)
+e000-i0050 => L=6.520 acc= 43% / t(ms):   0.7  67.3 106.8)
+e000-i0056 => L=5.776 acc= 61% / t(ms):   0.6  69.4 107.7)
+e000-i0062 => L=6.008 acc= 60% / t(ms):   0.6  68.8 109.1)
+e000-i0068 => L=6.822 acc= 38% / t(ms):   0.6  66.8 106.1)
+e000-i0075 => L=6.804 acc= 47% / t(ms):   0.6  64.4 102.3)
+e000-i0082 => L=5.812 acc= 55% / t(ms):   0.7  64.5 102.1)
+e000-i0089 => L=5.696 acc= 56% / t(ms):   0.7  63.8 102.6)
+e000-i0095 => L=5.229 acc= 67% / t(ms):   0.6  64.3 102.2)
+e000-i0101 => L=5.702 acc= 64% / t(ms):   0.6  66.4 103.7)
+e000-i0107 => L=6.116 acc= 48% / t(ms):   0.8  66.1 103.9)
+e000-i0114 => L=5.704 acc= 50% / t(ms):   0.7  62.8 103.1)
+e000-i0121 => L=5.925 acc= 48% / t(ms):   0.7  62.5 101.8)
+e000-i0127 => L=4.744 acc= 77% / t(ms):   0.6  64.9 103.0)
+e000-i0133 => L=5.065 acc= 64% / t(ms):   0.6  65.9 103.6)
+e000-i0140 => L=4.594 acc= 72% / t(ms):   0.8  63.4 101.4)
+e000-i0147 => L=4.717 acc= 76% / t(ms):   0.7  63.5 100.2)
+e000-i0154 => L=4.978 acc= 70% / t(ms):   0.7  62.3 100.6)
+e000-i0160 => L=5.132 acc= 63% / t(ms):   0.7  64.4 101.0)
+e000-i0167 => L=4.945 acc= 58% / t(ms):   0.7  64.6 101.4)
+e000-i0173 => L=5.133 acc= 49% / t(ms):   0.7  66.0 104.8)
+e000-i0180 => L=4.721 acc= 69% / t(ms):   0.6  64.7 103.4)
+e000-i0187 => L=4.510 acc= 73% / t(ms):   0.7  63.3 102.0)
+e000-i0194 => L=4.668 acc= 64% / t(ms):   0.7  63.5 101.1)
+e000-i0201 => L=4.301 acc= 65% / t(ms):   0.7  64.5 101.8)
+e000-i0207 => L=4.599 acc= 71% / t(ms):   0.7  66.9 105.3)
+e000-i0213 => L=3.909 acc= 77% / t(ms):   0.7  67.0 104.8)
+e000-i0219 => L=5.086 acc= 70% / t(ms):   0.6  68.2 105.9)
+e000-i0225 => L=4.528 acc= 58% / t(ms):   0.6  66.7 106.0)
+e000-i0231 => L=5.285 acc= 55% / t(ms):   0.7  67.4 105.0)
+e000-i0238 => L=4.483 acc= 69% / t(ms):   0.6  65.5 102.8)
+e000-i0244 => L=4.520 acc= 66% / t(ms):   0.6  65.5 102.8)
+e000-i0251 => L=5.136 acc= 40% / t(ms):   0.6  64.9 102.9)
+e000-i0257 => L=4.456 acc= 70% / t(ms):   0.5  65.1 102.7)
+e000-i0264 => L=3.916 acc= 68% / t(ms):   0.6  63.9 101.2)
+e000-i0271 => L=4.044 acc= 79% / t(ms):   0.6  63.3 101.9)
+e000-i0278 => L=4.414 acc= 67% / t(ms):   0.6  62.7 100.7)
+e000-i0284 => L=4.633 acc= 56% / t(ms):   0.6  64.5 102.3)
+e000-i0291 => L=4.208 acc= 63% / t(ms):   0.7  62.7 101.1)
+e000-i0297 => L=3.885 acc= 80% / t(ms):   0.7  64.5 100.6)
+e000-i0304 => L=4.346 acc= 48% / t(ms):   0.8  62.8  99.5)
+e000-i0310 => L=4.299 acc= 58% / t(ms):   0.8  63.2 100.9)
+e000-i0316 => L=3.663 acc= 82% / t(ms):   0.7  64.5 100.3)
+e000-i0323 => L=4.351 acc= 61% / t(ms):   0.8  63.4 100.5)
+e000-i0330 => L=4.160 acc= 68% / t(ms):   0.7  62.3 100.5)
+e000-i0337 => L=3.994 acc= 72% / t(ms):   0.7  62.0 100.9)
+e000-i0343 => L=4.117 acc= 59% / t(ms):   0.7  65.0 101.7)
+e000-i0349 => L=4.363 acc= 58% / t(ms):   0.8  65.7 102.4)
+e000-i0355 => L=3.639 acc= 70% / t(ms):   0.7  66.5 101.1)
+e000-i0361 => L=3.676 acc= 73% / t(ms):   0.7  65.1 101.8)
+e000-i0367 => L=4.411 acc= 52% / t(ms):   0.7  64.5 102.9)
+e000-i0374 => L=4.206 acc= 60% / t(ms):   0.6  64.0 101.9)
+e000-i0381 => L=4.036 acc= 69% / t(ms):   0.6  63.6 101.1)
+e000-i0387 => L=3.870 acc= 70% / t(ms):   0.5  65.4 100.5)
+e000-i0393 => L=4.042 acc= 63% / t(ms):   0.5  66.0 101.4)
+e000-i0400 => L=4.069 acc= 63% / t(ms):   0.7  64.1 100.0)
+e000-i0406 => L=3.620 acc= 75% / t(ms):   0.6  64.7 101.2)
+e000-i0412 => L=3.491 acc= 71% / t(ms):   0.6  64.0 102.6)
+e000-i0418 => L=3.599 acc= 64% / t(ms):   0.6  64.7 102.4)
+e000-i0424 => L=3.373 acc= 81% / t(ms):   0.6  65.7 101.9)
+e000-i0430 => L=4.242 acc= 51% / t(ms):   0.6  66.0 101.2)
+e000-i0437 => L=4.003 acc= 70% / t(ms):   0.5  65.9 100.3)
+e000-i0443 => L=3.705 acc= 77% / t(ms):   0.5  65.3 102.1)
+e000-i0450 => L=3.959 acc= 64% / t(ms):   0.6  64.9 100.9)
+e000-i0457 => L=3.749 acc= 62% / t(ms):   0.6  62.1 102.0)
+e000-i0464 => L=3.110 acc= 83% / t(ms):   0.6  61.5 101.3)
+e000-i0470 => L=4.688 acc= 54% / t(ms):   0.7  64.5 101.8)
+e000-i0477 => L=3.699 acc= 70% / t(ms):   0.6  63.7 100.6)
+e000-i0483 => L=3.440 acc= 78% / t(ms):   0.6  64.4 101.2)
+e000-i0489 => L=3.516 acc= 76% / t(ms):   0.5  64.1 101.9)
+e000-i0496 => L=3.949 acc= 64% / t(ms):   0.4  62.9 100.6)
+Backend QtAgg is interactive backend. Turning interactive mode on.
+Validation : 2.0% (timings : 42.13 7.05)
+Validation : 4.0% (timings : 1698.95 10.54)
+Validation : 6.0% (timings : 1827.98 14.10)
+Validation : 8.0% (timings : 1847.60 17.68)

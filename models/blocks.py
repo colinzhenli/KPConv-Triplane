@@ -19,11 +19,13 @@ import time
 import math
 import torch
 import torch.nn as nn
+import torch.nn.functional as F
 from torch.nn.parameter import Parameter
 from torch.nn.init import kaiming_uniform_
 from kernels.kernel_points import load_kernels
 
 from utils.ply import write_ply
+from utils.TriplaneConv_util import get_scorenet_input, knn, feat_trans_pointnet, ScoreNet, pc_normalize, Mlps
 
 # ----------------------------------------------------------------------------------------------------------------------
 #
@@ -135,10 +137,107 @@ def global_average(x, batch_lengths):
 
 # ----------------------------------------------------------------------------------------------------------------------
 #
-#           KPConv class
+#           TriplaneConv class
 #       \******************/
 #
 
+class TriplaneConv(nn.Module):
+    def __init__(self, kernel_size, p_dim, in_channels, out_channels,  aggregation_mode='sum'):
+        super(TriplaneConv, self).__init__()
+        self.calc_scores = 'softmax'
+
+        self.no_mlp = True
+        self.matMode = [[0,1], [0,2], [1,2]]
+        self.vecMode =  [2, 1, 0]
+        self.method = 'Triplane'
+        self.n_comp = 8
+
+        self.neiGridSize = 128
+        self.m = 8
+        self.cin = in_channels
+        self.cout = out_channels
+
+
+        self.nei_plane= self.init_one_svd(self.n_comp, self.neiGridSize, 0.1)
+
+        if self.method=='VM' or self.method=='Triplane':
+            self.mlp_map = Mlps(
+                3*self.n_comp, [self.m], last_bn_norm=False       
+            )
+
+
+        self.scorenet = ScoreNet(6, self.m, hidden_unit=[16])
+
+        tensor = nn.init.kaiming_normal_(torch.empty(self.m, self.cin, self.cout), nonlinearity='relu') \
+            .permute(1, 0, 2).contiguous().view(self.cin, self.m * self.cout)
+
+
+        # convolutional weight matrices in Weight Bank:
+        self.matrice = nn.Parameter(tensor, requires_grad=True)
+
+
+    def init_one_svd(self, n_component, neighborGridSize, scale):
+        neighbor_plane_coef = []
+        for i in range(len(self.vecMode)):
+            vec_id = self.vecMode[i]
+            mat_id_0, mat_id_1 = self.matMode[i]
+
+            neighbor_plane_coef.append(torch.nn.Parameter(
+                scale * torch.randn((1, n_component, neighborGridSize, neighborGridSize))))  #
+
+        return torch.nn.ParameterList(neighbor_plane_coef)
+    
+    
+    def tensor_field(self, xyz, nei_plane, mlp_map):
+        N = xyz.size(0)*xyz.size(1)
+        xyz_nei = xyz.reshape(-1, 3)
+        xyz_nei = torch.clamp(xyz_nei, -1, 1)
+
+        nei_coordinate_plane = torch.stack((xyz_nei[..., self.matMode[0]], xyz_nei[..., self.matMode[1]], xyz_nei[..., self.matMode[2]])).view(3, -1, 1, 2)
+
+        nei_plane_coef_point = []
+        for idx_plane in range(len(nei_plane)):
+            nei_plane_coef_point.append(F.grid_sample(nei_plane[idx_plane], nei_coordinate_plane[[idx_plane]],
+                                                align_corners=True).view(-1, *xyz_nei.shape[:1]))
+        if self.no_mlp == True:
+            nei_plane_coef_point = torch.sum(torch.stack(nei_plane_coef_point), 0)
+        else:
+            nei_plane_coef_point= torch.cat(nei_plane_coef_point)
+        if self.method=='Triplane':
+            if self.no_mlp == True:
+                return (nei_plane_coef_point.T).reshape(N, -1)
+            return mlp_map((nei_plane_coef_point.T).reshape(N, -1))
+
+        
+    def forward(self, q_pts, s_pts, neighb_inds, x):
+        N, k = neighb_inds.shape
+        # Add a fake point in the last row for shadow neighbors
+        s_pts = torch.cat((s_pts, torch.zeros_like(s_pts[:1, :]) + 1e6), 0)
+        # Add a zero feature for shadow neighbors
+        x = torch.cat((x, torch.zeros_like(x[:1, :])), 0)
+
+        xyz = s_pts[neighb_inds, :] # get neighbor coordinate: n, k, 3
+        xyz = xyz - q_pts.unsqueeze(1) # Center every neighborhood: n, k, 3
+
+        ##################
+        # TriplaneConv layer using Point convolution tricks:
+        """feature transformation:"""
+        x = feat_trans_pointnet(point_input=x, kernel=self.matrice, m=self.m)  # n*, m, cout
+        x = x[neighb_inds, :].view(N, k, self.m, -1) # n, k, m, cout 
+
+        if self.method=='ScoreNet':
+            score = self.scorenet(xyz, calc_scores=self.calc_scores, bias=0)
+        else:
+            score = self.tensor_field(xyz, self.nei_plane, self.mlp_map).view(N, k, -1) # n, k, m
+        """assemble with scores:"""
+        x = torch.einsum('nkmo,nkm->no', x, score) # n, cout
+        return x
+        
+# ----------------------------------------------------------------------------------------------------------------------
+#
+#           KPConv class
+#       \******************/
+#
 
 class KPConv(nn.Module):
 
@@ -525,19 +624,26 @@ class SimpleBlock(nn.Module):
         self.block_name = block_name
         self.in_dim = in_dim
         self.out_dim = out_dim
+        self.method = config.method
 
-        # Define the KPConv class
-        self.KPConv = KPConv(config.num_kernel_points,
-                             config.in_points_dim,
-                             in_dim,
-                             out_dim // 2,
-                             current_extent,
-                             radius,
-                             fixed_kernel_points=config.fixed_kernel_points,
-                             KP_influence=config.KP_influence,
-                             aggregation_mode=config.aggregation_mode,
-                             deformable='deform' in block_name,
-                             modulated=config.modulated)
+        if config.method == 'KPConv':
+            # Define the KPConv class
+            self.KPConv = KPConv(config.num_kernel_points,
+                                config.in_points_dim,
+                                in_dim,
+                                out_dim // 2,
+                                current_extent,
+                                radius,
+                                fixed_kernel_points=config.fixed_kernel_points,
+                                KP_influence=config.KP_influence,
+                                aggregation_mode=config.aggregation_mode,
+                                deformable='deform' in block_name,
+                                modulated=config.modulated)
+        else:
+            self.TriplaneConv = TriplaneConv(config.num_kernel_points,
+                                config.in_points_dim,
+                                in_dim,
+                                out_dim // 2)
 
         # Other opperations
         self.batch_norm = BatchNormBlock(out_dim // 2, self.use_bn, self.bn_momentum)
@@ -556,7 +662,10 @@ class SimpleBlock(nn.Module):
             s_pts = batch.points[self.layer_ind]
             neighb_inds = batch.neighbors[self.layer_ind]
 
-        x = self.KPConv(q_pts, s_pts, neighb_inds, x)
+        if self.method=='KPConv':
+            x = self.KPConv(q_pts, s_pts, neighb_inds, x)
+        else:
+            x = self.TriplaneConv(q_pts, s_pts, neighb_inds, x)
         return self.leaky_relu(self.batch_norm(x))
 
 
@@ -582,6 +691,7 @@ class ResnetBottleneckBlock(nn.Module):
         self.layer_ind = layer_ind
         self.in_dim = in_dim
         self.out_dim = out_dim
+        self.method = config.method
 
         # First downscaling mlp
         if in_dim != out_dim // 4:
@@ -589,18 +699,24 @@ class ResnetBottleneckBlock(nn.Module):
         else:
             self.unary1 = nn.Identity()
 
-        # KPConv block
-        self.KPConv = KPConv(config.num_kernel_points,
-                             config.in_points_dim,
-                             out_dim // 4,
-                             out_dim // 4,
-                             current_extent,
-                             radius,
-                             fixed_kernel_points=config.fixed_kernel_points,
-                             KP_influence=config.KP_influence,
-                             aggregation_mode=config.aggregation_mode,
-                             deformable='deform' in block_name,
-                             modulated=config.modulated)
+        # Conv block
+        if self.method == 'KPConv':
+            self.KPConv = KPConv(config.num_kernel_points,
+                                config.in_points_dim,
+                                out_dim // 4,
+                                out_dim // 4,
+                                current_extent,
+                                radius,
+                                fixed_kernel_points=config.fixed_kernel_points,
+                                KP_influence=config.KP_influence,
+                                aggregation_mode=config.aggregation_mode,
+                                deformable='deform' in block_name,
+                                modulated=config.modulated)
+        else:
+            self.TriplaneConv = TriplaneConv(config.num_kernel_points,
+                                config.in_points_dim,
+                                out_dim // 4,
+                                out_dim // 4)
         self.batch_norm_conv = BatchNormBlock(out_dim // 4, self.use_bn, self.bn_momentum)
 
         # Second upscaling mlp
@@ -632,7 +748,10 @@ class ResnetBottleneckBlock(nn.Module):
         x = self.unary1(features)
 
         # Convolution
-        x = self.KPConv(q_pts, s_pts, neighb_inds, x)
+        if self.method=='KPConv':
+            x = self.KPConv(q_pts, s_pts, neighb_inds, x)
+        else:
+            x = self.TriplaneConv(q_pts, s_pts, neighb_inds, x)
         x = self.leaky_relu(self.batch_norm_conv(x))
 
         # Second upscaling mlp

@@ -26,6 +26,7 @@
 import torch
 import torch.nn as nn
 import numpy as np
+import wandb
 import pickle
 import os
 from os import makedirs, remove
@@ -164,6 +165,8 @@ class ModelTrainer:
                 remove(PID_file)
 
             self.step = 0
+            train_loss = 0.0
+            train_acc = 0.0
             for batch in training_loader:
 
                 # Check kill signal (running_PID.txt deleted)
@@ -211,6 +214,11 @@ class ModelTrainer:
                 else:
                     mean_dt = 0.9 * mean_dt + 0.1 * (np.array(t[1:]) - np.array(t[:-1]))
 
+
+                # Log loss and accuracy
+                train_loss += loss.item()
+                train_acc += 100*acc 
+
                 # Console display (only one per second)
                 if (t[-1] - last_display) > 1.0:
                     last_display = t[-1]
@@ -221,6 +229,7 @@ class ModelTrainer:
                                          1000 * mean_dt[0],
                                          1000 * mean_dt[1],
                                          1000 * mean_dt[2]))
+                    
 
                 # Log file
                 if config.saving:
@@ -239,6 +248,10 @@ class ModelTrainer:
             ##############
             # End of epoch
             ##############
+            wandb.log({'loss_train': train_loss * 1.0 / self.step, 'epoch': self.epoch})
+            wandb.log({'acc_train': train_acc * 1.0 / self.step, 'epoch': self.epoch})
+
+            # compute and log epoch loss and accuracy
 
             # Check kill signal (running_PID.txt deleted)
             if config.saving and not exists(PID_file):
@@ -600,6 +613,7 @@ class ModelTrainer:
 
         # Print instance mean
         mIoU = 100 * np.mean(IoUs)
+        wandb.log({'mIoU': mIoU, 'epoch': self.epoch})
         print('{:s} mean IoU = {:.1f}%'.format(config.dataset, mIoU))
 
         # Save predicted cloud occasionally

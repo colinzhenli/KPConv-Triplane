@@ -29,7 +29,7 @@ import sys
 import torch
 
 # Dataset
-from datasets.ModelNet40 import *
+from dataset.ModelNet40 import *
 from torch.utils.data import DataLoader
 
 from utils.config import Config

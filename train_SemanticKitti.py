@@ -29,7 +29,7 @@ import sys
 import torch
 
 # Dataset
-from datasets.SemanticKitti import *
+from dataset.SemanticKitti import *
 from torch.utils.data import DataLoader
 
 from utils.config import Config

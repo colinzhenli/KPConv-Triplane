@@ -24,9 +24,10 @@
 # Common libs
 import signal
 import os
+import wandb
 
 # Dataset
-from datasets.S3DIS import *
+from dataset.S3DIS import *
 from torch.utils.data import DataLoader
 
 from utils.config import Config
@@ -48,6 +49,13 @@ class S3DISConfig(Config):
     ####################
     # Dataset parameters
     ####################
+
+    # experiment name and run name
+    exp_name = 'KPConv-Triplane'
+    run_name = 'TriplaneConv_run_1'
+    
+    # Convolution method 'KPConv' or 'TriplaneConv'
+    method = 'TriplaneConv' 
 
     # Dataset name
     dataset = 'S3DIS'
@@ -174,7 +182,7 @@ class S3DISConfig(Config):
     grad_clip_norm = 100.0
 
     # Number of batch (decrease to reduce memory cost, but it should remain > 3 for stability)
-    batch_num = 6
+    batch_num = 4
 
     # Number of steps per epochs
     epoch_steps = 500
@@ -266,6 +274,10 @@ if __name__ == '__main__':
     # Get path from argument if given
     if len(sys.argv) > 1:
         config.saving_path = sys.argv[1]
+
+    # log experiment in wandb
+    wandb.init(project=config.exp_name, name=config.run_name)
+    wandb.config.update(config)
 
     # Initialize datasets
     training_dataset = S3DISDataset(config, set='training', use_potentials=True)

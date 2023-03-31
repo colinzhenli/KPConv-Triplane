@@ -29,9 +29,9 @@ import sys
 import torch
 
 # Dataset
-from datasets.ModelNet40 import *
-from datasets.S3DIS import *
-from datasets.SemanticKitti import *
+from dataset.ModelNet40 import *
+from dataset.S3DIS import *
+from dataset.SemanticKitti import *
 from torch.utils.data import DataLoader
 
 from utils.config import Config
