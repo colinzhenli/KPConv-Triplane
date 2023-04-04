@@ -52,10 +52,10 @@ class S3DISConfig(Config):
 
     # experiment name and run name
     exp_name = 'KPConv-Triplane'
-    run_name = 'TriplaneConv_run_1'
+    run_name = 'KPConv_debug_cpu_1'
     
     # Convolution method 'KPConv' or 'TriplaneConv'
-    method = 'TriplaneConv' 
+    method = 'KPConv' 
 
     # Dataset name
     dataset = 'S3DIS'
@@ -67,35 +67,11 @@ class S3DISConfig(Config):
     dataset_task = ''
 
     # Number of CPU threads for the input pipeline
-    input_threads = 10
+    input_threads = 4
 
     #########################
     # Architecture definition
     #########################
-
-    # # Define layers
-    architecture = ['simple',
-                    'resnetb',
-                    'resnetb_strided',
-                    'resnetb',
-                    'resnetb',
-                    'resnetb_strided',
-                    'resnetb',
-                    'resnetb',
-                    'resnetb_strided',
-                    'resnetb_deformable',
-                    'resnetb_deformable',
-                    'resnetb_deformable_strided',
-                    'resnetb_deformable',
-                    'resnetb_deformable',
-                    'nearest_upsample',
-                    'unary',
-                    'nearest_upsample',
-                    'unary',
-                    'nearest_upsample',
-                    'unary',
-                    'nearest_upsample',
-                    'unary']
 
     # Define layers
     # architecture = ['simple',
@@ -107,11 +83,11 @@ class S3DISConfig(Config):
     #                 'resnetb',
     #                 'resnetb',
     #                 'resnetb_strided',
-    #                 'resnetb',
-    #                 'resnetb',
-    #                 'resnetb_strided',
-    #                 'resnetb',
-    #                 'resnetb',
+    #                 'resnetb_deformable',
+    #                 'resnetb_deformable',
+    #                 'resnetb_deformable_strided',
+    #                 'resnetb_deformable',
+    #                 'resnetb_deformable',
     #                 'nearest_upsample',
     #                 'unary',
     #                 'nearest_upsample',
@@ -120,6 +96,30 @@ class S3DISConfig(Config):
     #                 'unary',
     #                 'nearest_upsample',
     #                 'unary']
+
+    # # Define layers
+    architecture = ['simple',
+                    'resnetb',
+                    'resnetb_strided',
+                    'resnetb',
+                    'resnetb',
+                    'resnetb_strided',
+                    'resnetb',
+                    'resnetb',
+                    'resnetb_strided',
+                    'resnetb',
+                    'resnetb',
+                    'resnetb_strided',
+                    'resnetb',
+                    'resnetb',
+                    'nearest_upsample',
+                    'unary',
+                    'nearest_upsample',
+                    'unary',
+                    'nearest_upsample',
+                    'unary',
+                    'nearest_upsample',
+                    'unary']
 
     ###################
     # KPConv parameters
@@ -182,7 +182,7 @@ class S3DISConfig(Config):
     grad_clip_norm = 100.0
 
     # Number of batch (decrease to reduce memory cost, but it should remain > 3 for stability)
-    batch_num = 4
+    batch_num = 6
 
     # Number of steps per epochs
     epoch_steps = 500
@@ -280,8 +280,8 @@ if __name__ == '__main__':
     wandb.config.update(config)
 
     # Initialize datasets
-    training_dataset = S3DISDataset(config, set='training', use_potentials=True)
-    test_dataset = S3DISDataset(config, set='validation', use_potentials=True)
+    training_dataset = S3DISDataset(config, set='training', use_potentials=False)
+    test_dataset = S3DISDataset(config, set='validation', use_potentials=False)
 
     # Initialize samplers
     training_sampler = S3DISSampler(training_dataset)
@@ -293,13 +293,13 @@ if __name__ == '__main__':
                                  sampler=training_sampler,
                                  collate_fn=S3DISCollate,
                                  num_workers=config.input_threads,
-                                 pin_memory=True)
+                                 pin_memory=False)
     test_loader = DataLoader(test_dataset,
                              batch_size=1,
                              sampler=test_sampler,
                              collate_fn=S3DISCollate,
                              num_workers=config.input_threads,
-                             pin_memory=True)
+                             pin_memory=False)
 
     # Calibrate samplers
     training_sampler.calibration(training_loader, verbose=True)

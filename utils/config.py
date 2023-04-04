@@ -168,8 +168,8 @@ class Config:
     repulse_extent = 1.0                    # Distance of repulsion for deformed kernel points
 
     # Number of batch
-    batch_num = 4
-    val_batch_num = 2
+    batch_num = 8
+    val_batch_num = 8
 
     # Maximal number of epochs
     max_epoch = 1000
@@ -178,7 +178,7 @@ class Config:
     epoch_steps = 1000
 
     # Number of validation examples per epoch
-    validation_size = 100
+    validation_size = 50
 
     # Number of epoch between each checkpoint
     checkpoint_gap = 50

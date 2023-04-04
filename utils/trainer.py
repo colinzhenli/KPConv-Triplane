@@ -75,7 +75,7 @@ class ModelTrainer:
         self.epoch = 0
         self.step = 0
 
-        # Optimizer with specific learning rate for deformable KPConv
+        # Optimizer with specific learning rate for deformable KPConvherman
         deform_params = [v for k, v in net.named_parameters() if 'offset' in k]
         other_params = [v for k, v in net.named_parameters() if 'offset' not in k]
         deform_lr = config.learning_rate * config.deform_lr_factor

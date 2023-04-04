@@ -152,7 +152,7 @@ class TriplaneConv(nn.Module):
         self.method = 'Triplane'
         self.n_comp = 8
 
-        self.neiGridSize = 128
+        self.neiGridSize = 512
         self.m = 8
         self.cin = in_channels
         self.cout = out_channels
@@ -191,7 +191,7 @@ class TriplaneConv(nn.Module):
     def tensor_field(self, xyz, nei_plane, mlp_map):
         N = xyz.size(0)*xyz.size(1)
         xyz_nei = xyz.reshape(-1, 3)
-        xyz_nei = torch.clamp(xyz_nei, -1, 1)
+        xyz_nei = 2 * xyz_nei - 1
 
         nei_coordinate_plane = torch.stack((xyz_nei[..., self.matMode[0]], xyz_nei[..., self.matMode[1]], xyz_nei[..., self.matMode[2]])).view(3, -1, 1, 2)
 
@@ -215,9 +215,12 @@ class TriplaneConv(nn.Module):
         s_pts = torch.cat((s_pts, torch.zeros_like(s_pts[:1, :]) + 1e6), 0)
         # Add a zero feature for shadow neighbors
         x = torch.cat((x, torch.zeros_like(x[:1, :])), 0)
+        max = torch.max(neighb_inds)
+        print(max)
+        shape = s_pts.shape[0]
 
         xyz = s_pts[neighb_inds, :] # get neighbor coordinate: n, k, 3
-        xyz = xyz - q_pts.unsqueeze(1) # Center every neighborhood: n, k, 3
+        xyz = xyz.clone() - q_pts.unsqueeze(1) # Center every neighborhood: n, k, 3
 
         ##################
         # TriplaneConv layer using Point convolution tricks:
@@ -228,7 +231,24 @@ class TriplaneConv(nn.Module):
         if self.method=='ScoreNet':
             score = self.scorenet(xyz, calc_scores=self.calc_scores, bias=0)
         else:
-            score = self.tensor_field(xyz, self.nei_plane, self.mlp_map).view(N, k, -1) # n, k, m
+            # score = self.tensor_field(xyz, self.nei_plane, self.mlp_map).view(N, k, -1) # n, k, m
+            n = xyz.size(0)*xyz.size(1)
+            xyz_nei = xyz.reshape(-1, 3)
+            xyz_nei = 2 * xyz_nei - 1
+
+            nei_coordinate_plane = torch.stack((xyz_nei[..., self.matMode[0]], xyz_nei[..., self.matMode[1]], xyz_nei[..., self.matMode[2]])).view(3, -1, 1, 2)
+
+            nei_plane_coef_point = []
+            for idx_plane in range(len(self.nei_plane)):
+                nei_plane_coef_point.append(F.grid_sample(self.nei_plane[idx_plane], nei_coordinate_plane[[idx_plane]],
+                                                    align_corners=True).view(-1, *xyz_nei.shape[:1]))
+            if self.no_mlp == True:
+                nei_plane_coef_point = torch.sum(torch.stack(nei_plane_coef_point), 0)
+            else:
+                nei_plane_coef_point= torch.cat(nei_plane_coef_point)
+            if self.method=='Triplane':
+                if self.no_mlp == True:
+                    score  = (nei_plane_coef_point.T).reshape(n, -1).view(N, k, -1)
         """assemble with scores:"""
         x = torch.einsum('nmo,nkm->no', x, score) # n, cout
         return x
@@ -390,6 +410,7 @@ class KPConv(nn.Module):
 
         # Get all difference matrices [n_points, n_neighbors, n_kpoints, dim]
         neighbors.unsqueeze_(2)
+        deformed_K_points = deformed_K_points.unsqueeze(0).unsqueeze(1)  # Adds new dimensions at positions 0 and 1, resulting in shape [1, 1, 15, 3]
         differences = neighbors - deformed_K_points
 
         # Get the square distances [n_points, n_neighbors, n_kpoints]

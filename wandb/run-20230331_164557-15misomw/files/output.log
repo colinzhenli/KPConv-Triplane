@@ -1,0 +1,53 @@
+Preparing ply files
+Done in 0.0s
+Found KDTree for cloud Area_1, subsampled at 0.030
+146.6 MB loaded in 0.1s
+Found KDTree for cloud Area_2, subsampled at 0.030
+159.1 MB loaded in 0.2s
+Found KDTree for cloud Area_3, subsampled at 0.030
+62.6 MB loaded in 0.1s
+Found KDTree for cloud Area_4, subsampled at 0.030
+144.2 MB loaded in 0.2s
+Found KDTree for cloud Area_6, subsampled at 0.030
+137.9 MB loaded in 0.2s
+Backend QtAgg is interactive backend. Turning interactive mode on.
+Preparing ply files
+Done in 0.0s
+Found KDTree for cloud Area_5, subsampled at 0.030
+260.4 MB loaded in 0.2s
+Preparing reprojection indices for testing
+Area_5 done in 0.2s
+Starting Calibration (use verbose=True for more details)
+Previous calibration found:
+Check batch limit dictionary
+[92m"random_1.200_0.030_6": 51080
+Check neighbors limit dictionary
+[92m"0.030_0.075": 28
+[92m"0.060_0.150": 33
+[92m"0.120_0.300": 40
+[92m"0.240_0.600": 40
+[92m"0.480_1.200": 37
+Calibration done in 3.5s
+Starting Calibration (use verbose=True for more details)
+Previous calibration found:
+Check batch limit dictionary
+[92m"random_1.200_0.030_6": 51080
+Check neighbors limit dictionary
+[92m"0.030_0.075": 28
+[92m"0.060_0.150": 33
+[92m"0.120_0.300": 40
+[92m"0.240_0.600": 40
+[92m"0.480_1.200": 37
+Calibration done in 0.0s
+Model Preparation
+*****************
+Done in 1.0s
+Start training
+**************
+e000-i0000 => L=2.581 acc=  5% / t(ms): 1106.3 534.4  65.6)
+e000-i0007 => L=2.512 acc= 21% / t(ms):   7.0  54.1  88.4)
+e000-i0014 => L=2.179 acc= 35% / t(ms):   5.7  57.8  88.3)
+e000-i0021 => L=2.571 acc= 17% / t(ms):   5.3  55.4  87.4)
+e000-i0028 => L=2.497 acc= 24% / t(ms):   5.0  58.4  85.2)
+e000-i0035 => L=1.542 acc= 62% / t(ms):   4.9  58.6  84.3)
+e000-i0042 => L=2.262 acc= 35% / t(ms):   4.8  59.7  83.8)
