@@ -1,0 +1,2 @@
+/home/zhenli/KPConv-Triplane/dataset/SemanticKitti.py:585: FutureWarning: In the future `np.bool` will be defined as the corresponding NumPy scalar.
+  class_frames_bool = np.zeros((0, self.num_classes), dtype=np.bool)

@@ -142,17 +142,23 @@ def global_average(x, batch_lengths):
 #
 
 class TriplaneConv(nn.Module):
-    def __init__(self, kernel_size, p_dim, in_channels, out_channels,  aggregation_mode='sum'):
+    def __init__(self, kernel_size, p_dim, in_channels, out_channels, layer_ind, aggregation_mode='sum'):
         super(TriplaneConv, self).__init__()
         self.calc_scores = 'softmax'
-
-        self.no_mlp = True
+        self.padding_with_center = False 
+        self.no_mlp = False
+        self.LoDs = True
+        self.depth_wise = False
+        self.precompute_indices = False
         self.matMode = [[0,1], [0,2], [1,2]]
         self.vecMode =  [2, 1, 0]
         self.method = 'Triplane'
+        self.baseGridSize = 32
         self.n_comp = 8
-
-        self.neiGridSize = 512
+        if self.LoDs:
+            self.neiGridSize = int(self.baseGridSize / (2**layer_ind))
+        else:
+            self.neiGridSize = self.baseGridSize
         self.m = 8
         self.cin = in_channels
         self.cout = out_channels
@@ -162,18 +168,18 @@ class TriplaneConv(nn.Module):
 
         if self.method=='VM' or self.method=='Triplane':
             self.mlp_map = Mlps(
-                3*self.n_comp, [self.m], last_bn_norm=False       
+                3*self.n_comp, [self.cin], last_bn_norm=False       
             )
+        self.linear = nn.Linear(self.cin, self.cout)
 
+        # self.scorenet = ScoreNet(6, self.m, hidden_unit=[16])
 
-        self.scorenet = ScoreNet(6, self.m, hidden_unit=[16])
-
-        tensor = nn.init.kaiming_normal_(torch.empty(self.m, self.cin, self.cout), nonlinearity='relu') \
-            .permute(1, 0, 2).contiguous().view(self.cin, self.m * self.cout)
+        # tensor = nn.init.kaiming_normal_(torch.empty(self.m, self.cin, self.cout), nonlinearity='relu') \
+            # .permute(1, 0, 2).contiguous().view(self.cin, self.m * self.cout)
 
 
         # convolutional weight matrices in Weight Bank:
-        self.matrice = nn.Parameter(tensor, requires_grad=True)
+        # self.matrice = nn.Parameter(tensor, requires_grad=True)
 
 
     def init_one_svd(self, n_component, neighborGridSize, scale):
@@ -186,12 +192,51 @@ class TriplaneConv(nn.Module):
                 scale * torch.randn((1, n_component, neighborGridSize, neighborGridSize))))  #
 
         return torch.nn.ParameterList(neighbor_plane_coef)
-    
+
+    def bilinear_interpolation(self, res, points):
+        """
+        Performs bilinear interpolation of points with respect to a grid.
+
+        Parameters:
+            points (n, 2): A 2D PyTorch tensor representing the points to interpolate.
+
+        Returns:
+            indices (4, n, 2): A 3D PyTorch tensor representing the 2D indices of grid
+                for the four nearest points for each input point.
+            weights (4, n): A 2D PyTorch tensor representing the weights for each of
+                the four points.
+        """
+
+        points = points[None]
+        _, N, _ = points.shape
+
+        x = points[:, :, 0] * (res - 1)
+        y = points[:, :, 1] * (res - 1)
+
+        x1 = torch.floor(torch.clip(x, 0, res - 1 - 1e-5)).int()
+        y1 = torch.floor(torch.clip(y, 0, res - 1 - 1e-5)).int()
+
+        x2 = torch.clip(x1 + 1, 0, res - 1).int()
+        y2 = torch.clip(y1 + 1, 0, res - 1).int()
+
+        w1 = (x2 - x) * (y2 - y)
+        w2 = (x - x1) * (y2 - y)
+        w3 = (x2 - x) * (y - y1)
+        w4 = (x - x1) * (y - y1)
+
+        id1 = torch.stack((y1, x1), dim=-1)
+        id2 = torch.stack((y1, x2), dim=-1)
+        id3 = torch.stack((y2, x1), dim=-1)
+        id4 = torch.stack((y2, x2), dim=-1)
+
+        indices = torch.stack((id1, id2, id3, id4), dim=1)
+        weights = torch.stack((w1, w2, w3, w4), dim=0)
+
+        return indices[0], weights
     
     def tensor_field(self, xyz, nei_plane, mlp_map):
         N = xyz.size(0)*xyz.size(1)
         xyz_nei = xyz.reshape(-1, 3)
-        xyz_nei = 2 * xyz_nei - 1
 
         nei_coordinate_plane = torch.stack((xyz_nei[..., self.matMode[0]], xyz_nei[..., self.matMode[1]], xyz_nei[..., self.matMode[2]])).view(3, -1, 1, 2)
 
@@ -206,52 +251,70 @@ class TriplaneConv(nn.Module):
         if self.method=='Triplane':
             if self.no_mlp == True:
                 return (nei_plane_coef_point.T).reshape(N, -1)
-            return mlp_map((nei_plane_coef_point.T).reshape(N, -1))
+            return mlp_map(((nei_plane_coef_point.T).reshape(N, -1)).unsqueeze(0), format="BNC").squeeze(0)
 
-        
-    def forward(self, q_pts, s_pts, neighb_inds, x):
-        N, k = neighb_inds.shape
-        # Add a fake point in the last row for shadow neighbors
-        s_pts = torch.cat((s_pts, torch.zeros_like(s_pts[:1, :]) + 1e6), 0)
-        # Add a zero feature for shadow neighbors
-        x = torch.cat((x, torch.zeros_like(x[:1, :])), 0)
-        max = torch.max(neighb_inds)
-        print(max)
-        shape = s_pts.shape[0]
-
-        xyz = s_pts[neighb_inds, :] # get neighbor coordinate: n, k, 3
-        xyz = xyz.clone() - q_pts.unsqueeze(1) # Center every neighborhood: n, k, 3
-
-        ##################
-        # TriplaneConv layer using Point convolution tricks:
+    def depth_wise_conv(self, x, neighb_inds, xyz):
+        N, k, _ = xyz.shape
+        x = x[neighb_inds[:, 0], :] # n, cin
+        # output = torch.zeros_like(x)
+        # if self.precompute_indices:
+        #     for j in range(k):
+        #         features = []
+        #         for idx_plane in range(len(self.nei_plane)):                    
+        #             # Expand bilinear_weights to shape (4, n, m)
+        #             bilinear_weights_expanded = bilinear_weights[idx_plane, :, :, j].unsqueeze(-1).expand(-1, -1, self.n_comp) # 4, n, m
+                    
+        #             # Use advanced indexing to retrieve corresponding elements in self_nei_plane
+        #             y_indices = bilinear_indices[idx_plane, :, :, j, 0] # 4, n
+        #             x_indices = bilinear_indices[idx_plane, :, :, j, 1] # 4, n
+        #             selected_features = self.nei_plane[idx_plane][0, :, y_indices, x_indices] # m, 4, n
+        #             features.append(torch.einsum('hnm,mhn->nm', bilinear_weights_expanded, selected_features))
+        #         features = torch.cat(features, -1) #n, 3*m
+        #         output += self.mlp_map(features.unsqueeze(0), format="BNC").squeeze(0) #n, cin
+        # else:
+        filter = self.tensor_field(xyz, self.nei_plane, self.mlp_map).view(N, k, -1) # n, k, cin
+        x = torch.einsum('nki,ni->ni', filter, x) #n, cin
+        x = self.linear(x) # n,cout
+        return x
+    
+    def conv_with_trick(self, x, neighb_inds, xyz):
+        """ TriplaneConv layer using Point convolution tricks """
+        N, k, _ = xyz.shape[0]
         """feature transformation:"""
         x = feat_trans_pointnet(point_input=x, kernel=self.matrice, m=self.m)  # n*, m, cout
-        x = x[neighb_inds[:, 0], :].view(N, self.m, -1) # n, k, m, cout 
+        x = x[neighb_inds[:, 0], :].view(N, self.m, -1) # n, m, cout 
 
         if self.method=='ScoreNet':
             score = self.scorenet(xyz, calc_scores=self.calc_scores, bias=0)
         else:
-            # score = self.tensor_field(xyz, self.nei_plane, self.mlp_map).view(N, k, -1) # n, k, m
-            n = xyz.size(0)*xyz.size(1)
-            xyz_nei = xyz.reshape(-1, 3)
-            xyz_nei = 2 * xyz_nei - 1
-
-            nei_coordinate_plane = torch.stack((xyz_nei[..., self.matMode[0]], xyz_nei[..., self.matMode[1]], xyz_nei[..., self.matMode[2]])).view(3, -1, 1, 2)
-
-            nei_plane_coef_point = []
-            for idx_plane in range(len(self.nei_plane)):
-                nei_plane_coef_point.append(F.grid_sample(self.nei_plane[idx_plane], nei_coordinate_plane[[idx_plane]],
-                                                    align_corners=True).view(-1, *xyz_nei.shape[:1]))
-            if self.no_mlp == True:
-                nei_plane_coef_point = torch.sum(torch.stack(nei_plane_coef_point), 0)
-            else:
-                nei_plane_coef_point= torch.cat(nei_plane_coef_point)
-            if self.method=='Triplane':
-                if self.no_mlp == True:
-                    score  = (nei_plane_coef_point.T).reshape(n, -1).view(N, k, -1)
+            score = self.tensor_field(xyz, self.nei_plane, self.mlp_map).view(N, k, -1) # n, k, m
         """assemble with scores:"""
         x = torch.einsum('nmo,nkm->no', x, score) # n, cout
         return x
+    
+    def forward(self, q_pts, s_pts, neighb_inds, neighb_r, x):
+        # n = s_pts.shape[0]
+        # if self.padding_with_center:
+        #     mask = neighb_inds == n
+        #     first_elements = neighb_inds[:, 0].unsqueeze(1).expand_as(mask)
+        #     neighb_inds = torch.where(mask, first_elements, neighb_inds)
+        # else:
+        # Add a fake point in the last row for shadow neighbors
+        s_pts = torch.cat((s_pts, torch.zeros_like(s_pts[:1, :]) + 1e6), 0)
+        # Add a zero feature for shadow neighbors
+        x = torch.cat((x, torch.zeros_like(x[:1, :])), 0)
+
+        xyz = s_pts[neighb_inds, :] # get neighbor coordinate: n, k, 3
+        xyz = xyz.clone() - q_pts.unsqueeze(1) # Center every neighborhood: n, k, 3
+        xyz = xyz / neighb_r #normalize xyz by neigbor radius
+        xyz = torch.sin(xyz*(torch.pi/2))
+        # if self.depth_wise:
+        # return self.depth_wise_conv(x, neighb_inds, xyz, bilinear_indices[:, :, neighb_inds[:, 0], ...], bilinear_weights[:, :, neighb_inds[:, 0], ...])
+        return self.depth_wise_conv(x, neighb_inds, xyz)
+        # else:
+        #     return self.conv_with_trick(x, neighb_inds, xyz)
+
+
         
 # ----------------------------------------------------------------------------------------------------------------------
 #
@@ -396,6 +459,10 @@ class KPConv(nn.Module):
         s_pts = torch.cat((s_pts, torch.zeros_like(s_pts[:1, :]) + 1e6), 0)
 
         # Get neighbor points [n_points, n_neighbors, dim]
+        max = torch.max(neighb_inds)
+        shape = s_pts.shape[0]
+        if max >= shape:
+            print("wrong_dim: neighb_inds=" + str(max.item()) + " shape= " + str(shape))
         neighbors = s_pts[neighb_inds, :]
 
         # Center every neighborhood
@@ -664,7 +731,8 @@ class SimpleBlock(nn.Module):
             self.TriplaneConv = TriplaneConv(config.num_kernel_points,
                                 config.in_points_dim,
                                 in_dim,
-                                out_dim // 2)
+                                out_dim // 2,
+                                layer_ind)
 
         # Other opperations
         self.batch_norm = BatchNormBlock(out_dim // 2, self.use_bn, self.bn_momentum)
@@ -678,15 +746,25 @@ class SimpleBlock(nn.Module):
             q_pts = batch.points[self.layer_ind + 1]
             s_pts = batch.points[self.layer_ind]
             neighb_inds = batch.pools[self.layer_ind]
+            neighb_r = batch.neighbor_r[self.layer_ind]
+            # bilinear_indices = batch.bilinear_indices[self.layer_ind]
+            # bilinear_weights = batch.bilinear_weights[self.layer_ind]
         else:
             q_pts = batch.points[self.layer_ind]
             s_pts = batch.points[self.layer_ind]
             neighb_inds = batch.neighbors[self.layer_ind]
+            # bilinear_indices = batch.bilinear_indices[self.layer_ind]
+            # bilinear_weights = batch.bilinear_weights[self.layer_ind]
+            neighb_r = batch.neighbor_r[self.layer_ind]
+            # max = torch.max(neighb_inds)
+            # shape = s_pts.shape[0]
+            # if max > shape:
+            #     print("wrong_dim: neighb_inds=" + str(max.item()) + " shape= " + str(shape))
 
         if self.method=='KPConv':
             x = self.KPConv(q_pts, s_pts, neighb_inds, x)
         else:
-            x = self.TriplaneConv(q_pts, s_pts, neighb_inds, x)
+            x = self.TriplaneConv(q_pts, s_pts, neighb_inds, neighb_r, x)
         return self.leaky_relu(self.batch_norm(x))
 
 
@@ -737,7 +815,8 @@ class ResnetBottleneckBlock(nn.Module):
             self.TriplaneConv = TriplaneConv(config.num_kernel_points,
                                 config.in_points_dim,
                                 out_dim // 4,
-                                out_dim // 4)
+                                out_dim // 4,
+                                layer_ind)
         self.batch_norm_conv = BatchNormBlock(out_dim // 4, self.use_bn, self.bn_momentum)
 
         # Second upscaling mlp
@@ -760,10 +839,16 @@ class ResnetBottleneckBlock(nn.Module):
             q_pts = batch.points[self.layer_ind + 1]
             s_pts = batch.points[self.layer_ind]
             neighb_inds = batch.pools[self.layer_ind]
+            neighb_r = batch.neighbor_r[self.layer_ind]            
+            # bilinear_indices = batch.bilinear_indices[self.layer_ind]
+            # bilinear_weights = batch.bilinear_weights[self.layer_ind]
         else:
             q_pts = batch.points[self.layer_ind]
             s_pts = batch.points[self.layer_ind]
             neighb_inds = batch.neighbors[self.layer_ind]
+            neighb_r = batch.neighbor_r[self.layer_ind]
+            # bilinear_indices = batch.bilinear_indices[self.layer_ind]
+            # bilinear_weights = batch.bilinear_weights[self.layer_ind]
 
         # First downscaling mlp
         x = self.unary1(features)
@@ -772,7 +857,7 @@ class ResnetBottleneckBlock(nn.Module):
         if self.method=='KPConv':
             x = self.KPConv(q_pts, s_pts, neighb_inds, x)
         else:
-            x = self.TriplaneConv(q_pts, s_pts, neighb_inds, x)
+            x = self.TriplaneConv(q_pts, s_pts, neighb_inds, neighb_r, x)
         x = self.leaky_relu(self.batch_norm_conv(x))
 
         # Second upscaling mlp

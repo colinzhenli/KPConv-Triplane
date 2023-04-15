@@ -27,6 +27,7 @@ import os
 import numpy as np
 import sys
 import torch
+import wandb
 
 # Dataset
 from dataset.SemanticKitti import *
@@ -52,6 +53,13 @@ class SemanticKittiConfig(Config):
     # Dataset parameters
     ####################
 
+    # experiment name and run name
+    exp_name = 'KPConv-Triplane'
+    run_name = 'KPConv_SemKitti_run_1'
+    
+    # Convolution method 'KPConv' or 'TriplaneConv'
+    method = 'KPConv' 
+
     # Dataset name
     dataset = 'SemanticKitti'
 
@@ -62,7 +70,7 @@ class SemanticKittiConfig(Config):
     dataset_task = ''
 
     # Number of CPU threads for the input pipeline
-    input_threads = 10
+    input_threads = 0
 
     #########################
     # Architecture definition
@@ -257,6 +265,10 @@ if __name__ == '__main__':
     # Get path from argument if given
     if len(sys.argv) > 1:
         config.saving_path = sys.argv[1]
+
+    # log experiment in wandb
+    wandb.init(project=config.exp_name, name=config.run_name)
+    wandb.config.update(config)
 
     # Initialize datasets
     training_dataset = SemanticKittiDataset(config, set='training',

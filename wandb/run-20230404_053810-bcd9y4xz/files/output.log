@@ -1,0 +1,188 @@
+Preparing ply files
+Done in 0.0s
+Found KDTree for cloud Area_1, subsampled at 0.030
+146.6 MB loaded in 0.1s
+Found KDTree for cloud Area_2, subsampled at 0.030
+159.1 MB loaded in 0.1s
+Found KDTree for cloud Area_3, subsampled at 0.030
+62.6 MB loaded in 0.0s
+Found KDTree for cloud Area_4, subsampled at 0.030
+144.2 MB loaded in 0.1s
+Found KDTree for cloud Area_6, subsampled at 0.030
+137.9 MB loaded in 0.1s
+Preparing ply files
+Done in 0.0s
+Found KDTree for cloud Area_5, subsampled at 0.030
+260.4 MB loaded in 0.2s
+Preparing reprojection indices for testing
+Area_5 done in 0.2s
+Starting Calibration (use verbose=True for more details)
+Previous calibration found:
+Check batch limit dictionary
+[92m"random_1.200_0.030_6": 53173
+Check neighbors limit dictionary
+[92m"0.030_0.075": 28
+[92m"0.060_0.150": 33
+[92m"0.120_0.300": 40
+[92m"0.240_0.600": 41
+[92m"0.480_1.200": 37
+Calibration done in 0.0s
+Starting Calibration (use verbose=True for more details)
+Previous calibration found:
+Check batch limit dictionary
+[92m"random_1.200_0.030_6": 53173
+Check neighbors limit dictionary
+[92m"0.030_0.075": 28
+[92m"0.060_0.150": 33
+[92m"0.120_0.300": 40
+[92m"0.240_0.600": 41
+[92m"0.480_1.200": 37
+Calibration done in 0.0s
+Model Preparation
+*****************
+Done in 0.9s
+Start training
+**************
+wrong_dim: neighb_inds=60661 shape= 60661
+wrong_dim: neighb_inds=17531 shape= 17531
+wrong_dim: neighb_inds=4526 shape= 4526
+wrong_dim: neighb_inds=1118 shape= 1118
+wrong_dim: neighb_inds=313 shape= 313
+e000-i0000 => L=2.603 acc=  4% / t(ms): 1271.7 501.3  62.7)
+wrong_dim: neighb_inds=58883 shape= 58883
+wrong_dim: neighb_inds=16404 shape= 16404
+wrong_dim: neighb_inds=4288 shape= 4288
+wrong_dim: neighb_inds=1115 shape= 1115
+wrong_dim: neighb_inds=269 shape= 269
+wrong_dim: neighb_inds=61415 shape= 61415
+wrong_dim: neighb_inds=18492 shape= 18492
+wrong_dim: neighb_inds=4898 shape= 4898
+wrong_dim: neighb_inds=1229 shape= 1229
+wrong_dim: neighb_inds=331 shape= 331
+wrong_dim: neighb_inds=55782 shape= 55782
+wrong_dim: neighb_inds=16537 shape= 16537
+wrong_dim: neighb_inds=4363 shape= 4363
+wrong_dim: neighb_inds=1073 shape= 1073
+wrong_dim: neighb_inds=298 shape= 298
+wrong_dim: neighb_inds=57709 shape= 57709
+wrong_dim: neighb_inds=16505 shape= 16505
+wrong_dim: neighb_inds=4293 shape= 4293
+wrong_dim: neighb_inds=1119 shape= 1119
+wrong_dim: neighb_inds=309 shape= 309
+wrong_dim: neighb_inds=55485 shape= 55485
+wrong_dim: neighb_inds=16918 shape= 16918
+wrong_dim: neighb_inds=4478 shape= 4478
+wrong_dim: neighb_inds=1087 shape= 1087
+wrong_dim: neighb_inds=266 shape= 266
+wrong_dim: neighb_inds=61009 shape= 61009
+wrong_dim: neighb_inds=18744 shape= 18744
+wrong_dim: neighb_inds=4909 shape= 4909
+wrong_dim: neighb_inds=1249 shape= 1249
+wrong_dim: neighb_inds=332 shape= 332
+wrong_dim: neighb_inds=53651 shape= 53651
+wrong_dim: neighb_inds=15090 shape= 15090
+wrong_dim: neighb_inds=3975 shape= 3975
+wrong_dim: neighb_inds=1020 shape= 1020
+wrong_dim: neighb_inds=296 shape= 296
+e000-i0007 => L=2.516 acc= 18% / t(ms):  10.6  63.2  81.9)
+wrong_dim: neighb_inds=57679 shape= 57679
+wrong_dim: neighb_inds=16420 shape= 16420
+wrong_dim: neighb_inds=4141 shape= 4141
+wrong_dim: neighb_inds=1079 shape= 1079
+wrong_dim: neighb_inds=282 shape= 282
+wrong_dim: neighb_inds=56045 shape= 56045
+wrong_dim: neighb_inds=16256 shape= 16256
+wrong_dim: neighb_inds=4447 shape= 4447
+wrong_dim: neighb_inds=1150 shape= 1150
+wrong_dim: neighb_inds=313 shape= 313
+wrong_dim: neighb_inds=54355 shape= 54355
+wrong_dim: neighb_inds=15184 shape= 15184
+wrong_dim: neighb_inds=3981 shape= 3981
+wrong_dim: neighb_inds=1009 shape= 1009
+wrong_dim: neighb_inds=283 shape= 283
+wrong_dim: neighb_inds=53520 shape= 53520
+wrong_dim: neighb_inds=16217 shape= 16217
+wrong_dim: neighb_inds=4135 shape= 4135
+wrong_dim: neighb_inds=1068 shape= 1068
+wrong_dim: neighb_inds=290 shape= 290
+wrong_dim: neighb_inds=61932 shape= 61932
+wrong_dim: neighb_inds=17080 shape= 17080
+wrong_dim: neighb_inds=4423 shape= 4423
+wrong_dim: neighb_inds=1080 shape= 1080
+wrong_dim: neighb_inds=294 shape= 294
+wrong_dim: neighb_inds=58488 shape= 58488
+wrong_dim: neighb_inds=17218 shape= 17218
+wrong_dim: neighb_inds=4516 shape= 4516
+wrong_dim: neighb_inds=1109 shape= 1109
+wrong_dim: neighb_inds=309 shape= 309
+wrong_dim: neighb_inds=59383 shape= 59383
+wrong_dim: neighb_inds=17047 shape= 17047
+wrong_dim: neighb_inds=4383 shape= 4383
+wrong_dim: neighb_inds=1130 shape= 1130
+wrong_dim: neighb_inds=305 shape= 305
+e000-i0014 => L=2.340 acc= 32% / t(ms):   8.2  60.7  81.9)
+wrong_dim: neighb_inds=61071 shape= 61071
+wrong_dim: neighb_inds=18092 shape= 18092
+wrong_dim: neighb_inds=4637 shape= 4637
+wrong_dim: neighb_inds=1223 shape= 1223
+wrong_dim: neighb_inds=355 shape= 355
+wrong_dim: neighb_inds=57233 shape= 57233
+wrong_dim: neighb_inds=16626 shape= 16626
+wrong_dim: neighb_inds=4333 shape= 4333
+wrong_dim: neighb_inds=1130 shape= 1130
+wrong_dim: neighb_inds=300 shape= 300
+wrong_dim: neighb_inds=54190 shape= 54190
+wrong_dim: neighb_inds=15898 shape= 15898
+wrong_dim: neighb_inds=4167 shape= 4167
+wrong_dim: neighb_inds=1033 shape= 1033
+wrong_dim: neighb_inds=261 shape= 261
+wrong_dim: neighb_inds=59921 shape= 59921
+wrong_dim: neighb_inds=17607 shape= 17607
+wrong_dim: neighb_inds=4588 shape= 4588
+wrong_dim: neighb_inds=1158 shape= 1158
+wrong_dim: neighb_inds=291 shape= 291
+wrong_dim: neighb_inds=55452 shape= 55452
+wrong_dim: neighb_inds=15718 shape= 15718
+wrong_dim: neighb_inds=4023 shape= 4023
+wrong_dim: neighb_inds=1085 shape= 1085
+wrong_dim: neighb_inds=297 shape= 297
+wrong_dim: neighb_inds=69110 shape= 69110
+wrong_dim: neighb_inds=20347 shape= 20347
+wrong_dim: neighb_inds=5224 shape= 5224
+wrong_dim: neighb_inds=1235 shape= 1235
+wrong_dim: neighb_inds=327 shape= 327
+wrong_dim: neighb_inds=54649 shape= 54649
+wrong_dim: neighb_inds=15965 shape= 15965
+wrong_dim: neighb_inds=4107 shape= 4107
+wrong_dim: neighb_inds=1032 shape= 1032
+wrong_dim: neighb_inds=258 shape= 258
+e000-i0021 => L=2.016 acc= 37% / t(ms):   7.2  62.0  83.4)
+wrong_dim: neighb_inds=58332 shape= 58332
+wrong_dim: neighb_inds=15838 shape= 15838
+wrong_dim: neighb_inds=3964 shape= 3964
+wrong_dim: neighb_inds=1011 shape= 1011
+wrong_dim: neighb_inds=270 shape= 270
+wrong_dim: neighb_inds=59878 shape= 59878
+wrong_dim: neighb_inds=16802 shape= 16802
+wrong_dim: neighb_inds=4641 shape= 4641
+wrong_dim: neighb_inds=1182 shape= 1182
+wrong_dim: neighb_inds=336 shape= 336
+wrong_dim: neighb_inds=62619 shape= 62619
+wrong_dim: neighb_inds=18745 shape= 18745
+wrong_dim: neighb_inds=4999 shape= 4999
+wrong_dim: neighb_inds=1283 shape= 1283
+wrong_dim: neighb_inds=321 shape= 321
+wrong_dim: neighb_inds=56657 shape= 56657
+wrong_dim: neighb_inds=16841 shape= 16841
+wrong_dim: neighb_inds=4237 shape= 4237
+wrong_dim: neighb_inds=1064 shape= 1064
+wrong_dim: neighb_inds=267 shape= 267
+wrong_dim: neighb_inds=57484 shape= 57484
+wrong_dim: neighb_inds=16276 shape= 16276
+wrong_dim: neighb_inds=4259 shape= 4259
+wrong_dim: neighb_inds=1048 shape= 1048
+wrong_dim: neighb_inds=296 shape= 296
+wrong_dim: neighb_inds=56366 shape= 56366
+wrong_dim: neighb_inds=15720 shape= 15720
+wrong_dim: neighb_inds=4101 shape= 4101
+wrong_dim: neighb_inds=1001 shape= 1001

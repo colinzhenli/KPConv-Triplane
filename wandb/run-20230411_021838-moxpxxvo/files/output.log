@@ -1,0 +1,515 @@
+Preparing ply files
+Done in 0.0s
+Found KDTree for cloud Area_1, subsampled at 0.030
+146.6 MB loaded in 0.2s
+Found KDTree for cloud Area_2, subsampled at 0.030
+159.1 MB loaded in 0.2s
+Found KDTree for cloud Area_3, subsampled at 0.030
+62.6 MB loaded in 0.1s
+Found KDTree for cloud Area_4, subsampled at 0.030
+144.2 MB loaded in 0.2s
+Found KDTree for cloud Area_6, subsampled at 0.030
+137.9 MB loaded in 0.2s
+Preparing ply files
+Done in 0.0s
+Found KDTree for cloud Area_5, subsampled at 0.030
+260.4 MB loaded in 0.3s
+Preparing reprojection indices for testing
+Area_5 done in 0.2s
+Starting Calibration (use verbose=True for more details)
+Previous calibration found:
+Check batch limit dictionary
+[91m"random_2.400_0.030_6": ?
+Check neighbors limit dictionary
+[92m"0.030_0.075": 28
+[92m"0.060_0.150": 32
+[92m"0.120_0.300": 40
+[92m"0.240_0.600": 40
+[92m"0.480_1.200": 37
+Step     2  estim_b = 0.02 batch_limit =  17508
+Step     7  estim_b = 0.07 batch_limit =  30071
+Step    12  estim_b = 0.12 batch_limit =  39695
+Step    17  estim_b = 0.19 batch_limit =  51378
+Step    19  estim_b = 0.22 batch_limit =  55466
+Step    22  estim_b = 0.26 batch_limit =  62616
+Step    25  estim_b = 0.31 batch_limit =  71283
+Step    28  estim_b = 0.36 batch_limit =  74969
+Step    31  estim_b = 0.41 batch_limit =  81173
+Step    34  estim_b = 0.46 batch_limit =  84394
+Step    37  estim_b = 0.51 batch_limit =  93133
+Step    39  estim_b = 0.55 batch_limit =  96801
+Step    41  estim_b = 0.59 batch_limit =  97976
+Step    43  estim_b = 0.64 batch_limit = 101158
+Step    45  estim_b = 0.66 batch_limit = 107847
+Step    47  estim_b = 0.69 batch_limit = 112044
+Step    49  estim_b = 0.74 batch_limit = 112747
+Step    51  estim_b = 0.76 batch_limit = 119458
+Step    53  estim_b = 0.82 batch_limit = 119675
+Step    55  estim_b = 0.86 batch_limit = 122897
+Step    57  estim_b = 0.90 batch_limit = 126126
+Step    59  estim_b = 0.94 batch_limit = 129360
+Step    61  estim_b = 0.98 batch_limit = 132601
+Step    63  estim_b = 1.03 batch_limit = 132847
+Step    65  estim_b = 1.07 batch_limit = 138598
+Step    67  estim_b = 1.13 batch_limit = 138354
+Step    69  estim_b = 1.18 batch_limit = 143615
+Step    71  estim_b = 1.22 batch_limit = 143881
+Step    73  estim_b = 1.26 batch_limit = 149652
+Step    75  estim_b = 1.31 batch_limit = 149428
+Step    77  estim_b = 1.35 batch_limit = 155210
+Step    78  estim_b = 1.36 batch_limit = 156853
+Step    79  estim_b = 1.39 batch_limit = 155497
+Step    81  estim_b = 1.42 batch_limit = 161289
+Step    83  estim_b = 1.48 batch_limit = 158086
+Step    85  estim_b = 1.52 batch_limit = 163387
+Step    87  estim_b = 1.57 batch_limit = 165692
+Step    88  estim_b = 1.59 batch_limit = 169846
+Step    90  estim_b = 1.63 batch_limit = 170159
+Step    91  estim_b = 1.65 batch_limit = 171317
+Step    93  estim_b = 1.70 batch_limit = 173636
+Step    94  estim_b = 1.72 batch_limit = 174797
+Step    96  estim_b = 1.76 batch_limit = 177623
+Step    98  estim_b = 1.78 batch_limit = 183455
+Step    99  estim_b = 1.80 batch_limit = 182122
+Step   100  estim_b = 1.82 batch_limit = 183291
+Step   102  estim_b = 1.88 batch_limit = 185130
+Step   103  estim_b = 1.91 batch_limit = 183300
+Step   104  estim_b = 1.93 batch_limit = 186972
+Step   106  estim_b = 1.98 batch_limit = 186317
+Step   107  estim_b = 2.01 batch_limit = 186991
+Step   108  estim_b = 2.03 batch_limit = 190665
+Step   110  estim_b = 2.07 batch_limit = 193017
+Step   111  estim_b = 2.10 batch_limit = 191194
+Step   112  estim_b = 2.12 batch_limit = 194872
+Step   114  estim_b = 2.16 batch_limit = 197231
+Step   115  estim_b = 2.19 batch_limit = 192411
+Step   117  estim_b = 2.23 batch_limit = 199774
+Step   118  estim_b = 2.25 batch_limit = 200957
+Step   119  estim_b = 2.27 batch_limit = 202141
+Step   120  estim_b = 2.29 batch_limit = 200326
+Step   121  estim_b = 2.32 batch_limit = 201011
+Step   122  estim_b = 2.34 batch_limit = 204697
+Step   123  estim_b = 2.35 batch_limit = 205884
+Step   124  estim_b = 2.38 batch_limit = 204071
+Step   125  estim_b = 2.41 batch_limit = 204759
+Step   126  estim_b = 2.42 batch_limit = 208448
+Step   127  estim_b = 2.43 batch_limit = 212639
+Step   128  estim_b = 2.44 batch_limit = 211330
+Step   130  estim_b = 2.47 batch_limit = 211217
+Step   131  estim_b = 2.49 batch_limit = 214911
+Step   132  estim_b = 2.50 batch_limit = 216107
+Step   133  estim_b = 2.52 batch_limit = 217303
+Step   134  estim_b = 2.55 batch_limit = 212500
+Step   135  estim_b = 2.58 batch_limit = 215697
+Step   136  estim_b = 2.60 batch_limit = 216394
+Step   137  estim_b = 2.61 batch_limit = 223093
+Step   138  estim_b = 2.63 batch_limit = 218793
+Step   139  estim_b = 2.64 batch_limit = 222493
+Step   140  estim_b = 2.66 batch_limit = 223695
+Step   141  estim_b = 2.68 batch_limit = 221897
+Step   142  estim_b = 2.70 batch_limit = 222599
+Step   143  estim_b = 2.73 batch_limit = 223302
+Step   144  estim_b = 2.76 batch_limit = 221005
+Step   145  estim_b = 2.78 batch_limit = 224209
+Step   146  estim_b = 2.81 batch_limit = 224913
+Step   147  estim_b = 2.83 batch_limit = 225617
+Step   148  estim_b = 2.85 batch_limit = 226322
+Step   149  estim_b = 2.88 batch_limit = 224027
+Step   150  estim_b = 2.89 batch_limit = 230233
+Step   151  estim_b = 2.90 batch_limit = 231440
+Step   152  estim_b = 2.92 batch_limit = 229648
+Step   153  estim_b = 2.95 batch_limit = 227355
+Step   154  estim_b = 2.98 batch_limit = 227563
+Step   155  estim_b = 3.00 batch_limit = 230771
+Step   156  estim_b = 3.02 batch_limit = 231479
+Step   157  estim_b = 3.06 batch_limit = 226187
+Step   158  estim_b = 3.09 batch_limit = 228895
+Step   159  estim_b = 3.11 batch_limit = 232104
+Step   160  estim_b = 3.13 batch_limit = 232813
+Step   161  estim_b = 3.15 batch_limit = 233522
+Step   162  estim_b = 3.17 batch_limit = 234232
+Step   163  estim_b = 3.19 batch_limit = 234943
+Step   164  estim_b = 3.21 batch_limit = 235654
+Step   165  estim_b = 3.22 batch_limit = 236365
+Step   166  estim_b = 3.24 batch_limit = 237077
+Step   167  estim_b = 3.26 batch_limit = 237790
+Step   168  estim_b = 3.29 batch_limit = 235502
+Step   169  estim_b = 3.30 batch_limit = 238715
+Step   170  estim_b = 3.32 batch_limit = 239429
+Step   171  estim_b = 3.34 batch_limit = 240143
+Step   172  estim_b = 3.36 batch_limit = 237857
+Step   173  estim_b = 3.38 batch_limit = 241071
+Step   174  estim_b = 3.40 batch_limit = 241786
+Step   175  estim_b = 3.42 batch_limit = 239501
+Step   176  estim_b = 3.43 batch_limit = 245717
+Step   177  estim_b = 3.45 batch_limit = 240933
+Step   178  estim_b = 3.47 batch_limit = 244150
+Step   179  estim_b = 3.49 batch_limit = 241866
+Step   180  estim_b = 3.52 batch_limit = 242083
+Step   181  estim_b = 3.53 batch_limit = 245300
+Step   182  estim_b = 3.54 batch_limit = 249018
+Step   183  estim_b = 3.55 batch_limit = 247236
+Step   184  estim_b = 3.57 batch_limit = 247955
+Step   185  estim_b = 3.58 batch_limit = 248675
+Step   186  estim_b = 3.60 batch_limit = 249395
+Step   187  estim_b = 3.61 batch_limit = 250115
+Step   188  estim_b = 3.62 batch_limit = 250836
+Step   189  estim_b = 3.66 batch_limit = 245557
+Step   190  estim_b = 3.68 batch_limit = 248277
+Step   191  estim_b = 3.70 batch_limit = 248498
+Step   192  estim_b = 3.73 batch_limit = 248718
+Step   193  estim_b = 3.74 batch_limit = 251939
+Step   194  estim_b = 3.76 batch_limit = 249660
+Step   195  estim_b = 3.78 batch_limit = 252882
+Step   196  estim_b = 3.78 batch_limit = 256604
+Step   197  estim_b = 3.79 batch_limit = 254827
+Step   198  estim_b = 3.81 batch_limit = 252550
+Step   199  estim_b = 3.81 batch_limit = 258774
+Step   200  estim_b = 3.83 batch_limit = 256999
+Step   201  estim_b = 3.85 batch_limit = 254723
+Step   202  estim_b = 3.87 batch_limit = 254948
+Step   203  estim_b = 3.87 batch_limit = 261173
+Step   204  estim_b = 3.89 batch_limit = 256399
+Step   205  estim_b = 3.91 batch_limit = 256624
+Step   206  estim_b = 3.93 batch_limit = 256850
+Step   207  estim_b = 3.94 batch_limit = 260076
+Step   208  estim_b = 3.96 batch_limit = 257802
+Step   209  estim_b = 3.98 batch_limit = 261028
+Step   210  estim_b = 4.00 batch_limit = 258755
+Step   211  estim_b = 4.01 batch_limit = 261982
+Step   212  estim_b = 4.03 batch_limit = 259709
+Step   213  estim_b = 4.05 batch_limit = 259936
+Step   214  estim_b = 4.05 batch_limit = 263163
+Step   215  estim_b = 4.06 batch_limit = 263891
+Step   216  estim_b = 4.08 batch_limit = 261619
+Step   217  estim_b = 4.10 batch_limit = 261847
+Step   218  estim_b = 4.11 batch_limit = 265076
+Step   219  estim_b = 4.12 batch_limit = 265805
+Step   220  estim_b = 4.13 batch_limit = 266534
+Step   221  estim_b = 4.15 batch_limit = 264264
+Step   222  estim_b = 4.16 batch_limit = 267494
+Step   223  estim_b = 4.18 batch_limit = 265224
+Step   224  estim_b = 4.19 batch_limit = 265454
+Step   225  estim_b = 4.20 batch_limit = 268684
+Step   226  estim_b = 4.21 batch_limit = 269415
+Step   227  estim_b = 4.23 batch_limit = 267146
+Step   228  estim_b = 4.24 batch_limit = 270378
+Step   229  estim_b = 4.25 batch_limit = 268109
+Step   230  estim_b = 4.26 batch_limit = 271341
+Step   231  estim_b = 4.28 batch_limit = 269073
+Step   232  estim_b = 4.28 batch_limit = 272306
+Step   233  estim_b = 4.31 batch_limit = 267038
+Step   234  estim_b = 4.33 batch_limit = 269770
+Step   235  estim_b = 4.35 batch_limit = 270002
+Step   236  estim_b = 4.35 batch_limit = 273234
+Step   237  estim_b = 4.37 batch_limit = 270967
+Step   238  estim_b = 4.39 batch_limit = 268199
+Step   239  estim_b = 4.41 batch_limit = 270931
+Step   240  estim_b = 4.43 batch_limit = 271163
+Step   241  estim_b = 4.45 batch_limit = 268394
+Step   242  estim_b = 4.47 batch_limit = 271126
+Step   243  estim_b = 4.47 batch_limit = 274358
+Step   244  estim_b = 4.49 batch_limit = 272090
+Step   245  estim_b = 4.49 batch_limit = 275322
+Step   246  estim_b = 4.50 batch_limit = 276055
+Step   247  estim_b = 4.51 batch_limit = 273788
+Step   248  estim_b = 4.54 batch_limit = 271021
+Step   249  estim_b = 4.55 batch_limit = 273753
+Step   250  estim_b = 4.57 batch_limit = 273986
+Step   251  estim_b = 4.57 batch_limit = 277219
+Step   252  estim_b = 4.58 batch_limit = 277952
+Step   253  estim_b = 4.59 batch_limit = 275686
+Step   254  estim_b = 4.61 batch_limit = 272919
+Step   255  estim_b = 4.63 batch_limit = 275652
+Step   256  estim_b = 4.64 batch_limit = 275885
+Step   257  estim_b = 4.66 batch_limit = 276118
+Step   258  estim_b = 4.67 batch_limit = 276351
+Step   259  estim_b = 4.69 batch_limit = 273583
+Step   260  estim_b = 4.70 batch_limit = 279316
+Step   261  estim_b = 4.72 batch_limit = 274049
+Step   262  estim_b = 4.73 batch_limit = 276781
+Step   263  estim_b = 4.74 batch_limit = 277014
+Step   264  estim_b = 4.76 batch_limit = 277246
+Step   265  estim_b = 4.77 batch_limit = 277479
+Step   266  estim_b = 4.79 batch_limit = 274711
+Step   267  estim_b = 4.79 batch_limit = 280443
+Step   268  estim_b = 4.80 batch_limit = 281176
+Step   269  estim_b = 4.80 batch_limit = 281910
+Step   270  estim_b = 4.81 batch_limit = 279643
+Step   271  estim_b = 4.83 batch_limit = 276876
+Step   272  estim_b = 4.83 batch_limit = 282610
+Step   273  estim_b = 4.83 batch_limit = 283344
+Step   274  estim_b = 4.86 batch_limit = 278077
+Step   275  estim_b = 4.86 batch_limit = 283811
+Step   276  estim_b = 4.88 batch_limit = 278545
+Step   277  estim_b = 4.89 batch_limit = 281278
+Step   278  estim_b = 4.90 batch_limit = 281512
+Step   279  estim_b = 4.90 batch_limit = 284746
+Step   280  estim_b = 4.90 batch_limit = 285480
+Step   281  estim_b = 4.91 batch_limit = 283215
+Step   282  estim_b = 4.92 batch_limit = 286450
+Step   283  estim_b = 4.92 batch_limit = 287185
+Step   284  estim_b = 4.93 batch_limit = 284921
+Step   285  estim_b = 4.94 batch_limit = 285156
+Step   286  estim_b = 4.95 batch_limit = 285392
+Step   287  estim_b = 4.96 batch_limit = 285627
+Step   288  estim_b = 4.96 batch_limit = 288863
+Step   289  estim_b = 4.98 batch_limit = 283599
+Step   290  estim_b = 4.99 batch_limit = 286334
+Step   291  estim_b = 4.99 batch_limit = 289570
+Step   292  estim_b = 5.00 batch_limit = 287306
+Step   293  estim_b = 5.01 batch_limit = 287542
+Step   294  estim_b = 5.03 batch_limit = 284778
+Step   295  estim_b = 5.04 batch_limit = 287513
+Step   296  estim_b = 5.05 batch_limit = 287749
+Step   297  estim_b = 5.06 batch_limit = 287984
+Step   298  estim_b = 5.07 batch_limit = 288220
+Step   299  estim_b = 5.08 batch_limit = 288455
+Step   300  estim_b = 5.08 batch_limit = 291691
+Step   301  estim_b = 5.08 batch_limit = 292428
+Step   302  estim_b = 5.10 batch_limit = 287164
+Step   303  estim_b = 5.09 batch_limit = 292900
+Step   304  estim_b = 5.09 batch_limit = 293637
+Step   305  estim_b = 5.09 batch_limit = 294375
+Step   306  estim_b = 5.11 batch_limit = 289112
+Step   307  estim_b = 5.12 batch_limit = 291849
+Step   308  estim_b = 5.14 batch_limit = 289085
+Step   309  estim_b = 5.14 batch_limit = 294822
+Step   310  estim_b = 5.16 batch_limit = 289559
+Step   311  estim_b = 5.16 batch_limit = 292295
+Step   312  estim_b = 5.16 batch_limit = 295532
+Step   313  estim_b = 5.17 batch_limit = 293269
+Step   314  estim_b = 5.18 batch_limit = 293506
+Step   315  estim_b = 5.18 batch_limit = 296744
+Step   316  estim_b = 5.18 batch_limit = 297482
+Step   317  estim_b = 5.17 batch_limit = 298220
+Step   318  estim_b = 5.19 batch_limit = 292958
+Step   319  estim_b = 5.21 batch_limit = 292696
+Step   320  estim_b = 5.21 batch_limit = 298434
+Step   321  estim_b = 5.21 batch_limit = 299172
+Step   322  estim_b = 5.21 batch_limit = 296911
+Step   323  estim_b = 5.22 batch_limit = 297149
+Step   324  estim_b = 5.23 batch_limit = 297388
+Step   325  estim_b = 5.26 batch_limit = 291625
+Step   326  estim_b = 5.27 batch_limit = 296863
+Step   327  estim_b = 5.28 batch_limit = 294100
+Step   328  estim_b = 5.29 batch_limit = 296837
+Step   329  estim_b = 5.30 batch_limit = 297074
+Step   330  estim_b = 5.30 batch_limit = 297311
+Step   331  estim_b = 5.30 batch_limit = 300548
+Step   332  estim_b = 5.31 batch_limit = 298286
+Step   333  estim_b = 5.30 batch_limit = 301524
+Step   334  estim_b = 5.32 batch_limit = 296261
+Step   335  estim_b = 5.33 batch_limit = 298999
+Step   336  estim_b = 5.35 batch_limit = 296236
+Step   337  estim_b = 5.35 batch_limit = 298973
+Step   338  estim_b = 5.37 batch_limit = 296209
+Step   339  estim_b = 5.37 batch_limit = 298946
+Step   340  estim_b = 5.38 batch_limit = 299182
+Step   341  estim_b = 5.41 batch_limit = 293418
+Step   342  estim_b = 5.42 batch_limit = 295653
+Step   343  estim_b = 5.43 batch_limit = 298388
+Step   344  estim_b = 5.43 batch_limit = 298623
+Step   345  estim_b = 5.44 batch_limit = 298858
+Step   346  estim_b = 5.46 batch_limit = 296092
+Step   347  estim_b = 5.47 batch_limit = 295826
+Step   348  estim_b = 5.48 batch_limit = 298560
+Step   349  estim_b = 5.49 batch_limit = 295794
+Step   350  estim_b = 5.50 batch_limit = 298527
+Step   351  estim_b = 5.50 batch_limit = 298761
+Step   352  estim_b = 5.52 batch_limit = 295994
+Step   353  estim_b = 5.53 batch_limit = 295726
+Step   354  estim_b = 5.53 batch_limit = 301459
+Step   355  estim_b = 5.53 batch_limit = 299192
+Step   356  estim_b = 5.54 batch_limit = 299425
+Step   357  estim_b = 5.54 batch_limit = 299658
+Step   358  estim_b = 5.55 batch_limit = 299891
+Step   359  estim_b = 5.55 batch_limit = 300124
+Step   360  estim_b = 5.56 batch_limit = 297357
+Step   361  estim_b = 5.56 batch_limit = 303090
+Step   362  estim_b = 5.57 batch_limit = 297822
+Step   363  estim_b = 5.58 batch_limit = 300555
+Step   364  estim_b = 5.58 batch_limit = 300787
+Step   365  estim_b = 5.58 batch_limit = 304020
+Step   366  estim_b = 5.58 batch_limit = 301753
+Step   367  estim_b = 5.60 batch_limit = 295985
+Step   368  estim_b = 5.63 batch_limit = 295216
+Step   369  estim_b = 5.63 batch_limit = 300447
+Step   370  estim_b = 5.63 batch_limit = 303679
+Step   371  estim_b = 5.62 batch_limit = 304411
+Step   372  estim_b = 5.63 batch_limit = 299142
+Step   373  estim_b = 5.64 batch_limit = 301874
+Step   374  estim_b = 5.64 batch_limit = 302105
+Step   375  estim_b = 5.65 batch_limit = 299336
+Step   376  estim_b = 5.65 batch_limit = 305068
+Step   377  estim_b = 5.64 batch_limit = 305800
+Step   378  estim_b = 5.64 batch_limit = 303532
+Step   379  estim_b = 5.65 batch_limit = 303764
+Step   380  estim_b = 5.67 batch_limit = 297995
+Step   381  estim_b = 5.68 batch_limit = 300225
+Step   382  estim_b = 5.69 batch_limit = 302956
+Step   383  estim_b = 5.69 batch_limit = 303186
+Step   384  estim_b = 5.70 batch_limit = 300416
+Step   385  estim_b = 5.71 batch_limit = 303146
+Step   386  estim_b = 5.72 batch_limit = 300376
+Step   387  estim_b = 5.73 batch_limit = 300105
+Step   388  estim_b = 5.75 batch_limit = 299833
+Step   389  estim_b = 5.75 batch_limit = 302562
+Step   390  estim_b = 5.75 batch_limit = 302790
+Step   391  estim_b = 5.78 batch_limit = 294017
+Step   392  estim_b = 5.78 batch_limit = 304745
+Step   393  estim_b = 5.79 batch_limit = 299472
+Step   394  estim_b = 5.79 batch_limit = 302199
+Step   395  estim_b = 5.80 batch_limit = 299425
+Step   396  estim_b = 5.79 batch_limit = 305152
+Step   397  estim_b = 5.81 batch_limit = 299879
+Step   398  estim_b = 5.82 batch_limit = 299605
+Step   399  estim_b = 5.82 batch_limit = 302331
+Step   400  estim_b = 5.83 batch_limit = 299556
+Step   401  estim_b = 5.83 batch_limit = 302282
+Step   402  estim_b = 5.83 batch_limit = 302507
+Step   403  estim_b = 5.84 batch_limit = 302733
+Step   404  estim_b = 5.85 batch_limit = 299958
+Step   405  estim_b = 5.85 batch_limit = 302683
+Step   406  estim_b = 5.86 batch_limit = 299907
+Step   407  estim_b = 5.86 batch_limit = 302632
+Step   408  estim_b = 5.86 batch_limit = 302856
+Step   409  estim_b = 5.88 batch_limit = 300080
+Step   410  estim_b = 5.89 batch_limit = 299804
+Step   411  estim_b = 5.90 batch_limit = 299527
+Step   412  estim_b = 5.90 batch_limit = 302250
+Step   413  estim_b = 5.90 batch_limit = 302473
+Step   414  estim_b = 5.90 batch_limit = 302696
+Step   415  estim_b = 5.91 batch_limit = 299918
+Step   416  estim_b = 5.92 batch_limit = 299640
+Step   417  estim_b = 5.92 batch_limit = 302362
+Step   418  estim_b = 5.91 batch_limit = 305585
+Step   419  estim_b = 5.91 batch_limit = 303307
+Step   420  estim_b = 5.93 batch_limit = 300529
+Step   421  estim_b = 5.92 batch_limit = 306252
+Step   422  estim_b = 5.93 batch_limit = 300974
+Step   423  estim_b = 5.93 batch_limit = 303696
+Step   424  estim_b = 5.94 batch_limit = 300917
+Step   425  estim_b = 5.93 batch_limit = 306639
+Step   426  estim_b = 5.93 batch_limit = 304361
+Step   427  estim_b = 5.92 batch_limit = 307584
+Step   428  estim_b = 5.92 batch_limit = 305306
+Step   429  estim_b = 5.91 batch_limit = 308529
+Step   430  estim_b = 5.91 batch_limit = 306252
+Step   431  estim_b = 5.90 batch_limit = 309476
+Step   432  estim_b = 5.92 batch_limit = 304199
+Step   433  estim_b = 5.93 batch_limit = 303921
+Step   434  estim_b = 5.93 batch_limit = 306644
+Step   435  estim_b = 5.92 batch_limit = 309867
+Step   436  estim_b = 5.92 batch_limit = 307590
+Step   437  estim_b = 5.92 batch_limit = 307813
+Step   438  estim_b = 5.92 batch_limit = 308036
+Step   439  estim_b = 5.94 batch_limit = 302258
+Step   440  estim_b = 5.95 batch_limit = 304479
+Step   441  estim_b = 5.94 batch_limit = 310201
+Step   442  estim_b = 5.94 batch_limit = 307923
+**************************************************
+neighbors_num |  layer  0  |  layer  1  |  layer  2  |  layer  3  |  layer  4
+        0     |[92m         0[39m  |[92m         0[39m  |[92m         0[39m  |[92m         0[39m  |[92m         0
+        1     |[92m     10414[39m  |[92m      6651[39m  |[92m      2242[39m  |[92m       131[39m  |[92m         9
+        2     |[92m      1168[39m  |[92m       957[39m  |[92m       589[39m  |[92m       204[39m  |[92m        39
+        3     |[92m      2837[39m  |[92m      1583[39m  |[92m       845[39m  |[92m       314[39m  |[92m        89
+        4     |[92m      4869[39m  |[92m      2950[39m  |[92m      1424[39m  |[92m       584[39m  |[92m        91
+        5     |[92m      9449[39m  |[92m      5081[39m  |[92m      2120[39m  |[92m       766[39m  |[92m       148
+        6     |[92m     14602[39m  |[92m      7642[39m  |[92m      3185[39m  |[92m      1142[39m  |[92m       235
+        7     |[92m     23002[39m  |[92m     11910[39m  |[92m      4816[39m  |[92m      1497[39m  |[92m       244
+        8     |[92m     40945[39m  |[92m     17581[39m  |[92m      6771[39m  |[92m      2102[39m  |[92m       237
+        9     |[92m     76367[39m  |[92m     24890[39m  |[92m      9236[39m  |[92m      2589[39m  |[92m       342
+       10     |[92m    182089[39m  |[92m     36671[39m  |[92m     13209[39m  |[92m      3555[39m  |[92m       560
+       11     |[92m    436106[39m  |[92m     61406[39m  |[92m     20805[39m  |[92m      5592[39m  |[92m      1084
+       12     |[92m    630181[39m  |[92m    107310[39m  |[92m     35201[39m  |[92m      9490[39m  |[92m      2005
+       13     |[92m    897965[39m  |[92m    178675[39m  |[92m     53827[39m  |[92m     14170[39m  |[92m      3049
+       14     |[92m    866443[39m  |[92m    260210[39m  |[92m     77803[39m  |[92m     20894[39m  |[92m      4791
+       15     |[92m    978859[39m  |[92m    349605[39m  |[92m    106183[39m  |[92m     28219[39m  |[92m      6822
+       16     |[92m   1308503[39m  |[92m    421290[39m  |[92m    130504[39m  |[92m     34581[39m  |[92m      8425
+       17     |[92m   2070817[39m  |[92m    458300[39m  |[92m    143804[39m  |[92m     38540[39m  |[92m     10011
+       18     |[92m   4089220[39m  |[92m    493678[39m  |[92m    153604[39m  |[92m     41924[39m  |[92m     11436
+       19     |[92m   7798937[39m  |[92m    546868[39m  |[92m    162206[39m  |[92m     45093[39m  |[92m     12752
+       20     |[92m  14443537[39m  |[92m    746862[39m  |[92m    186841[39m  |[92m     49449[39m  |[92m     14120
+       21     |[92m  28795888[39m  |[92m   1545978[39m  |[92m    307548[39m  |[92m     59993[39m  |[92m     15691
+       22     |[92m  10619246[39m  |[92m   1524651[39m  |[92m    287497[39m  |[92m     62515[39m  |[92m     16562
+       23     |[92m   6998224[39m  |[92m   2280449[39m  |[92m    377310[39m  |[92m     71354[39m  |[92m     17551
+       24     |[92m   6727290[39m  |[92m   3152706[39m  |[92m    499560[39m  |[92m     83551[39m  |[92m     18493
+       25     |[92m   6305469[39m  |[92m   3680097[39m  |[92m    602181[39m  |[92m     95835[39m  |[92m     19329
+       26     |[92m   5354063[39m  |[92m   3650586[39m  |[92m    648486[39m  |[92m    104830[39m  |[92m     20139
+       27     |[92m   3901187[39m  |[92m   3141548[39m  |[92m    630605[39m  |[92m    109848[39m  |[92m     19970
+       28     |[92m   3064277[39m  |[92m   2413049[39m  |[92m    556661[39m  |[92m    109299[39m  |[92m     20272
+       29     |[91m   2420375[39m  |[92m   1724556[39m  |[92m    457296[39m  |[92m    102501[39m  |[92m     20142
+       30     |[91m   1874399[39m  |[92m   1226011[39m  |[92m    364761[39m  |[92m     94444[39m  |[92m     19440
+       31     |[91m   1407156[39m  |[92m    896861[39m  |[92m    292698[39m  |[92m     85980[39m  |[92m     19299
+       32     |[91m   1023972[39m  |[92m    690963[39m  |[92m    239746[39m  |[92m     77889[39m  |[92m     18714
+       33     |[91m    778523[39m  |[92m    556967[39m  |[92m    199715[39m  |[92m     72335[39m  |[92m     17863
+       34     |[91m    604470[39m  |[91m    460667[39m  |[92m    173326[39m  |[92m     66889[39m  |[92m     17197
+       35     |[91m    473119[39m  |[91m    389693[39m  |[92m    152606[39m  |[92m     62330[39m  |[92m     16568
+       36     |[91m    377867[39m  |[91m    330937[39m  |[92m    139899[39m  |[92m     59145[39m  |[92m     15545
+       37     |[91m    302606[39m  |[91m    284438[39m  |[92m    130456[39m  |[92m     55316[39m  |[92m     14626
+       38     |[91m    244197[39m  |[91m    246459[39m  |[92m    127280[39m  |[92m     52210[39m  |[92m     13806
+       39     |[91m    197247[39m  |[91m    214260[39m  |[92m    126953[39m  |[92m     48868[39m  |[92m     12953
+       40     |[91m    158963[39m  |[91m    184557[39m  |[92m    127919[39m  |[92m     44991[39m  |[92m     12010
+       41     |[91m    127487[39m  |[91m    158300[39m  |[92m    130858[39m  |[92m     40853[39m  |[92m     11349
+       42     |[91m    102187[39m  |[91m    134609[39m  |[91m    130870[39m  |[92m     37429[39m  |[92m     10615
+       43     |[91m     77385[39m  |[91m    110449[39m  |[91m    125374[39m  |[91m     32939[39m  |[92m      9595
+       44     |[91m     59456[39m  |[91m     87405[39m  |[91m    114823[39m  |[91m     28960[39m  |[92m      8852
+       45     |[91m     45717[39m  |[91m     66328[39m  |[91m     98091[39m  |[91m     24990[39m  |[91m      7901
+       46     |[91m     35074[39m  |[91m     47711[39m  |[91m     78499[39m  |[91m     21027[39m  |[91m      7091
+       47     |[91m     26215[39m  |[91m     33064[39m  |[91m     57839[39m  |[91m     17666[39m  |[91m      6190
+       48     |[91m     19673[39m  |[91m     22202[39m  |[91m     41569[39m  |[91m     13979[39m  |[91m      5137
+       49     |[91m     14862[39m  |[91m     14924[39m  |[91m     28540[39m  |[91m     11226[39m  |[91m      4443
+       50     |[91m     10787[39m  |[91m     10254[39m  |[91m     19775[39m  |[91m      9119[39m  |[91m      3623
+       51     |[91m      8173[39m  |[91m      6891[39m  |[91m     13115[39m  |[91m      7114[39m  |[91m      2937
+       52     |[91m      5877[39m  |[91m      4918[39m  |[91m      8946[39m  |[91m      5560[39m  |[91m      2413
+       53     |[91m      4167[39m  |[91m      3440[39m  |[91m      6274[39m  |[91m      4387[39m  |[91m      1968
+       54     |[91m      3005[39m  |[91m      2430[39m  |[91m      4581[39m  |[91m      3346[39m  |[91m      1511
+       55     |[91m      2103[39m  |[91m      1696[39m  |[91m      3302[39m  |[91m      2649[39m  |[91m      1199
+       56     |[91m      1481[39m  |[91m      1216[39m  |[91m      2471[39m  |[91m      1993[39m  |[91m       934
+       57     |[91m      1101[39m  |[91m       849[39m  |[91m      1688[39m  |[91m      1512[39m  |[91m       676
+       58     |[91m       703[39m  |[91m       544[39m  |[91m      1256[39m  |[91m      1072[39m  |[91m       485
+       59     |[91m       539[39m  |[91m       389[39m  |[91m       824[39m  |[91m       687[39m  |[91m       316
+       60     |[91m       401[39m  |[91m       256[39m  |[91m       586[39m  |[91m       470[39m  |[91m       223
+       61     |[91m       317[39m  |[91m       140[39m  |[91m       404[39m  |[91m       358[39m  |[91m       151
+       62     |[91m       211[39m  |[91m       107[39m  |[91m       246[39m  |[91m       255[39m  |[91m       106
+       63     |[91m       121[39m  |[91m        64[39m  |[91m       164[39m  |[91m       143[39m  |[91m        52
+       64     |[91m        87[39m  |[91m        33[39m  |[91m       118[39m  |[91m        86[39m  |[91m        40
+       65     |[91m        70[39m  |[91m        24[39m  |[91m        56[39m  |[91m        62[39m  |[91m        24
+       66     |[91m        41[39m  |[91m         8[39m  |[91m        38[39m  |[91m        46[39m  |[91m        14
+       67     |[91m        23[39m  |[91m         4[39m  |[91m        23[39m  |[91m        19[39m  |[91m         4
+       68     |[91m        21[39m  |[91m         4[39m  |[91m        12[39m  |[91m        15[39m  |[91m         5
+       69     |[91m        15[39m  |[91m         0[39m  |[91m        12[39m  |[91m         7[39m  |[91m         2
+       70     |[91m        12[39m  |[91m         2[39m  |[91m         2[39m  |[91m         2[39m  |[91m         0
+       71     |[91m         4[39m  |[91m         0[39m  |[91m         2[39m  |[91m         2[39m  |[91m         0
+       72     |[91m         4[39m  |[91m         0[39m  |[91m         2[39m  |[91m         3[39m  |[91m         0
+       73     |[91m         2[39m  |[91m         0[39m  |[91m         1[39m  |[91m         0[39m  |[91m         0
+       74     |[91m         1[39m  |[91m         0[39m  |[91m         1[39m  |[91m         0[39m  |[91m         0
+       75     |[91m         1[39m  |[91m         0[39m  |[91m         0[39m  |[91m         0[39m  |[91m         0
+       76     |[91m         0[39m  |[91m         0[39m  |[91m         1[39m  |[91m         0[39m  |[91m         0
+       77     |[91m         2[39m  |[91m         0[39m  |[91m         0[39m  |[91m         0[39m  |[91m         0
+**************************************************
+chosen neighbors limits:  [28 33 41 42 44]
+Calibration done in 550.6s
+Starting Calibration (use verbose=True for more details)
+Previous calibration found:
+Check batch limit dictionary
+[92m"random_2.400_0.030_6": 305145
+Check neighbors limit dictionary
+[92m"0.030_0.075": 28
+[92m"0.060_0.150": 33
+[92m"0.120_0.300": 41
+[92m"0.240_0.600": 42
+[92m"0.480_1.200": 44
+Calibration done in 0.0s
+Model Preparation
+*****************
+Done in 0.6s
+Start training
+**************
+Backend QtAgg is interactive backend. Turning interactive mode on.
+e000-i0000 => L=2.572 acc= 10% / t(ms): 2104.9 1742421.3 486.7)
+e000-i0001 => L=2.544 acc= 19% / t(ms): 1644.4 247.4 441.8)
+e000-i0002 => L=2.508 acc= 28% / t(ms): 1653.2 249.9 444.6)
+e000-i0003 => L=2.442 acc= 40% / t(ms): 1640.4 247.4 444.6)
+e000-i0004 => L=2.411 acc= 43% / t(ms): 1642.7 248.9 449.4)

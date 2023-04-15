@@ -323,17 +323,36 @@ class KPFCNN(nn.Module):
 
         # Get input features
         x = batch.features.clone().detach()
-
+        # for j in range(len(batch.points)):               
+        #     max = torch.max(batch.neighbors[j])
+        #     shape = batch.points[j].shape[0]
+        #     if max > shape:
+        #         neighbor_shape = batch.neighbors[j].shape
+        #         max_values, max_indices = torch.max(batch.neighbors[j], dim=0)
+        #         print(neighbor_shape)
+        #         print(max_values)
+        #         print(max_indices)
+        #         print(str(j) + " wrong_dim in net encoder: neighb_inds=" + str(max.item()) + " shape= " + str(shape))
         # Loop over consecutive blocks
         skip_x = []
         for block_i, block_op in enumerate(self.encoder_blocks):
             if block_i in self.encoder_skips:
                 skip_x.append(x)
+            # for j in range(len(batch.points)):               
+            #     max = torch.max(batch.neighbors[j])
+            #     shape = batch.points[j].shape[0]
+            #     if max > shape:
+            #         print("wrong_dim in net encoder: neighb_inds=" + str(max.item()) + " shape= " + str(shape))
             x = block_op(x, batch)
 
         for block_i, block_op in enumerate(self.decoder_blocks):
             if block_i in self.decoder_concats:
                 x = torch.cat([x, skip_x.pop()], dim=1)
+            # for j in range(len(batch.points)):               
+            #     max = torch.max(batch.neighbors[j])
+            #     shape = batch.points[j].shape[0]
+            #     if max > shape:
+            #         print("wrong_dim in net decoder: neighb_inds=" + str(max.item()) + " shape= " + str(shape))
             x = block_op(x, batch)
 
         # Head of network

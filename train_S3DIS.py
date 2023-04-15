@@ -52,10 +52,10 @@ class S3DISConfig(Config):
 
     # experiment name and run name
     exp_name = 'KPConv-Triplane'
-    run_name = 'KPConv_debug_cpu_1'
+    run_name = 'TriplaneConv_sin-encoding_32_S3DIS_descend-LoDs_run_1'
     
     # Convolution method 'KPConv' or 'TriplaneConv'
-    method = 'KPConv' 
+    method = 'TriplaneConv' 
 
     # Dataset name
     dataset = 'S3DIS'
@@ -67,7 +67,7 @@ class S3DISConfig(Config):
     dataset_task = ''
 
     # Number of CPU threads for the input pipeline
-    input_threads = 4
+    input_threads = 0
 
     #########################
     # Architecture definition
@@ -188,7 +188,7 @@ class S3DISConfig(Config):
     epoch_steps = 500
 
     # Number of validation examples per epoch
-    validation_size = 50
+    validation_size = 100
 
     # Number of epoch between each checkpoint
     checkpoint_gap = 50
@@ -305,6 +305,12 @@ if __name__ == '__main__':
     training_sampler.calibration(training_loader, verbose=True)
     test_sampler.calibration(test_loader, verbose=True)
 
+    # for batch in training_loader:
+    #     for j in range(5):               
+    #         max = torch.max(batch.neighbors[j])
+    #         shape = batch.points[j].shape[0]
+    #         if max > shape:
+    #             print("wrong_dim in loader: neighb_inds=" + str(max.item()) + " shape= " + str(shape))
     # Optional debug functions
     # debug_timing(training_dataset, training_loader)
     # debug_timing(test_dataset, test_loader)

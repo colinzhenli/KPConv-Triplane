@@ -341,6 +341,48 @@ class PointCloudDataset(Dataset):
         else:
             return neighbors
 
+    def bilinear_interpolation(self, res, points):
+        """
+        Performs bilinear interpolation of points with respect to a grid.
+
+        Parameters:
+            res: resolution of the grid
+            points (n, k, 2): A 3D numpy array representing the points to interpolate.
+
+        Returns:
+            indices (4, n, k, 2): A 4D numpy array representing the 2D indices of grid
+                for the four nearest points for each input point.
+            weights (4, n, k): A 3D numpy array representing the weights for each of
+                the four points.
+        """
+
+        points = points[np.newaxis, ...]
+        _, N, K, _ = points.shape
+
+        x = points[..., 0] * (res - 1)
+        y = points[..., 1] * (res - 1)
+
+        x1 = np.floor(np.clip(x, 0, res - 1 - 1e-5)).astype(int)
+        y1 = np.floor(np.clip(y, 0, res - 1 - 1e-5)).astype(int)
+
+        x2 = np.clip(x1 + 1, 0, res - 1).astype(int)
+        y2 = np.clip(y1 + 1, 0, res - 1).astype(int)
+
+        w1 = (x2 - x) * (y2 - y)
+        w2 = (x - x1) * (y2 - y)
+        w3 = (x2 - x) * (y - y1)
+        w4 = (x - x1) * (y - y1)
+
+        id1 = np.stack((y1, x1), axis=-1)
+        id2 = np.stack((y1, x2), axis=-1)
+        id3 = np.stack((y2, x1), axis=-1)
+        id4 = np.stack((y2, x2), axis=-1)
+
+        indices = np.stack((id1, id2, id3, id4), axis=1)
+        weights = np.stack((w1, w2, w3, w4), axis=0)
+
+        return indices[0], weights[:, 0, :, :]
+
     def classification_inputs(self,
                               stacked_points,
                               stacked_features,
@@ -462,6 +504,7 @@ class PointCloudDataset(Dataset):
 
         # Starting radius of convolutions
         r_normal = self.config.first_subsampling_dl * self.config.conv_radius
+        res = 512
 
         # Starting layer
         layer_blocks = []
@@ -469,6 +512,9 @@ class PointCloudDataset(Dataset):
         # Lists of inputs
         input_points = []
         input_neighbors = []
+        input_bilinear_indices = []
+        input_bilinear_weights = []
+        input_neighbors_radius = []
         input_pools = []
         input_upsamples = []
         input_stack_lengths = []
@@ -499,6 +545,11 @@ class PointCloudDataset(Dataset):
                 else:
                     r = r_normal
                 conv_i = batch_neighbors(stacked_points, stacked_points, stack_lengths, stack_lengths, r)
+                neighbor_r = r
+                # max = np.max(conv_i)
+                # shape = stacked_points.shape[0]
+                # if max > shape:
+                #         print("wrong_dim in block_i:" +str(block_i) + " neighb_inds=" + str(max.item()) + " shape= " + str(shape))
 
             else:
                 # This layer only perform pooling, no neighbors required
@@ -538,6 +589,18 @@ class PointCloudDataset(Dataset):
 
             # Reduce size of neighbors matrices by eliminating furthest point
             conv_i = self.big_neighborhood_filter(conv_i, len(input_points))
+            relative_coord = (np.concatenate((stacked_points, np.zeros_like(stacked_points[:1, :]) + 1e6), axis=0))[conv_i, :] - stacked_points[:, np.newaxis, :]
+
+            indices_0, weight_0 = self.bilinear_interpolation(res, relative_coord[:, :, [0, 1]]) # (4, n, k, 2), (4, n, k)
+            indices_1, weight_1 = self.bilinear_interpolation(res, relative_coord[:, :, [1, 2]]) # (4, n, k, 2), (4, n, k)
+            indices_2, weight_2 = self.bilinear_interpolation(res, relative_coord[:, :, [0, 2]]) # (4, n, k, 2), (4, n, k)
+
+            indices = np.stack((indices_0, indices_1, indices_2), axis=0) # 3, 4, n, k, 2
+            weight = np.stack((weight_0, weight_1, weight_2), axis=0) # 3, 4, n, k
+            # max = np.max(conv_i)
+            # shape = stacked_points.shape[0]
+            # if max > shape:
+            #         print("wrong_dim after filter: neighb_inds=" + str(max.item()) + " shape= " + str(shape))
             pool_i = self.big_neighborhood_filter(pool_i, len(input_points))
             if up_i.shape[0] > 0:
                 up_i = self.big_neighborhood_filter(up_i, len(input_points)+1)
@@ -545,6 +608,9 @@ class PointCloudDataset(Dataset):
             # Updating input lists
             input_points += [stacked_points]
             input_neighbors += [conv_i.astype(np.int64)]
+            input_bilinear_indices += [indices.astype(np.int64)]
+            input_bilinear_weights += [weight.astype(np.float32)]
+            input_neighbors_radius += [neighbor_r]
             input_pools += [pool_i.astype(np.int64)]
             input_upsamples += [up_i.astype(np.int64)]
             input_stack_lengths += [stack_lengths]
@@ -554,8 +620,9 @@ class PointCloudDataset(Dataset):
             stacked_points = pool_p
             stack_lengths = pool_b
 
-            # Update radius and reset blocks
+            # Update radius, resolution and reset blocks
             r_normal *= 2
+            res = res / 2
             layer_blocks = []
 
             # Stop when meeting a global pooling or upsampling
@@ -567,8 +634,13 @@ class PointCloudDataset(Dataset):
         ###############
 
         # list of network inputs
-        li = input_points + input_neighbors + input_pools + input_upsamples + input_stack_lengths
-        li += [stacked_features, labels]
+        # for j in range(5):               
+        #     max = np.max(input_neighbors[j])
+        #     shape = input_points[j].shape[0]
+        #     if max > shape:
+        #         print("wrong_dim : neighb_inds=" + str(max.item()) + " shape= " + str(shape))
+        li = input_points + input_neighbors + input_bilinear_indices + input_bilinear_weights + input_pools + input_upsamples + input_stack_lengths
+        li += [stacked_features, labels, np.array(input_neighbors_radius)]
 
         return li
 

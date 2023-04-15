@@ -1,0 +1,78 @@
+2023-04-13 02:18:22,592 INFO    StreamThr :900875 [internal.py:wandb_internal():87] W&B internal server running at pid: 900875, started at: 2023-04-13 02:18:22.591608
+2023-04-13 02:18:22,596 DEBUG   HandlerThread:900875 [handler.py:handle_request():144] handle_request: status
+2023-04-13 02:18:22,601 INFO    WriterThread:900875 [datastore.py:open_for_write():85] open: /home/zhenli/KPConv-Triplane/wandb/run-20230413_021822-p13mqtpc/run-p13mqtpc.wandb
+2023-04-13 02:18:22,602 DEBUG   SenderThread:900875 [sender.py:send():336] send: header
+2023-04-13 02:18:22,603 DEBUG   SenderThread:900875 [sender.py:send():336] send: run
+2023-04-13 02:18:22,943 DEBUG   HandlerThread:900875 [handler.py:handle_request():144] handle_request: check_version
+2023-04-13 02:18:22,948 INFO    SenderThread:900875 [dir_watcher.py:__init__():219] watching files in: /home/zhenli/KPConv-Triplane/wandb/run-20230413_021822-p13mqtpc/files
+2023-04-13 02:18:22,948 INFO    SenderThread:900875 [sender.py:_start_run_threads():1078] run started: p13mqtpc with start time 1681377502.58957
+2023-04-13 02:18:22,948 DEBUG   SenderThread:900875 [sender.py:send_request():363] send_request: summary_record
+2023-04-13 02:18:22,949 INFO    SenderThread:900875 [sender.py:_save_file():1332] saving file wandb-summary.json with policy end
+2023-04-13 02:18:22,950 DEBUG   SenderThread:900875 [sender.py:send_request():363] send_request: check_version
+2023-04-13 02:18:23,067 DEBUG   HandlerThread:900875 [handler.py:handle_request():144] handle_request: run_start
+2023-04-13 02:18:23,085 DEBUG   HandlerThread:900875 [system_info.py:__init__():31] System info init
+2023-04-13 02:18:23,085 DEBUG   HandlerThread:900875 [system_info.py:__init__():46] System info init done
+2023-04-13 02:18:23,085 INFO    HandlerThread:900875 [system_monitor.py:start():183] Starting system monitor
+2023-04-13 02:18:23,086 INFO    HandlerThread:900875 [system_monitor.py:probe():204] Collecting system info
+2023-04-13 02:18:23,086 INFO    SystemMonitor:900875 [system_monitor.py:_start():147] Starting system asset monitoring threads
+2023-04-13 02:18:23,088 INFO    SystemMonitor:900875 [interfaces.py:start():187] Started cpu monitoring
+2023-04-13 02:18:23,088 INFO    SystemMonitor:900875 [interfaces.py:start():187] Started disk monitoring
+2023-04-13 02:18:23,089 INFO    SystemMonitor:900875 [interfaces.py:start():187] Started gpu monitoring
+2023-04-13 02:18:23,090 INFO    SystemMonitor:900875 [interfaces.py:start():187] Started memory monitoring
+2023-04-13 02:18:23,091 INFO    SystemMonitor:900875 [interfaces.py:start():187] Started network monitoring
+2023-04-13 02:18:23,129 DEBUG   HandlerThread:900875 [system_info.py:probe():195] Probing system
+2023-04-13 02:18:23,133 DEBUG   HandlerThread:900875 [system_info.py:_probe_git():180] Probing git
+2023-04-13 02:18:23,141 DEBUG   HandlerThread:900875 [system_info.py:_probe_git():188] Probing git done
+2023-04-13 02:18:23,141 DEBUG   HandlerThread:900875 [system_info.py:probe():240] Probing system done
+2023-04-13 02:18:23,141 DEBUG   HandlerThread:900875 [system_monitor.py:probe():213] {'os': 'Linux-5.15.0-69-generic-x86_64-with-glibc2.31', 'python': '3.10.10', 'heartbeatAt': '2023-04-13T09:18:23.129951', 'startedAt': '2023-04-13T09:18:22.584235', 'docker': None, 'cuda': None, 'args': (), 'state': 'running', 'program': 'train_S3DIS.py', 'codePath': 'train_S3DIS.py', 'git': {'remote': 'git@github.com:Kaola-2115/KPConv-Triplane.git', 'commit': '49fc429352a9a7442a66f788a14c82a09eaf9f6a'}, 'email': 'zla247@sfu.ca', 'root': '/home/zhenli/KPConv-Triplane', 'host': 'pc', 'username': 'zhenli', 'executable': '/home/zhenli/anaconda3/envs/cuda11.1/bin/python', 'cpu_count': 12, 'cpu_count_logical': 20, 'cpu_freq': {'current': 2068.11315, 'min': 800.0, 'max': 4580.0}, 'cpu_freq_per_core': [{'current': 2100.0, 'min': 800.0, 'max': 4800.0}, {'current': 2100.0, 'min': 800.0, 'max': 4800.0}, {'current': 2100.0, 'min': 800.0, 'max': 4800.0}, {'current': 2100.0, 'min': 800.0, 'max': 4800.0}, {'current': 2100.0, 'min': 800.0, 'max': 4800.0}, {'current': 2100.0, 'min': 800.0, 'max': 4800.0}, {'current': 797.412, 'min': 800.0, 'max': 4800.0}, {'current': 2100.0, 'min': 800.0, 'max': 4800.0}, {'current': 2100.0, 'min': 800.0, 'max': 4900.0}, {'current': 2100.0, 'min': 800.0, 'max': 4900.0}, {'current': 2100.0, 'min': 800.0, 'max': 4800.0}, {'current': 2100.0, 'min': 800.0, 'max': 4800.0}, {'current': 2100.0, 'min': 800.0, 'max': 4900.0}, {'current': 2100.0, 'min': 800.0, 'max': 4900.0}, {'current': 2100.0, 'min': 800.0, 'max': 4800.0}, {'current': 2100.0, 'min': 800.0, 'max': 4800.0}, {'current': 2100.0, 'min': 800.0, 'max': 3600.0}, {'current': 2100.0, 'min': 800.0, 'max': 3600.0}, {'current': 2100.0, 'min': 800.0, 'max': 3600.0}, {'current': 2100.0, 'min': 800.0, 'max': 3600.0}], 'disk': {'total': 288.5988540649414, 'used': 230.86338424682617}, 'gpu': 'NVIDIA GeForce RTX 3090 Ti', 'gpu_count': 1, 'gpu_devices': [{'name': 'NVIDIA GeForce RTX 3090 Ti', 'memory_total': 25757220864}], 'memory': {'total': 31.14797592163086}}
+2023-04-13 02:18:23,141 INFO    HandlerThread:900875 [system_monitor.py:probe():214] Finished collecting system info
+2023-04-13 02:18:23,141 INFO    HandlerThread:900875 [system_monitor.py:probe():217] Publishing system info
+2023-04-13 02:18:23,141 DEBUG   HandlerThread:900875 [system_info.py:_save_pip():51] Saving list of pip packages installed into the current environment
+2023-04-13 02:18:23,142 DEBUG   HandlerThread:900875 [system_info.py:_save_pip():67] Saving pip packages done
+2023-04-13 02:18:23,142 DEBUG   HandlerThread:900875 [system_info.py:_save_conda():74] Saving list of conda packages installed into the current environment
+2023-04-13 02:18:23,950 INFO    Thread-18 :900875 [dir_watcher.py:_on_file_created():278] file/dir created: /home/zhenli/KPConv-Triplane/wandb/run-20230413_021822-p13mqtpc/files/wandb-summary.json
+2023-04-13 02:18:23,950 INFO    Thread-18 :900875 [dir_watcher.py:_on_file_created():278] file/dir created: /home/zhenli/KPConv-Triplane/wandb/run-20230413_021822-p13mqtpc/files/conda-environment.yaml
+2023-04-13 02:18:23,950 INFO    Thread-18 :900875 [dir_watcher.py:_on_file_created():278] file/dir created: /home/zhenli/KPConv-Triplane/wandb/run-20230413_021822-p13mqtpc/files/requirements.txt
+2023-04-13 02:18:25,216 DEBUG   HandlerThread:900875 [system_info.py:_save_conda():86] Saving conda packages done
+2023-04-13 02:18:25,217 INFO    HandlerThread:900875 [system_monitor.py:probe():219] Finished publishing system info
+2023-04-13 02:18:25,219 DEBUG   SenderThread:900875 [sender.py:send():336] send: files
+2023-04-13 02:18:25,219 INFO    SenderThread:900875 [sender.py:_save_file():1332] saving file wandb-metadata.json with policy now
+2023-04-13 02:18:25,223 DEBUG   HandlerThread:900875 [handler.py:handle_request():144] handle_request: stop_status
+2023-04-13 02:18:25,224 DEBUG   SenderThread:900875 [sender.py:send_request():363] send_request: stop_status
+2023-04-13 02:18:25,326 DEBUG   SenderThread:900875 [sender.py:send():336] send: telemetry
+2023-04-13 02:18:25,326 DEBUG   SenderThread:900875 [sender.py:send():336] send: config
+2023-04-13 02:18:25,676 INFO    wandb-upload_0:900875 [upload_job.py:push():138] Uploaded file /tmp/tmpprxcbrcuwandb/kcf3nsz5-wandb-metadata.json
+2023-04-13 02:18:25,949 INFO    Thread-18 :900875 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/zhenli/KPConv-Triplane/wandb/run-20230413_021822-p13mqtpc/files/conda-environment.yaml
+2023-04-13 02:18:25,949 INFO    Thread-18 :900875 [dir_watcher.py:_on_file_created():278] file/dir created: /home/zhenli/KPConv-Triplane/wandb/run-20230413_021822-p13mqtpc/files/wandb-metadata.json
+2023-04-13 02:18:25,949 INFO    Thread-18 :900875 [dir_watcher.py:_on_file_created():278] file/dir created: /home/zhenli/KPConv-Triplane/wandb/run-20230413_021822-p13mqtpc/files/output.log
+2023-04-13 02:18:27,949 INFO    Thread-18 :900875 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/zhenli/KPConv-Triplane/wandb/run-20230413_021822-p13mqtpc/files/output.log
+2023-04-13 02:18:27,962 DEBUG   HandlerThread:900875 [handler.py:handle_request():144] handle_request: status_report
+2023-04-13 02:18:29,952 INFO    Thread-18 :900875 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/zhenli/KPConv-Triplane/wandb/run-20230413_021822-p13mqtpc/files/output.log
+2023-04-13 02:18:32,964 DEBUG   HandlerThread:900875 [handler.py:handle_request():144] handle_request: status_report
+2023-04-13 02:18:37,965 DEBUG   HandlerThread:900875 [handler.py:handle_request():144] handle_request: status_report
+2023-04-13 02:18:40,225 DEBUG   HandlerThread:900875 [handler.py:handle_request():144] handle_request: stop_status
+2023-04-13 02:18:40,227 DEBUG   SenderThread:900875 [sender.py:send_request():363] send_request: stop_status
+2023-04-13 02:18:43,361 DEBUG   HandlerThread:900875 [handler.py:handle_request():144] handle_request: status_report
+2023-04-13 02:18:48,363 DEBUG   HandlerThread:900875 [handler.py:handle_request():144] handle_request: status_report
+2023-04-13 02:18:53,369 DEBUG   HandlerThread:900875 [handler.py:handle_request():144] handle_request: status_report
+2023-04-13 02:18:53,970 INFO    Thread-18 :900875 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/zhenli/KPConv-Triplane/wandb/run-20230413_021822-p13mqtpc/files/config.yaml
+2023-04-13 02:18:55,226 DEBUG   HandlerThread:900875 [handler.py:handle_request():144] handle_request: stop_status
+2023-04-13 02:18:55,227 DEBUG   SenderThread:900875 [sender.py:send_request():363] send_request: stop_status
+2023-04-13 02:18:59,343 DEBUG   HandlerThread:900875 [handler.py:handle_request():144] handle_request: status_report
+2023-04-13 02:19:04,345 DEBUG   HandlerThread:900875 [handler.py:handle_request():144] handle_request: status_report
+2023-04-13 02:19:09,346 DEBUG   HandlerThread:900875 [handler.py:handle_request():144] handle_request: status_report
+2023-04-13 02:19:10,226 DEBUG   HandlerThread:900875 [handler.py:handle_request():144] handle_request: stop_status
+2023-04-13 02:19:10,229 DEBUG   SenderThread:900875 [sender.py:send_request():363] send_request: stop_status
+2023-04-13 02:19:14,349 DEBUG   HandlerThread:900875 [handler.py:handle_request():144] handle_request: status_report
+2023-04-13 02:19:19,351 DEBUG   HandlerThread:900875 [handler.py:handle_request():144] handle_request: status_report
+2023-04-13 02:19:23,091 DEBUG   SystemMonitor:900875 [system_monitor.py:_start():161] Starting system metrics aggregation loop
+2023-04-13 02:19:23,096 DEBUG   SenderThread:900875 [sender.py:send():336] send: stats
+2023-04-13 02:19:25,099 DEBUG   HandlerThread:900875 [handler.py:handle_request():144] handle_request: status_report
+2023-04-13 02:19:25,226 DEBUG   HandlerThread:900875 [handler.py:handle_request():144] handle_request: stop_status
+2023-04-13 02:19:25,226 DEBUG   SenderThread:900875 [sender.py:send_request():363] send_request: stop_status
+2023-04-13 02:19:30,328 DEBUG   HandlerThread:900875 [handler.py:handle_request():144] handle_request: status_report
+2023-04-13 02:19:35,329 DEBUG   HandlerThread:900875 [handler.py:handle_request():144] handle_request: status_report
+2023-04-13 02:19:40,228 DEBUG   HandlerThread:900875 [handler.py:handle_request():144] handle_request: stop_status
+2023-04-13 02:19:40,229 DEBUG   SenderThread:900875 [sender.py:send_request():363] send_request: stop_status
+2023-04-13 02:19:40,354 DEBUG   HandlerThread:900875 [handler.py:handle_request():144] handle_request: status_report
+2023-04-13 02:19:45,355 DEBUG   HandlerThread:900875 [handler.py:handle_request():144] handle_request: status_report

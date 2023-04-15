@@ -168,7 +168,11 @@ class ModelTrainer:
             train_loss = 0.0
             train_acc = 0.0
             for batch in training_loader:
-
+                # for j in range(5):               
+                #     max = torch.max(batch.neighbors[j])
+                #     shape = batch.points[j].shape[0]
+                #     if max > shape:
+                #         print("wrong_dim in train loader: neighb_inds=" + str(max.item()) + " shape= " + str(shape))
                 # Check kill signal (running_PID.txt deleted)
                 if config.saving and not exists(PID_file):
                     continue
@@ -187,6 +191,11 @@ class ModelTrainer:
                 # zero the parameter gradients
                 self.optimizer.zero_grad()
 
+                # for j in range(5):               
+                #     max = torch.max(batch.neighbors[j])
+                #     shape = batch.points[j].shape[0]
+                #     if max > shape:
+                #         print("wrong_dim in cuda train loader: neighb_inds=" + str(max.item()) + " shape= " + str(shape))
                 # Forward pass
                 outputs = net(batch, config)
                 loss = net.loss(outputs, batch.labels)
@@ -343,6 +352,11 @@ class ModelTrainer:
 
         # Start validation loop
         for batch in val_loader:
+            for j in range(5):               
+                max = torch.max(batch.neighbors[j])
+                shape = batch.points[j].shape[0]
+                if max > shape:
+                    print("wrong_dim in val loader: neighb_inds=" + str(max.item()) + " shape= " + str(shape))
 
             # New time
             t = t[-1:]
@@ -351,6 +365,11 @@ class ModelTrainer:
             if 'cuda' in self.device.type:
                 batch.to(self.device)
 
+            for j in range(5):               
+                max = torch.max(batch.neighbors[j])
+                shape = batch.points[j].shape[0]
+                if max > shape:
+                    print("wrong_dim in val cuda loader: neighb_inds=" + str(max.item()) + " shape= " + str(shape))
             # Forward pass
             outputs = net(batch, config)
 
@@ -486,7 +505,8 @@ class ModelTrainer:
             # New time
             t = t[-1:]
             t += [time.time()]
-
+            if batch.neighbors[0][0, 0].type()!="torch.LongTensor":
+                print("wrong_val_batch")
             if 'cuda' in self.device.type:
                 batch.to(self.device)
 

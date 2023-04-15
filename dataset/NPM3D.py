@@ -1422,6 +1422,11 @@ class NPM3DCustomBatch:
         self.center_inds = torch.from_numpy(input_list[ind])
         ind += 1
         self.input_inds = torch.from_numpy(input_list[ind])
+        for j in range(5):               
+            max = torch.max(self.neighbors[j])
+            shape = self.points[j].shape[0]
+            if max > shape:
+                print("wrong_dim in custom batch: neighb_inds=" + str(max.item()) + " shape= " + str(shape))
 
         return
 

@@ -1392,13 +1392,17 @@ class S3DISCustomBatch:
         input_list = input_list[0]
 
         # Number of layers
-        L = (len(input_list) - 7) // 5
+        L = (len(input_list) - 8) // 7
 
         # Extract input tensors from the list of numpy array
         ind = 0
         self.points = [torch.from_numpy(nparray) for nparray in input_list[ind:ind+L]]
         ind += L
         self.neighbors = [torch.from_numpy(nparray) for nparray in input_list[ind:ind+L]]
+        ind += L        
+        # self.bilinear_indices = [torch.from_numpy(nparray) for nparray in input_list[ind:ind+L]]
+        ind += L
+        # self.bilinear_weights = [torch.from_numpy(nparray) for nparray in input_list[ind:ind+L]]
         ind += L
         self.pools = [torch.from_numpy(nparray) for nparray in input_list[ind:ind+L]]
         ind += L
@@ -1409,6 +1413,8 @@ class S3DISCustomBatch:
         self.features = torch.from_numpy(input_list[ind])
         ind += 1
         self.labels = torch.from_numpy(input_list[ind])
+        ind += 1
+        self.neighbor_r = torch.from_numpy(input_list[ind])
         ind += 1
         self.scales = torch.from_numpy(input_list[ind])
         ind += 1
@@ -1446,6 +1452,8 @@ class S3DISCustomBatch:
 
         self.points = [in_tensor.to(device) for in_tensor in self.points]
         self.neighbors = [in_tensor.to(device) for in_tensor in self.neighbors]
+        # self.bilinear_weights = [in_tensor.to(device) for in_tensor in self.bilinear_weights] 
+        # self.bilinear_indices = [in_tensor.to(device) for in_tensor in self.bilinear_indices]
         self.pools = [in_tensor.to(device) for in_tensor in self.pools]
         self.upsamples = [in_tensor.to(device) for in_tensor in self.upsamples]
         self.lengths = [in_tensor.to(device) for in_tensor in self.lengths]
@@ -1455,6 +1463,7 @@ class S3DISCustomBatch:
         self.rots = self.rots.to(device)
         self.cloud_inds = self.cloud_inds.to(device)
         self.center_inds = self.center_inds.to(device)
+        self.neighbor_r = self.neighbor_r.to(device)
         self.input_inds = self.input_inds.to(device)
 
         return self

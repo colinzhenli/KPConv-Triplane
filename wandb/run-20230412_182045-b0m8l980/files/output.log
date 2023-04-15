@@ -1,0 +1,73 @@
+Preparing ply files
+Done in 0.0s
+Found KDTree for cloud Area_1, subsampled at 0.030
+146.6 MB loaded in 0.1s
+Found KDTree for cloud Area_2, subsampled at 0.030
+159.1 MB loaded in 0.1s
+Found KDTree for cloud Area_3, subsampled at 0.030
+62.6 MB loaded in 0.1s
+Found KDTree for cloud Area_4, subsampled at 0.030
+144.2 MB loaded in 0.1s
+Found KDTree for cloud Area_6, subsampled at 0.030
+137.9 MB loaded in 0.1s
+Preparing ply files
+Done in 0.0s
+Found KDTree for cloud Area_5, subsampled at 0.030
+260.4 MB loaded in 0.2s
+Preparing reprojection indices for testing
+Area_5 done in 0.2s
+Starting Calibration (use verbose=True for more details)
+Previous calibration found:
+Check batch limit dictionary
+[92m"random_1.200_0.030_6": 58084
+Check neighbors limit dictionary
+[92m"0.030_0.075": 28
+[92m"0.060_0.150": 33
+[92m"0.120_0.300": 41
+[92m"0.240_0.600": 42
+[92m"0.480_1.200": 44
+Calibration done in 0.0s
+Starting Calibration (use verbose=True for more details)
+Previous calibration found:
+Check batch limit dictionary
+[92m"random_1.200_0.030_6": 58084
+Check neighbors limit dictionary
+[92m"0.030_0.075": 28
+[92m"0.060_0.150": 33
+[92m"0.120_0.300": 41
+[92m"0.240_0.600": 42
+[92m"0.480_1.200": 44
+Calibration done in 0.0s
+Backend QtAgg is interactive backend. Turning interactive mode on.
+Traceback (most recent call last):
+  File "/home/zhenli/anaconda3/envs/cuda11.1/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/home/zhenli/anaconda3/envs/cuda11.1/lib/python3.10/runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "/home/zhenli/.vscode/extensions/ms-python.python-2023.4.1/pythonFiles/lib/python/debugpy/adapter/../../debugpy/launcher/../../debugpy/__main__.py", line 39, in <module>
+    cli.main()
+  File "/home/zhenli/.vscode/extensions/ms-python.python-2023.4.1/pythonFiles/lib/python/debugpy/adapter/../../debugpy/launcher/../../debugpy/../debugpy/server/cli.py", line 430, in main
+    run()
+  File "/home/zhenli/.vscode/extensions/ms-python.python-2023.4.1/pythonFiles/lib/python/debugpy/adapter/../../debugpy/launcher/../../debugpy/../debugpy/server/cli.py", line 284, in run_file
+    runpy.run_path(target, run_name="__main__")
+  File "/home/zhenli/.vscode/extensions/ms-python.python-2023.4.1/pythonFiles/lib/python/debugpy/_vendored/pydevd/_pydevd_bundle/pydevd_runpy.py", line 321, in run_path
+    return _run_module_code(code, init_globals, run_name,
+  File "/home/zhenli/.vscode/extensions/ms-python.python-2023.4.1/pythonFiles/lib/python/debugpy/_vendored/pydevd/_pydevd_bundle/pydevd_runpy.py", line 135, in _run_module_code
+    _run_code(code, mod_globals, init_globals,
+  File "/home/zhenli/.vscode/extensions/ms-python.python-2023.4.1/pythonFiles/lib/python/debugpy/_vendored/pydevd/_pydevd_bundle/pydevd_runpy.py", line 124, in _run_code
+    exec(code, run_globals)
+  File "train_S3DIS.py", line 308, in <module>
+    for batch in training_loader:
+  File "/home/zhenli/anaconda3/envs/cuda11.1/lib/python3.10/site-packages/torch/utils/data/dataloader.py", line 681, in __next__
+    data = self._next_data()
+  File "/home/zhenli/anaconda3/envs/cuda11.1/lib/python3.10/site-packages/torch/utils/data/dataloader.py", line 721, in _next_data
+    data = self._dataset_fetcher.fetch(index)  # may raise StopIteration
+  File "/home/zhenli/anaconda3/envs/cuda11.1/lib/python3.10/site-packages/torch/utils/data/_utils/fetch.py", line 52, in fetch
+    return self.collate_fn(data)
+  File "/home/zhenli/KPConv-Triplane/dataset/S3DIS.py", line 1528, in S3DISCollate
+    return S3DISCustomBatch(batch_data)
+  File "/home/zhenli/KPConv-Triplane/dataset/S3DIS.py", line 1401, in __init__
+    self.neighbors = [torch.from_numpy(nparray) for nparray in input_list[ind:ind+L]]
+  File "/home/zhenli/KPConv-Triplane/dataset/S3DIS.py", line 1401, in <listcomp>
+    self.neighbors = [torch.from_numpy(nparray) for nparray in input_list[ind:ind+L]]
+TypeError: expected np.ndarray (got float)

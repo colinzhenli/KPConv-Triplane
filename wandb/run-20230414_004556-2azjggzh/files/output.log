@@ -1,0 +1,84 @@
+Preparing ply files
+Done in 0.0s
+Found KDTree for cloud Area_1, subsampled at 0.030
+146.6 MB loaded in 0.1s
+Found KDTree for cloud Area_2, subsampled at 0.030
+159.1 MB loaded in 0.1s
+Found KDTree for cloud Area_3, subsampled at 0.030
+62.6 MB loaded in 0.1s
+Found KDTree for cloud Area_4, subsampled at 0.030
+144.2 MB loaded in 0.1s
+Found KDTree for cloud Area_6, subsampled at 0.030
+137.9 MB loaded in 0.1s
+Preparing ply files
+Done in 0.0s
+Found KDTree for cloud Area_5, subsampled at 0.030
+260.4 MB loaded in 0.2s
+Preparing reprojection indices for testing
+Area_5 done in 0.2s
+Starting Calibration (use verbose=True for more details)
+Previous calibration found:
+Check batch limit dictionary
+[92m"random_1.200_0.030_6": 58084
+Check neighbors limit dictionary
+[92m"0.030_0.075": 28
+[92m"0.060_0.150": 33
+[92m"0.120_0.300": 41
+[92m"0.240_0.600": 42
+[92m"0.480_1.200": 44
+Calibration done in 0.0s
+Starting Calibration (use verbose=True for more details)
+Previous calibration found:
+Check batch limit dictionary
+[92m"random_1.200_0.030_6": 58084
+Check neighbors limit dictionary
+[92m"0.030_0.075": 28
+[92m"0.060_0.150": 33
+[92m"0.120_0.300": 41
+[92m"0.240_0.600": 42
+[92m"0.480_1.200": 44
+Calibration done in 0.0s
+Model Preparation
+*****************
+Done in 0.7s
+Start training
+**************
+Backend QtAgg is interactive backend. Turning interactive mode on.
+Traceback (most recent call last):
+  File "/home/zhenli/anaconda3/envs/cuda11.1/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/home/zhenli/anaconda3/envs/cuda11.1/lib/python3.10/runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "/home/zhenli/.vscode/extensions/ms-python.python-2023.4.1/pythonFiles/lib/python/debugpy/adapter/../../debugpy/launcher/../../debugpy/__main__.py", line 39, in <module>
+    cli.main()
+  File "/home/zhenli/.vscode/extensions/ms-python.python-2023.4.1/pythonFiles/lib/python/debugpy/adapter/../../debugpy/launcher/../../debugpy/../debugpy/server/cli.py", line 430, in main
+    run()
+  File "/home/zhenli/.vscode/extensions/ms-python.python-2023.4.1/pythonFiles/lib/python/debugpy/adapter/../../debugpy/launcher/../../debugpy/../debugpy/server/cli.py", line 284, in run_file
+    runpy.run_path(target, run_name="__main__")
+  File "/home/zhenli/.vscode/extensions/ms-python.python-2023.4.1/pythonFiles/lib/python/debugpy/_vendored/pydevd/_pydevd_bundle/pydevd_runpy.py", line 321, in run_path
+    return _run_module_code(code, init_globals, run_name,
+  File "/home/zhenli/.vscode/extensions/ms-python.python-2023.4.1/pythonFiles/lib/python/debugpy/_vendored/pydevd/_pydevd_bundle/pydevd_runpy.py", line 135, in _run_module_code
+    _run_code(code, mod_globals, init_globals,
+  File "/home/zhenli/.vscode/extensions/ms-python.python-2023.4.1/pythonFiles/lib/python/debugpy/_vendored/pydevd/_pydevd_bundle/pydevd_runpy.py", line 124, in _run_code
+    exec(code, run_globals)
+  File "train_S3DIS.py", line 346, in <module>
+    trainer.train(net, training_loader, test_loader, config)
+  File "/home/zhenli/KPConv-Triplane/utils/trainer.py", line 200, in train
+    outputs = net(batch, config)
+  File "/home/zhenli/anaconda3/envs/cuda11.1/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1130, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/zhenli/KPConv-Triplane/models/architectures.py", line 346, in forward
+    x = block_op(x, batch)
+  File "/home/zhenli/anaconda3/envs/cuda11.1/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1130, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/zhenli/KPConv-Triplane/models/blocks.py", line 764, in forward
+    x = self.TriplaneConv(q_pts, s_pts, neighb_inds, neighb_r, x, bilinear_indices, bilinear_weights)
+  File "/home/zhenli/anaconda3/envs/cuda11.1/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1130, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/zhenli/KPConv-Triplane/models/blocks.py", line 310, in forward
+    return self.depth_wise_conv(x, neighb_inds, xyz, bilinear_indices, bilinear_weights)
+  File "/home/zhenli/KPConv-Triplane/models/blocks.py", line 271, in depth_wise_conv
+    features.append(torch.einsum('hnm,mhn->nm', bilinear_weights_expanded, selected_features))
+  File "/home/zhenli/anaconda3/envs/cuda11.1/lib/python3.10/site-packages/torch/functional.py", line 360, in einsum
+    return _VF.einsum(equation, operands)  # type: ignore[attr-defined]
+RuntimeError: expected scalar type Float but found Double
