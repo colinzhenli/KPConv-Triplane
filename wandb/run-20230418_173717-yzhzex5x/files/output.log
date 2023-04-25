@@ -1,0 +1,134 @@
+Preparing ply files
+Done in 0.0s
+Found KDTree for cloud Area_1, subsampled at 0.030
+146.6 MB loaded in 0.2s
+Found KDTree for cloud Area_2, subsampled at 0.030
+159.1 MB loaded in 0.2s
+Found KDTree for cloud Area_3, subsampled at 0.030
+62.6 MB loaded in 0.1s
+Found KDTree for cloud Area_4, subsampled at 0.030
+144.2 MB loaded in 0.2s
+Found KDTree for cloud Area_6, subsampled at 0.030
+137.9 MB loaded in 0.2s
+Preparing potentials
+Done in 0.3s
+Preparing ply files
+Done in 0.0s
+Found KDTree for cloud Area_5, subsampled at 0.030
+260.4 MB loaded in 0.4s
+Preparing potentials
+Done in 0.1s
+Preparing reprojection indices for testing
+Area_5 done in 0.3s
+Starting Calibration (use verbose=True for more details)
+Previous calibration found:
+Check batch limit dictionary
+[91m"potentials_1.200_0.030_6": ?
+Check neighbors limit dictionary
+[92m"0.030_0.075": 29
+[92m"0.060_0.150": 32
+[92m"0.120_0.300": 34
+[92m"0.240_0.600": 23
+[92m"0.480_1.200": 8
+Step     6  estim_b = 0.08 batch_limit =  21552
+Step    10  estim_b = 0.13 batch_limit =  33132
+Step    14  estim_b = 0.27 batch_limit =  30738
+Step    18  estim_b = 0.40 batch_limit =  35864
+Step    22  estim_b = 0.57 batch_limit =  38501
+Step    26  estim_b = 0.74 batch_limit =  40647
+Step    30  estim_b = 0.88 batch_limit =  44307
+Step    34  estim_b = 1.06 batch_limit =  45473
+Step    38  estim_b = 1.24 batch_limit =  46644
+Step    42  estim_b = 1.38 batch_limit =  48820
+Step    46  estim_b = 1.57 batch_limit =  46500
+Step    50  estim_b = 1.73 batch_limit =  47180
+Step    54  estim_b = 1.89 batch_limit =  50363
+Step    58  estim_b = 2.00 batch_limit =  53054
+Step    62  estim_b = 2.13 batch_limit =  52252
+Step    66  estim_b = 2.26 batch_limit =  53455
+Step    70  estim_b = 2.41 batch_limit =  53660
+Step    74  estim_b = 2.56 batch_limit =  50863
+Step    78  estim_b = 2.71 batch_limit =  50564
+Step    82  estim_b = 2.83 batch_limit =  53765
+Step    86  estim_b = 2.98 batch_limit =  54961
+Step    90  estim_b = 3.11 batch_limit =  54655
+Step    94  estim_b = 3.24 batch_limit =  48847
+Step    98  estim_b = 3.35 batch_limit =  49037
+Step   102  estim_b = 3.44 batch_limit =  55229
+Step   106  estim_b = 3.53 batch_limit =  55923
+Step   110  estim_b = 3.63 batch_limit =  53620
+Step   114  estim_b = 3.70 batch_limit =  54819
+Step   115  estim_b = 3.72 batch_limit =  54869
+Step   118  estim_b = 3.77 batch_limit =  56022
+Step   119  estim_b = 3.79 batch_limit =  56073
+Step   122  estim_b = 3.85 batch_limit =  56727
+Step   123  estim_b = 3.88 batch_limit =  53778
+Step   126  estim_b = 3.96 batch_limit =  55429
+Step   127  estim_b = 3.98 batch_limit =  55479
+Step   130  estim_b = 4.06 batch_limit =  52127
+Step   131  estim_b = 4.08 batch_limit =  54676
+Step   135  estim_b = 4.18 batch_limit =  56368
+Step   138  estim_b = 4.20 batch_limit =  58015
+Step   139  estim_b = 4.22 batch_limit =  55565
+Step   142  estim_b = 4.29 batch_limit =  52212
+Step   143  estim_b = 4.32 batch_limit =  51760
+Step   146  estim_b = 4.39 batch_limit =  50902
+Step   147  estim_b = 4.41 batch_limit =  53449
+Step   151  estim_b = 4.47 batch_limit =  56136
+Step   154  estim_b = 4.52 batch_limit =  50776
+Step   155  estim_b = 4.55 batch_limit =  50322
+Step   158  estim_b = 4.59 batch_limit =  52960
+Step   159  estim_b = 4.60 batch_limit =  56007
+Step   162  estim_b = 4.68 batch_limit =  51641
+Step   163  estim_b = 4.68 batch_limit =  54686
+Step   166  estim_b = 4.72 batch_limit =  52321
+Step   167  estim_b = 4.73 batch_limit =  52366
+Step   170  estim_b = 4.75 batch_limit =  53504
+Step   171  estim_b = 4.78 batch_limit =  47549
+Step   175  estim_b = 4.85 batch_limit =  51727
+Step   179  estim_b = 4.91 batch_limit =  50900
+Step   182  estim_b = 4.96 batch_limit =  50528
+Step   183  estim_b = 4.96 batch_limit =  53571
+Step   186  estim_b = 4.98 batch_limit =  49203
+Step   188  estim_b = 5.00 batch_limit =  51790
+Step   190  estim_b = 5.03 batch_limit =  51376
+Step   194  estim_b = 5.04 batch_limit =  55551
+Step   195  estim_b = 5.06 batch_limit =  50095
+Step   198  estim_b = 5.08 batch_limit =  53228
+Step   199  estim_b = 5.08 batch_limit =  53272
+Step   202  estim_b = 5.09 batch_limit =  56907
+Step   203  estim_b = 5.10 batch_limit =  54453
+Step   206  estim_b = 5.15 batch_limit =  53586
+Step   207  estim_b = 5.15 batch_limit =  56631
+Step   210  estim_b = 5.17 batch_limit =  54266
+Traceback (most recent call last):
+  File "/home/zhenli/anaconda3/envs/cuda11.1/lib/python3.10/site-packages/torch/utils/data/dataloader.py", line 1163, in _try_get_data
+    data = self._data_queue.get(timeout=timeout)
+  File "/home/zhenli/anaconda3/envs/cuda11.1/lib/python3.10/multiprocessing/queues.py", line 113, in get
+    if not self._poll(timeout):
+  File "/home/zhenli/anaconda3/envs/cuda11.1/lib/python3.10/multiprocessing/connection.py", line 257, in poll
+    return self._poll(timeout)
+  File "/home/zhenli/anaconda3/envs/cuda11.1/lib/python3.10/multiprocessing/connection.py", line 424, in _poll
+    r = wait([self], timeout)
+  File "/home/zhenli/anaconda3/envs/cuda11.1/lib/python3.10/multiprocessing/connection.py", line 931, in wait
+    ready = selector.select(timeout)
+  File "/home/zhenli/anaconda3/envs/cuda11.1/lib/python3.10/selectors.py", line 416, in select
+    fd_event_list = self._selector.poll(timeout)
+  File "/home/zhenli/anaconda3/envs/cuda11.1/lib/python3.10/site-packages/torch/utils/data/_utils/signal_handling.py", line 66, in handler
+    _error_if_any_worker_fails()
+RuntimeError: DataLoader worker (pid 2963442) is killed by signal: Killed.
+The above exception was the direct cause of the following exception:
+Traceback (most recent call last):
+  File "/home/zhenli/KPConv-Triplane/train_S3DIS.py", line 305, in <module>
+    training_sampler.calibration(training_loader, verbose=True)
+  File "/home/zhenli/KPConv-Triplane/dataset/S3DIS.py", line 1235, in calibration
+    for batch_i, batch in enumerate(dataloader):
+  File "/home/zhenli/anaconda3/envs/cuda11.1/lib/python3.10/site-packages/torch/utils/data/dataloader.py", line 681, in __next__
+    data = self._next_data()
+  File "/home/zhenli/anaconda3/envs/cuda11.1/lib/python3.10/site-packages/torch/utils/data/dataloader.py", line 1359, in _next_data
+    idx, data = self._get_data()
+  File "/home/zhenli/anaconda3/envs/cuda11.1/lib/python3.10/site-packages/torch/utils/data/dataloader.py", line 1325, in _get_data
+    success, data = self._try_get_data()
+  File "/home/zhenli/anaconda3/envs/cuda11.1/lib/python3.10/site-packages/torch/utils/data/dataloader.py", line 1176, in _try_get_data
+    raise RuntimeError('DataLoader worker (pid(s) {}) exited unexpectedly'.format(pids_str)) from e
+RuntimeError: DataLoader worker (pid(s) 2963442) exited unexpectedly

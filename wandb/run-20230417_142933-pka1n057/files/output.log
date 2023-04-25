@@ -1,0 +1,103 @@
+Preparing ply files
+Done in 0.0s
+Found KDTree for cloud Area_1, subsampled at 0.030
+146.6 MB loaded in 0.2s
+Found KDTree for cloud Area_2, subsampled at 0.030
+159.1 MB loaded in 0.3s
+Found KDTree for cloud Area_3, subsampled at 0.030
+62.6 MB loaded in 0.1s
+Found KDTree for cloud Area_4, subsampled at 0.030
+144.2 MB loaded in 0.2s
+Found KDTree for cloud Area_6, subsampled at 0.030
+137.9 MB loaded in 0.2s
+Preparing ply files
+Done in 0.0s
+Found KDTree for cloud Area_5, subsampled at 0.030
+260.4 MB loaded in 0.3s
+Preparing reprojection indices for testing
+Area_5 done in 0.3s
+Starting Calibration (use verbose=True for more details)
+Previous calibration found:
+Check batch limit dictionary
+[92m"random_1.200_0.030_6": 53556
+Check neighbors limit dictionary
+[92m"0.030_0.075": 28
+[92m"0.060_0.150": 33
+[92m"0.120_0.300": 40
+[92m"0.240_0.600": 41
+[92m"0.480_1.200": 37
+Calibration done in 0.0s
+Starting Calibration (use verbose=True for more details)
+Previous calibration found:
+Check batch limit dictionary
+[92m"random_1.200_0.030_6": 53556
+Check neighbors limit dictionary
+[92m"0.030_0.075": 28
+[92m"0.060_0.150": 33
+[92m"0.120_0.300": 40
+[92m"0.240_0.600": 41
+[92m"0.480_1.200": 37
+Calibration done in 0.0s
+Model Preparation
+*****************
+Done in 1.0s
+Start training
+**************
+e000-i0000 => L=2.604 acc=  5% / t(ms): 4023.6 1505.5  94.7)
+e000-i0005 => L=2.489 acc= 21% / t(ms):   4.4 102.6 106.9)
+e000-i0010 => L=2.386 acc= 31% / t(ms):  18.0  97.0 105.3)
+e000-i0012 => L=2.294 acc= 35% / t(ms): 162.4  91.6 103.2)
+e000-i0018 => L=2.154 acc= 25% / t(ms): 194.0  86.5  99.1)
+e000-i0024 => L=2.173 acc= 37% / t(ms): 233.5  82.4  97.2)
+e000-i0029 => L=1.927 acc= 47% / t(ms): 139.5  90.8  99.2)
+e000-i0030 => L=1.798 acc= 49% / t(ms): 229.9  89.3  99.3)
+e000-i0036 => L=2.353 acc= 28% / t(ms): 220.7  83.4  96.7)
+e000-i0042 => L=1.799 acc= 38% / t(ms): 229.2  81.7  98.1)
+e000-i0048 => L=1.984 acc= 44% / t(ms): 248.4  81.6  96.9)
+e000-i0054 => L=1.762 acc= 41% / t(ms): 265.5  80.1  98.0)
+e000-i0060 => L=1.755 acc= 43% / t(ms): 244.5  78.4  98.1)
+e000-i0065 => L=1.804 acc= 45% / t(ms): 146.2  87.9  99.9)
+e000-i0066 => L=1.689 acc= 53% / t(ms): 241.0  84.6  99.2)
+e000-i0072 => L=1.579 acc= 53% / t(ms): 240.8  79.3  96.2)
+e000-i0078 => L=1.677 acc= 55% / t(ms): 234.0  77.2  95.7)
+e000-i0084 => L=1.353 acc= 59% / t(ms): 251.8  80.0  97.3)
+e000-i0090 => L=1.609 acc= 45% / t(ms): 242.6  84.3  99.1)
+e000-i0095 => L=1.644 acc= 47% / t(ms): 150.0  85.2  99.1)
+e000-i0096 => L=1.571 acc= 51% / t(ms): 223.7  84.7  99.0)
+e000-i0102 => L=1.540 acc= 52% / t(ms): 211.8  84.0  98.4)
+e000-i0107 => L=1.571 acc= 50% / t(ms): 143.4  82.8 100.0)
+e000-i0108 => L=1.875 acc= 30% / t(ms): 303.2  83.6 101.2)
+e000-i0114 => L=2.271 acc= 33% / t(ms): 730.0  80.7  98.3)
+e000-i0117 => L=1.558 acc= 50% / t(ms): 533.6 194.6  98.4)
+e000-i0120 => L=1.645 acc= 46% / t(ms): 489.1 164.2  98.7)
+Traceback (most recent call last):
+  File "/home/zhenli/anaconda3/envs/cuda11.1/lib/python3.10/site-packages/torch/utils/data/dataloader.py", line 1163, in _try_get_data
+    data = self._data_queue.get(timeout=timeout)
+  File "/home/zhenli/anaconda3/envs/cuda11.1/lib/python3.10/multiprocessing/queues.py", line 113, in get
+    if not self._poll(timeout):
+  File "/home/zhenli/anaconda3/envs/cuda11.1/lib/python3.10/multiprocessing/connection.py", line 257, in poll
+    return self._poll(timeout)
+  File "/home/zhenli/anaconda3/envs/cuda11.1/lib/python3.10/multiprocessing/connection.py", line 424, in _poll
+    r = wait([self], timeout)
+  File "/home/zhenli/anaconda3/envs/cuda11.1/lib/python3.10/multiprocessing/connection.py", line 931, in wait
+    ready = selector.select(timeout)
+  File "/home/zhenli/anaconda3/envs/cuda11.1/lib/python3.10/selectors.py", line 416, in select
+    fd_event_list = self._selector.poll(timeout)
+  File "/home/zhenli/anaconda3/envs/cuda11.1/lib/python3.10/site-packages/torch/utils/data/_utils/signal_handling.py", line 66, in handler
+    _error_if_any_worker_fails()
+RuntimeError: DataLoader worker (pid 2810879) is killed by signal: Killed.
+The above exception was the direct cause of the following exception:
+Traceback (most recent call last):
+  File "/home/zhenli/KPConv-Triplane/train_S3DIS.py", line 346, in <module>
+    trainer.train(net, training_loader, test_loader, config)
+  File "/home/zhenli/KPConv-Triplane/utils/trainer.py", line 170, in train
+    for batch in training_loader:
+  File "/home/zhenli/anaconda3/envs/cuda11.1/lib/python3.10/site-packages/torch/utils/data/dataloader.py", line 681, in __next__
+    data = self._next_data()
+  File "/home/zhenli/anaconda3/envs/cuda11.1/lib/python3.10/site-packages/torch/utils/data/dataloader.py", line 1359, in _next_data
+    idx, data = self._get_data()
+  File "/home/zhenli/anaconda3/envs/cuda11.1/lib/python3.10/site-packages/torch/utils/data/dataloader.py", line 1325, in _get_data
+    success, data = self._try_get_data()
+  File "/home/zhenli/anaconda3/envs/cuda11.1/lib/python3.10/site-packages/torch/utils/data/dataloader.py", line 1176, in _try_get_data
+    raise RuntimeError('DataLoader worker (pid(s) {}) exited unexpectedly'.format(pids_str)) from e
+RuntimeError: DataLoader worker (pid(s) 2810879) exited unexpectedly

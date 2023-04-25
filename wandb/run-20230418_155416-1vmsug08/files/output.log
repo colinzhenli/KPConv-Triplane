@@ -1,0 +1,51 @@
+Preparing ply files
+Done in 0.0s
+Found KDTree for cloud Area_1, subsampled at 0.030
+146.6 MB loaded in 0.6s
+Found KDTree for cloud Area_2, subsampled at 0.030
+159.1 MB loaded in 0.9s
+Found KDTree for cloud Area_3, subsampled at 0.030
+62.6 MB loaded in 0.3s
+Found KDTree for cloud Area_4, subsampled at 0.030
+144.2 MB loaded in 8.0s
+Found KDTree for cloud Area_6, subsampled at 0.030
+137.9 MB loaded in 0.9s
+Preparing potentials
+Done in 27.0s
+Preparing ply files
+Done in 0.0s
+Found KDTree for cloud Area_5, subsampled at 0.030
+260.4 MB loaded in 11.7s
+Preparing potentials
+Done in 15.1s
+Preparing reprojection indices for testing
+Area_5 done in 11.4s
+Starting Calibration (use verbose=True for more details)
+Previous calibration found:
+Check batch limit dictionary
+[91m"potentials_0.400_0.030_6": ?
+Check neighbors limit dictionary
+[92m"0.030_0.075": 29
+[92m"0.060_0.150": 32
+[92m"0.120_0.300": 34
+[92m"0.240_0.600": 23
+[92m"0.480_1.200": 8
+Step     1  estim_b = 0.01 batch_limit =  15003
+Step     3  estim_b = 0.03 batch_limit =  20016
+Step     6  estim_b = 0.38 batch_limit = -68462
+Step    45  estim_b = 1.73 batch_limit = -59076
+Step   146  estim_b = 1.26 batch_limit = -32397
+Step   241  estim_b = 1.10 batch_limit =  -4975
+Step   280  estim_b = 1.49 batch_limit =   3667
+Step   298  estim_b = 2.25 batch_limit =   3912
+Step   316  estim_b = 2.95 batch_limit =   4999
+Step   334  estim_b = 3.57 batch_limit =   5427
+Step   348  estim_b = 4.04 batch_limit =   4915
+Step   364  estim_b = 4.53 batch_limit =   4952
+Step   378  estim_b = 4.89 batch_limit =   4365
+Step   394  estim_b = 5.19 batch_limit =   4974
+Step   408  estim_b = 5.47 batch_limit =   5063
+Step   424  estim_b = 5.73 batch_limit =   4446
+Step   442  estim_b = 5.89 batch_limit =   4967
+Step   456  estim_b = 6.07 batch_limit =   4571
+Step   473  estim_b = 6.22 batch_limit =   4762

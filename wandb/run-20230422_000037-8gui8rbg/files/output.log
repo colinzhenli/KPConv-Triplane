@@ -1,0 +1,181 @@
+Preparing ply files
+Done in 0.0s
+Found KDTree for cloud Area_1, subsampled at 0.030
+146.6 MB loaded in 0.2s
+Found KDTree for cloud Area_2, subsampled at 0.030
+159.1 MB loaded in 0.2s
+Found KDTree for cloud Area_3, subsampled at 0.030
+62.6 MB loaded in 0.1s
+Found KDTree for cloud Area_4, subsampled at 0.030
+144.2 MB loaded in 0.2s
+Found KDTree for cloud Area_6, subsampled at 0.030
+137.9 MB loaded in 0.2s
+Preparing potentials
+Done in 0.2s
+Preparing ply files
+Done in 0.0s
+Found KDTree for cloud Area_5, subsampled at 0.030
+260.4 MB loaded in 0.2s
+Preparing potentials
+Done in 0.1s
+Preparing reprojection indices for testing
+Area_5 done in 0.2s
+Starting Calibration (use verbose=True for more details)
+Previous calibration found:
+Check batch limit dictionary
+[91m"potentials_0.600_0.030_4": ?
+Check neighbors limit dictionary
+[92m"0.030_0.075": 28
+[92m"0.060_0.150": 32
+[92m"0.120_0.300": 38
+[92m"0.240_0.600": 33
+[92m"0.480_1.200": 18
+Step     2  estim_b = 0.06 batch_limit =  -1496
+Step    23  estim_b = 0.31 batch_limit =   2035
+Step    37  estim_b = 0.52 batch_limit =   3536
+Step    48  estim_b = 0.75 batch_limit =   4038
+Step    57  estim_b = 0.95 batch_limit =   4285
+Step    66  estim_b = 1.13 batch_limit =   5037
+Step    75  estim_b = 1.33 batch_limit =   5091
+Step    83  estim_b = 1.49 batch_limit =   5641
+Step    91  estim_b = 1.62 batch_limit =   5744
+Step    99  estim_b = 1.80 batch_limit =   5848
+Step   106  estim_b = 1.94 batch_limit =   6195
+Step   113  estim_b = 2.08 batch_limit =   5993
+Step   121  estim_b = 2.19 batch_limit =   6248
+Step   128  estim_b = 2.29 batch_limit =   6398
+Step   135  estim_b = 2.42 batch_limit =   6147
+Step   143  estim_b = 2.53 batch_limit =   6254
+Step   151  estim_b = 2.64 batch_limit =   6561
+Step   158  estim_b = 2.75 batch_limit =   6561
+Step   165  estim_b = 2.84 batch_limit =   6560
+Step   172  estim_b = 2.92 batch_limit =   6858
+Step   179  estim_b = 2.97 batch_limit =   6758
+Step   186  estim_b = 3.03 batch_limit =   6857
+Step   193  estim_b = 3.12 batch_limit =   6557
+Step   200  estim_b = 3.19 batch_limit =   6556
+Step   206  estim_b = 3.25 batch_limit =   6748
+Step   213  estim_b = 3.31 batch_limit =   6496
+Step   220  estim_b = 3.40 batch_limit =   6343
+Step   227  estim_b = 3.44 batch_limit =   6639
+Step   234  estim_b = 3.47 batch_limit =   6736
+Step   241  estim_b = 3.51 batch_limit =   6483
+Step   247  estim_b = 3.55 batch_limit =   6723
+Step   254  estim_b = 3.57 batch_limit =   6819
+Step   261  estim_b = 3.62 batch_limit =   6515
+Step   268  estim_b = 3.65 batch_limit =   6811
+Step   274  estim_b = 3.69 batch_limit =   6500
+Step   280  estim_b = 3.72 batch_limit =   6739
+Step   288  estim_b = 3.76 batch_limit =   6689
+Step   295  estim_b = 3.78 batch_limit =   6683
+Step   302  estim_b = 3.79 batch_limit =   6527
+Step   309  estim_b = 3.79 batch_limit =   6872
+Step   315  estim_b = 3.82 batch_limit =   6610
+Step   322  estim_b = 3.86 batch_limit =   6503
+Step   329  estim_b = 3.87 batch_limit =   6796
+Step   336  estim_b = 3.89 batch_limit =   7039
+Step   343  estim_b = 3.91 batch_limit =   6482
+Step   350  estim_b = 3.92 batch_limit =   6774
+Step   357  estim_b = 3.95 batch_limit =   6665
+Step   364  estim_b = 3.98 batch_limit =   6606
+**************************************************
+neighbors_num |  layer  0  |  layer  1  |  layer  2  |  layer  3  |  layer  4
+        0     |[92m         0[39m  |[92m         0[39m  |[92m         0[39m  |[92m         0[39m  |[92m         0
+        1     |[92m        43[39m  |[92m        33[39m  |[92m        11[39m  |[92m         1[39m  |[92m         0
+        2     |[92m        74[39m  |[92m        54[39m  |[92m        35[39m  |[92m         5[39m  |[92m         0
+        3     |[92m       194[39m  |[92m        87[39m  |[92m        56[39m  |[92m         9[39m  |[92m         0
+        4     |[92m       303[39m  |[92m       193[39m  |[92m       105[39m  |[92m        10[39m  |[92m         8
+        5     |[92m       514[39m  |[92m       257[39m  |[92m       154[39m  |[92m        19[39m  |[92m        25
+        6     |[92m       713[39m  |[92m       431[39m  |[92m       188[39m  |[92m        23[39m  |[92m       108
+        7     |[92m      1143[39m  |[92m       618[39m  |[92m       239[39m  |[92m        38[39m  |[92m       182
+        8     |[92m      2165[39m  |[92m       777[39m  |[92m       354[39m  |[92m        52[39m  |[92m       475
+        9     |[92m      5090[39m  |[92m      1093[39m  |[92m       480[39m  |[92m        94[39m  |[92m       783
+       10     |[92m     14780[39m  |[92m      1820[39m  |[92m       874[39m  |[92m       283[39m  |[92m      1418
+       11     |[92m     35126[39m  |[92m      3759[39m  |[92m      1627[39m  |[92m       654[39m  |[92m      1619
+       12     |[92m     43981[39m  |[92m      7268[39m  |[92m      3067[39m  |[92m      1346[39m  |[92m      2318
+       13     |[92m     49333[39m  |[92m     12049[39m  |[92m      4777[39m  |[92m      2055[39m  |[92m      1817
+       14     |[92m     46356[39m  |[92m     17485[39m  |[92m      6634[39m  |[92m      2700[39m  |[92m      1900
+       15     |[92m     50073[39m  |[92m     22321[39m  |[92m      8205[39m  |[92m      3063[39m  |[92m      1685
+       16     |[92m     59729[39m  |[92m     24368[39m  |[92m      8628[39m  |[92m      3160[39m  |[92m      1563
+       17     |[92m     73631[39m  |[92m     24766[39m  |[92m      8666[39m  |[92m      3223[39m  |[92m      1421
+       18     |[92m    116260[39m  |[92m     24812[39m  |[92m      8359[39m  |[92m      3214[39m  |[92m       794
+       19     |[92m    181901[39m  |[92m     24833[39m  |[92m      8136[39m  |[92m      3263[39m  |[91m       767
+       20     |[92m    300432[39m  |[92m     27534[39m  |[92m      8070[39m  |[92m      3214[39m  |[91m       391
+       21     |[92m    570066[39m  |[92m     38397[39m  |[92m      9112[39m  |[92m      3203[39m  |[91m       147
+       22     |[92m    219824[39m  |[92m     38921[39m  |[92m      8831[39m  |[92m      3041[39m  |[91m       107
+       23     |[92m    142123[39m  |[92m     49507[39m  |[92m      9266[39m  |[92m      2707[39m  |[91m        44
+       24     |[92m    132636[39m  |[92m     61620[39m  |[92m     10292[39m  |[92m      2669[39m  |[91m        24
+       25     |[92m    122864[39m  |[92m     68754[39m  |[92m     10735[39m  |[92m      2505[39m  |[91m         0
+       26     |[92m    103165[39m  |[92m     66430[39m  |[92m     10709[39m  |[92m      2247[39m  |[91m         0
+       27     |[92m     74685[39m  |[92m     57633[39m  |[92m      9871[39m  |[92m      1926[39m  |[91m         0
+       28     |[91m     57748[39m  |[92m     44824[39m  |[92m      8978[39m  |[92m      1809[39m  |[91m         0
+       29     |[91m     45583[39m  |[92m     32897[39m  |[92m      7638[39m  |[92m      1562[39m  |[91m         0
+       30     |[91m     35040[39m  |[92m     23652[39m  |[92m      6123[39m  |[92m      1289[39m  |[91m         0
+       31     |[91m     26825[39m  |[92m     17652[39m  |[92m      5033[39m  |[92m      1194[39m  |[91m         0
+       32     |[91m     19654[39m  |[92m     13663[39m  |[92m      4276[39m  |[92m      1053[39m  |[91m         0
+       33     |[91m     14603[39m  |[91m     10975[39m  |[92m      3641[39m  |[92m       854[39m  |[91m         0
+       34     |[91m     11613[39m  |[91m      9139[39m  |[92m      3458[39m  |[91m       787[39m  |[91m         0
+       35     |[91m      8885[39m  |[91m      7576[39m  |[92m      3018[39m  |[91m       690[39m  |[91m         0
+       36     |[91m      7251[39m  |[91m      6400[39m  |[92m      2828[39m  |[91m       561[39m  |[91m         0
+       37     |[91m      5796[39m  |[91m      5297[39m  |[92m      2712[39m  |[91m       504[39m  |[91m         0
+       38     |[91m      4657[39m  |[91m      4617[39m  |[92m      2469[39m  |[91m       391[39m  |[91m         0
+       39     |[91m      3802[39m  |[91m      3909[39m  |[91m      2474[39m  |[91m       370[39m  |[91m         0
+       40     |[91m      3169[39m  |[91m      3503[39m  |[91m      2275[39m  |[91m       326[39m  |[91m         0
+       41     |[91m      2603[39m  |[91m      2932[39m  |[91m      2222[39m  |[91m       321[39m  |[91m         0
+       42     |[91m      2072[39m  |[91m      2502[39m  |[91m      2124[39m  |[91m       269[39m  |[91m         0
+       43     |[91m      1681[39m  |[91m      2040[39m  |[91m      1986[39m  |[91m       202[39m  |[91m         0
+       44     |[91m      1240[39m  |[91m      1652[39m  |[91m      1974[39m  |[91m       181[39m  |[91m         0
+       45     |[91m       915[39m  |[91m      1248[39m  |[91m      1753[39m  |[91m       159[39m  |[91m         0
+       46     |[91m       682[39m  |[91m       972[39m  |[91m      1421[39m  |[91m       140[39m  |[91m         0
+       47     |[91m       504[39m  |[91m       679[39m  |[91m      1068[39m  |[91m       117[39m  |[91m         0
+       48     |[91m       327[39m  |[91m       521[39m  |[91m       811[39m  |[91m        99[39m  |[91m         0
+       49     |[91m       256[39m  |[91m       364[39m  |[91m       585[39m  |[91m        75[39m  |[91m         0
+       50     |[91m       207[39m  |[91m       251[39m  |[91m       371[39m  |[91m        50[39m  |[91m         0
+       51     |[91m       127[39m  |[91m       179[39m  |[91m       312[39m  |[91m        53[39m  |[91m         0
+       52     |[91m        87[39m  |[91m       137[39m  |[91m       222[39m  |[91m        34[39m  |[91m         0
+       53     |[91m        75[39m  |[91m        68[39m  |[91m       170[39m  |[91m        34[39m  |[91m         0
+       54     |[91m        54[39m  |[91m        68[39m  |[91m       106[39m  |[91m        16[39m  |[91m         0
+       55     |[91m        36[39m  |[91m        48[39m  |[91m        75[39m  |[91m        15[39m  |[91m         0
+       56     |[91m        25[39m  |[91m        36[39m  |[91m        63[39m  |[91m        11[39m  |[91m         0
+       57     |[91m        18[39m  |[91m        29[39m  |[91m        55[39m  |[91m         8[39m  |[91m         0
+       58     |[91m        10[39m  |[91m        16[39m  |[91m        55[39m  |[91m         9[39m  |[91m         0
+       59     |[91m         6[39m  |[91m        18[39m  |[91m        36[39m  |[91m         5[39m  |[91m         0
+       60     |[91m         7[39m  |[91m         9[39m  |[91m        22[39m  |[91m         2[39m  |[91m         0
+       61     |[91m         5[39m  |[91m         4[39m  |[91m        18[39m  |[91m         2[39m  |[91m         0
+       62     |[91m         5[39m  |[91m         9[39m  |[91m        11[39m  |[91m         2[39m  |[91m         0
+       63     |[91m         3[39m  |[91m         5[39m  |[91m         6[39m  |[91m         3[39m  |[91m         0
+       64     |[91m         3[39m  |[91m         0[39m  |[91m         3[39m  |[91m         0[39m  |[91m         0
+       65     |[91m         2[39m  |[91m         2[39m  |[91m         1[39m  |[91m         0[39m  |[91m         0
+       66     |[91m         0[39m  |[91m         1[39m  |[91m         3[39m  |[91m         1[39m  |[91m         0
+       67     |[91m         0[39m  |[91m         1[39m  |[91m         1[39m  |[91m         2[39m  |[91m         0
+       68     |[91m         1[39m  |[91m         1[39m  |[91m         1[39m  |[91m         0[39m  |[91m         0
+       69     |[91m         3[39m  |[91m         0[39m  |[91m         0[39m  |[91m         0[39m  |[91m         0
+**************************************************
+chosen neighbors limits:  [27 32 38 33 18]
+Calibration done in 53.9s
+Starting Calibration (use verbose=True for more details)
+Previous calibration found:
+Check batch limit dictionary
+[92m"potentials_0.600_0.030_4": 6340
+Check neighbors limit dictionary
+[92m"0.030_0.075": 27
+[92m"0.060_0.150": 32
+[92m"0.120_0.300": 38
+[92m"0.240_0.600": 33
+[92m"0.480_1.200": 18
+Calibration done in 0.0s
+Model Preparation
+*****************
+Done in 0.8s
+Start training
+**************
+e000-i0000 => L=2.582 acc=  6% / t(ms): 902.6 1399.5 627.3)
+e000-i0002 => L=2.554 acc=  6% / t(ms):   4.9 285.9 488.2)
+e000-i0004 => L=2.483 acc= 13% / t(ms):   4.9 291.5 506.8)
+e000-i0005 => L=2.378 acc= 46% / t(ms):   5.0 297.6 523.6)
+e000-i0007 => L=2.223 acc= 66% / t(ms):   4.9 305.6 538.8)
+e000-i0009 => L=2.262 acc= 30% / t(ms):   5.0 315.8 537.2)
+e000-i0011 => L=2.085 acc= 37% / t(ms):   5.0 319.6 538.5)
+e000-i0013 => L=1.983 acc= 41% / t(ms):   5.0 311.9 533.2)
+e000-i0015 => L=1.458 acc= 48% / t(ms):   4.9 304.2 531.8)
+e000-i0017 => L=2.519 acc= 26% / t(ms):   5.1 299.9 520.8)

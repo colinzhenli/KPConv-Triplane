@@ -1,0 +1,149 @@
+2023-04-21 22:29:13,301 INFO    StreamThr :811356 [internal.py:wandb_internal():87] W&B internal server running at pid: 811356, started at: 2023-04-21 22:29:13.301261
+2023-04-21 22:29:13,304 DEBUG   HandlerThread:811356 [handler.py:handle_request():144] handle_request: status
+2023-04-21 22:29:13,307 INFO    WriterThread:811356 [datastore.py:open_for_write():85] open: /home/zhenli/KPConv-Triplane/wandb/run-20230421_222913-twbd1ty7/run-twbd1ty7.wandb
+2023-04-21 22:29:13,308 DEBUG   SenderThread:811356 [sender.py:send():336] send: header
+2023-04-21 22:29:13,309 DEBUG   SenderThread:811356 [sender.py:send():336] send: run
+2023-04-21 22:29:13,642 DEBUG   HandlerThread:811356 [handler.py:handle_request():144] handle_request: check_version
+2023-04-21 22:29:13,646 INFO    SenderThread:811356 [dir_watcher.py:__init__():219] watching files in: /home/zhenli/KPConv-Triplane/wandb/run-20230421_222913-twbd1ty7/files
+2023-04-21 22:29:13,646 INFO    SenderThread:811356 [sender.py:_start_run_threads():1078] run started: twbd1ty7 with start time 1682141353.300168
+2023-04-21 22:29:13,646 DEBUG   SenderThread:811356 [sender.py:send_request():363] send_request: summary_record
+2023-04-21 22:29:13,646 INFO    SenderThread:811356 [sender.py:_save_file():1332] saving file wandb-summary.json with policy end
+2023-04-21 22:29:13,646 DEBUG   SenderThread:811356 [sender.py:send_request():363] send_request: check_version
+2023-04-21 22:29:13,768 DEBUG   HandlerThread:811356 [handler.py:handle_request():144] handle_request: run_start
+2023-04-21 22:29:13,784 DEBUG   HandlerThread:811356 [system_info.py:__init__():31] System info init
+2023-04-21 22:29:13,784 DEBUG   HandlerThread:811356 [system_info.py:__init__():46] System info init done
+2023-04-21 22:29:13,784 INFO    HandlerThread:811356 [system_monitor.py:start():183] Starting system monitor
+2023-04-21 22:29:13,785 INFO    SystemMonitor:811356 [system_monitor.py:_start():147] Starting system asset monitoring threads
+2023-04-21 22:29:13,786 INFO    HandlerThread:811356 [system_monitor.py:probe():204] Collecting system info
+2023-04-21 22:29:13,788 INFO    SystemMonitor:811356 [interfaces.py:start():187] Started cpu monitoring
+2023-04-21 22:29:13,791 INFO    SystemMonitor:811356 [interfaces.py:start():187] Started disk monitoring
+2023-04-21 22:29:13,793 INFO    SystemMonitor:811356 [interfaces.py:start():187] Started gpu monitoring
+2023-04-21 22:29:13,797 INFO    SystemMonitor:811356 [interfaces.py:start():187] Started memory monitoring
+2023-04-21 22:29:13,800 INFO    SystemMonitor:811356 [interfaces.py:start():187] Started network monitoring
+2023-04-21 22:29:13,856 DEBUG   HandlerThread:811356 [system_info.py:probe():195] Probing system
+2023-04-21 22:29:13,861 DEBUG   HandlerThread:811356 [system_info.py:_probe_git():180] Probing git
+2023-04-21 22:29:13,870 DEBUG   HandlerThread:811356 [system_info.py:_probe_git():188] Probing git done
+2023-04-21 22:29:13,870 DEBUG   HandlerThread:811356 [system_info.py:probe():240] Probing system done
+2023-04-21 22:29:13,870 DEBUG   HandlerThread:811356 [system_monitor.py:probe():213] {'os': 'Linux-5.15.0-69-generic-x86_64-with-glibc2.31', 'python': '3.10.10', 'heartbeatAt': '2023-04-22T05:29:13.856475', 'startedAt': '2023-04-22T05:29:13.287378', 'docker': None, 'cuda': None, 'args': (), 'state': 'running', 'program': 'train_S3DIS.py', 'codePath': 'train_S3DIS.py', 'git': {'remote': 'git@github.com:Kaola-2115/KPConv-Triplane.git', 'commit': '5fa7972082de1f7c1579b7b1ebd7281d2efbd680'}, 'email': 'zla247@sfu.ca', 'root': '/home/zhenli/KPConv-Triplane', 'host': 'pc', 'username': 'zhenli', 'executable': '/home/zhenli/anaconda3/envs/cuda11.1/bin/python', 'cpu_count': 12, 'cpu_count_logical': 20, 'cpu_freq': {'current': 2042.1180500000003, 'min': 800.0, 'max': 4580.0}, 'cpu_freq_per_core': [{'current': 2100.0, 'min': 800.0, 'max': 4800.0}, {'current': 2100.0, 'min': 800.0, 'max': 4800.0}, {'current': 2100.0, 'min': 800.0, 'max': 4800.0}, {'current': 2100.0, 'min': 800.0, 'max': 4800.0}, {'current': 2100.0, 'min': 800.0, 'max': 4800.0}, {'current': 2100.0, 'min': 800.0, 'max': 4800.0}, {'current': 2100.0, 'min': 800.0, 'max': 4800.0}, {'current': 2100.0, 'min': 800.0, 'max': 4800.0}, {'current': 2100.0, 'min': 800.0, 'max': 4900.0}, {'current': 2100.0, 'min': 800.0, 'max': 4900.0}, {'current': 2100.0, 'min': 800.0, 'max': 4800.0}, {'current': 2100.0, 'min': 800.0, 'max': 4800.0}, {'current': 900.023, 'min': 800.0, 'max': 4900.0}, {'current': 2100.0, 'min': 800.0, 'max': 4900.0}, {'current': 2100.0, 'min': 800.0, 'max': 4800.0}, {'current': 2100.0, 'min': 800.0, 'max': 4800.0}, {'current': 2100.0, 'min': 800.0, 'max': 3600.0}, {'current': 2100.0, 'min': 800.0, 'max': 3600.0}, {'current': 2100.0, 'min': 800.0, 'max': 3600.0}, {'current': 2100.0, 'min': 800.0, 'max': 3600.0}], 'disk': {'total': 288.5988540649414, 'used': 265.7239799499512}, 'gpu': 'NVIDIA GeForce RTX 3090 Ti', 'gpu_count': 1, 'gpu_devices': [{'name': 'NVIDIA GeForce RTX 3090 Ti', 'memory_total': 25757220864}], 'memory': {'total': 31.147968292236328}}
+2023-04-21 22:29:13,870 INFO    HandlerThread:811356 [system_monitor.py:probe():214] Finished collecting system info
+2023-04-21 22:29:13,870 INFO    HandlerThread:811356 [system_monitor.py:probe():217] Publishing system info
+2023-04-21 22:29:13,870 DEBUG   HandlerThread:811356 [system_info.py:_save_pip():51] Saving list of pip packages installed into the current environment
+2023-04-21 22:29:13,871 DEBUG   HandlerThread:811356 [system_info.py:_save_pip():67] Saving pip packages done
+2023-04-21 22:29:13,871 DEBUG   HandlerThread:811356 [system_info.py:_save_conda():74] Saving list of conda packages installed into the current environment
+2023-04-21 22:29:14,648 INFO    Thread-18 :811356 [dir_watcher.py:_on_file_created():278] file/dir created: /home/zhenli/KPConv-Triplane/wandb/run-20230421_222913-twbd1ty7/files/wandb-summary.json
+2023-04-21 22:29:14,648 INFO    Thread-18 :811356 [dir_watcher.py:_on_file_created():278] file/dir created: /home/zhenli/KPConv-Triplane/wandb/run-20230421_222913-twbd1ty7/files/conda-environment.yaml
+2023-04-21 22:29:14,648 INFO    Thread-18 :811356 [dir_watcher.py:_on_file_created():278] file/dir created: /home/zhenli/KPConv-Triplane/wandb/run-20230421_222913-twbd1ty7/files/requirements.txt
+2023-04-21 22:29:16,219 DEBUG   HandlerThread:811356 [system_info.py:_save_conda():86] Saving conda packages done
+2023-04-21 22:29:16,220 INFO    HandlerThread:811356 [system_monitor.py:probe():219] Finished publishing system info
+2023-04-21 22:29:16,224 DEBUG   SenderThread:811356 [sender.py:send():336] send: files
+2023-04-21 22:29:16,224 INFO    SenderThread:811356 [sender.py:_save_file():1332] saving file wandb-metadata.json with policy now
+2023-04-21 22:29:16,229 DEBUG   SenderThread:811356 [sender.py:send():336] send: telemetry
+2023-04-21 22:29:16,230 DEBUG   SenderThread:811356 [sender.py:send():336] send: config
+2023-04-21 22:29:16,273 DEBUG   HandlerThread:811356 [handler.py:handle_request():144] handle_request: stop_status
+2023-04-21 22:29:16,273 DEBUG   SenderThread:811356 [sender.py:send_request():363] send_request: stop_status
+2023-04-21 22:29:16,646 INFO    Thread-18 :811356 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/zhenli/KPConv-Triplane/wandb/run-20230421_222913-twbd1ty7/files/conda-environment.yaml
+2023-04-21 22:29:16,646 INFO    Thread-18 :811356 [dir_watcher.py:_on_file_created():278] file/dir created: /home/zhenli/KPConv-Triplane/wandb/run-20230421_222913-twbd1ty7/files/wandb-metadata.json
+2023-04-21 22:29:16,647 INFO    Thread-18 :811356 [dir_watcher.py:_on_file_created():278] file/dir created: /home/zhenli/KPConv-Triplane/wandb/run-20230421_222913-twbd1ty7/files/output.log
+2023-04-21 22:29:16,701 INFO    wandb-upload_0:811356 [upload_job.py:push():138] Uploaded file /tmp/tmphv_ls4d6wandb/8wlpjdg0-wandb-metadata.json
+2023-04-21 22:29:18,369 DEBUG   HandlerThread:811356 [handler.py:handle_request():144] handle_request: status_report
+2023-04-21 22:29:18,647 INFO    Thread-18 :811356 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/zhenli/KPConv-Triplane/wandb/run-20230421_222913-twbd1ty7/files/output.log
+2023-04-21 22:29:22,648 INFO    Thread-18 :811356 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/zhenli/KPConv-Triplane/wandb/run-20230421_222913-twbd1ty7/files/output.log
+2023-04-21 22:29:23,998 DEBUG   HandlerThread:811356 [handler.py:handle_request():144] handle_request: status_report
+2023-04-21 22:29:28,650 INFO    Thread-18 :811356 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/zhenli/KPConv-Triplane/wandb/run-20230421_222913-twbd1ty7/files/output.log
+2023-04-21 22:29:29,938 DEBUG   HandlerThread:811356 [handler.py:handle_request():144] handle_request: status_report
+2023-04-21 22:29:30,650 INFO    Thread-18 :811356 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/zhenli/KPConv-Triplane/wandb/run-20230421_222913-twbd1ty7/files/output.log
+2023-04-21 22:29:31,722 DEBUG   HandlerThread:811356 [handler.py:handle_request():144] handle_request: stop_status
+2023-04-21 22:29:31,722 DEBUG   SenderThread:811356 [sender.py:send_request():363] send_request: stop_status
+2023-04-21 22:29:34,651 INFO    Thread-18 :811356 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/zhenli/KPConv-Triplane/wandb/run-20230421_222913-twbd1ty7/files/output.log
+2023-04-21 22:29:35,430 DEBUG   HandlerThread:811356 [handler.py:handle_request():144] handle_request: status_report
+2023-04-21 22:29:38,653 INFO    Thread-18 :811356 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/zhenli/KPConv-Triplane/wandb/run-20230421_222913-twbd1ty7/files/output.log
+2023-04-21 22:29:40,579 DEBUG   HandlerThread:811356 [handler.py:handle_request():144] handle_request: status_report
+2023-04-21 22:29:42,654 INFO    Thread-18 :811356 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/zhenli/KPConv-Triplane/wandb/run-20230421_222913-twbd1ty7/files/output.log
+2023-04-21 22:29:45,838 DEBUG   HandlerThread:811356 [handler.py:handle_request():144] handle_request: status_report
+2023-04-21 22:29:46,655 INFO    Thread-18 :811356 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/zhenli/KPConv-Triplane/wandb/run-20230421_222913-twbd1ty7/files/config.yaml
+2023-04-21 22:29:48,915 DEBUG   HandlerThread:811356 [handler.py:handle_request():144] handle_request: stop_status
+2023-04-21 22:29:48,915 DEBUG   SenderThread:811356 [sender.py:send_request():363] send_request: stop_status
+2023-04-21 22:29:51,277 DEBUG   HandlerThread:811356 [handler.py:handle_request():144] handle_request: status_report
+2023-04-21 22:29:52,656 INFO    Thread-18 :811356 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/zhenli/KPConv-Triplane/wandb/run-20230421_222913-twbd1ty7/files/output.log
+2023-04-21 22:29:54,657 INFO    Thread-18 :811356 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/zhenli/KPConv-Triplane/wandb/run-20230421_222913-twbd1ty7/files/output.log
+2023-04-21 22:29:57,167 DEBUG   HandlerThread:811356 [handler.py:handle_request():144] handle_request: status_report
+2023-04-21 22:30:02,168 DEBUG   HandlerThread:811356 [handler.py:handle_request():144] handle_request: status_report
+2023-04-21 22:30:03,915 DEBUG   HandlerThread:811356 [handler.py:handle_request():144] handle_request: stop_status
+2023-04-21 22:30:03,915 DEBUG   SenderThread:811356 [sender.py:send_request():363] send_request: stop_status
+2023-04-21 22:30:08,017 DEBUG   HandlerThread:811356 [handler.py:handle_request():144] handle_request: status_report
+2023-04-21 22:30:13,018 DEBUG   HandlerThread:811356 [handler.py:handle_request():144] handle_request: status_report
+2023-04-21 22:30:13,801 DEBUG   SystemMonitor:811356 [system_monitor.py:_start():161] Starting system metrics aggregation loop
+2023-04-21 22:30:13,801 DEBUG   SenderThread:811356 [sender.py:send():336] send: stats
+2023-04-21 22:30:18,802 DEBUG   HandlerThread:811356 [handler.py:handle_request():144] handle_request: status_report
+2023-04-21 22:30:18,915 DEBUG   HandlerThread:811356 [handler.py:handle_request():144] handle_request: stop_status
+2023-04-21 22:30:18,915 DEBUG   SenderThread:811356 [sender.py:send_request():363] send_request: stop_status
+2023-04-21 22:30:24,018 DEBUG   HandlerThread:811356 [handler.py:handle_request():144] handle_request: status_report
+2023-04-21 22:30:29,019 DEBUG   HandlerThread:811356 [handler.py:handle_request():144] handle_request: status_report
+2023-04-21 22:30:33,915 DEBUG   HandlerThread:811356 [handler.py:handle_request():144] handle_request: stop_status
+2023-04-21 22:30:33,915 DEBUG   SenderThread:811356 [sender.py:send_request():363] send_request: stop_status
+2023-04-21 22:30:35,008 DEBUG   HandlerThread:811356 [handler.py:handle_request():144] handle_request: status_report
+2023-04-21 22:30:40,009 DEBUG   HandlerThread:811356 [handler.py:handle_request():144] handle_request: status_report
+2023-04-21 22:30:43,802 DEBUG   SenderThread:811356 [sender.py:send():336] send: stats
+2023-04-21 22:30:45,803 DEBUG   HandlerThread:811356 [handler.py:handle_request():144] handle_request: status_report
+2023-04-21 22:30:48,915 DEBUG   HandlerThread:811356 [handler.py:handle_request():144] handle_request: stop_status
+2023-04-21 22:30:48,915 DEBUG   SenderThread:811356 [sender.py:send_request():363] send_request: stop_status
+2023-04-21 22:30:51,019 DEBUG   HandlerThread:811356 [handler.py:handle_request():144] handle_request: status_report
+2023-04-21 22:30:56,020 DEBUG   HandlerThread:811356 [handler.py:handle_request():144] handle_request: status_report
+2023-04-21 22:31:01,020 DEBUG   HandlerThread:811356 [handler.py:handle_request():144] handle_request: status_report
+2023-04-21 22:31:03,915 DEBUG   HandlerThread:811356 [handler.py:handle_request():144] handle_request: stop_status
+2023-04-21 22:31:03,915 DEBUG   SenderThread:811356 [sender.py:send_request():363] send_request: stop_status
+2023-04-21 22:31:04,673 INFO    Thread-18 :811356 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/zhenli/KPConv-Triplane/wandb/run-20230421_222913-twbd1ty7/files/output.log
+2023-04-21 22:31:06,329 DEBUG   HandlerThread:811356 [handler.py:handle_request():144] handle_request: status_report
+2023-04-21 22:31:06,674 INFO    Thread-18 :811356 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/zhenli/KPConv-Triplane/wandb/run-20230421_222913-twbd1ty7/files/output.log
+2023-04-21 22:31:08,674 INFO    Thread-18 :811356 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/zhenli/KPConv-Triplane/wandb/run-20230421_222913-twbd1ty7/files/output.log
+2023-04-21 22:31:10,675 INFO    Thread-18 :811356 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/zhenli/KPConv-Triplane/wandb/run-20230421_222913-twbd1ty7/files/output.log
+2023-04-21 22:31:11,438 DEBUG   HandlerThread:811356 [handler.py:handle_request():144] handle_request: status_report
+2023-04-21 22:31:12,675 INFO    Thread-18 :811356 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/zhenli/KPConv-Triplane/wandb/run-20230421_222913-twbd1ty7/files/output.log
+2023-04-21 22:31:13,803 DEBUG   SenderThread:811356 [sender.py:send():336] send: stats
+2023-04-21 22:31:14,676 INFO    Thread-18 :811356 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/zhenli/KPConv-Triplane/wandb/run-20230421_222913-twbd1ty7/files/output.log
+2023-04-21 22:31:16,603 DEBUG   HandlerThread:811356 [handler.py:handle_request():144] handle_request: status_report
+2023-04-21 22:31:16,677 INFO    Thread-18 :811356 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/zhenli/KPConv-Triplane/wandb/run-20230421_222913-twbd1ty7/files/output.log
+2023-04-21 22:31:18,678 INFO    Thread-18 :811356 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/zhenli/KPConv-Triplane/wandb/run-20230421_222913-twbd1ty7/files/output.log
+2023-04-21 22:31:18,915 DEBUG   HandlerThread:811356 [handler.py:handle_request():144] handle_request: stop_status
+2023-04-21 22:31:18,915 DEBUG   SenderThread:811356 [sender.py:send_request():363] send_request: stop_status
+2023-04-21 22:31:20,679 INFO    Thread-18 :811356 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/zhenli/KPConv-Triplane/wandb/run-20230421_222913-twbd1ty7/files/output.log
+2023-04-21 22:31:21,768 DEBUG   HandlerThread:811356 [handler.py:handle_request():144] handle_request: status_report
+2023-04-21 22:31:22,679 INFO    Thread-18 :811356 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/zhenli/KPConv-Triplane/wandb/run-20230421_222913-twbd1ty7/files/output.log
+2023-04-21 22:31:24,680 INFO    Thread-18 :811356 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/zhenli/KPConv-Triplane/wandb/run-20230421_222913-twbd1ty7/files/output.log
+2023-04-21 22:31:26,681 INFO    Thread-18 :811356 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/zhenli/KPConv-Triplane/wandb/run-20230421_222913-twbd1ty7/files/output.log
+2023-04-21 22:31:27,569 DEBUG   HandlerThread:811356 [handler.py:handle_request():144] handle_request: status_report
+2023-04-21 22:31:28,682 INFO    Thread-18 :811356 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/zhenli/KPConv-Triplane/wandb/run-20230421_222913-twbd1ty7/files/output.log
+2023-04-21 22:31:30,682 INFO    Thread-18 :811356 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/zhenli/KPConv-Triplane/wandb/run-20230421_222913-twbd1ty7/files/output.log
+2023-04-21 22:31:32,683 INFO    Thread-18 :811356 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/zhenli/KPConv-Triplane/wandb/run-20230421_222913-twbd1ty7/files/output.log
+2023-04-21 22:31:32,778 DEBUG   HandlerThread:811356 [handler.py:handle_request():144] handle_request: status_report
+2023-04-21 22:31:33,915 DEBUG   HandlerThread:811356 [handler.py:handle_request():144] handle_request: stop_status
+2023-04-21 22:31:33,916 DEBUG   SenderThread:811356 [sender.py:send_request():363] send_request: stop_status
+2023-04-21 22:31:34,684 INFO    Thread-18 :811356 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/zhenli/KPConv-Triplane/wandb/run-20230421_222913-twbd1ty7/files/output.log
+2023-04-21 22:31:36,685 INFO    Thread-18 :811356 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/zhenli/KPConv-Triplane/wandb/run-20230421_222913-twbd1ty7/files/output.log
+2023-04-21 22:31:37,993 DEBUG   HandlerThread:811356 [handler.py:handle_request():144] handle_request: status_report
+2023-04-21 22:31:38,685 INFO    Thread-18 :811356 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/zhenli/KPConv-Triplane/wandb/run-20230421_222913-twbd1ty7/files/output.log
+2023-04-21 22:31:40,686 INFO    Thread-18 :811356 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/zhenli/KPConv-Triplane/wandb/run-20230421_222913-twbd1ty7/files/output.log
+2023-04-21 22:31:42,687 INFO    Thread-18 :811356 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/zhenli/KPConv-Triplane/wandb/run-20230421_222913-twbd1ty7/files/output.log
+2023-04-21 22:31:43,113 DEBUG   HandlerThread:811356 [handler.py:handle_request():144] handle_request: status_report
+2023-04-21 22:31:43,804 DEBUG   SenderThread:811356 [sender.py:send():336] send: stats
+2023-04-21 22:31:44,687 INFO    Thread-18 :811356 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/zhenli/KPConv-Triplane/wandb/run-20230421_222913-twbd1ty7/files/output.log
+2023-04-21 22:31:46,688 INFO    Thread-18 :811356 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/zhenli/KPConv-Triplane/wandb/run-20230421_222913-twbd1ty7/files/output.log
+2023-04-21 22:31:48,342 DEBUG   HandlerThread:811356 [handler.py:handle_request():144] handle_request: status_report
+2023-04-21 22:31:48,689 INFO    Thread-18 :811356 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/zhenli/KPConv-Triplane/wandb/run-20230421_222913-twbd1ty7/files/output.log
+2023-04-21 22:31:48,916 DEBUG   HandlerThread:811356 [handler.py:handle_request():144] handle_request: stop_status
+2023-04-21 22:31:48,916 DEBUG   SenderThread:811356 [sender.py:send_request():363] send_request: stop_status
+2023-04-21 22:31:50,690 INFO    Thread-18 :811356 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/zhenli/KPConv-Triplane/wandb/run-20230421_222913-twbd1ty7/files/output.log
+2023-04-21 22:31:52,690 INFO    Thread-18 :811356 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/zhenli/KPConv-Triplane/wandb/run-20230421_222913-twbd1ty7/files/output.log
+2023-04-21 22:31:53,607 DEBUG   HandlerThread:811356 [handler.py:handle_request():144] handle_request: status_report
+2023-04-21 22:31:54,691 INFO    Thread-18 :811356 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/zhenli/KPConv-Triplane/wandb/run-20230421_222913-twbd1ty7/files/output.log
+2023-04-21 22:31:56,692 INFO    Thread-18 :811356 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/zhenli/KPConv-Triplane/wandb/run-20230421_222913-twbd1ty7/files/output.log
+2023-04-21 22:31:58,693 INFO    Thread-18 :811356 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/zhenli/KPConv-Triplane/wandb/run-20230421_222913-twbd1ty7/files/output.log
+2023-04-21 22:31:58,701 DEBUG   HandlerThread:811356 [handler.py:handle_request():144] handle_request: status_report
+2023-04-21 22:32:00,693 INFO    Thread-18 :811356 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/zhenli/KPConv-Triplane/wandb/run-20230421_222913-twbd1ty7/files/output.log
+2023-04-21 22:32:02,694 INFO    Thread-18 :811356 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/zhenli/KPConv-Triplane/wandb/run-20230421_222913-twbd1ty7/files/output.log
+2023-04-21 22:32:03,918 DEBUG   HandlerThread:811356 [handler.py:handle_request():144] handle_request: stop_status
+2023-04-21 22:32:03,920 DEBUG   SenderThread:811356 [sender.py:send_request():363] send_request: stop_status
+2023-04-21 22:32:03,925 DEBUG   HandlerThread:811356 [handler.py:handle_request():144] handle_request: status_report
+2023-04-21 22:32:04,696 INFO    Thread-18 :811356 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/zhenli/KPConv-Triplane/wandb/run-20230421_222913-twbd1ty7/files/output.log
+2023-04-21 22:32:09,051 DEBUG   HandlerThread:811356 [handler.py:handle_request():144] handle_request: status_report
+2023-04-21 22:32:10,700 INFO    Thread-18 :811356 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/zhenli/KPConv-Triplane/wandb/run-20230421_222913-twbd1ty7/files/output.log

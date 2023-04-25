@@ -1,0 +1,932 @@
+Preparing ply files
+Done in 0.0s
+Found KDTree for cloud Area_1, subsampled at 0.030
+146.6 MB loaded in 0.1s
+Found KDTree for cloud Area_2, subsampled at 0.030
+159.1 MB loaded in 0.1s
+Found KDTree for cloud Area_3, subsampled at 0.030
+62.6 MB loaded in 0.0s
+Found KDTree for cloud Area_4, subsampled at 0.030
+144.2 MB loaded in 0.1s
+Found KDTree for cloud Area_6, subsampled at 0.030
+137.9 MB loaded in 0.1s
+Preparing potentials
+Done in 2.1s
+Preparing ply files
+Done in 0.0s
+Found KDTree for cloud Area_5, subsampled at 0.030
+260.4 MB loaded in 0.2s
+Preparing potentials
+Done in 1.0s
+Preparing reprojection indices for testing
+Area_5 done in 0.2s
+Starting Calibration (use verbose=True for more details)
+Previous calibration found:
+Check batch limit dictionary
+[91m"potentials_1.200_0.030_6": ?
+Check neighbors limit dictionary
+[92m"0.030_0.075": 28
+[92m"0.060_0.150": 33
+[92m"0.120_0.300": 41
+[92m"0.240_0.600": 42
+[92m"0.480_1.200": 44
+Backend QtAgg is interactive backend. Turning interactive mode on.
+Step     1  estim_b = 0.01 batch_limit =  15003
+Step     4  estim_b = 0.06 batch_limit =  19024
+Step     7  estim_b = 0.15 batch_limit =  21060
+Step     9  estim_b = 0.21 batch_limit =  23591
+Step    11  estim_b = 0.28 batch_limit =  23627
+Step    13  estim_b = 0.33 batch_limit =  29168
+Step    15  estim_b = 0.39 batch_limit =  32216
+Step    17  estim_b = 0.45 batch_limit =  32269
+Step    19  estim_b = 0.52 batch_limit =  34326
+Step    21  estim_b = 0.59 batch_limit =  33887
+Step    23  estim_b = 0.65 batch_limit =  38953
+Step    24  estim_b = 0.69 batch_limit =  36987
+Step    26  estim_b = 0.77 batch_limit =  38558
+Step    28  estim_b = 0.84 batch_limit =  40131
+Step    30  estim_b = 0.91 batch_limit =  44207
+Step    32  estim_b = 0.99 batch_limit =  42786
+Step    34  estim_b = 1.06 batch_limit =  44367
+Step    36  estim_b = 1.14 batch_limit =  42951
+Step    37  estim_b = 1.18 batch_limit =  45994
+Step    38  estim_b = 1.22 batch_limit =  46537
+Step    39  estim_b = 1.27 batch_limit =  44080
+Step    41  estim_b = 1.34 batch_limit =  47667
+Step    43  estim_b = 1.42 batch_limit =  48256
+Step    44  estim_b = 1.47 batch_limit =  45800
+Step    45  estim_b = 1.51 batch_limit =  45845
+Step    46  estim_b = 1.55 batch_limit =  48890
+Step    47  estim_b = 1.59 batch_limit =  46435
+Step    48  estim_b = 1.64 batch_limit =  46480
+Step    50  estim_b = 1.72 batch_limit =  47071
+Step    51  estim_b = 1.76 batch_limit =  47116
+Step    52  estim_b = 1.80 batch_limit =  47162
+Step    53  estim_b = 1.83 batch_limit =  50208
+Step    55  estim_b = 1.91 batch_limit =  53300
+Step    56  estim_b = 1.96 batch_limit =  45346
+Step    57  estim_b = 1.99 batch_limit =  50892
+Step    58  estim_b = 2.02 batch_limit =  51439
+Step    59  estim_b = 2.06 batch_limit =  48986
+Step    60  estim_b = 2.09 batch_limit =  52034
+Step    61  estim_b = 2.13 batch_limit =  49581
+Step    62  estim_b = 2.14 batch_limit =  55630
+Step    63  estim_b = 2.19 batch_limit =  47678
+Step    64  estim_b = 2.23 batch_limit =  50226
+Step    65  estim_b = 2.27 batch_limit =  50274
+Step    66  estim_b = 2.33 batch_limit =  44321
+Step    67  estim_b = 2.36 batch_limit =  49368
+Step    68  estim_b = 2.41 batch_limit =  46414
+Step    69  estim_b = 2.43 batch_limit =  51961
+Step    70  estim_b = 2.47 batch_limit =  49508
+Step    72  estim_b = 2.53 batch_limit =  52603
+Step    73  estim_b = 2.57 batch_limit =  50150
+Step    74  estim_b = 2.62 batch_limit =  44197
+Step    76  estim_b = 2.68 batch_limit =  47291
+Step    77  estim_b = 2.71 batch_limit =  49838
+Step    78  estim_b = 2.74 batch_limit =  49885
+Step    79  estim_b = 2.78 batch_limit =  49932
+Step    80  estim_b = 2.81 batch_limit =  49979
+Step    81  estim_b = 2.84 batch_limit =  50026
+Step    83  estim_b = 2.89 batch_limit =  53121
+Step    84  estim_b = 2.92 batch_limit =  50668
+Step    85  estim_b = 2.95 batch_limit =  50716
+Step    86  estim_b = 3.00 batch_limit =  47763
+Step    87  estim_b = 3.03 batch_limit =  50310
+Step    88  estim_b = 3.04 batch_limit =  53357
+Step    89  estim_b = 3.07 batch_limit =  50905
+Step    90  estim_b = 3.11 batch_limit =  47952
+Step    92  estim_b = 3.17 batch_limit =  48046
+Step    93  estim_b = 3.21 batch_limit =  47593
+Step    94  estim_b = 3.23 batch_limit =  53140
+Step    95  estim_b = 3.26 batch_limit =  50687
+Step    96  estim_b = 3.27 batch_limit =  53734
+Step    97  estim_b = 3.31 batch_limit =  48281
+Step    98  estim_b = 3.35 batch_limit =  47828
+Step   100  estim_b = 3.40 batch_limit =  50421
+Step   101  estim_b = 3.43 batch_limit =  50467
+Step   103  estim_b = 3.49 batch_limit =  50059
+Step   104  estim_b = 3.52 batch_limit =  47105
+Step   105  estim_b = 3.54 batch_limit =  52651
+Step   106  estim_b = 3.56 batch_limit =  50197
+Step   108  estim_b = 3.61 batch_limit =  50289
+Step   109  estim_b = 3.64 batch_limit =  47334
+Step   110  estim_b = 3.67 batch_limit =  49880
+Step   111  estim_b = 3.68 batch_limit =  52926
+Step   112  estim_b = 3.71 batch_limit =  47471
+Step   113  estim_b = 3.73 batch_limit =  53017
+Step   114  estim_b = 3.75 batch_limit =  50563
+Step   116  estim_b = 3.81 batch_limit =  44654
+Step   117  estim_b = 3.85 batch_limit =  46699
+Step   118  estim_b = 3.86 batch_limit =  52244
+Step   119  estim_b = 3.88 batch_limit =  49789
+Step   120  estim_b = 3.89 batch_limit =  52834
+Step   121  estim_b = 3.91 batch_limit =  50380
+Step   122  estim_b = 3.93 batch_limit =  50425
+Step   123  estim_b = 3.94 batch_limit =  53471
+Step   124  estim_b = 3.96 batch_limit =  51017
+Step   125  estim_b = 3.98 batch_limit =  51063
+Step   126  estim_b = 4.01 batch_limit =  48109
+Step   127  estim_b = 4.03 batch_limit =  50654
+Step   128  estim_b = 4.04 batch_limit =  53700
+Step   129  estim_b = 4.06 batch_limit =  51246
+Step   130  estim_b = 4.08 batch_limit =  51292
+Step   131  estim_b = 4.09 batch_limit =  54339
+Step   132  estim_b = 4.11 batch_limit =  51885
+Step   133  estim_b = 4.12 batch_limit =  54932
+Step   134  estim_b = 4.14 batch_limit =  52479
+Step   135  estim_b = 4.16 batch_limit =  52526
+Step   136  estim_b = 4.19 batch_limit =  49573
+Step   137  estim_b = 4.21 batch_limit =  49119
+Step   138  estim_b = 4.23 batch_limit =  51665
+Step   139  estim_b = 4.24 batch_limit =  54711
+Step   140  estim_b = 4.26 batch_limit =  52258
+Step   141  estim_b = 4.27 batch_limit =  52304
+Step   142  estim_b = 4.31 batch_limit =  46350
+Step   143  estim_b = 4.33 batch_limit =  51395
+Step   144  estim_b = 4.35 batch_limit =  51441
+Step   145  estim_b = 4.35 batch_limit =  54487
+Step   146  estim_b = 4.38 batch_limit =  49032
+Step   147  estim_b = 4.39 batch_limit =  51578
+Step   148  estim_b = 4.41 batch_limit =  51623
+Step   149  estim_b = 4.43 batch_limit =  51669
+Step   150  estim_b = 4.43 batch_limit =  54715
+Step   151  estim_b = 4.45 batch_limit =  52261
+Step   152  estim_b = 4.47 batch_limit =  49306
+Step   153  estim_b = 4.48 batch_limit =  54852
+Step   154  estim_b = 4.49 batch_limit =  52398
+Step   155  estim_b = 4.51 batch_limit =  52444
+Step   156  estim_b = 4.52 batch_limit =  52490
+Step   157  estim_b = 4.54 batch_limit =  52536
+Step   158  estim_b = 4.56 batch_limit =  49582
+Step   159  estim_b = 4.58 batch_limit =  52127
+Step   160  estim_b = 4.60 batch_limit =  49172
+Step   161  estim_b = 4.62 batch_limit =  51717
+Step   162  estim_b = 4.64 batch_limit =  48762
+Step   163  estim_b = 4.64 batch_limit =  54307
+Step   164  estim_b = 4.66 batch_limit =  51852
+Step   165  estim_b = 4.67 batch_limit =  51897
+Step   166  estim_b = 4.67 batch_limit =  54942
+Step   167  estim_b = 4.69 batch_limit =  52488
+Step   168  estim_b = 4.70 batch_limit =  52533
+Step   169  estim_b = 4.70 batch_limit =  55579
+Step   170  estim_b = 4.73 batch_limit =  50125
+Step   171  estim_b = 4.72 batch_limit =  58671
+Step   172  estim_b = 4.73 batch_limit =  53718
+Step   173  estim_b = 4.74 batch_limit =  53764
+Step   174  estim_b = 4.76 batch_limit =  53811
+Step   175  estim_b = 4.77 batch_limit =  53857
+Step   176  estim_b = 4.78 batch_limit =  53904
+Step   177  estim_b = 4.79 batch_limit =  53950
+Step   178  estim_b = 4.81 batch_limit =  53997
+Step   179  estim_b = 4.82 batch_limit =  54043
+Step   180  estim_b = 4.83 batch_limit =  54090
+Step   181  estim_b = 4.86 batch_limit =  48135
+Step   183  estim_b = 4.87 batch_limit =  53727
+Step   184  estim_b = 4.89 batch_limit =  53773
+Step   185  estim_b = 4.89 batch_limit =  56820
+Step   186  estim_b = 4.93 batch_limit =  45365
+Step   187  estim_b = 4.93 batch_limit =  55910
+Step   188  estim_b = 4.94 batch_limit =  53456
+Step   189  estim_b = 4.95 batch_limit =  53501
+Step   190  estim_b = 4.96 batch_limit =  53547
+Step   191  estim_b = 4.97 batch_limit =  53592
+Step   192  estim_b = 4.98 batch_limit =  53638
+Step   193  estim_b = 4.99 batch_limit =  53683
+Step   194  estim_b = 5.01 batch_limit =  50728
+Step   195  estim_b = 5.02 batch_limit =  53273
+Step   196  estim_b = 5.03 batch_limit =  53318
+Step   197  estim_b = 5.03 batch_limit =  56364
+Step   198  estim_b = 5.04 batch_limit =  53909
+Step   199  estim_b = 5.06 batch_limit =  50954
+Step   200  estim_b = 5.07 batch_limit =  53499
+Step   201  estim_b = 5.08 batch_limit =  53544
+Step   202  estim_b = 5.10 batch_limit =  50589
+Step   203  estim_b = 5.12 batch_limit =  50133
+Step   204  estim_b = 5.12 batch_limit =  55677
+Step   205  estim_b = 5.13 batch_limit =  50221
+Step   206  estim_b = 5.14 batch_limit =  52765
+Step   207  estim_b = 5.15 batch_limit =  52809
+Step   208  estim_b = 5.15 batch_limit =  55854
+Step   209  estim_b = 5.17 batch_limit =  50398
+Step   210  estim_b = 5.17 batch_limit =  55942
+Step   211  estim_b = 5.18 batch_limit =  53487
+Step   212  estim_b = 5.19 batch_limit =  50531
+Step   213  estim_b = 5.21 batch_limit =  50074
+Step   214  estim_b = 5.21 batch_limit =  55618
+Step   215  estim_b = 5.23 batch_limit =  50162
+Step   216  estim_b = 5.24 batch_limit =  49705
+Step   217  estim_b = 5.25 batch_limit =  52248
+Step   218  estim_b = 5.26 batch_limit =  52291
+Step   219  estim_b = 5.27 batch_limit =  52334
+Step   220  estim_b = 5.27 batch_limit =  52377
+Step   221  estim_b = 5.27 batch_limit =  55420
+Step   222  estim_b = 5.28 batch_limit =  52964
+Step   223  estim_b = 5.29 batch_limit =  53007
+Step   224  estim_b = 5.28 batch_limit =  56051
+Step   225  estim_b = 5.29 batch_limit =  53595
+Step   226  estim_b = 5.31 batch_limit =  50639
+Step   227  estim_b = 5.30 batch_limit =  56183
+Step   228  estim_b = 5.31 batch_limit =  53727
+Step   229  estim_b = 5.32 batch_limit =  53771
+Step   230  estim_b = 5.33 batch_limit =  53815
+Step   231  estim_b = 5.33 batch_limit =  53859
+Step   232  estim_b = 5.35 batch_limit =  50902
+Step   233  estim_b = 5.34 batch_limit =  59447
+Step   234  estim_b = 5.35 batch_limit =  51491
+Step   235  estim_b = 5.37 batch_limit =  51034
+Step   236  estim_b = 5.36 batch_limit =  56578
+Step   237  estim_b = 5.38 batch_limit =  51122
+Step   238  estim_b = 5.38 batch_limit =  56666
+Step   239  estim_b = 5.39 batch_limit =  51209
+Step   240  estim_b = 5.41 batch_limit =  50752
+Step   242  estim_b = 5.42 batch_limit =  55838
+Step   243  estim_b = 5.43 batch_limit =  53381
+Step   244  estim_b = 5.44 batch_limit =  50423
+Step   245  estim_b = 5.44 batch_limit =  55966
+Step   246  estim_b = 5.45 batch_limit =  50509
+Step   247  estim_b = 5.47 batch_limit =  50051
+Step   248  estim_b = 5.46 batch_limit =  55593
+Step   249  estim_b = 5.47 batch_limit =  53136
+Step   250  estim_b = 5.48 batch_limit =  53178
+Step   251  estim_b = 5.48 batch_limit =  53221
+Step   252  estim_b = 5.50 batch_limit =  50263
+Step   253  estim_b = 5.51 batch_limit =  49804
+Step   254  estim_b = 5.52 batch_limit =  52346
+Step   255  estim_b = 5.53 batch_limit =  49387
+Step   256  estim_b = 5.54 batch_limit =  51928
+Step   257  estim_b = 5.55 batch_limit =  48968
+Step   258  estim_b = 5.55 batch_limit =  51509
+Step   259  estim_b = 5.55 batch_limit =  54550
+Step   260  estim_b = 5.55 batch_limit =  52091
+Step   261  estim_b = 5.56 batch_limit =  52132
+Step   262  estim_b = 5.57 batch_limit =  49172
+Step   263  estim_b = 5.58 batch_limit =  51713
+Step   264  estim_b = 5.59 batch_limit =  48753
+Step   265  estim_b = 5.59 batch_limit =  51293
+Step   266  estim_b = 5.60 batch_limit =  51333
+Step   267  estim_b = 5.61 batch_limit =  48372
+Step   268  estim_b = 5.62 batch_limit =  50912
+Step   269  estim_b = 5.62 batch_limit =  50951
+Step   270  estim_b = 5.63 batch_limit =  47990
+Step   271  estim_b = 5.63 batch_limit =  53530
+Step   272  estim_b = 5.64 batch_limit =  48069
+Step   274  estim_b = 5.66 batch_limit =  50146
+Step   275  estim_b = 5.66 batch_limit =  50184
+Step   276  estim_b = 5.67 batch_limit =  50223
+Step   277  estim_b = 5.67 batch_limit =  50261
+Step   278  estim_b = 5.69 batch_limit =  44299
+Step   280  estim_b = 5.69 batch_limit =  49875
+Step   281  estim_b = 5.69 batch_limit =  49913
+Step   283  estim_b = 5.71 batch_limit =  46988
+Step   284  estim_b = 5.71 batch_limit =  49526
+Step   285  estim_b = 5.72 batch_limit =  46563
+Step   286  estim_b = 5.72 batch_limit =  52100
+Step   287  estim_b = 5.74 batch_limit =  43637
+Step   289  estim_b = 5.74 batch_limit =  51209
+Step   290  estim_b = 5.74 batch_limit =  51746
+Step   291  estim_b = 5.75 batch_limit =  46283
+Step   293  estim_b = 5.75 batch_limit =  48856
+Step   294  estim_b = 5.76 batch_limit =  48892
+Step   296  estim_b = 5.76 batch_limit =  48965
+Step   297  estim_b = 5.77 batch_limit =  46001
+Step   298  estim_b = 5.78 batch_limit =  48537
+Step   300  estim_b = 5.79 batch_limit =  45609
+Step   301  estim_b = 5.78 batch_limit =  51145
+Step   302  estim_b = 5.79 batch_limit =  48681
+Step   304  estim_b = 5.80 batch_limit =  45752
+Step   306  estim_b = 5.80 batch_limit =  48323
+Step   307  estim_b = 5.81 batch_limit =  48359
+Step   308  estim_b = 5.82 batch_limit =  45394
+Step   310  estim_b = 5.81 batch_limit =  50964
+Step   311  estim_b = 5.82 batch_limit =  45499
+Step   313  estim_b = 5.83 batch_limit =  45570
+Step   314  estim_b = 5.83 batch_limit =  48105
+Step   315  estim_b = 5.82 batch_limit =  51140
+Step   316  estim_b = 5.83 batch_limit =  45675
+Step   318  estim_b = 5.85 batch_limit =  45245
+Step   319  estim_b = 5.84 batch_limit =  50780
+Step   321  estim_b = 5.85 batch_limit =  45349
+Step   322  estim_b = 5.83 batch_limit =  53885
+Step   323  estim_b = 5.83 batch_limit =  48920
+Step   324  estim_b = 5.84 batch_limit =  45955
+Step   325  estim_b = 5.84 batch_limit =  51491
+Step   326  estim_b = 5.85 batch_limit =  46026
+Step   327  estim_b = 5.85 batch_limit =  48561
+Step   329  estim_b = 5.86 batch_limit =  45630
+Step   330  estim_b = 5.85 batch_limit =  51165
+Step   331  estim_b = 5.87 batch_limit =  45700
+Step   332  estim_b = 5.88 batch_limit =  45234
+Step   333  estim_b = 5.88 batch_limit =  47768
+Step   334  estim_b = 5.87 batch_limit =  50802
+Step   335  estim_b = 5.87 batch_limit =  48337
+Step   336  estim_b = 5.86 batch_limit =  51372
+Step   337  estim_b = 5.86 batch_limit =  48907
+Step   339  estim_b = 5.87 batch_limit =  48977
+Step   340  estim_b = 5.87 batch_limit =  49012
+Step   341  estim_b = 5.86 batch_limit =  52047
+Step   342  estim_b = 5.86 batch_limit =  49583
+Step   344  estim_b = 5.86 batch_limit =  49654
+Step   345  estim_b = 5.86 batch_limit =  49689
+Step   346  estim_b = 5.87 batch_limit =  49725
+Step   347  estim_b = 5.87 batch_limit =  49760
+Step   348  estim_b = 5.86 batch_limit =  52796
+Step   349  estim_b = 5.86 batch_limit =  50332
+Step   350  estim_b = 5.87 batch_limit =  47368
+Step   351  estim_b = 5.86 batch_limit =  52904
+Step   352  estim_b = 5.86 batch_limit =  50440
+Step   353  estim_b = 5.84 batch_limit =  56477
+Step   354  estim_b = 5.87 batch_limit =  45513
+Step   355  estim_b = 5.86 batch_limit =  53549
+Step   356  estim_b = 5.88 batch_limit =  45085
+Step   358  estim_b = 5.88 batch_limit =  47656
+Step   359  estim_b = 5.88 batch_limit =  50192
+Step   360  estim_b = 5.87 batch_limit =  53228
+Step   361  estim_b = 5.90 batch_limit =  44763
+Step   363  estim_b = 5.92 batch_limit =  43832
+Step   365  estim_b = 5.91 batch_limit =  49401
+Step   366  estim_b = 5.91 batch_limit =  49435
+Step   367  estim_b = 5.92 batch_limit =  46469
+Step   369  estim_b = 5.91 batch_limit =  47039
+Step   371  estim_b = 5.90 batch_limit =  50109
+Step   372  estim_b = 5.93 batch_limit =  44143
+Step   373  estim_b = 5.91 batch_limit =  55178
+Step   374  estim_b = 5.92 batch_limit =  47212
+Step   376  estim_b = 5.91 batch_limit =  52782
+Step   377  estim_b = 5.92 batch_limit =  47316
+Step   378  estim_b = 5.92 batch_limit =  49851
+Step   379  estim_b = 5.92 batch_limit =  49885
+Step   380  estim_b = 5.92 batch_limit =  49920
+Step   381  estim_b = 5.93 batch_limit =  46954
+Step   383  estim_b = 5.92 batch_limit =  50023
+Step   384  estim_b = 5.92 batch_limit =  53058
+Step   385  estim_b = 5.94 batch_limit =  44592
+Step   386  estim_b = 5.92 batch_limit =  55627
+Step   387  estim_b = 5.93 batch_limit =  47661
+Step   388  estim_b = 5.93 batch_limit =  50196
+Step   389  estim_b = 5.94 batch_limit =  47230
+Step   391  estim_b = 5.94 batch_limit =  49798
+**************************************************
+neighbors_num |  layer  0  |  layer  1  |  layer  2  |  layer  3  |  layer  4
+        0     |[92m         0[39m  |[92m         0[39m  |[92m         0[39m  |[92m         0[39m  |[92m         0
+        1     |[92m       159[39m  |[92m       100[39m  |[92m        54[39m  |[92m        21[39m  |[92m         1
+        2     |[92m       310[39m  |[92m       209[39m  |[92m       129[39m  |[92m        45[39m  |[92m         0
+        3     |[92m       810[39m  |[92m       398[39m  |[92m       175[39m  |[92m        94[39m  |[92m         6
+        4     |[92m      1343[39m  |[92m       802[39m  |[92m       376[39m  |[92m       124[39m  |[92m        10
+        5     |[92m      2545[39m  |[92m      1271[39m  |[92m       622[39m  |[92m       155[39m  |[92m         3
+        6     |[92m      3829[39m  |[92m      1962[39m  |[92m       871[39m  |[92m       282[39m  |[92m        14
+        7     |[92m      5661[39m  |[92m      2882[39m  |[92m      1286[39m  |[92m       398[39m  |[92m        16
+        8     |[92m     10598[39m  |[92m      4368[39m  |[92m      1715[39m  |[92m       515[39m  |[92m        34
+        9     |[92m     22088[39m  |[92m      5867[39m  |[92m      2400[39m  |[92m       709[39m  |[92m        74
+       10     |[92m     57989[39m  |[92m      8788[39m  |[92m      3479[39m  |[92m      1198[39m  |[92m       261
+       11     |[92m    145949[39m  |[92m     16203[39m  |[92m      6376[39m  |[92m      2270[39m  |[92m       559
+       12     |[92m    195573[39m  |[92m     30590[39m  |[92m     11496[39m  |[92m      4095[39m  |[92m      1203
+       13     |[92m    246301[39m  |[92m     52232[39m  |[92m     17613[39m  |[92m      6250[39m  |[92m      2019
+       14     |[92m    233412[39m  |[92m     77665[39m  |[92m     26095[39m  |[92m      9024[39m  |[92m      2938
+       15     |[92m    254662[39m  |[92m    101666[39m  |[92m     35131[39m  |[92m     11737[39m  |[92m      3664
+       16     |[92m    328965[39m  |[92m    118687[39m  |[92m     40862[39m  |[92m     12992[39m  |[92m      4307
+       17     |[92m    459672[39m  |[92m    124843[39m  |[92m     42694[39m  |[92m     14114[39m  |[92m      4937
+       18     |[92m    824395[39m  |[92m    130407[39m  |[92m     43782[39m  |[92m     14482[39m  |[92m      5317
+       19     |[92m   1463095[39m  |[92m    137195[39m  |[92m     44477[39m  |[92m     14641[39m  |[92m      5605
+       20     |[92m   2632744[39m  |[92m    166747[39m  |[92m     47961[39m  |[92m     15313[39m  |[92m      5847
+       21     |[92m   5193548[39m  |[92m    295266[39m  |[92m     66518[39m  |[92m     16600[39m  |[92m      5880
+       22     |[92m   1876308[39m  |[92m    293745[39m  |[92m     61880[39m  |[92m     16525[39m  |[92m      6046
+       23     |[92m   1213327[39m  |[92m    417181[39m  |[92m     74326[39m  |[92m     17219[39m  |[92m      5890
+       24     |[92m   1146648[39m  |[92m    562450[39m  |[92m     90173[39m  |[92m     18049[39m  |[92m      5572
+       25     |[92m   1064949[39m  |[92m    651698[39m  |[92m    103739[39m  |[92m     18671[39m  |[92m      5370
+       26     |[92m    898884[39m  |[92m    642163[39m  |[92m    107898[39m  |[92m     18958[39m  |[92m      4882
+       27     |[92m    650446[39m  |[92m    551397[39m  |[92m    104484[39m  |[92m     18464[39m  |[92m      4512
+       28     |[92m    510342[39m  |[92m    420566[39m  |[92m     92119[39m  |[92m     17629[39m  |[92m      4170
+       29     |[91m    402110[39m  |[92m    300547[39m  |[92m     75728[39m  |[92m     16453[39m  |[92m      3662
+       30     |[91m    309687[39m  |[92m    213209[39m  |[92m     60129[39m  |[92m     14827[39m  |[92m      3303
+       31     |[91m    231965[39m  |[92m    156158[39m  |[92m     48223[39m  |[92m     13182[39m  |[92m      2932
+       32     |[91m    166429[39m  |[92m    118850[39m  |[92m     39721[39m  |[92m     11715[39m  |[92m      2596
+       33     |[91m    125387[39m  |[91m     94141[39m  |[92m     33587[39m  |[92m     10739[39m  |[92m      2399
+       34     |[91m     97162[39m  |[91m     77447[39m  |[92m     28876[39m  |[92m      9693[39m  |[92m      2090
+       35     |[91m     76213[39m  |[91m     64529[39m  |[92m     25643[39m  |[92m      8728[39m  |[92m      1838
+       36     |[91m     60313[39m  |[91m     53850[39m  |[92m     23668[39m  |[92m      8200[39m  |[92m      1626
+       37     |[91m     48040[39m  |[91m     46106[39m  |[92m     22050[39m  |[92m      7657[39m  |[91m      1449
+       38     |[91m     38329[39m  |[91m     38168[39m  |[92m     21178[39m  |[92m      7031[39m  |[91m      1187
+       39     |[91m     31599[39m  |[91m     31522[39m  |[92m     20793[39m  |[92m      6414[39m  |[91m      1106
+       40     |[91m     24957[39m  |[91m     26280[39m  |[92m     20940[39m  |[92m      6029[39m  |[91m       901
+       41     |[91m     20873[39m  |[91m     21501[39m  |[91m     21288[39m  |[91m      5475[39m  |[91m       799
+       42     |[91m     16617[39m  |[91m     17577[39m  |[91m     20719[39m  |[91m      4934[39m  |[91m       752
+       43     |[91m     12569[39m  |[91m     13889[39m  |[91m     20331[39m  |[91m      4251[39m  |[91m       584
+       44     |[91m      9468[39m  |[91m     10945[39m  |[91m     18761[39m  |[91m      3786[39m  |[91m       548
+       45     |[91m      7285[39m  |[91m      8114[39m  |[91m     16275[39m  |[91m      3332[39m  |[91m       468
+       46     |[91m      5427[39m  |[91m      6076[39m  |[91m     13323[39m  |[91m      2887[39m  |[91m       398
+       47     |[91m      4138[39m  |[91m      4134[39m  |[91m     10088[39m  |[91m      2489[39m  |[91m       332
+       48     |[91m      3137[39m  |[91m      2821[39m  |[91m      7341[39m  |[91m      1992[39m  |[91m       313
+       49     |[91m      2188[39m  |[91m      2003[39m  |[91m      5236[39m  |[91m      1587[39m  |[91m       223
+       50     |[91m      1720[39m  |[91m      1409[39m  |[91m      3528[39m  |[91m      1281[39m  |[91m       204
+       51     |[91m      1198[39m  |[91m       944[39m  |[91m      2449[39m  |[91m       999[39m  |[91m       130
+       52     |[91m       893[39m  |[91m       693[39m  |[91m      1757[39m  |[91m       759[39m  |[91m       130
+       53     |[91m       639[39m  |[91m       478[39m  |[91m      1226[39m  |[91m       613[39m  |[91m        92
+       54     |[91m       463[39m  |[91m       321[39m  |[91m       908[39m  |[91m       449[39m  |[91m        64
+       55     |[91m       342[39m  |[91m       254[39m  |[91m       640[39m  |[91m       383[39m  |[91m        62
+       56     |[91m       245[39m  |[91m       183[39m  |[91m       502[39m  |[91m       292[39m  |[91m        38
+       57     |[91m       213[39m  |[91m       140[39m  |[91m       369[39m  |[91m       174[39m  |[91m        41
+       58     |[91m       131[39m  |[91m        91[39m  |[91m       270[39m  |[91m       140[39m  |[91m        22
+       59     |[91m        81[39m  |[91m        70[39m  |[91m       190[39m  |[91m        92[39m  |[91m        19
+       60     |[91m        49[39m  |[91m        29[39m  |[91m       113[39m  |[91m        44[39m  |[91m        11
+       61     |[91m        41[39m  |[91m        25[39m  |[91m        75[39m  |[91m        29[39m  |[91m        10
+       62     |[91m        31[39m  |[91m        14[39m  |[91m        59[39m  |[91m        23[39m  |[91m         4
+       63     |[91m        15[39m  |[91m        16[39m  |[91m        38[39m  |[91m         8[39m  |[91m         2
+       64     |[91m        12[39m  |[91m         7[39m  |[91m        24[39m  |[91m        15[39m  |[91m         1
+       65     |[91m         8[39m  |[91m         2[39m  |[91m        19[39m  |[91m         3[39m  |[91m         1
+       66     |[91m         7[39m  |[91m         1[39m  |[91m         6[39m  |[91m         2[39m  |[91m         1
+       67     |[91m         3[39m  |[91m         1[39m  |[91m         8[39m  |[91m         1[39m  |[91m         1
+       68     |[91m         1[39m  |[91m         0[39m  |[91m         4[39m  |[91m         1[39m  |[91m         0
+       69     |[91m         1[39m  |[91m         0[39m  |[91m         2[39m  |[91m         1[39m  |[91m         0
+       70     |[91m         3[39m  |[91m         0[39m  |[91m         2[39m  |[91m         1[39m  |[91m         0
+       71     |[91m         1[39m  |[91m         0[39m  |[91m         0[39m  |[91m         0[39m  |[91m         0
+       72     |[91m         1[39m  |[91m         0[39m  |[91m         1[39m  |[91m         0[39m  |[91m         0
+       73     |[91m         1[39m  |[91m         0[39m  |[91m         1[39m  |[91m         0[39m  |[91m         0
+**************************************************
+chosen neighbors limits:  [28 32 40 40 36]
+Calibration done in 457.8s
+Starting Calibration (use verbose=True for more details)
+Previous calibration found:
+Check batch limit dictionary
+[92m"potentials_1.200_0.030_6": 52832
+Check neighbors limit dictionary
+[92m"0.030_0.075": 28
+[92m"0.060_0.150": 32
+[92m"0.120_0.300": 40
+[92m"0.240_0.600": 40
+[92m"0.480_1.200": 36
+Calibration done in 0.0s
+Model Preparation
+*****************
+Done in 0.6s
+Start training
+**************
+e000-i0000 => L=2.542 acc= 12% / t(ms): 14363.3 1158.6 196.2)
+e000-i0002 => L=2.559 acc= 11% / t(ms): 777.2  44.1 112.0)
+e000-i0004 => L=2.530 acc= 22% / t(ms): 768.5  44.4 113.2)
+e000-i0006 => L=2.360 acc= 34% / t(ms): 770.2  44.2 114.0)
+e000-i0008 => L=2.332 acc= 34% / t(ms): 771.9  44.3 113.7)
+e000-i0010 => L=2.048 acc= 43% / t(ms): 766.1  44.0 113.4)
+e000-i0011 => L=2.159 acc= 35% / t(ms): 772.8  44.6 114.4)
+e000-i0013 => L=2.028 acc= 43% / t(ms): 770.2  45.0 115.4)
+e000-i0015 => L=1.647 acc= 49% / t(ms): 765.0  44.3 114.1)
+e000-i0017 => L=1.791 acc= 46% / t(ms): 776.2  44.8 115.2)
+e000-i0019 => L=1.279 acc= 65% / t(ms): 773.3  45.0 115.8)
+e000-i0021 => L=2.329 acc= 41% / t(ms): 776.2  45.3 116.2)
+e000-i0023 => L=1.450 acc= 61% / t(ms): 779.9  45.6 116.5)
+e000-i0025 => L=2.128 acc= 34% / t(ms): 789.8  45.8 118.1)
+e000-i0027 => L=1.419 acc= 60% / t(ms): 794.6  46.2 119.6)
+e000-i0028 => L=1.658 acc= 55% / t(ms): 801.8  46.6 120.2)
+e000-i0029 => L=2.529 acc= 34% / t(ms): 807.2  46.6 120.1)
+e000-i0031 => L=1.480 acc= 49% / t(ms): 800.4  46.7 120.0)
+e000-i0033 => L=1.615 acc= 51% / t(ms): 797.3  46.5 119.8)
+e000-i0035 => L=2.148 acc= 36% / t(ms): 795.8  46.2 119.4)
+e000-i0037 => L=2.050 acc= 42% / t(ms): 786.9  46.0 118.4)
+e000-i0039 => L=1.325 acc= 58% / t(ms): 777.2  45.5 118.3)
+e000-i0041 => L=1.408 acc= 60% / t(ms): 780.5  45.6 118.7)
+e000-i0042 => L=1.824 acc= 45% / t(ms): 786.8  45.7 118.9)
+e000-i0043 => L=1.766 acc= 49% / t(ms): 791.7  46.0 119.5)
+e000-i0045 => L=2.875 acc= 21% / t(ms): 786.6  45.1 118.6)
+e000-i0047 => L=1.691 acc= 41% / t(ms): 799.3  45.4 119.9)
+e000-i0049 => L=1.328 acc= 56% / t(ms): 800.0  45.4 119.4)
+e000-i0051 => L=1.372 acc= 54% / t(ms): 788.1  44.9 118.9)
+e000-i0053 => L=1.848 acc= 39% / t(ms): 786.6  45.2 119.2)
+e000-i0055 => L=1.577 acc= 51% / t(ms): 785.4  45.1 119.5)
+e000-i0056 => L=2.292 acc= 29% / t(ms): 792.0  45.1 118.8)
+e000-i0058 => L=1.722 acc= 39% / t(ms): 787.1  44.9 118.3)
+e000-i0060 => L=1.498 acc= 49% / t(ms): 779.6  45.4 117.9)
+e000-i0062 => L=1.669 acc= 40% / t(ms): 778.5  45.0 118.1)
+e000-i0064 => L=1.294 acc= 58% / t(ms): 776.3  45.5 119.9)
+e000-i0066 => L=1.762 acc= 45% / t(ms): 772.5  45.2 119.0)
+e000-i0068 => L=2.157 acc= 44% / t(ms): 775.7  44.8 119.2)
+e000-i0070 => L=1.316 acc= 61% / t(ms): 771.1  44.7 118.4)
+e000-i0072 => L=1.958 acc= 41% / t(ms): 765.6  44.5 116.8)
+e000-i0073 => L=1.589 acc= 42% / t(ms): 772.8  45.0 117.3)
+e000-i0075 => L=1.259 acc= 67% / t(ms): 765.7  44.5 115.9)
+e000-i0077 => L=1.694 acc= 43% / t(ms): 760.9  44.1 115.9)
+e000-i0079 => L=1.448 acc= 58% / t(ms): 762.3  44.1 116.7)
+e000-i0081 => L=1.829 acc= 39% / t(ms): 762.1  43.8 117.3)
+e000-i0083 => L=1.221 acc= 64% / t(ms): 759.9  43.4 116.0)
+e000-i0085 => L=1.573 acc= 42% / t(ms): 751.6  43.2 115.0)
+e000-i0087 => L=1.876 acc= 35% / t(ms): 754.6  43.6 115.8)
+e000-i0089 => L=1.525 acc= 47% / t(ms): 760.0  43.7 116.3)
+e000-i0091 => L=1.760 acc= 47% / t(ms): 760.5  43.8 115.9)
+e000-i0093 => L=1.668 acc= 49% / t(ms): 755.7  43.2 115.2)
+e000-i0095 => L=1.136 acc= 67% / t(ms): 753.6  43.3 115.2)
+e000-i0097 => L=1.744 acc= 47% / t(ms): 755.5  43.2 115.0)
+e000-i0099 => L=1.503 acc= 52% / t(ms): 748.9  42.9 115.0)
+e000-i0101 => L=1.495 acc= 52% / t(ms): 746.4  42.6 114.4)
+e000-i0103 => L=1.773 acc= 52% / t(ms): 754.0  43.0 115.6)
+e000-i0105 => L=1.647 acc= 52% / t(ms): 758.1  43.3 115.5)
+e000-i0107 => L=1.620 acc= 47% / t(ms): 756.4  43.2 113.9)
+e000-i0109 => L=1.530 acc= 51% / t(ms): 757.3  43.3 113.8)
+e000-i0111 => L=1.571 acc= 52% / t(ms): 757.2  43.3 113.9)
+e000-i0113 => L=1.539 acc= 50% / t(ms): 758.2  43.1 113.7)
+e000-i0115 => L=1.207 acc= 56% / t(ms): 759.2  43.1 113.8)
+e000-i0117 => L=1.809 acc= 48% / t(ms): 755.0  42.9 113.5)
+e000-i0119 => L=1.389 acc= 56% / t(ms): 753.7  43.2 113.6)
+e000-i0121 => L=1.691 acc= 45% / t(ms): 752.0  42.9 113.2)
+e000-i0123 => L=1.551 acc= 43% / t(ms): 751.7  42.9 112.9)
+e000-i0125 => L=1.752 acc= 41% / t(ms): 757.6  43.4 113.2)
+e000-i0127 => L=1.613 acc= 47% / t(ms): 764.1  43.8 114.6)
+e000-i0129 => L=1.201 acc= 57% / t(ms): 757.6  43.3 113.8)
+e000-i0131 => L=1.343 acc= 57% / t(ms): 754.8  43.3 113.2)
+e000-i0133 => L=1.342 acc= 60% / t(ms): 757.0  43.5 113.8)
+e000-i0135 => L=1.865 acc= 45% / t(ms): 750.0  43.0 113.4)
+e000-i0137 => L=1.159 acc= 63% / t(ms): 750.0  42.4 112.8)
+e000-i0139 => L=1.351 acc= 53% / t(ms): 749.0  42.3 112.7)
+e000-i0141 => L=1.702 acc= 54% / t(ms): 747.8  42.3 112.4)
+e000-i0143 => L=1.437 acc= 56% / t(ms): 750.4  42.4 112.8)
+e000-i0145 => L=1.471 acc= 55% / t(ms): 752.7  42.4 112.2)
+e000-i0147 => L=1.320 acc= 52% / t(ms): 755.2  42.5 112.6)
+e000-i0149 => L=1.558 acc= 58% / t(ms): 750.0  42.4 112.6)
+e000-i0151 => L=1.419 acc= 56% / t(ms): 752.7  42.4 111.9)
+e000-i0153 => L=1.593 acc= 60% / t(ms): 751.8  42.5 112.5)
+e000-i0155 => L=1.661 acc= 51% / t(ms): 749.2  42.5 112.5)
+e000-i0157 => L=1.400 acc= 52% / t(ms): 750.7  42.6 113.3)
+e000-i0159 => L=1.330 acc= 60% / t(ms): 748.7  42.6 113.7)
+e000-i0161 => L=1.037 acc= 62% / t(ms): 743.0  42.4 113.0)
+e000-i0163 => L=1.474 acc= 49% / t(ms): 742.7  42.1 112.9)
+e000-i0165 => L=1.578 acc= 38% / t(ms): 748.7  42.3 113.6)
+e000-i0167 => L=1.088 acc= 68% / t(ms): 746.7  42.2 114.1)
+e000-i0169 => L=1.091 acc= 72% / t(ms): 753.3  42.8 114.4)
+e000-i0171 => L=1.340 acc= 59% / t(ms): 755.1  42.8 114.4)
+e000-i0173 => L=1.874 acc= 41% / t(ms): 748.9  42.6 113.6)
+e000-i0175 => L=1.365 acc= 57% / t(ms): 748.9  42.6 113.6)
+e000-i0177 => L=1.305 acc= 55% / t(ms): 754.9  42.4 114.0)
+e000-i0179 => L=1.910 acc= 34% / t(ms): 757.3  42.5 114.4)
+e000-i0181 => L=1.338 acc= 53% / t(ms): 752.0  42.5 115.0)
+e000-i0183 => L=1.521 acc= 53% / t(ms): 755.5  42.1 115.0)
+e000-i0185 => L=2.819 acc= 34% / t(ms): 753.5  42.5 115.2)
+e000-i0187 => L=1.120 acc= 60% / t(ms): 756.4  42.4 114.8)
+e000-i0189 => L=1.135 acc= 59% / t(ms): 761.6  42.2 114.5)
+e000-i0191 => L=1.914 acc= 38% / t(ms): 759.5  42.0 114.7)
+e000-i0193 => L=1.180 acc= 62% / t(ms): 761.4  42.2 115.8)
+e000-i0194 => L=1.313 acc= 59% / t(ms): 772.0  43.1 117.4)
+e000-i0196 => L=1.599 acc= 45% / t(ms): 763.6  42.0 116.6)
+e000-i0198 => L=1.503 acc= 51% / t(ms): 761.2  42.1 115.7)
+e000-i0200 => L=1.274 acc= 54% / t(ms): 764.4  42.3 115.1)
+e000-i0202 => L=1.468 acc= 57% / t(ms): 762.0  42.5 114.1)
+e000-i0204 => L=1.146 acc= 68% / t(ms): 765.0  43.0 114.6)
+e000-i0206 => L=1.550 acc= 53% / t(ms): 761.5  42.4 114.1)
+e000-i0208 => L=0.851 acc= 75% / t(ms): 762.2  42.5 114.6)
+e000-i0210 => L=1.780 acc= 57% / t(ms): 766.4  42.4 114.7)
+e000-i0212 => L=1.386 acc= 53% / t(ms): 762.4  42.2 114.6)
+e000-i0214 => L=1.468 acc= 55% / t(ms): 757.5  41.8 114.6)
+e000-i0216 => L=1.117 acc= 66% / t(ms): 755.9  41.4 114.3)
+e000-i0218 => L=1.580 acc= 59% / t(ms): 749.4  41.6 114.1)
+e000-i0220 => L=1.443 acc= 48% / t(ms): 750.6  41.9 113.8)
+e000-i0222 => L=1.436 acc= 54% / t(ms): 751.7  41.9 113.4)
+e000-i0224 => L=1.286 acc= 58% / t(ms): 751.1  42.1 113.5)
+e000-i0226 => L=1.022 acc= 69% / t(ms): 748.0  41.3 112.2)
+e000-i0228 => L=1.310 acc= 61% / t(ms): 741.3  41.4 111.6)
+e000-i0230 => L=1.386 acc= 54% / t(ms): 740.2  41.4 112.5)
+e000-i0232 => L=1.301 acc= 53% / t(ms): 738.8  41.3 112.6)
+e000-i0234 => L=1.259 acc= 56% / t(ms): 747.0  42.0 114.4)
+e000-i0236 => L=1.181 acc= 64% / t(ms): 753.3  41.7 114.8)
+e000-i0238 => L=0.880 acc= 71% / t(ms): 749.5  41.8 114.5)
+e000-i0240 => L=0.934 acc= 65% / t(ms): 741.1  41.8 114.0)
+e000-i0242 => L=0.915 acc= 72% / t(ms): 749.6  42.3 114.1)
+e000-i0244 => L=1.259 acc= 56% / t(ms): 749.4  42.0 113.2)
+e000-i0246 => L=1.151 acc= 64% / t(ms): 761.6  42.8 115.1)
+e000-i0248 => L=1.401 acc= 61% / t(ms): 752.1  42.5 114.8)
+e000-i0250 => L=1.634 acc= 42% / t(ms): 755.8  42.6 115.3)
+e000-i0252 => L=1.240 acc= 59% / t(ms): 758.5  42.8 115.4)
+e000-i0254 => L=1.513 acc= 47% / t(ms): 752.1  42.6 115.1)
+e000-i0256 => L=1.620 acc= 50% / t(ms): 746.7  42.5 114.7)
+e000-i0257 => L=0.937 acc= 69% / t(ms): 755.7  43.1 116.0)
+e000-i0259 => L=1.047 acc= 65% / t(ms): 753.6  42.6 114.7)
+e000-i0261 => L=1.101 acc= 62% / t(ms): 759.2  43.1 115.2)
+e000-i0262 => L=1.344 acc= 53% / t(ms): 769.0  43.4 115.2)
+e000-i0264 => L=1.341 acc= 57% / t(ms): 763.4  43.0 115.0)
+e000-i0266 => L=1.530 acc= 53% / t(ms): 762.6  42.8 115.3)
+e000-i0268 => L=1.384 acc= 57% / t(ms): 754.0  42.7 114.7)
+e000-i0270 => L=1.401 acc= 50% / t(ms): 754.1  42.4 114.5)
+e000-i0272 => L=1.589 acc= 40% / t(ms): 748.0  41.9 114.0)
+e000-i0274 => L=1.181 acc= 64% / t(ms): 749.6  42.2 114.9)
+e000-i0276 => L=1.168 acc= 71% / t(ms): 750.9  42.4 114.4)
+e000-i0278 => L=1.145 acc= 65% / t(ms): 750.9  42.3 114.1)
+e000-i0280 => L=1.117 acc= 64% / t(ms): 754.9  41.9 113.9)
+e000-i0282 => L=1.181 acc= 60% / t(ms): 756.3  42.0 113.2)
+e000-i0284 => L=1.183 acc= 62% / t(ms): 759.0  42.2 113.3)
+e000-i0286 => L=1.333 acc= 55% / t(ms): 764.6  42.5 113.4)
+e000-i0288 => L=0.834 acc= 73% / t(ms): 764.8  42.9 114.2)
+e000-i0290 => L=1.705 acc= 54% / t(ms): 764.8  42.5 113.9)
+e000-i0292 => L=1.429 acc= 55% / t(ms): 762.9  43.0 115.2)
+e000-i0294 => L=1.277 acc= 60% / t(ms): 769.4  43.9 115.6)
+e000-i0296 => L=1.383 acc= 51% / t(ms): 771.3  44.0 115.8)
+e000-i0298 => L=0.745 acc= 76% / t(ms): 764.5  44.0 115.3)
+e000-i0300 => L=1.293 acc= 53% / t(ms): 757.8  43.4 114.8)
+e000-i0302 => L=1.182 acc= 64% / t(ms): 755.2  43.0 114.5)
+e000-i0304 => L=1.166 acc= 62% / t(ms): 757.0  42.5 114.3)
+e000-i0306 => L=0.878 acc= 72% / t(ms): 766.0  42.5 114.9)
+e000-i0308 => L=1.290 acc= 53% / t(ms): 767.2  42.4 116.0)
+e000-i0310 => L=1.068 acc= 67% / t(ms): 770.3  43.0 116.1)
+e000-i0312 => L=1.171 acc= 64% / t(ms): 767.5  43.2 116.1)
+e000-i0314 => L=1.081 acc= 67% / t(ms): 756.8  42.9 114.5)
+e000-i0316 => L=1.100 acc= 64% / t(ms): 762.8  43.3 114.5)
+e000-i0318 => L=1.328 acc= 57% / t(ms): 758.3  42.9 114.8)
+e000-i0320 => L=0.748 acc= 80% / t(ms): 756.5  42.1 114.4)
+e000-i0322 => L=1.150 acc= 59% / t(ms): 764.2  42.7 115.4)
+e000-i0324 => L=1.456 acc= 49% / t(ms): 780.5  43.7 117.5)
+e000-i0326 => L=1.522 acc= 47% / t(ms): 779.9  43.7 117.4)
+e000-i0328 => L=1.775 acc= 43% / t(ms): 781.2  44.1 117.4)
+e000-i0330 => L=1.053 acc= 63% / t(ms): 774.3  44.0 117.1)
+e000-i0332 => L=1.202 acc= 62% / t(ms): 773.4  44.0 116.6)
+e000-i0334 => L=0.931 acc= 73% / t(ms): 773.3  44.2 117.3)
+e000-i0336 => L=0.904 acc= 73% / t(ms): 763.9  43.4 115.9)
+e000-i0338 => L=0.752 acc= 84% / t(ms): 760.8  43.3 115.0)
+e000-i0340 => L=1.356 acc= 58% / t(ms): 759.8  43.2 115.1)
+e000-i0342 => L=1.073 acc= 65% / t(ms): 762.5  43.2 115.1)
+e000-i0344 => L=1.354 acc= 57% / t(ms): 760.1  42.8 114.2)
+e000-i0346 => L=1.097 acc= 64% / t(ms): 771.3  43.4 115.4)
+e000-i0348 => L=1.151 acc= 66% / t(ms): 762.3  43.1 115.7)
+e000-i0350 => L=1.179 acc= 64% / t(ms): 768.6  42.8 115.4)
+e000-i0352 => L=1.419 acc= 58% / t(ms): 760.5  42.9 115.6)
+e000-i0354 => L=0.979 acc= 70% / t(ms): 761.1  42.8 116.2)
+e000-i0356 => L=1.458 acc= 52% / t(ms): 758.3  42.9 115.8)
+e000-i0358 => L=1.600 acc= 43% / t(ms): 775.8  43.4 116.9)
+e000-i0360 => L=1.235 acc= 67% / t(ms): 769.4  43.5 116.5)
+e000-i0361 => L=1.359 acc= 57% / t(ms): 779.9  44.1 117.2)
+e000-i0362 => L=1.096 acc= 63% / t(ms): 785.2  44.6 118.1)
+e000-i0364 => L=1.359 acc= 51% / t(ms): 779.3  44.3 117.2)
+e000-i0365 => L=1.967 acc= 35% / t(ms): 790.0  44.8 118.1)
+e000-i0366 => L=1.408 acc= 53% / t(ms): 798.8  45.1 119.0)
+e000-i0368 => L=1.261 acc= 56% / t(ms): 788.2  43.9 117.6)
+e000-i0370 => L=1.541 acc= 45% / t(ms): 784.3  44.0 117.6)
+e000-i0372 => L=1.296 acc= 53% / t(ms): 770.7  43.2 117.9)
+e000-i0374 => L=1.143 acc= 61% / t(ms): 776.8  43.7 118.0)
+e000-i0375 => L=1.381 acc= 52% / t(ms): 784.8  43.6 118.3)
+e000-i0377 => L=1.036 acc= 69% / t(ms): 782.4  43.5 118.0)
+e000-i0379 => L=1.628 acc= 47% / t(ms): 789.6  43.7 117.7)
+e000-i0381 => L=1.130 acc= 60% / t(ms): 794.0  44.5 119.2)
+e000-i0383 => L=0.972 acc= 65% / t(ms): 782.3  44.1 118.5)
+e000-i0385 => L=1.279 acc= 53% / t(ms): 771.2  43.3 117.7)
+e000-i0387 => L=1.471 acc= 49% / t(ms): 773.9  43.7 118.0)
+e000-i0389 => L=0.962 acc= 71% / t(ms): 769.4  43.2 117.3)
+e000-i0391 => L=1.097 acc= 68% / t(ms): 765.0  43.0 116.7)
+e000-i0393 => L=1.355 acc= 54% / t(ms): 769.4  43.5 117.1)
+e000-i0395 => L=1.571 acc= 48% / t(ms): 764.1  43.2 117.4)
+e000-i0397 => L=1.082 acc= 60% / t(ms): 768.7  43.5 116.9)
+e000-i0398 => L=1.241 acc= 57% / t(ms): 777.5  44.1 117.5)
+e000-i0400 => L=1.018 acc= 66% / t(ms): 780.7  44.4 118.0)
+e000-i0402 => L=1.099 acc= 58% / t(ms): 779.5  44.0 117.9)
+e000-i0404 => L=1.359 acc= 55% / t(ms): 775.0  44.0 117.0)
+e000-i0406 => L=1.603 acc= 56% / t(ms): 768.4  43.6 115.6)
+e000-i0408 => L=0.859 acc= 65% / t(ms): 760.5  42.8 115.8)
+e000-i0410 => L=1.331 acc= 58% / t(ms): 758.0  42.8 115.9)
+e000-i0412 => L=1.010 acc= 69% / t(ms): 768.8  43.3 116.7)
+e000-i0414 => L=1.093 acc= 64% / t(ms): 773.2  43.4 117.1)
+e000-i0415 => L=0.963 acc= 73% / t(ms): 782.1  44.2 117.9)
+e000-i0417 => L=1.333 acc= 54% / t(ms): 772.4  43.7 116.8)
+e000-i0419 => L=0.977 acc= 70% / t(ms): 771.6  43.7 116.1)
+e000-i0421 => L=1.580 acc= 50% / t(ms): 769.1  43.4 115.9)
+e000-i0423 => L=0.791 acc= 74% / t(ms): 765.1  42.9 115.6)
+e000-i0425 => L=1.055 acc= 61% / t(ms): 771.2  43.1 116.3)
+e000-i0427 => L=1.320 acc= 49% / t(ms): 791.1  44.1 117.8)
+e000-i0429 => L=0.973 acc= 67% / t(ms): 785.5  43.4 117.6)
+e000-i0431 => L=1.003 acc= 66% / t(ms): 778.2  43.2 116.2)
+e000-i0432 => L=1.361 acc= 48% / t(ms): 792.8  44.1 118.6)
+e000-i0434 => L=1.083 acc= 68% / t(ms): 790.9  44.1 118.8)
+e000-i0436 => L=1.217 acc= 61% / t(ms): 786.6  43.6 117.8)
+e000-i0438 => L=1.341 acc= 53% / t(ms): 785.5  43.2 117.7)
+e000-i0440 => L=0.791 acc= 79% / t(ms): 774.7  43.0 117.6)
+e000-i0441 => L=1.262 acc= 54% / t(ms): 788.6  43.7 119.2)
+e000-i0443 => L=1.155 acc= 66% / t(ms): 788.5  43.5 118.9)
+e000-i0445 => L=1.170 acc= 59% / t(ms): 787.9  43.0 118.7)
+e000-i0447 => L=0.767 acc= 76% / t(ms): 781.5  43.7 118.5)
+e000-i0449 => L=1.371 acc= 58% / t(ms): 785.8  44.3 118.7)
+e000-i0451 => L=1.308 acc= 56% / t(ms): 788.1  44.2 117.8)
+e000-i0453 => L=1.274 acc= 62% / t(ms): 777.0  43.6 116.6)
+e000-i0455 => L=1.109 acc= 65% / t(ms): 773.3  43.0 116.0)
+e000-i0457 => L=0.972 acc= 68% / t(ms): 771.4  42.9 115.7)
+e000-i0458 => L=1.124 acc= 58% / t(ms): 779.7  43.5 117.1)
+e000-i0460 => L=1.155 acc= 61% / t(ms): 775.4  43.5 116.8)
+e000-i0462 => L=1.081 acc= 68% / t(ms): 779.0  43.5 116.1)
+e000-i0464 => L=1.356 acc= 51% / t(ms): 771.6  43.1 115.2)
+e000-i0466 => L=0.880 acc= 77% / t(ms): 768.6  42.8 115.0)
+e000-i0468 => L=1.313 acc= 54% / t(ms): 770.0  43.0 115.1)
+e000-i0470 => L=1.505 acc= 46% / t(ms): 766.1  42.9 115.0)
+e000-i0471 => L=0.877 acc= 73% / t(ms): 777.3  43.5 116.3)
+e000-i0473 => L=0.999 acc= 66% / t(ms): 773.7  43.7 116.3)
+e000-i0475 => L=1.658 acc= 53% / t(ms): 770.2  43.6 116.1)
+e000-i0476 => L=1.648 acc= 47% / t(ms): 777.5  44.1 116.8)
+e000-i0478 => L=1.374 acc= 59% / t(ms): 783.9  44.6 116.9)
+e000-i0480 => L=1.060 acc= 70% / t(ms): 785.8  44.3 116.7)
+e000-i0482 => L=1.286 acc= 56% / t(ms): 784.5  43.9 116.5)
+e000-i0484 => L=1.574 acc= 51% / t(ms): 780.4  43.4 115.8)
+e000-i0486 => L=1.142 acc= 67% / t(ms): 784.3  43.7 116.3)
+e000-i0488 => L=1.106 acc= 66% / t(ms): 780.5  43.7 116.9)
+e000-i0490 => L=0.908 acc= 68% / t(ms): 782.5  43.7 117.4)
+e000-i0492 => L=1.275 acc= 61% / t(ms): 774.4  43.3 116.9)
+e000-i0494 => L=1.310 acc= 60% / t(ms): 767.8  42.8 115.9)
+e000-i0496 => L=1.166 acc= 60% / t(ms): 770.5  42.6 115.9)
+e000-i0498 => L=1.275 acc= 54% / t(ms): 770.6  42.4 116.0)
+e000-i0499 => L=0.770 acc= 75% / t(ms): 777.2  42.8 116.7)
+Validation : 1.0% (timings : 74.19 6.90)
+Validation : 3.0% (timings : 136.84 12.36)
+Validation : 5.0% (timings : 198.84 16.85)
+Validation : 7.0% (timings : 252.14 20.47)
+Validation : 9.0% (timings : 308.78 23.99)
+Validation : 11.0% (timings : 362.80 27.25)
+Validation : 13.0% (timings : 406.24 29.60)
+Validation : 15.0% (timings : 453.61 32.01)
+Validation : 17.0% (timings : 489.66 33.83)
+Validation : 19.0% (timings : 516.18 35.46)
+Validation : 21.0% (timings : 532.01 36.34)
+Validation : 23.0% (timings : 548.96 37.23)
+Validation : 25.0% (timings : 573.04 38.30)
+Validation : 27.0% (timings : 588.01 38.91)
+Validation : 29.0% (timings : 604.62 39.71)
+Validation : 31.0% (timings : 615.14 40.12)
+Validation : 33.0% (timings : 630.53 40.80)
+Validation : 35.0% (timings : 651.90 41.59)
+Validation : 37.0% (timings : 661.83 41.79)
+Validation : 39.0% (timings : 670.67 42.17)
+Validation : 41.0% (timings : 680.66 42.39)
+Validation : 43.0% (timings : 687.07 42.55)
+Validation : 45.0% (timings : 692.98 42.87)
+Validation : 47.0% (timings : 704.83 43.36)
+Validation : 49.0% (timings : 716.22 43.51)
+Validation : 51.0% (timings : 723.01 43.70)
+Validation : 53.0% (timings : 727.00 43.85)
+Validation : 55.0% (timings : 733.48 44.08)
+Validation : 57.0% (timings : 729.66 44.00)
+Validation : 58.0% (timings : 742.94 44.43)
+Validation : 60.0% (timings : 747.86 44.50)
+Validation : 62.0% (timings : 748.90 44.58)
+Validation : 64.0% (timings : 744.44 44.40)
+Validation : 66.0% (timings : 752.10 44.52)
+Validation : 68.0% (timings : 753.16 44.62)
+Validation : 70.0% (timings : 750.26 44.46)
+Validation : 72.0% (timings : 746.74 44.29)
+Validation : 74.0% (timings : 741.39 43.74)
+Validation : 76.0% (timings : 755.80 44.16)
+Validation : 77.0% (timings : 769.49 44.55)
+Validation : 79.0% (timings : 768.70 44.54)
+Validation : 81.0% (timings : 775.19 44.76)
+Validation : 83.0% (timings : 768.07 44.62)
+Validation : 85.0% (timings : 768.96 44.69)
+Validation : 86.0% (timings : 783.31 45.11)
+Validation : 88.0% (timings : 776.74 44.68)
+Validation : 90.0% (timings : 772.67 44.54)
+Validation : 92.0% (timings : 783.51 44.99)
+Validation : 94.0% (timings : 774.23 44.73)
+Validation : 96.0% (timings : 772.41 44.61)
+Validation : 98.0% (timings : 768.69 44.56)
+S3DIS mean IoU = 16.7%
+e001-i0000 => L=1.004 acc= 66% / t(ms): 83782.9  39.6 187.1)
+e001-i0002 => L=1.842 acc= 47% / t(ms): 691.2  41.2 128.7)
+e001-i0004 => L=1.084 acc= 67% / t(ms): 696.8  41.3 126.3)
+e001-i0006 => L=0.863 acc= 72% / t(ms): 702.3  41.5 125.3)
+e001-i0008 => L=1.186 acc= 63% / t(ms): 696.0  41.1 123.2)
+e001-i0010 => L=0.821 acc= 77% / t(ms): 693.6  40.7 121.1)
+e001-i0011 => L=0.846 acc= 73% / t(ms): 707.9  41.4 120.8)
+e001-i0013 => L=1.368 acc= 56% / t(ms): 707.6  41.3 119.4)
+e001-i0015 => L=1.009 acc= 65% / t(ms): 714.9  41.9 118.7)
+e001-i0017 => L=0.872 acc= 75% / t(ms): 709.7  41.4 118.1)
+e001-i0019 => L=1.072 acc= 67% / t(ms): 718.9  41.9 118.8)
+e001-i0021 => L=1.300 acc= 59% / t(ms): 718.2  41.3 117.6)
+e001-i0023 => L=0.837 acc= 74% / t(ms): 714.8  41.5 116.6)
+e001-i0025 => L=1.153 acc= 56% / t(ms): 718.1  41.7 117.0)
+e001-i0027 => L=0.967 acc= 73% / t(ms): 720.0  41.8 117.2)
+e001-i0029 => L=1.016 acc= 70% / t(ms): 743.3  42.7 118.8)
+e001-i0031 => L=0.727 acc= 78% / t(ms): 730.6  42.0 118.8)
+e001-i0033 => L=1.152 acc= 63% / t(ms): 752.4  42.4 119.9)
+e001-i0035 => L=0.958 acc= 69% / t(ms): 754.5  42.1 118.8)
+e001-i0037 => L=1.206 acc= 59% / t(ms): 759.7  42.5 118.6)
+e001-i0039 => L=1.125 acc= 65% / t(ms): 742.2  42.0 117.1)
+e001-i0041 => L=1.235 acc= 59% / t(ms): 741.7  42.0 117.7)
+e001-i0043 => L=1.213 acc= 64% / t(ms): 728.9  41.2 116.5)
+e001-i0045 => L=1.311 acc= 59% / t(ms): 736.5  41.7 117.5)
+e001-i0047 => L=1.231 acc= 62% / t(ms): 731.6  41.9 118.2)
+e001-i0049 => L=1.450 acc= 49% / t(ms): 725.8  41.2 117.8)
+e001-i0050 => L=1.244 acc= 67% / t(ms): 741.6  41.8 118.4)
+e001-i0052 => L=1.113 acc= 60% / t(ms): 738.7  42.0 118.9)
+e001-i0054 => L=0.952 acc= 69% / t(ms): 743.2  42.7 119.1)
+e001-i0056 => L=1.280 acc= 57% / t(ms): 739.6  42.7 119.1)
+e001-i0058 => L=1.369 acc= 58% / t(ms): 737.0  42.9 119.0)
+e001-i0060 => L=1.188 acc= 57% / t(ms): 738.0  43.0 118.9)
+e001-i0062 => L=1.524 acc= 46% / t(ms): 734.5  43.0 117.7)
+e001-i0064 => L=1.081 acc= 67% / t(ms): 721.9  42.5 117.2)
+e001-i0066 => L=1.238 acc= 61% / t(ms): 720.0  42.2 116.7)
+e001-i0068 => L=1.246 acc= 56% / t(ms): 719.3  41.8 116.1)
+e001-i0070 => L=1.127 acc= 62% / t(ms): 724.7  42.0 116.9)
+e001-i0071 => L=1.578 acc= 50% / t(ms): 739.4  42.6 117.8)
+e001-i0072 => L=1.077 acc= 68% / t(ms): 748.9  43.1 118.3)
+e001-i0074 => L=1.109 acc= 60% / t(ms): 744.9  42.7 118.2)
+e001-i0076 => L=0.961 acc= 66% / t(ms): 748.6  43.1 118.4)
+e001-i0078 => L=1.358 acc= 64% / t(ms): 737.7  42.7 118.5)
+e001-i0080 => L=0.935 acc= 70% / t(ms): 732.0  42.0 116.8)
+e001-i0082 => L=1.018 acc= 66% / t(ms): 720.9  41.5 115.8)
+e001-i0084 => L=1.063 acc= 67% / t(ms): 719.3  41.3 115.5)
+e001-i0086 => L=1.088 acc= 64% / t(ms): 721.7  41.5 115.5)
+e001-i0088 => L=1.163 acc= 55% / t(ms): 717.5  41.4 115.9)
+e001-i0090 => L=1.105 acc= 67% / t(ms): 709.3  41.3 114.6)
+e001-i0092 => L=1.530 acc= 49% / t(ms): 705.0  41.5 114.9)
+e001-i0094 => L=1.231 acc= 58% / t(ms): 708.1  41.0 115.3)
+e001-i0096 => L=1.261 acc= 59% / t(ms): 715.9  41.5 116.0)
+e001-i0098 => L=0.951 acc= 74% / t(ms): 716.2  41.7 116.4)
+e001-i0100 => L=1.226 acc= 64% / t(ms): 717.6  41.8 116.7)
+e001-i0102 => L=1.022 acc= 62% / t(ms): 712.7  41.4 115.7)
+e001-i0104 => L=1.499 acc= 57% / t(ms): 718.6  41.9 115.5)
+e001-i0106 => L=1.035 acc= 64% / t(ms): 719.7  42.1 115.7)
+e001-i0108 => L=0.858 acc= 71% / t(ms): 716.4  41.6 115.0)
+e001-i0110 => L=0.982 acc= 74% / t(ms): 720.4  41.8 115.2)
+e001-i0112 => L=1.009 acc= 62% / t(ms): 739.6  42.4 116.9)
+e001-i0113 => L=0.933 acc= 70% / t(ms): 751.4  43.0 118.3)
+e001-i0115 => L=0.905 acc= 67% / t(ms): 742.9  42.7 117.2)
+e001-i0117 => L=1.305 acc= 61% / t(ms): 743.7  42.8 117.5)
+e001-i0119 => L=0.971 acc= 70% / t(ms): 752.0  43.0 117.6)
+e001-i0121 => L=1.028 acc= 62% / t(ms): 741.8  42.5 117.9)
+e001-i0123 => L=1.167 acc= 64% / t(ms): 737.8  42.3 117.1)
+e001-i0125 => L=1.193 acc= 61% / t(ms): 742.9  42.0 117.0)
+e001-i0127 => L=1.264 acc= 55% / t(ms): 732.8  42.0 117.4)
+e001-i0129 => L=1.016 acc= 63% / t(ms): 727.4  41.8 116.6)
+e001-i0131 => L=1.087 acc= 61% / t(ms): 722.3  41.8 115.2)
+e001-i0133 => L=1.046 acc= 64% / t(ms): 715.7  41.3 113.6)
+e001-i0135 => L=1.109 acc= 60% / t(ms): 715.4  41.2 113.7)
+e001-i0137 => L=0.792 acc= 74% / t(ms): 711.1  41.1 113.7)
+e001-i0139 => L=0.879 acc= 67% / t(ms): 718.2  41.0 113.9)
+e001-i0141 => L=1.249 acc= 62% / t(ms): 715.8  41.0 113.6)
+e001-i0143 => L=1.124 acc= 63% / t(ms): 711.6  40.7 113.6)
+e001-i0145 => L=1.145 acc= 64% / t(ms): 709.7  40.4 113.2)
+e001-i0147 => L=1.630 acc= 46% / t(ms): 708.3  40.6 113.7)
+e001-i0149 => L=0.843 acc= 72% / t(ms): 703.7  40.8 114.3)
+e001-i0150 => L=1.109 acc= 62% / t(ms): 724.2  41.2 115.1)
+e001-i0152 => L=1.591 acc= 45% / t(ms): 733.3  41.1 114.7)
+e001-i0153 => L=0.936 acc= 70% / t(ms): 756.9  41.9 116.0)
+e001-i0155 => L=0.997 acc= 67% / t(ms): 746.5  41.8 114.9)
+e001-i0157 => L=0.958 acc= 62% / t(ms): 735.2  41.7 114.3)
+e001-i0159 => L=1.260 acc= 60% / t(ms): 723.4  41.3 113.8)
+e001-i0161 => L=1.013 acc= 68% / t(ms): 722.5  41.1 113.2)
+e001-i0163 => L=1.141 acc= 69% / t(ms): 723.9  40.7 113.3)
+e001-i0165 => L=1.263 acc= 58% / t(ms): 720.7  40.2 113.4)
+e001-i0167 => L=1.332 acc= 54% / t(ms): 719.0  40.5 113.2)
+e001-i0169 => L=1.037 acc= 69% / t(ms): 723.2  40.8 114.0)
+e001-i0171 => L=1.134 acc= 66% / t(ms): 720.1  40.5 113.5)
+e001-i0172 => L=1.211 acc= 60% / t(ms): 735.2  41.2 114.4)
+e001-i0174 => L=0.944 acc= 71% / t(ms): 736.5  41.7 114.9)
+e001-i0176 => L=1.478 acc= 56% / t(ms): 726.1  41.3 113.9)
+e001-i0178 => L=0.962 acc= 67% / t(ms): 736.1  41.9 114.6)
+e001-i0180 => L=0.957 acc= 63% / t(ms): 733.9  41.6 114.8)
+e001-i0182 => L=0.807 acc= 73% / t(ms): 721.5  41.4 113.8)
+e001-i0184 => L=1.100 acc= 64% / t(ms): 719.2  41.4 114.4)
+e001-i0186 => L=1.120 acc= 59% / t(ms): 710.9  41.4 114.1)
+e001-i0188 => L=1.218 acc= 58% / t(ms): 709.2  41.2 113.1)
+e001-i0190 => L=1.268 acc= 59% / t(ms): 708.4  40.6 113.4)
+e001-i0192 => L=0.847 acc= 73% / t(ms): 708.1  40.5 112.9)
+e001-i0194 => L=0.816 acc= 76% / t(ms): 710.0  41.3 113.2)
+e001-i0196 => L=1.124 acc= 62% / t(ms): 722.3  41.5 115.2)
+e001-i0198 => L=1.049 acc= 62% / t(ms): 744.9  42.4 117.2)
+e001-i0200 => L=1.168 acc= 60% / t(ms): 740.5  42.2 117.1)
+e001-i0202 => L=1.113 acc= 63% / t(ms): 733.1  42.0 116.7)
+e001-i0204 => L=0.851 acc= 68% / t(ms): 730.9  41.4 116.7)
+e001-i0206 => L=1.336 acc= 51% / t(ms): 732.2  41.3 115.9)
+e001-i0208 => L=0.842 acc= 75% / t(ms): 735.3  41.5 116.1)
+e001-i0210 => L=0.773 acc= 73% / t(ms): 736.5  41.7 116.8)
+e001-i0212 => L=1.097 acc= 65% / t(ms): 734.4  41.3 116.9)
+e001-i0214 => L=1.199 acc= 60% / t(ms): 744.0  42.1 118.0)
+e001-i0215 => L=1.009 acc= 58% / t(ms): 753.5  42.6 118.7)
+e001-i0217 => L=0.862 acc= 74% / t(ms): 751.8  43.0 118.6)
+e001-i0219 => L=0.862 acc= 74% / t(ms): 736.9  42.1 116.9)
+e001-i0221 => L=0.810 acc= 73% / t(ms): 738.8  42.3 116.8)
+e001-i0223 => L=1.121 acc= 56% / t(ms): 734.7  42.6 118.2)
+e001-i0225 => L=1.052 acc= 67% / t(ms): 736.5  42.8 118.3)
+e001-i0227 => L=1.413 acc= 57% / t(ms): 726.2  42.4 117.8)
+e001-i0229 => L=0.757 acc= 81% / t(ms): 724.6  42.2 117.7)
+e001-i0231 => L=1.707 acc= 43% / t(ms): 730.4  42.5 117.7)
+e001-i0233 => L=0.912 acc= 72% / t(ms): 736.8  43.0 118.2)
+e001-i0235 => L=1.011 acc= 71% / t(ms): 733.3  42.9 117.4)
+e001-i0237 => L=1.198 acc= 63% / t(ms): 738.7  43.5 118.1)
+e001-i0239 => L=1.131 acc= 58% / t(ms): 727.7  43.0 118.0)
+e001-i0241 => L=0.837 acc= 71% / t(ms): 734.4  43.1 118.4)
+e001-i0242 => L=0.777 acc= 74% / t(ms): 745.1  43.7 119.6)
+e001-i0244 => L=1.113 acc= 65% / t(ms): 740.4  43.6 120.2)
+e001-i0246 => L=0.929 acc= 70% / t(ms): 746.2  43.7 120.8)
+e001-i0248 => L=1.788 acc= 46% / t(ms): 735.8  42.8 119.4)
+e001-i0250 => L=0.955 acc= 71% / t(ms): 726.8  43.0 118.0)
+e001-i0252 => L=0.794 acc= 76% / t(ms): 722.6  42.5 116.8)
+e001-i0254 => L=1.261 acc= 61% / t(ms): 733.4  42.5 116.3)
+e001-i0256 => L=0.962 acc= 67% / t(ms): 721.2  41.5 114.9)
+e001-i0258 => L=1.320 acc= 57% / t(ms): 730.5  41.5 115.0)
+e001-i0260 => L=1.263 acc= 55% / t(ms): 732.3  41.1 114.7)
+e001-i0261 => L=1.031 acc= 67% / t(ms): 746.4  41.3 115.1)
+e001-i0263 => L=1.002 acc= 64% / t(ms): 738.1  41.1 114.2)
+e001-i0265 => L=1.187 acc= 55% / t(ms): 728.0  40.7 112.3)
+e001-i0267 => L=0.888 acc= 72% / t(ms): 720.0  40.1 112.1)
+e001-i0269 => L=0.842 acc= 73% / t(ms): 720.0  40.4 112.3)
+e001-i0271 => L=1.050 acc= 66% / t(ms): 725.4  40.7 113.4)
+e001-i0273 => L=1.363 acc= 54% / t(ms): 722.9  40.8 113.6)
+e001-i0275 => L=0.915 acc= 66% / t(ms): 721.8  41.0 113.8)
+e001-i0277 => L=0.778 acc= 77% / t(ms): 724.8  41.3 114.9)
+e001-i0279 => L=0.926 acc= 71% / t(ms): 729.3  41.5 115.0)
+e001-i0281 => L=1.034 acc= 62% / t(ms): 721.5  41.6 115.4)
+e001-i0283 => L=1.094 acc= 65% / t(ms): 716.6  41.5 116.4)
+e001-i0285 => L=1.219 acc= 63% / t(ms): 722.1  41.6 116.8)
+e001-i0287 => L=0.764 acc= 80% / t(ms): 722.3  40.7 114.9)
+e001-i0289 => L=0.980 acc= 70% / t(ms): 723.1  41.0 115.7)
+e001-i0291 => L=1.152 acc= 58% / t(ms): 716.0  41.1 114.6)
+e001-i0293 => L=1.248 acc= 61% / t(ms): 718.7  41.6 116.0)
+e001-i0295 => L=1.043 acc= 69% / t(ms): 732.9  41.8 115.8)
+e001-i0297 => L=1.420 acc= 59% / t(ms): 726.7  41.4 115.0)

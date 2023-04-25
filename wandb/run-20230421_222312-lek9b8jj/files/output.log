@@ -1,0 +1,141 @@
+Preparing ply files
+Done in 0.0s
+Found KDTree for cloud Area_1, subsampled at 0.030
+146.6 MB loaded in 0.2s
+Found KDTree for cloud Area_2, subsampled at 0.030
+159.1 MB loaded in 0.2s
+Found KDTree for cloud Area_3, subsampled at 0.030
+62.6 MB loaded in 0.1s
+Found KDTree for cloud Area_4, subsampled at 0.030
+144.2 MB loaded in 0.2s
+Found KDTree for cloud Area_6, subsampled at 0.030
+137.9 MB loaded in 0.2s
+Preparing potentials
+Done in 0.3s
+Preparing ply files
+Done in 0.0s
+Found KDTree for cloud Area_5, subsampled at 0.030
+260.4 MB loaded in 0.3s
+Preparing potentials
+Done in 0.1s
+Preparing reprojection indices for testing
+Area_5 done in 0.3s
+Starting Calibration (use verbose=True for more details)
+Previous calibration found:
+Check batch limit dictionary
+[91m"potentials_0.400_0.030_6": ?
+Check neighbors limit dictionary
+[92m"0.030_0.075": 28
+[92m"0.060_0.150": 32
+[92m"0.120_0.300": 40
+[92m"0.240_0.600": 33
+[92m"0.480_1.200": 18
+Step     2  estim_b = 0.20 batch_limit = -36500
+Step    47  estim_b = 0.50 batch_limit = -20614
+Step    96  estim_b = 0.70 batch_limit =  -7531
+Step   134  estim_b = 0.89 batch_limit =   1776
+Step   147  estim_b = 1.27 batch_limit =   3253
+Step   157  estim_b = 1.66 batch_limit =   3938
+Step   166  estim_b = 2.00 batch_limit =   4441
+Step   175  estim_b = 2.36 batch_limit =   4146
+Step   182  estim_b = 2.63 batch_limit =   4532
+Step   190  estim_b = 2.91 batch_limit =   4701
+Step   198  estim_b = 3.18 batch_limit =   4819
+Step   206  estim_b = 3.42 batch_limit =   5185
+Step   213  estim_b = 3.67 batch_limit =   4567
+Step   221  estim_b = 3.89 batch_limit =   5129
+Step   228  estim_b = 4.09 batch_limit =   4306
+Step   236  estim_b = 4.27 batch_limit =   4615
+Step   243  estim_b = 4.45 batch_limit =   4289
+Step   251  estim_b = 4.60 batch_limit =   4894
+Step   259  estim_b = 4.75 batch_limit =   4947
+Step   267  estim_b = 4.90 batch_limit =   4648
+Step   275  estim_b = 5.03 batch_limit =   4896
+Step   283  estim_b = 5.15 batch_limit =   4694
+Step   292  estim_b = 5.27 batch_limit =   4720
+Step   301  estim_b = 5.37 batch_limit =   4794
+Step   309  estim_b = 5.47 batch_limit =   5035
+Step   317  estim_b = 5.56 batch_limit =   5275
+Step   325  estim_b = 5.69 batch_limit =   4511
+Step   334  estim_b = 5.76 batch_limit =   4773
+Step   343  estim_b = 5.83 batch_limit =   5034
+Step   352  estim_b = 5.89 batch_limit =   4792
+Step   361  estim_b = 5.96 batch_limit =   4248
+Step   369  estim_b = 6.01 batch_limit =   4723
+Step   377  estim_b = 6.08 batch_limit =   3846
+Step   386  estim_b = 6.11 batch_limit =   4644
+Step   395  estim_b = 6.13 batch_limit =   4990
+Step   404  estim_b = 6.16 batch_limit =   4485
+Step   413  estim_b = 6.20 batch_limit =   4229
+Step   422  estim_b = 6.22 batch_limit =   4770
+Step   431  estim_b = 6.26 batch_limit =   4708
+Step   440  estim_b = 6.26 batch_limit =   4845
+Step   449  estim_b = 6.29 batch_limit =   4530
+Step   458  estim_b = 6.31 batch_limit =   4512
+Step   467  estim_b = 6.35 batch_limit =   4192
+Step   476  estim_b = 6.35 batch_limit =   4470
+Step   485  estim_b = 6.38 batch_limit =   4395
+Step   494  estim_b = 6.40 batch_limit =   4368
+Step   501  estim_b = 6.40 batch_limit =   4640
+Step   509  estim_b = 6.42 batch_limit =   4584
+Step   517  estim_b = 6.41 batch_limit =   4628
+Step   525  estim_b = 6.38 batch_limit =   4571
+Step   534  estim_b = 6.42 batch_limit =   4436
+Step   543  estim_b = 6.43 batch_limit =   4149
+Step   552  estim_b = 6.42 batch_limit =   4710
+Step   561  estim_b = 6.44 batch_limit =   4368
+Step   569  estim_b = 6.43 batch_limit =   4452
+Step   577  estim_b = 6.43 batch_limit =   4685
+Step   585  estim_b = 6.46 batch_limit =   4316
+Step   594  estim_b = 6.43 batch_limit =   4468
+Step   603  estim_b = 6.41 batch_limit =   5319
+Step   611  estim_b = 6.43 batch_limit =   4496
+Step   619  estim_b = 6.43 batch_limit =   4721
+Step   627  estim_b = 6.43 batch_limit =   4995
+Step   635  estim_b = 6.45 batch_limit =   4617
+Step   643  estim_b = 6.45 batch_limit =   4337
+Step   652  estim_b = 6.44 batch_limit =   4627
+Step   661  estim_b = 6.44 batch_limit =   4615
+Step   669  estim_b = 6.47 batch_limit =   4230
+Step   678  estim_b = 6.46 batch_limit =   4215
+Step   686  estim_b = 6.46 batch_limit =   4727
+Step   694  estim_b = 6.45 batch_limit =   3988
+Step   702  estim_b = 6.47 batch_limit =   4148
+Step   711  estim_b = 6.47 batch_limit =   4125
+Step   720  estim_b = 6.43 batch_limit =   4552
+Step   729  estim_b = 6.41 batch_limit =   4878
+Step   737  estim_b = 6.43 batch_limit =   3983
+Step   746  estim_b = 6.44 batch_limit =   4404
+Step   755  estim_b = 6.44 batch_limit =   4123
+Step   764  estim_b = 6.41 batch_limit =   4043
+Step   772  estim_b = 6.40 batch_limit =   4343
+Step   780  estim_b = 6.40 batch_limit =   4291
+Step   789  estim_b = 6.39 batch_limit =   4856
+Step   797  estim_b = 6.41 batch_limit =   4252
+Step   805  estim_b = 6.38 batch_limit =   4347
+Step   813  estim_b = 6.38 batch_limit =   4840
+Step   821  estim_b = 6.42 batch_limit =   3882
+Step   830  estim_b = 6.39 batch_limit =   4739
+Step   838  estim_b = 6.40 batch_limit =   4178
+Step   846  estim_b = 6.39 batch_limit =   4216
+Step   855  estim_b = 6.37 batch_limit =   5020
+Step   864  estim_b = 6.37 batch_limit =   4523
+Step   872  estim_b = 6.37 batch_limit =   4008
+Step   880  estim_b = 6.37 batch_limit =   4742
+Step   889  estim_b = 6.38 batch_limit =   4690
+Step   897  estim_b = 6.37 batch_limit =   4221
+Step   906  estim_b = 6.37 batch_limit =   4417
+Step   915  estim_b = 6.36 batch_limit =   4212
+Step   924  estim_b = 6.38 batch_limit =   4356
+Step   933  estim_b = 6.38 batch_limit =   4297
+Step   942  estim_b = 6.37 batch_limit =   3837
+Step   950  estim_b = 6.36 batch_limit =   4360
+Step   959  estim_b = 6.35 batch_limit =   4399
+Step   967  estim_b = 6.33 batch_limit =   4971
+Step   975  estim_b = 6.33 batch_limit =   4441
+Step   983  estim_b = 6.32 batch_limit =   4762
+Step   992  estim_b = 6.30 batch_limit =   4347
+Step  1000  estim_b = 6.31 batch_limit =   4266
+ERROR: It seems that the calibration have not reached convergence. Here are some plot to understand why:
+If you notice unstability, reduce the expected_N value
+If convergece is too slow, increase the expected_N value

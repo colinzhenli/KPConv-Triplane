@@ -1,0 +1,76 @@
+Preparing ply files
+Done in 0.0s
+Found KDTree for cloud Area_1, subsampled at 0.030
+146.6 MB loaded in 0.4s
+Found KDTree for cloud Area_2, subsampled at 0.030
+159.1 MB loaded in 0.5s
+Found KDTree for cloud Area_3, subsampled at 0.030
+62.6 MB loaded in 0.2s
+Found KDTree for cloud Area_4, subsampled at 0.030
+144.2 MB loaded in 0.3s
+Found KDTree for cloud Area_6, subsampled at 0.030
+137.9 MB loaded in 0.5s
+Preparing ply files
+Done in 0.0s
+Found KDTree for cloud Area_5, subsampled at 0.030
+260.4 MB loaded in 0.9s
+Preparing reprojection indices for testing
+Area_5 done in 0.5s
+Starting Calibration (use verbose=True for more details)
+Previous calibration found:
+Check batch limit dictionary
+[92m"random_1.200_0.030_6": 53556
+Check neighbors limit dictionary
+[92m"0.030_0.075": 28
+[92m"0.060_0.150": 33
+[92m"0.120_0.300": 40
+[92m"0.240_0.600": 41
+[92m"0.480_1.200": 37
+Calibration done in 0.0s
+Starting Calibration (use verbose=True for more details)
+Previous calibration found:
+Check batch limit dictionary
+[92m"random_1.200_0.030_6": 53556
+Check neighbors limit dictionary
+[92m"0.030_0.075": 28
+[92m"0.060_0.150": 33
+[92m"0.120_0.300": 40
+[92m"0.240_0.600": 41
+[92m"0.480_1.200": 37
+Calibration done in 0.0s
+Model Preparation
+*****************
+Done in 2.9s
+Start training
+**************
+Traceback (most recent call last):
+  File "/home/zhenli/anaconda3/envs/cuda11.1/lib/python3.10/site-packages/torch/utils/data/dataloader.py", line 1163, in _try_get_data
+    data = self._data_queue.get(timeout=timeout)
+  File "/home/zhenli/anaconda3/envs/cuda11.1/lib/python3.10/multiprocessing/queues.py", line 113, in get
+    if not self._poll(timeout):
+  File "/home/zhenli/anaconda3/envs/cuda11.1/lib/python3.10/multiprocessing/connection.py", line 257, in poll
+    return self._poll(timeout)
+  File "/home/zhenli/anaconda3/envs/cuda11.1/lib/python3.10/multiprocessing/connection.py", line 424, in _poll
+    r = wait([self], timeout)
+  File "/home/zhenli/anaconda3/envs/cuda11.1/lib/python3.10/multiprocessing/connection.py", line 931, in wait
+    ready = selector.select(timeout)
+  File "/home/zhenli/anaconda3/envs/cuda11.1/lib/python3.10/selectors.py", line 416, in select
+    fd_event_list = self._selector.poll(timeout)
+  File "/home/zhenli/anaconda3/envs/cuda11.1/lib/python3.10/site-packages/torch/utils/data/_utils/signal_handling.py", line 66, in handler
+    _error_if_any_worker_fails()
+RuntimeError: DataLoader worker (pid 2811370) is killed by signal: Killed.
+The above exception was the direct cause of the following exception:
+Traceback (most recent call last):
+  File "/home/zhenli/KPConv-Triplane/train_S3DIS.py", line 346, in <module>
+    trainer.train(net, training_loader, test_loader, config)
+  File "/home/zhenli/KPConv-Triplane/utils/trainer.py", line 170, in train
+    for batch in training_loader:
+  File "/home/zhenli/anaconda3/envs/cuda11.1/lib/python3.10/site-packages/torch/utils/data/dataloader.py", line 681, in __next__
+    data = self._next_data()
+  File "/home/zhenli/anaconda3/envs/cuda11.1/lib/python3.10/site-packages/torch/utils/data/dataloader.py", line 1359, in _next_data
+    idx, data = self._get_data()
+  File "/home/zhenli/anaconda3/envs/cuda11.1/lib/python3.10/site-packages/torch/utils/data/dataloader.py", line 1325, in _get_data
+    success, data = self._try_get_data()
+  File "/home/zhenli/anaconda3/envs/cuda11.1/lib/python3.10/site-packages/torch/utils/data/dataloader.py", line 1176, in _try_get_data
+    raise RuntimeError('DataLoader worker (pid(s) {}) exited unexpectedly'.format(pids_str)) from e
+RuntimeError: DataLoader worker (pid(s) 2811370) exited unexpectedly

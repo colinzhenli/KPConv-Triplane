@@ -545,6 +545,21 @@ class PointCloudDataset(Dataset):
                 else:
                     r = r_normal
                 conv_i = batch_neighbors(stacked_points, stacked_points, stack_lengths, stack_lengths, r)
+                max = np.max(conv_i)
+                shape = stacked_points.shape[0]
+                # Check if the maximum value is greater than the shape
+                if max > shape:
+                    print("wrong_dim")
+                    mask = conv_i > shape
+                    true_count = np.sum(mask)
+                    print("fixed dirty neighbor indices:", true_count)
+                    # Replace the True values in the first column of the mask with their row indices
+                    row_indices = np.arange(conv_i.shape[0])
+                    conv_i[:, 0] = np.where(mask[:, 0], row_indices, conv_i[:, 0])         
+                    # Replace the first column of the mask with False to prevent assigning left values from the first column
+                    mask[:, 0] = False
+                    # Replace the values greater than shape with their left neighbors
+                    conv_i[mask] = conv_i[:, :-1][mask[:, 1:]]
                 neighbor_r = r
                 # max = np.max(conv_i)
                 # shape = stacked_points.shape[0]
@@ -576,9 +591,42 @@ class PointCloudDataset(Dataset):
 
                 # Subsample indices
                 pool_i = batch_neighbors(pool_p, stacked_points, pool_b, stack_lengths, r)
+                # Reduce size of neighbors matrices by eliminating furthest point
+
+                # Check if the maximum value is greater than the shape
+                max = np.max(pool_i)
+                shape = stacked_points.shape[0]
+                if max > shape:
+                    print("wrong_dim in pool_i")
+                    mask = pool_i > shape
+                    true_count = np.sum(mask)
+                    print("fixed dirty neighbor indices:", true_count)
+                    # Replace the True values in the first column of the mask with their row indices
+                    row_indices = np.arange(pool_i.shape[0])
+                    pool_i[:, 0] = np.where(mask[:, 0], row_indices, pool_i[:, 0])         
+                    # Replace the first column of the mask with False to prevent assigning left values from the first column
+                    mask[:, 0] = False
+                    # Replace the values greater than shape with their left neighbors
+                    pool_i[mask] = pool_i[:, :-1][mask[:, 1:]]
 
                 # Upsample indices (with the radius of the next layer to keep wanted density)
                 up_i = batch_neighbors(stacked_points, pool_p, stack_lengths, pool_b, 2 * r)
+                # Reduce size of neighbors matrices by eliminating furthest point
+                max = np.max(up_i)
+                shape = pool_p.shape[0]
+                # Check if the maximum value is greater than the shape
+                if max > shape:
+                    print("wrong_dim in up_i")
+                    mask = up_i > shape
+                    true_count = np.sum(mask)
+                    print("fixed dirty neighbor indices:", true_count)
+                    # Replace the True values in the first column of the mask with their row indices
+                    row_indices = np.arange(up_i.shape[0])
+                    up_i[:, 0] = np.where(mask[:, 0], row_indices, up_i[:, 0])         
+                    # Replace the first column of the mask with False to prevent assigning left values from the first column
+                    mask[:, 0] = False
+                    # Replace the values greater than shape with their left neighbors
+                    up_i[mask] = up_i[:, :-1][mask[:, 1:]]
 
             else:
                 # No pooling in the end of this layer, no pooling indices required
@@ -587,8 +635,24 @@ class PointCloudDataset(Dataset):
                 pool_b = np.zeros((0,), dtype=np.int32)
                 up_i = np.zeros((0, 1), dtype=np.int32)
 
-            # Reduce size of neighbors matrices by eliminating furthest point
+            # Reduce size of neighbors matrices by eliminating furthest poin
+
             conv_i = self.big_neighborhood_filter(conv_i, len(input_points))
+            # Check if the maximum value is greater than the shape
+            max = np.max(conv_i)
+            shape = stacked_points.shape[0]
+            if max > shape:
+                print("wrong_dim after big_neighborhood_filter")
+                mask = conv_i > shape
+                true_count = np.sum(mask)
+                print("fixed dirty neighbor indices:", true_count)
+                # Replace the True values in the first column of the mask with their row indices
+                row_indices = np.arange(conv_i.shape[0])
+                conv_i[:, 0] = np.where(mask[:, 0], row_indices, conv_i[:, 0])         
+                # Replace the first column of the mask with False to prevent assigning left values from the first column
+                mask[:, 0] = False
+                # Replace the values greater than shape with their left neighbors
+                conv_i[mask] = conv_i[:, :-1][mask[:, 1:]]
             relative_coord = (np.concatenate((stacked_points, np.zeros_like(stacked_points[:1, :]) + 1e6), axis=0))[conv_i, :] - stacked_points[:, np.newaxis, :]
 
             indices_0, weight_0 = self.bilinear_interpolation(res, relative_coord[:, :, [0, 1]]) # (4, n, k, 2), (4, n, k)
@@ -604,6 +668,8 @@ class PointCloudDataset(Dataset):
             pool_i = self.big_neighborhood_filter(pool_i, len(input_points))
             if up_i.shape[0] > 0:
                 up_i = self.big_neighborhood_filter(up_i, len(input_points)+1)
+
+
 
             # Updating input lists
             input_points += [stacked_points]

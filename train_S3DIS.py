@@ -52,10 +52,10 @@ class S3DISConfig(Config):
 
     # experiment name and run name
     exp_name = 'KPConv-Triplane'
-    run_name = 'TriplaneConv_sin-encoding_32_S3DIS_descend-LoDs_run_1'
+    run_name = 'KPConv-Triplane_generative-K_debug'
     
     # Convolution method 'KPConv' or 'TriplaneConv'
-    method = 'TriplaneConv' 
+    method = 'KPConv' 
 
     # Dataset name
     dataset = 'S3DIS'
@@ -67,7 +67,7 @@ class S3DISConfig(Config):
     dataset_task = ''
 
     # Number of CPU threads for the input pipeline
-    input_threads = 0
+    input_threads = 1
 
     #########################
     # Architecture definition
@@ -150,7 +150,7 @@ class S3DISConfig(Config):
     aggregation_mode = 'sum'
 
     # Choice of input features
-    first_features_dim = 128
+    first_features_dim = 64
     in_features_dim = 5
 
     # Can the network learn modulations
@@ -182,13 +182,13 @@ class S3DISConfig(Config):
     grad_clip_norm = 100.0
 
     # Number of batch (decrease to reduce memory cost, but it should remain > 3 for stability)
-    batch_num = 6
+    batch_num = 3
 
     # Number of steps per epochs
     epoch_steps = 500
 
     # Number of validation examples per epoch
-    validation_size = 100
+    validation_size = 25
 
     # Number of epoch between each checkpoint
     checkpoint_gap = 50
@@ -280,8 +280,8 @@ if __name__ == '__main__':
     wandb.config.update(config)
 
     # Initialize datasets
-    training_dataset = S3DISDataset(config, set='training', use_potentials=False)
-    test_dataset = S3DISDataset(config, set='validation', use_potentials=False)
+    training_dataset = S3DISDataset(config, set='training', use_potentials=True)
+    test_dataset = S3DISDataset(config, set='validation', use_potentials=True)
 
     # Initialize samplers
     training_sampler = S3DISSampler(training_dataset)

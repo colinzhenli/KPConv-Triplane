@@ -1,0 +1,64 @@
+Preparing ply files
+Done in 0.0s
+Found KDTree for cloud Area_1, subsampled at 0.030
+146.6 MB loaded in 0.2s
+Found KDTree for cloud Area_2, subsampled at 0.030
+159.1 MB loaded in 0.2s
+Found KDTree for cloud Area_3, subsampled at 0.030
+62.6 MB loaded in 0.1s
+Found KDTree for cloud Area_4, subsampled at 0.030
+144.2 MB loaded in 0.2s
+Found KDTree for cloud Area_6, subsampled at 0.030
+137.9 MB loaded in 0.2s
+Preparing ply files
+Done in 0.0s
+Found KDTree for cloud Area_5, subsampled at 0.030
+260.4 MB loaded in 0.3s
+Preparing reprojection indices for testing
+Area_5 done in 0.3s
+Starting Calibration (use verbose=True for more details)
+Previous calibration found:
+Check batch limit dictionary
+[91m"random_0.300_0.030_6": ?
+Check neighbors limit dictionary
+[92m"0.030_0.075": 29
+[92m"0.060_0.150": 33
+[92m"0.120_0.300": 37
+[92m"0.240_0.600": 33
+[92m"0.480_1.200": 18
+Step     1  estim_b = 0.01 batch_limit =  15003
+Step     5  estim_b = 0.58 batch_limit =-133988
+Step   116  estim_b = 1.07 batch_limit = -95143
+Step   242  estim_b = 1.02 batch_limit = -58726
+Step   364  estim_b = 1.01 batch_limit = -19683
+Step   444  estim_b = 1.71 batch_limit =   2607
+Step   470  estim_b = 3.02 batch_limit =   2920
+Step   496  estim_b = 4.18 batch_limit =   3270
+Step   501  estim_b = 4.36 batch_limit =   3053
+Step   521  estim_b = 5.02 batch_limit =   2711
+Step   539  estim_b = 5.50 batch_limit =   3195
+Step   557  estim_b = 5.89 batch_limit =   2647
+Step   577  estim_b = 6.22 batch_limit =   2748
+Step   597  estim_b = 6.51 batch_limit =   3465
+Step   617  estim_b = 6.73 batch_limit =   2946
+Step   637  estim_b = 6.90 batch_limit =   3244
+Step   657  estim_b = 7.06 batch_limit =   2857
+Step   677  estim_b = 7.18 batch_limit =   2786
+Step   697  estim_b = 7.23 batch_limit =   2683
+Step   717  estim_b = 7.32 batch_limit =   3048
+Step   737  estim_b = 7.34 batch_limit =   2881
+Step   757  estim_b = 7.38 batch_limit =   3085
+Step   777  estim_b = 7.39 batch_limit =   2859
+Step   797  estim_b = 7.42 batch_limit =   2503
+Step   817  estim_b = 7.43 batch_limit =   2716
+Step   837  estim_b = 7.41 batch_limit =   2753
+Step   857  estim_b = 7.39 batch_limit =   3063
+Step   877  estim_b = 7.37 batch_limit =   3345
+Step   899  estim_b = 7.36 batch_limit =   3080
+Step   921  estim_b = 7.37 batch_limit =   3183
+Step   941  estim_b = 7.38 batch_limit =   1978
+Step   961  estim_b = 7.36 batch_limit =   2948
+Step   981  estim_b = 7.34 batch_limit =   2643
+ERROR: It seems that the calibration have not reached convergence. Here are some plot to understand why:
+If you notice unstability, reduce the expected_N value
+If convergece is too slow, increase the expected_N value

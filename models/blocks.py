@@ -17,6 +17,7 @@
 
 import time
 import math
+from matplotlib.font_manager import weight_dict
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
@@ -148,12 +149,14 @@ class TriplaneConv(nn.Module):
         self.padding_with_center = False 
         self.no_mlp = False
         self.LoDs = True
+        self.k_cin = False
         self.depth_wise = False
+        self.with_trick = False
         self.precompute_indices = False
         self.matMode = [[0,1], [0,2], [1,2]]
         self.vecMode =  [2, 1, 0]
         self.method = 'Triplane'
-        self.baseGridSize = 32
+        self.baseGridSize = 128
         self.n_comp = 8
         if self.LoDs:
             self.neiGridSize = int(self.baseGridSize / (2**layer_ind))
@@ -167,19 +170,24 @@ class TriplaneConv(nn.Module):
         self.nei_plane= self.init_one_svd(self.n_comp, self.neiGridSize, 0.1)
 
         if self.method=='VM' or self.method=='Triplane':
-            self.mlp_map = Mlps(
-                3*self.n_comp, [self.cin], last_bn_norm=False       
-            )
+            if self.with_trick:
+                self.mlp_map = Mlps(
+                    3*self.n_comp, [self.cin], last_bn_norm=False       
+                )
+            else:
+                self.mlp_map = Mlps(
+                    3*self.n_comp, [self.cin*self.cout], last_bn_norm=False       
+                )
         self.linear = nn.Linear(self.cin, self.cout)
 
-        # self.scorenet = ScoreNet(6, self.m, hidden_unit=[16])
+        self.scorenet = ScoreNet(6, self.m, hidden_unit=[16])
 
-        # tensor = nn.init.kaiming_normal_(torch.empty(self.m, self.cin, self.cout), nonlinearity='relu') \
-            # .permute(1, 0, 2).contiguous().view(self.cin, self.m * self.cout)
+        tensor = nn.init.kaiming_normal_(torch.empty(self.m, self.cin, self.cout), nonlinearity='relu') \
+            .permute(1, 0, 2).contiguous().view(self.cin, self.m * self.cout)
 
 
         # convolutional weight matrices in Weight Bank:
-        # self.matrice = nn.Parameter(tensor, requires_grad=True)
+        self.matrice = nn.Parameter(tensor, requires_grad=True)
 
 
     def init_one_svd(self, n_component, neighborGridSize, scale):
@@ -279,17 +287,34 @@ class TriplaneConv(nn.Module):
     
     def conv_with_trick(self, x, neighb_inds, xyz):
         """ TriplaneConv layer using Point convolution tricks """
-        N, k, _ = xyz.shape[0]
-        """feature transformation:"""
-        x = feat_trans_pointnet(point_input=x, kernel=self.matrice, m=self.m)  # n*, m, cout
-        x = x[neighb_inds[:, 0], :].view(N, self.m, -1) # n, m, cout 
-
+        N, k, _ = xyz.shape
         if self.method=='ScoreNet':
             score = self.scorenet(xyz, calc_scores=self.calc_scores, bias=0)
         else:
             score = self.tensor_field(xyz, self.nei_plane, self.mlp_map).view(N, k, -1) # n, k, m
-        """assemble with scores:"""
-        x = torch.einsum('nmo,nkm->no', x, score) # n, cout
+        """feature transformation:"""
+        if self.k_cin: # use n, k, cin as input feature
+            x = x[neighb_inds, :].view(-1, self.cin) # n*k, cin
+            x = feat_trans_pointnet(point_input=x, kernel=self.matrice, m=self.m).view(N, k, self.m, -1)  # n*, k,  m, cout
+            """assemble with scores:"""
+            x = torch.einsum('nkmo,nkm->no', x, score) # n, cout
+        else:
+            x = feat_trans_pointnet(point_input=x, kernel=self.matrice, m=self.m)  # n*, m, cout
+            x = x[neighb_inds[:, 0], :].view(N, self.m, -1) # n, m, cout 
+            """assemble with scores:"""
+            x = torch.einsum('nmo,nkm->no', x, score) # n, cout
+        return x
+    
+    def direct_conv(self, x, neighb_inds, xyz):
+        """ TriplaneConv layer using Point convolution tricks """
+        N, k, _ = xyz.shape
+        x = x[neighb_inds, :] # n, k, cin
+        if self.method=='ScoreNet':
+            score = self.scorenet(xyz, calc_scores=self.calc_scores, bias=0)
+        else:
+            kernel = self.tensor_field(xyz, self.nei_plane, self.mlp_map).view(N, k, self.cin, self.cout) # n, k, cin, cout
+        """convolution:"""
+        x = torch.einsum('nki,nkio->no', x, kernel) # n, cout
         return x
     
     def forward(self, q_pts, s_pts, neighb_inds, neighb_r, x):
@@ -303,16 +328,18 @@ class TriplaneConv(nn.Module):
         s_pts = torch.cat((s_pts, torch.zeros_like(s_pts[:1, :]) + 1e6), 0)
         # Add a zero feature for shadow neighbors
         x = torch.cat((x, torch.zeros_like(x[:1, :])), 0)
-
         xyz = s_pts[neighb_inds, :] # get neighbor coordinate: n, k, 3
         xyz = xyz.clone() - q_pts.unsqueeze(1) # Center every neighborhood: n, k, 3
         xyz = xyz / neighb_r #normalize xyz by neigbor radius
-        xyz = torch.sin(xyz*(torch.pi/2))
-        # if self.depth_wise:
+        # xyz = torch.sin(xyz*(torch.pi/2))
+        if self.depth_wise: 
         # return self.depth_wise_conv(x, neighb_inds, xyz, bilinear_indices[:, :, neighb_inds[:, 0], ...], bilinear_weights[:, :, neighb_inds[:, 0], ...])
-        return self.depth_wise_conv(x, neighb_inds, xyz)
-        # else:
-        #     return self.conv_with_trick(x, neighb_inds, xyz)
+            return self.depth_wise_conv(x, neighb_inds, xyz)
+        elif self.with_trick:
+            return self.conv_with_trick(x, neighb_inds, xyz)
+        else:
+            return self.direct_conv(x, neighb_inds, xyz)
+
 
 
         
@@ -324,7 +351,7 @@ class TriplaneConv(nn.Module):
 
 class KPConv(nn.Module):
 
-    def __init__(self, kernel_size, p_dim, in_channels, out_channels, KP_extent, radius,
+    def __init__(self, kernel_size, p_dim, in_channels, out_channels, KP_extent, radius, layer_ind,
                  fixed_kernel_points='center', KP_influence='linear', aggregation_mode='sum',
                  deformable=False, modulated=False):
         """
@@ -344,7 +371,8 @@ class KPConv(nn.Module):
         super(KPConv, self).__init__()
 
         # Save parameters
-        self.K = kernel_size
+        # self.K = kernel_size
+        self.K = 10
         self.p_dim = p_dim
         self.in_channels = in_channels
         self.out_channels = out_channels
@@ -356,6 +384,35 @@ class KPConv(nn.Module):
         self.deformable = deformable
         self.modulated = modulated
 
+        # Triplanes parameters
+        self.conv_method = 'Triplanes' # 'Triplanes' or 'Linear'
+        self.generative_kernel_points = True
+        self.no_mlp = False
+        self.LoDs = True
+        self.matMode = [[0,1], [0,2], [1,2]]
+        self.vecMode =  [2, 1, 0]
+        self.baseGridSize = 128
+        self.n_comp = 8
+        self.layer_ind = layer_ind
+        if self.LoDs:
+            self.neiGridSize = int(self.baseGridSize / (2**layer_ind))
+        else:
+            self.neiGridSize = self.baseGridSize
+
+        self.layer_ind2neighbor = [28, 32, 41, 40, 36]
+        self.kernel_points_generator = nn.Linear(self.layer_ind2neighbor[layer_ind]*3, self.K*3)
+        self.nei_plane= self.init_one_svd(self.n_comp, self.neiGridSize, 0.1)
+        self.mlp_map = Mlps(
+            3*self.n_comp, [self.in_channels*self.out_channels], last_bn_norm=False       
+        )
+
+
+        tensor = nn.init.kaiming_normal_(torch.empty(self.n_comp, self.in_channels, self.out_channels), nonlinearity='relu') \
+            .permute(1, 0, 2).contiguous().view(self.in_channels, self.n_comp * self.out_channels)
+
+
+        # convolutional weight matrices in Weight Bank:
+        self.matrice = nn.Parameter(tensor, requires_grad=True)
         # Running variable containing deformed KP distance to input points. (used in regularization loss)
         self.min_d2 = None
         self.deformed_KP = None
@@ -377,6 +434,7 @@ class KPConv(nn.Module):
                                       self.offset_dim,
                                       KP_extent,
                                       radius,
+                                      layer_ind,
                                       fixed_kernel_points=fixed_kernel_points,
                                       KP_influence=KP_influence,
                                       aggregation_mode=aggregation_mode)
@@ -395,6 +453,17 @@ class KPConv(nn.Module):
 
         return
 
+    def init_one_svd(self, n_component, neighborGridSize, scale):
+        neighbor_plane_coef = []
+        for i in range(len(self.vecMode)):
+            vec_id = self.vecMode[i]
+            mat_id_0, mat_id_1 = self.matMode[i]
+
+            neighbor_plane_coef.append(torch.nn.Parameter(
+                scale * torch.randn((1, n_component, neighborGridSize, neighborGridSize))))  #
+
+        return torch.nn.ParameterList(neighbor_plane_coef)
+    
     def reset_parameters(self):
         kaiming_uniform_(self.weights, a=math.sqrt(5))
         if self.deformable:
@@ -416,12 +485,32 @@ class KPConv(nn.Module):
         return Parameter(torch.tensor(K_points_numpy, dtype=torch.float32),
                          requires_grad=False)
 
+    def tensor_field(self, xyz, nei_plane, mlp_map):
+        N = xyz.size(0)*xyz.size(1)
+        xyz_nei = xyz.reshape(-1, 3)
+
+        nei_coordinate_plane = torch.stack((xyz_nei[..., self.matMode[0]], xyz_nei[..., self.matMode[1]], xyz_nei[..., self.matMode[2]])).view(3, -1, 1, 2)
+
+        nei_plane_coef_point = []
+        for idx_plane in range(len(nei_plane)):
+            nei_plane_coef_point.append(F.grid_sample(nei_plane[idx_plane], nei_coordinate_plane[[idx_plane]],
+                                                align_corners=True).view(-1, *xyz_nei.shape[:1]))
+        if self.no_mlp == True:
+            nei_plane_coef_point = torch.sum(torch.stack(nei_plane_coef_point), 0)
+            return (nei_plane_coef_point.T).reshape(N, -1)
+        else:
+            nei_plane_coef_point= torch.cat(nei_plane_coef_point)
+            return mlp_map(((nei_plane_coef_point.T).reshape(N, -1)).unsqueeze(0), format="BNC").squeeze(0)
+
     def forward(self, q_pts, s_pts, neighb_inds, x):
 
         ###################
         # Offset generation
         ###################
-
+        #set kernel points generator
+        # if self.generative_kernel_points:
+        #     if self.kernel_points_generator is None:
+        #         self.kernel_points_generator = nn.Linear(neighb_inds.shape[1]*3, self.K*3).to(neighb_inds.device)
         if self.deformable:
 
             # Get offsets with a KPConv that only takes part of the features
@@ -466,7 +555,8 @@ class KPConv(nn.Module):
         neighbors = s_pts[neighb_inds, :]
 
         # Center every neighborhood
-        neighbors = neighbors - q_pts.unsqueeze(1)
+        neighbors = neighbors - q_pts.unsqueeze(1) # N, K, 3
+        N = neighbors.shape[0]
 
         # Apply offsets to kernel points [n_points, n_kpoints, dim]
         if self.deformable:
@@ -476,8 +566,12 @@ class KPConv(nn.Module):
             deformed_K_points = self.kernel_points
 
         # Get all difference matrices [n_points, n_neighbors, n_kpoints, dim]
-        neighbors.unsqueeze_(2)
         deformed_K_points = deformed_K_points.unsqueeze(0).unsqueeze(1)  # Adds new dimensions at positions 0 and 1, resulting in shape [1, 1, 15, 3]
+        if self.generative_kernel_points:
+            # Generate kernel points from neighbors
+            padded_neighbors = torch.cat([neighbors, torch.full((N, self.layer_ind2neighbor[(self.layer_ind)] - neighbors.shape[1], 3), -1).to(neighbors.device)], dim=1)
+            deformed_K_points = self.kernel_points_generator(padded_neighbors.view(N, -1)).view(N, -1, 3).unsqueeze(1) # N, 1, m, 3
+        neighbors.unsqueeze_(2)
         differences = neighbors - deformed_K_points
 
         # Get the square distances [n_points, n_neighbors, n_kpoints]
@@ -552,12 +646,19 @@ class KPConv(nn.Module):
         if self.deformable and self.modulated:
             weighted_features *= modulations.unsqueeze(2)
 
-        # Apply network weights [n_kpoints, n_points, out_fdim]
-        weighted_features = weighted_features.permute((1, 0, 2))
-        kernel_outputs = torch.matmul(weighted_features, self.weights)
+        if self.conv_method == 'Triplanes':
+            relative_coord = deformed_K_points.squeeze(1) - q_pts.unsqueeze(1) # N, M, 3 
+            N = relative_coord.shape[0] # N
+            kernel = self.tensor_field(relative_coord, self.nei_plane, self.mlp_map).view(N, -1, self.in_channels, self.out_channels) # n, m, cin, cout
+            kernel_outputs = torch.einsum('nmi,nmio->nmo', weighted_features, kernel)
+            return torch.sum(kernel_outputs, dim=1)
 
-        # Convolution sum [n_points, out_fdim]
-        return torch.sum(kernel_outputs, dim=0)
+        else:
+            # Apply network weights [n_kpoints, n_points, out_fdim]
+            weighted_features = weighted_features.permute((1, 0, 2))
+            kernel_outputs = torch.matmul(weighted_features, self.weights)
+            # Convolution sum [n_points, out_fdim]
+            return torch.sum(kernel_outputs, dim=0)
 
     def __repr__(self):
         return 'KPConv(radius: {:.2f}, in_feat: {:d}, out_feat: {:d})'.format(self.radius,
@@ -722,6 +823,7 @@ class SimpleBlock(nn.Module):
                                 out_dim // 2,
                                 current_extent,
                                 radius,
+                                layer_ind,
                                 fixed_kernel_points=config.fixed_kernel_points,
                                 KP_influence=config.KP_influence,
                                 aggregation_mode=config.aggregation_mode,
@@ -806,6 +908,7 @@ class ResnetBottleneckBlock(nn.Module):
                                 out_dim // 4,
                                 current_extent,
                                 radius,
+                                layer_ind,
                                 fixed_kernel_points=config.fixed_kernel_points,
                                 KP_influence=config.KP_influence,
                                 aggregation_mode=config.aggregation_mode,

@@ -1,0 +1,115 @@
+Preparing ply files
+Done in 0.0s
+Found KDTree for cloud Area_1, subsampled at 0.030
+146.6 MB loaded in 0.1s
+Found KDTree for cloud Area_2, subsampled at 0.030
+159.1 MB loaded in 0.1s
+Found KDTree for cloud Area_3, subsampled at 0.030
+62.6 MB loaded in 0.0s
+Found KDTree for cloud Area_4, subsampled at 0.030
+144.2 MB loaded in 0.1s
+Found KDTree for cloud Area_6, subsampled at 0.030
+137.9 MB loaded in 0.1s
+Preparing potentials
+Done in 0.1s
+Preparing ply files
+Done in 0.0s
+Found KDTree for cloud Area_5, subsampled at 0.030
+260.4 MB loaded in 0.2s
+Preparing potentials
+Done in 0.1s
+Preparing reprojection indices for testing
+Area_5 done in 0.2s
+Starting Calibration (use verbose=True for more details)
+Previous calibration found:
+Check batch limit dictionary
+[92m"potentials_1.200_0.030_6": 47563
+Check neighbors limit dictionary
+[92m"0.030_0.075": 28
+[92m"0.060_0.150": 32
+[92m"0.120_0.300": 40
+[92m"0.240_0.600": 33
+[92m"0.480_1.200": 18
+Calibration done in 0.0s
+Starting Calibration (use verbose=True for more details)
+Previous calibration found:
+Check batch limit dictionary
+[92m"potentials_1.200_0.030_6": 47563
+Check neighbors limit dictionary
+[92m"0.030_0.075": 28
+[92m"0.060_0.150": 32
+[92m"0.120_0.300": 40
+[92m"0.240_0.600": 33
+[92m"0.480_1.200": 18
+Calibration done in 0.0s
+Model Preparation
+*****************
+Done in 0.7s
+Start training
+**************
+e000-i0000 => L=2.584 acc=  6% / t(ms): 34506.8 756.1  67.0)
+e000-i0001 => L=2.567 acc= 10% / t(ms): 87057.3 106.7  74.7)
+e000-i0002 => L=2.550 acc= 14% / t(ms): 78723.8 100.7  73.7)
+e000-i0003 => L=2.485 acc= 24% / t(ms): 70965.3  94.8  72.0)
+e000-i0004 => L=2.374 acc= 50% / t(ms): 63976.1  90.1  71.6)
+e000-i0005 => L=2.324 acc= 54% / t(ms): 57682.6  86.4  72.2)
+e000-i0011 => L=1.785 acc= 67% / t(ms): 30728.6  78.4  69.5)
+e000-i0017 => L=1.660 acc= 49% / t(ms): 16397.4  80.7  69.3)
+e000-i0023 => L=1.357 acc= 64% / t(ms): 8815.0  75.4  73.4)
+e000-i0029 => L=1.178 acc= 71% / t(ms): 4781.6  75.5  69.8)
+e000-i0035 => L=1.634 acc= 51% / t(ms): 2635.0  73.1  67.5)
+e000-i0041 => L=1.655 acc= 50% / t(ms): 1487.9  72.2  68.0)
+e000-i0047 => L=1.066 acc= 65% / t(ms): 907.6  72.3  70.4)
+e000-i0053 => L=1.289 acc= 53% / t(ms): 576.3  72.6  69.0)
+e000-i0059 => L=1.127 acc= 73% / t(ms): 389.5  74.0  68.8)
+e000-i0065 => L=1.280 acc= 52% / t(ms): 284.6  71.5  77.3)
+e000-i0071 => L=1.670 acc= 53% / t(ms): 238.6  70.6  71.1)
+e000-i0077 => L=1.445 acc= 46% / t(ms): 239.6  73.1  67.0)
+e000-i0083 => L=0.975 acc= 73% / t(ms): 249.5  73.4  68.8)
+e000-i0089 => L=0.954 acc= 70% / t(ms): 226.3  72.4  65.5)
+e000-i0095 => L=1.209 acc= 60% / t(ms): 202.9  70.9  67.4)
+e000-i0101 => L=1.445 acc= 58% / t(ms): 210.1  71.6  70.3)
+e000-i0107 => L=1.201 acc= 67% / t(ms): 207.8  73.4  68.8)
+e000-i0113 => L=1.631 acc= 54% / t(ms): 192.2  76.4  68.9)
+e000-i0119 => L=1.125 acc= 61% / t(ms): 189.1  76.2  79.8)
+e000-i0125 => L=0.737 acc= 78% / t(ms): 173.9  74.4  73.6)
+e000-i0131 => L=1.195 acc= 61% / t(ms): 170.0  73.4  78.7)
+e000-i0137 => L=0.892 acc= 72% / t(ms): 173.3  72.8  72.6)
+e000-i0143 => L=1.285 acc= 58% / t(ms): 182.4  72.8  67.1)
+e000-i0149 => L=1.122 acc= 66% / t(ms): 180.0  72.7  65.9)
+e000-i0155 => L=1.268 acc= 61% / t(ms): 171.7  73.8  64.5)
+e000-i0161 => L=1.404 acc= 60% / t(ms): 159.1  70.8  68.2)
+e000-i0167 => L=1.590 acc= 54% / t(ms): 183.4  68.9  69.8)
+e000-i0173 => L=0.917 acc= 69% / t(ms): 195.1  73.1  70.3)
+e000-i0179 => L=1.438 acc= 55% / t(ms): 211.6  70.9  68.3)
+e000-i0185 => L=1.363 acc= 56% / t(ms): 202.3  72.2  65.7)
+e000-i0191 => L=1.038 acc= 69% / t(ms): 198.3  71.8  74.8)
+e000-i0197 => L=1.118 acc= 65% / t(ms): 223.0  69.1  70.5)
+e000-i0203 => L=1.248 acc= 64% / t(ms): 203.0  73.7  68.3)
+e000-i0209 => L=1.285 acc= 62% / t(ms): 220.8  77.9  67.4)
+e000-i0215 => L=0.713 acc= 80% / t(ms): 200.3  75.1  67.7)
+e000-i0221 => L=1.119 acc= 61% / t(ms): 202.3  72.0  69.5)
+e000-i0227 => L=1.510 acc= 61% / t(ms): 185.8  72.6  67.9)
+e000-i0233 => L=0.865 acc= 71% / t(ms): 176.4  74.1  66.4)
+e000-i0239 => L=1.546 acc= 48% / t(ms): 188.1  80.0  65.2)
+e000-i0245 => L=1.070 acc= 64% / t(ms): 201.0  74.9  65.3)
+e000-i0251 => L=0.888 acc= 75% / t(ms): 207.6  75.6  64.8)
+e000-i0257 => L=1.113 acc= 64% / t(ms): 195.4  79.1  67.8)
+e000-i0263 => L=1.232 acc= 62% / t(ms): 189.7  75.1  67.8)
+e000-i0269 => L=0.893 acc= 70% / t(ms): 198.6  72.8  69.9)
+e000-i0275 => L=1.429 acc= 62% / t(ms): 209.4  76.5  72.0)
+e000-i0281 => L=0.652 acc= 80% / t(ms): 188.8  73.3  66.6)
+e000-i0287 => L=1.041 acc= 67% / t(ms): 175.0  75.2  70.7)
+e000-i0293 => L=1.028 acc= 67% / t(ms): 179.3  71.5  67.7)
+e000-i0299 => L=0.880 acc= 73% / t(ms): 169.2  73.7  67.3)
+e000-i0304 => L=1.046 acc= 72% / t(ms): 140.8  72.1  66.8)
+e000-i0307 => L=0.917 acc= 73% / t(ms): 170.2  71.3  66.5)
+e000-i0311 => L=0.923 acc= 68% / t(ms): 179.4  69.8  66.1)
+e000-i0315 => L=1.002 acc= 68% / t(ms): 153.0  70.9  68.7)
+e000-i0319 => L=1.505 acc= 53% / t(ms): 169.1  68.6  66.4)
+e000-i0323 => L=1.163 acc= 67% / t(ms): 170.9  67.7  67.4)
+e000-i0327 => L=0.931 acc= 74% / t(ms): 154.8  68.3  66.7)
+e000-i0331 => L=1.032 acc= 68% / t(ms): 172.2  67.2  66.3)
+e000-i0335 => L=0.704 acc= 77% / t(ms): 190.9  70.5  67.8)
+e000-i0340 => L=0.647 acc= 79% / t(ms): 162.9  74.4  66.3)
+wrong_dim: neighb_inds=4503599627398958 shape= 52914
