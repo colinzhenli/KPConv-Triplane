@@ -1,0 +1,165 @@
+{
+    "os": "Linux-5.15.0-71-generic-x86_64-with-glibc2.31",
+    "python": "3.10.0",
+    "heartbeatAt": "2023-05-13T00:17:49.513478",
+    "startedAt": "2023-05-13T00:17:49.133882",
+    "docker": null,
+    "cuda": null,
+    "args": [],
+    "state": "running",
+    "program": "/local-scratch/localhome/zla247/projects/KPConv-Triplane/train_S3DIS.py",
+    "codePath": "train_S3DIS.py",
+    "git": {
+        "remote": "git@github.com:Kaola-2115/KPConv-Triplane.git",
+        "commit": "54daeb0ca459c126290f5963ee52c17e995d16f3"
+    },
+    "email": null,
+    "root": "/local-scratch/localhome/zla247/projects/KPConv-Triplane",
+    "host": "cs-vml-51",
+    "username": "zla247",
+    "executable": "/localhome/zla247/anaconda3/envs/4DConv/bin/python",
+    "cpu_count": 16,
+    "cpu_count_logical": 24,
+    "cpu_freq": {
+        "current": 3117.1485833333336,
+        "min": 800.0,
+        "max": 2933.3333333333335
+    },
+    "cpu_freq_per_core": [
+        {
+            "current": 2805.775,
+            "min": 800.0,
+            "max": 3200.0
+        },
+        {
+            "current": 3200.0,
+            "min": 800.0,
+            "max": 3200.0
+        },
+        {
+            "current": 3200.0,
+            "min": 800.0,
+            "max": 3200.0
+        },
+        {
+            "current": 3200.0,
+            "min": 800.0,
+            "max": 3200.0
+        },
+        {
+            "current": 3200.0,
+            "min": 800.0,
+            "max": 3200.0
+        },
+        {
+            "current": 3200.0,
+            "min": 800.0,
+            "max": 3200.0
+        },
+        {
+            "current": 3200.0,
+            "min": 800.0,
+            "max": 3200.0
+        },
+        {
+            "current": 3200.0,
+            "min": 800.0,
+            "max": 3200.0
+        },
+        {
+            "current": 3199.998,
+            "min": 800.0,
+            "max": 3200.0
+        },
+        {
+            "current": 3200.0,
+            "min": 800.0,
+            "max": 3200.0
+        },
+        {
+            "current": 3200.001,
+            "min": 800.0,
+            "max": 3200.0
+        },
+        {
+            "current": 3200.0,
+            "min": 800.0,
+            "max": 3200.0
+        },
+        {
+            "current": 3200.0,
+            "min": 800.0,
+            "max": 3200.0
+        },
+        {
+            "current": 3200.0,
+            "min": 800.0,
+            "max": 3200.0
+        },
+        {
+            "current": 3200.0,
+            "min": 800.0,
+            "max": 3200.0
+        },
+        {
+            "current": 3200.0,
+            "min": 800.0,
+            "max": 3200.0
+        },
+        {
+            "current": 3200.0,
+            "min": 800.0,
+            "max": 2400.0
+        },
+        {
+            "current": 3200.0,
+            "min": 800.0,
+            "max": 2400.0
+        },
+        {
+            "current": 3200.0,
+            "min": 800.0,
+            "max": 2400.0
+        },
+        {
+            "current": 3200.0,
+            "min": 800.0,
+            "max": 2400.0
+        },
+        {
+            "current": 3200.0,
+            "min": 800.0,
+            "max": 2400.0
+        },
+        {
+            "current": 3200.0,
+            "min": 800.0,
+            "max": 2400.0
+        },
+        {
+            "current": 3200.0,
+            "min": 800.0,
+            "max": 2400.0
+        },
+        {
+            "current": 3200.0,
+            "min": 800.0,
+            "max": 2400.0
+        }
+    ],
+    "disk": {
+        "total": 126.90119171142578,
+        "used": 66.64758682250977
+    },
+    "gpu": "NVIDIA GeForce RTX 3090",
+    "gpu_count": 1,
+    "gpu_devices": [
+        {
+            "name": "NVIDIA GeForce RTX 3090",
+            "memory_total": 25769803776
+        }
+    ],
+    "memory": {
+        "total": 62.59612274169922
+    }
+}

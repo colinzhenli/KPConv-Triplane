@@ -52,10 +52,13 @@ class S3DISConfig(Config):
 
     # experiment name and run name
     exp_name = 'KPConv-Triplane'
-    run_name = 'KPConv-Triplane_generative-K_debug'
+    run_name = 'TriplaneConv_k-cin_m-4_run_1'
     
     # Convolution method 'KPConv' or 'TriplaneConv'
-    method = 'KPConv' 
+    method = 'TriplaneConv' 
+
+    # Linear or Triplanes conv for KPConv
+    conv_method = 'Triplanes'
 
     # Dataset name
     dataset = 'S3DIS'
@@ -67,22 +70,45 @@ class S3DISConfig(Config):
     dataset_task = ''
 
     # Number of CPU threads for the input pipeline
-    input_threads = 1
+    input_threads = 6
 
     #########################
     # Architecture definition
     #########################
 
     # Define layers
-    # architecture = ['simple',
-    #                 'resnetb',
-    #                 'resnetb_strided',
-    #                 'resnetb',
-    #                 'resnetb',
-    #                 'resnetb_strided',
-    #                 'resnetb',
-    #                 'resnetb',
-    #                 'resnetb_strided',
+    architecture = ['simple',
+                    'resnetb',
+                    'resnetb_strided',
+                    'resnetb',
+                    'resnetb',
+                    'resnetb_strided',
+                    'resnetb',
+                    'resnetb',
+                    'resnetb_strided',
+                    'resnetb_deformable',
+                    'resnetb_deformable',
+                    'resnetb_deformable_strided',
+                    'resnetb_deformable',
+                    'resnetb_deformable',
+                    'nearest_upsample',
+                    'unary',
+                    'nearest_upsample',
+                    'unary',
+                    'nearest_upsample',
+                    'unary',
+                    'nearest_upsample',
+                    'unary']
+
+    # architecture = ['simple_deformable',
+    #                 'resnetb_deformable',
+    #                 'resnetb_deformable_strided',
+    #                 'resnetb_deformable',
+    #                 'resnetb_deformable',
+    #                 'resnetb_deformable_strided',
+    #                 'resnetb_deformable',
+    #                 'resnetb_deformable',
+    #                 'resnetb_deformable_strided',
     #                 'resnetb_deformable',
     #                 'resnetb_deformable',
     #                 'resnetb_deformable_strided',
@@ -98,28 +124,28 @@ class S3DISConfig(Config):
     #                 'unary']
 
     # # Define layers
-    architecture = ['simple',
-                    'resnetb',
-                    'resnetb_strided',
-                    'resnetb',
-                    'resnetb',
-                    'resnetb_strided',
-                    'resnetb',
-                    'resnetb',
-                    'resnetb_strided',
-                    'resnetb',
-                    'resnetb',
-                    'resnetb_strided',
-                    'resnetb',
-                    'resnetb',
-                    'nearest_upsample',
-                    'unary',
-                    'nearest_upsample',
-                    'unary',
-                    'nearest_upsample',
-                    'unary',
-                    'nearest_upsample',
-                    'unary']
+    # architecture = ['simple',
+    #                 'resnetb',
+    #                 'resnetb_strided',
+    #                 'resnetb',
+    #                 'resnetb',
+    #                 'resnetb_strided',
+    #                 'resnetb',
+    #                 'resnetb',
+    #                 'resnetb_strided',
+    #                 'resnetb',
+    #                 'resnetb',
+    #                 'resnetb_strided',
+    #                 'resnetb',
+    #                 'resnetb',
+    #                 'nearest_upsample',
+    #                 'unary',
+    #                 'nearest_upsample',
+    #                 'unary',
+    #                 'nearest_upsample',
+    #                 'unary',
+    #                 'nearest_upsample',
+    #                 'unary']
 
     ###################
     # KPConv parameters
@@ -150,7 +176,7 @@ class S3DISConfig(Config):
     aggregation_mode = 'sum'
 
     # Choice of input features
-    first_features_dim = 64
+    first_features_dim = 128
     in_features_dim = 5
 
     # Can the network learn modulations
@@ -182,13 +208,13 @@ class S3DISConfig(Config):
     grad_clip_norm = 100.0
 
     # Number of batch (decrease to reduce memory cost, but it should remain > 3 for stability)
-    batch_num = 3
+    batch_num = 6
 
     # Number of steps per epochs
     epoch_steps = 500
 
     # Number of validation examples per epoch
-    validation_size = 25
+    validation_size = 50
 
     # Number of epoch between each checkpoint
     checkpoint_gap = 50
