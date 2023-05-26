@@ -143,7 +143,7 @@ class Mlps(nn.Module):
         for i, outc in enumerate(outc_list):
             self.layers.add_module(f"Linear-{i}", nn.Conv2d(inc, outc, 1))
             if i + 1 < len(outc_list) or last_bn_norm:
-                # self.layers.add_module(f"BN-{i}", nn.BatchNorm2d(outc))
+                self.layers.add_module(f"BN-{i}", nn.BatchNorm2d(outc))
                 self.layers.add_module(f"ReLU-{i}", nn.ReLU(inplace=True))
             inc = outc
 

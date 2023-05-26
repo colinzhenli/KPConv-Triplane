@@ -147,18 +147,20 @@ class TriplaneConv(nn.Module):
         super(TriplaneConv, self).__init__()
         self.calc_scores = 'softmax'
         self.padding_with_center = False 
-        self.no_mlp = True
+        self.no_mlp = False
+        self.encoding = False
         self.LoDs = True
         self.k_cin = True
-        self.first_gather = True
+        self.first_gather = False
         self.depth_wise = False
         self.with_trick = True
         self.precompute_indices = False
         self.matMode = [[0,1], [0,2], [1,2]]
-        self.vecMode =  [2, 1, 0]
+        self.vecMode =  [2, 1, 0] 
         self.method = 'Triplane'
         self.baseGridSize = 128
         self.n_comp = 4
+        self.L = 2 # positional encoding length 
         if self.LoDs:
             self.neiGridSize = int(self.baseGridSize / (2**layer_ind))
         else:
@@ -173,15 +175,20 @@ class TriplaneConv(nn.Module):
         if self.method=='VM' or self.method=='Triplane':
             if self.depth_wise:
                 self.mlp_map = Mlps(
-                    3*self.n_comp, [self.cin], last_bn_norm=False       
+                    3*self.n_comp, [16, self.cin], last_bn_norm=False       
                 )
             elif self.with_trick:
-                self.mlp_map = Mlps(
-                    3*self.n_comp, [self.m], last_bn_norm=False       
+                if self.encoding:
+                    self.mlp_map = Mlps(
+                    3*self.n_comp + 6*self.L, [16, self.m], last_bn_norm=False       
                 )
+                else:
+                    self.mlp_map = Mlps(
+                        3*self.n_comp, [16, self.m], last_bn_norm=False       
+                    )
             else:
                 self.mlp_map = Mlps(
-                    3*self.n_comp, [self.cin*self.cout], last_bn_norm=False       
+                    3*self.n_comp, [16, self.cin*self.cout], last_bn_norm=False       
                 )
         self.linear = nn.Linear(self.cin, self.cout)
 
@@ -246,7 +253,17 @@ class TriplaneConv(nn.Module):
         weights = torch.stack((w1, w2, w3, w4), dim=0)
 
         return indices[0], weights
-    
+
+    def positional_encoding(self, xyz, L):
+        N = xyz.shape[0]
+        exponents = torch.arange(L).float().to(xyz.device).view(1, 1, L)  # Shape (1, 1, L)
+        xyz = xyz.unsqueeze(2)  # Shape (N, 3, 1)
+        pos_enc = 2. ** exponents * xyz  # Shape (N, 3, L), thanks to broadcasting
+        sin_enc = torch.sin(pos_enc)
+        cos_enc = torch.cos(pos_enc)
+        encoding = torch.cat((sin_enc, cos_enc), dim=-1)  # Shape (N, 3, 2*L)
+        return encoding.view(N, -1)  # Shape (N, 2*L*3)
+
     def tensor_field(self, xyz, nei_plane, mlp_map):
         N = xyz.size(0)*xyz.size(1)
         xyz_nei = xyz.reshape(-1, 3)
@@ -264,7 +281,13 @@ class TriplaneConv(nn.Module):
         if self.method=='Triplane':
             if self.no_mlp == True:
                 return (nei_plane_coef_point.T).reshape(N, -1)
-            return mlp_map(((nei_plane_coef_point.T).reshape(N, -1)).unsqueeze(0), format="BNC").squeeze(0)
+            if self.encoding:
+                # concatnate positional encoding with triplane outputs
+                encoding = self.positional_encoding(xyz_nei, self.L) # (N, 6L)
+                encodings = torch.cat((encoding, (nei_plane_coef_point.T).reshape(N, -1)), dim=1) # (N, 3m+6L)
+                return mlp_map(encodings.unsqueeze(0), format="BNC").squeeze(0)
+            else:
+                return mlp_map((nei_plane_coef_point.T).reshape(N, -1).unsqueeze(0), format="BNC").squeeze(0)
 
     def depth_wise_conv(self, x, neighb_inds, xyz):
         N, k, _ = xyz.shape

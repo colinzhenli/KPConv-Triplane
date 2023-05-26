@@ -60,6 +60,9 @@ class SemanticKittiConfig(Config):
     # Convolution method 'KPConv' or 'TriplaneConv'
     method = 'KPConv' 
 
+    # Linear or Triplanes conv for KPConv
+    conv_method = 'Linear'
+
     # Dataset name
     dataset = 'SemanticKitti'
 

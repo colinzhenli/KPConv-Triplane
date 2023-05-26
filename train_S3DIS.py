@@ -52,13 +52,13 @@ class S3DISConfig(Config):
 
     # experiment name and run name
     exp_name = 'KPConv-Triplane'
-    run_name = 'TriplaneConv_k-cin_m-4_run_1'
+    run_name = 'TriplaneConv_m-4_no-MLP_1'
     
     # Convolution method 'KPConv' or 'TriplaneConv'
     method = 'TriplaneConv' 
 
     # Linear or Triplanes conv for KPConv
-    conv_method = 'Triplanes'
+    conv_method = 'Linear'
 
     # Dataset name
     dataset = 'S3DIS'

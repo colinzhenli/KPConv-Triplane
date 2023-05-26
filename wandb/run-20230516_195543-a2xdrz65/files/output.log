@@ -1,0 +1,181 @@
+Preparing ply files
+Done in 0.0s
+Found KDTree for cloud Area_1, subsampled at 0.030
+146.6 MB loaded in 0.1s
+Found KDTree for cloud Area_2, subsampled at 0.030
+159.1 MB loaded in 0.2s
+Found KDTree for cloud Area_3, subsampled at 0.030
+62.6 MB loaded in 0.1s
+Found KDTree for cloud Area_4, subsampled at 0.030
+144.2 MB loaded in 0.1s
+Found KDTree for cloud Area_6, subsampled at 0.030
+137.9 MB loaded in 0.1s
+Preparing potentials
+Done in 0.0s
+Preparing ply files
+Done in 0.0s
+Found KDTree for cloud Area_5, subsampled at 0.030
+260.4 MB loaded in 0.2s
+Preparing potentials
+Done in 0.0s
+Preparing reprojection indices for testing
+Area_5 done in 0.2s
+Starting Calibration (use verbose=True for more details)
+Previous calibration found:
+Check batch limit dictionary
+[92m"potentials_1.200_0.030_6": 51461
+Check neighbors limit dictionary
+[92m"0.030_0.075": 28
+[92m"0.060_0.150": 32
+[92m"0.120_0.300": 40
+[92m"0.240_1.200": 151
+[92m"0.480_2.400": 66
+Calibration done in 0.0s
+Starting Calibration (use verbose=True for more details)
+Previous calibration found:
+Check batch limit dictionary
+[92m"potentials_1.200_0.030_6": 51461
+Check neighbors limit dictionary
+[92m"0.030_0.075": 28
+[92m"0.060_0.150": 32
+[92m"0.120_0.300": 40
+[92m"0.240_1.200": 151
+[92m"0.480_2.400": 66
+Calibration done in 0.0s
+Model Preparation
+*****************
+Done in 1.0s
+Start training
+**************
+e000-i0000 => L=2.615 acc=  4% / t(ms): 3596.2 880.3  67.2)
+e000-i0002 => L=2.595 acc=  5% / t(ms): 519.9  35.6  56.5)
+e000-i0004 => L=2.540 acc= 11% / t(ms): 562.4  35.6  55.7)
+e000-i0007 => L=2.435 acc= 21% / t(ms): 565.5  37.9  56.0)
+e000-i0008 => L=2.303 acc= 43% / t(ms): 621.7  37.7  56.6)
+e000-i0010 => L=2.391 acc= 19% / t(ms): 597.2  37.0  55.2)
+e000-i0013 => L=2.215 acc= 28% / t(ms): 658.2  38.5  55.2)
+e000-i0014 => L=2.122 acc= 29% / t(ms): 696.1  38.3  55.2)
+e000-i0017 => L=1.905 acc= 31% / t(ms): 650.0  40.1  54.7)
+e000-i0019 => L=1.962 acc= 43% / t(ms): 632.9  41.3  54.1)
+e000-i0020 => L=1.990 acc= 40% / t(ms): 678.9  40.7  53.8)
+e000-i0022 => L=1.849 acc= 47% / t(ms): 675.8  39.9  54.9)
+e000-i0025 => L=2.356 acc= 30% / t(ms): 698.4  40.7  54.9)
+e000-i0027 => L=2.126 acc= 39% / t(ms): 745.4  39.8  55.5)
+e000-i0030 => L=2.196 acc= 40% / t(ms): 610.7  43.3  54.8)
+e000-i0031 => L=1.861 acc= 51% / t(ms): 654.7  42.4  54.1)
+e000-i0033 => L=2.101 acc= 41% / t(ms): 720.9  40.8  53.7)
+e000-i0035 => L=1.679 acc= 50% / t(ms): 760.4  42.1  54.2)
+e000-i0038 => L=1.992 acc= 43% / t(ms): 624.2  42.8  55.4)
+e000-i0039 => L=1.865 acc= 39% / t(ms): 736.5  42.1  55.7)
+e000-i0041 => L=1.725 acc= 51% / t(ms): 833.0  41.4  56.8)
+e000-i0045 => L=1.623 acc= 56% / t(ms): 681.3  44.0  56.5)
+e000-i0047 => L=1.595 acc= 49% / t(ms): 786.1  42.1  55.4)
+e000-i0050 => L=1.300 acc= 63% / t(ms): 684.5  44.3  55.8)
+e000-i0053 => L=1.413 acc= 50% / t(ms): 806.2  42.1  56.5)
+e000-i0057 => L=1.544 acc= 44% / t(ms): 759.6  44.7  56.1)
+e000-i0059 => L=1.247 acc= 61% / t(ms): 800.8  45.8  56.7)
+e000-i0063 => L=1.342 acc= 61% / t(ms): 728.0  46.7  57.0)
+e000-i0065 => L=1.514 acc= 58% / t(ms): 776.7  46.7  57.0)
+e000-i0069 => L=1.708 acc= 48% / t(ms): 742.1  49.8  57.7)
+e000-i0071 => L=1.355 acc= 62% / t(ms): 741.3  49.7  57.5)
+e000-i0075 => L=1.748 acc= 48% / t(ms): 748.7  49.3  57.2)
+e000-i0077 => L=1.508 acc= 56% / t(ms): 767.3  49.3  57.2)
+e000-i0081 => L=1.259 acc= 62% / t(ms): 739.2  56.4  60.8)
+e000-i0083 => L=1.455 acc= 60% / t(ms): 736.6  55.4  60.1)
+e000-i0087 => L=1.128 acc= 65% / t(ms): 716.9  54.3  58.9)
+e000-i0089 => L=1.315 acc= 56% / t(ms): 822.4  53.3  59.4)
+e000-i0093 => L=1.408 acc= 57% / t(ms): 661.4  51.8  58.8)
+e000-i0095 => L=1.444 acc= 58% / t(ms): 770.0  50.5  57.7)
+e000-i0099 => L=1.277 acc= 64% / t(ms): 717.1  49.2  57.5)
+e000-i0101 => L=1.454 acc= 54% / t(ms): 729.1  49.4  56.8)
+e000-i0104 => L=1.857 acc= 46% / t(ms): 606.4  50.3  57.2)
+e000-i0105 => L=1.179 acc= 66% / t(ms): 714.7  48.8  57.1)
+e000-i0107 => L=1.879 acc= 49% / t(ms): 734.2  47.1  57.5)
+e000-i0110 => L=1.660 acc= 47% / t(ms): 618.5  47.7  57.2)
+e000-i0111 => L=2.232 acc= 41% / t(ms): 729.5  46.7  57.5)
+e000-i0113 => L=1.462 acc= 57% / t(ms): 741.3  47.1  56.7)
+e000-i0117 => L=1.209 acc= 66% / t(ms): 737.0  47.0  56.5)
+e000-i0119 => L=1.296 acc= 65% / t(ms): 711.7  47.7  55.7)
+e000-i0122 => L=1.515 acc= 50% / t(ms): 626.2  46.5  55.8)
+e000-i0123 => L=1.092 acc= 67% / t(ms): 755.9  45.4  55.6)
+e000-i0125 => L=1.290 acc= 58% / t(ms): 759.0  46.6  56.4)
+e000-i0129 => L=1.253 acc= 64% / t(ms): 765.7  47.3  56.0)
+e000-i0131 => L=1.339 acc= 54% / t(ms): 799.9  48.0  56.2)
+e000-i0135 => L=1.491 acc= 46% / t(ms): 778.6  49.6  56.6)
+e000-i0137 => L=1.220 acc= 60% / t(ms): 815.7  49.7  57.2)
+e000-i0141 => L=1.321 acc= 53% / t(ms): 769.6  52.7  57.4)
+e000-i0143 => L=1.452 acc= 52% / t(ms): 759.8  52.3  56.4)
+e000-i0147 => L=1.432 acc= 48% / t(ms): 765.3  54.5  57.5)
+e000-i0149 => L=1.315 acc= 54% / t(ms): 769.1  54.0  57.5)
+e000-i0153 => L=1.308 acc= 54% / t(ms): 736.8  53.5  56.5)
+e000-i0155 => L=1.297 acc= 60% / t(ms): 749.0  52.2  55.2)
+e000-i0159 => L=1.460 acc= 59% / t(ms): 703.5  48.7  56.3)
+e000-i0161 => L=1.410 acc= 59% / t(ms): 808.0  48.8  57.0)
+e000-i0164 => L=1.305 acc= 53% / t(ms): 668.2  51.4  57.6)
+e000-i0165 => L=1.063 acc= 66% / t(ms): 717.3  50.0  57.7)
+e000-i0167 => L=1.247 acc= 62% / t(ms): 820.5  50.2  58.1)
+e000-i0171 => L=1.546 acc= 48% / t(ms): 715.5  49.6  56.1)
+e000-i0173 => L=1.368 acc= 58% / t(ms): 780.6  50.1  55.7)
+e000-i0177 => L=0.985 acc= 75% / t(ms): 702.9  51.2  55.7)
+e000-i0179 => L=0.995 acc= 72% / t(ms): 833.7  51.2  56.1)
+e000-i0183 => L=1.295 acc= 61% / t(ms): 689.5  53.8  55.4)
+e000-i0185 => L=1.264 acc= 59% / t(ms): 793.9  52.8  55.1)
+e000-i0189 => L=1.351 acc= 58% / t(ms): 709.9  50.8  54.8)
+e000-i0191 => L=0.871 acc= 74% / t(ms): 796.0  50.2  55.7)
+e000-i0194 => L=1.468 acc= 53% / t(ms): 640.3  51.6  56.7)
+e000-i0195 => L=1.286 acc= 71% / t(ms): 709.3  50.1  57.0)
+e000-i0197 => L=1.519 acc= 51% / t(ms): 741.2  49.5  56.2)
+e000-i0199 => L=1.159 acc= 65% / t(ms): 697.6  49.7  56.7)
+e000-i0201 => L=1.361 acc= 58% / t(ms): 670.9  49.6  56.4)
+e000-i0203 => L=1.155 acc= 69% / t(ms): 721.7  48.7  56.2)
+e000-i0205 => L=1.398 acc= 54% / t(ms): 665.2  48.9  55.2)
+e000-i0207 => L=1.062 acc= 70% / t(ms): 728.0  49.4  54.9)
+e000-i0209 => L=1.572 acc= 46% / t(ms): 700.8  49.5  55.5)
+e000-i0211 => L=1.259 acc= 62% / t(ms): 712.5  49.1  55.6)
+e000-i0213 => L=1.626 acc= 43% / t(ms): 686.4  48.9  55.1)
+e000-i0215 => L=1.325 acc= 52% / t(ms): 761.3  48.6  55.8)
+e000-i0217 => L=1.487 acc= 55% / t(ms): 702.7  48.7  55.6)
+e000-i0219 => L=1.219 acc= 60% / t(ms): 758.4  49.2  56.2)
+e000-i0221 => L=1.469 acc= 50% / t(ms): 752.6  49.5  56.0)
+e000-i0223 => L=1.048 acc= 67% / t(ms): 690.2  49.3  56.1)
+e000-i0225 => L=0.880 acc= 77% / t(ms): 755.2  48.4  55.5)
+Traceback (most recent call last):
+  File "/localhome/zla247/anaconda3/envs/4DConv/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/localhome/zla247/anaconda3/envs/4DConv/lib/python3.10/runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "/local-scratch/localhome/zla247/.vscode-server/extensions/ms-python.python-2023.8.0/pythonFiles/lib/python/debugpy/adapter/../../debugpy/launcher/../../debugpy/__main__.py", line 39, in <module>
+    cli.main()
+  File "/local-scratch/localhome/zla247/.vscode-server/extensions/ms-python.python-2023.8.0/pythonFiles/lib/python/debugpy/adapter/../../debugpy/launcher/../../debugpy/../debugpy/server/cli.py", line 430, in main
+    run()
+  File "/local-scratch/localhome/zla247/.vscode-server/extensions/ms-python.python-2023.8.0/pythonFiles/lib/python/debugpy/adapter/../../debugpy/launcher/../../debugpy/../debugpy/server/cli.py", line 284, in run_file
+    runpy.run_path(target, run_name="__main__")
+  File "/local-scratch/localhome/zla247/.vscode-server/extensions/ms-python.python-2023.8.0/pythonFiles/lib/python/debugpy/_vendored/pydevd/_pydevd_bundle/pydevd_runpy.py", line 321, in run_path
+    return _run_module_code(code, init_globals, run_name,
+  File "/local-scratch/localhome/zla247/.vscode-server/extensions/ms-python.python-2023.8.0/pythonFiles/lib/python/debugpy/_vendored/pydevd/_pydevd_bundle/pydevd_runpy.py", line 135, in _run_module_code
+    _run_code(code, mod_globals, init_globals,
+  File "/local-scratch/localhome/zla247/.vscode-server/extensions/ms-python.python-2023.8.0/pythonFiles/lib/python/debugpy/_vendored/pydevd/_pydevd_bundle/pydevd_runpy.py", line 124, in _run_code
+    exec(code, run_globals)
+  File "train_S3DIS.py", line 372, in <module>
+    trainer.train(net, training_loader, test_loader, config)
+  File "/local-scratch/localhome/zla247/projects/KPConv-Triplane/utils/trainer.py", line 170, in train
+    for batch in training_loader:
+  File "/localhome/zla247/anaconda3/envs/4DConv/lib/python3.10/site-packages/torch/utils/data/dataloader.py", line 633, in __next__
+    data = self._next_data()
+  File "/localhome/zla247/anaconda3/envs/4DConv/lib/python3.10/site-packages/torch/utils/data/dataloader.py", line 1328, in _next_data
+    idx, data = self._get_data()
+  File "/localhome/zla247/anaconda3/envs/4DConv/lib/python3.10/site-packages/torch/utils/data/dataloader.py", line 1294, in _get_data
+    success, data = self._try_get_data()
+  File "/localhome/zla247/anaconda3/envs/4DConv/lib/python3.10/site-packages/torch/utils/data/dataloader.py", line 1132, in _try_get_data
+    data = self._data_queue.get(timeout=timeout)
+  File "/localhome/zla247/anaconda3/envs/4DConv/lib/python3.10/multiprocessing/queues.py", line 113, in get
+    if not self._poll(timeout):
+  File "/localhome/zla247/anaconda3/envs/4DConv/lib/python3.10/multiprocessing/connection.py", line 262, in poll
+    return self._poll(timeout)
+  File "/localhome/zla247/anaconda3/envs/4DConv/lib/python3.10/multiprocessing/connection.py", line 429, in _poll
+    r = wait([self], timeout)
+  File "/localhome/zla247/anaconda3/envs/4DConv/lib/python3.10/multiprocessing/connection.py", line 936, in wait
+    ready = selector.select(timeout)
+  File "/localhome/zla247/anaconda3/envs/4DConv/lib/python3.10/selectors.py", line 416, in select
+    fd_event_list = self._selector.poll(timeout)
+KeyboardInterrupt

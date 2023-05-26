@@ -1,0 +1,91 @@
+2023-05-16 19:50:48,993 INFO    StreamThr :1458508 [internal.py:wandb_internal():86] W&B internal server running at pid: 1458508, started at: 2023-05-16 19:50:48.993033
+2023-05-16 19:50:48,996 DEBUG   HandlerThread:1458508 [handler.py:handle_request():144] handle_request: status
+2023-05-16 19:50:48,999 INFO    WriterThread:1458508 [datastore.py:open_for_write():85] open: /local-scratch/localhome/zla247/projects/KPConv-Triplane/wandb/run-20230516_195048-gr8vpuhw/run-gr8vpuhw.wandb
+2023-05-16 19:50:49,000 DEBUG   SenderThread:1458508 [sender.py:send():375] send: header
+2023-05-16 19:50:49,000 DEBUG   SenderThread:1458508 [sender.py:send():375] send: run
+2023-05-16 19:50:49,235 DEBUG   HandlerThread:1458508 [handler.py:handle_request():144] handle_request: check_version
+2023-05-16 19:50:49,236 INFO    SenderThread:1458508 [dir_watcher.py:__init__():219] watching files in: /local-scratch/localhome/zla247/projects/KPConv-Triplane/wandb/run-20230516_195048-gr8vpuhw/files
+2023-05-16 19:50:49,236 INFO    SenderThread:1458508 [sender.py:_start_run_threads():1124] run started: gr8vpuhw with start time 1684291848.991476
+2023-05-16 19:50:49,237 DEBUG   SenderThread:1458508 [sender.py:send_request():402] send_request: summary_record
+2023-05-16 19:50:49,237 INFO    SenderThread:1458508 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-05-16 19:50:49,238 DEBUG   SenderThread:1458508 [sender.py:send_request():402] send_request: check_version
+2023-05-16 19:50:49,334 DEBUG   HandlerThread:1458508 [handler.py:handle_request():144] handle_request: run_start
+2023-05-16 19:50:49,340 DEBUG   HandlerThread:1458508 [system_info.py:__init__():31] System info init
+2023-05-16 19:50:49,340 DEBUG   HandlerThread:1458508 [system_info.py:__init__():46] System info init done
+2023-05-16 19:50:49,340 INFO    HandlerThread:1458508 [system_monitor.py:start():181] Starting system monitor
+2023-05-16 19:50:49,341 INFO    HandlerThread:1458508 [system_monitor.py:probe():201] Collecting system info
+2023-05-16 19:50:49,342 INFO    SystemMonitor:1458508 [system_monitor.py:_start():145] Starting system asset monitoring threads
+2023-05-16 19:50:49,342 INFO    SystemMonitor:1458508 [interfaces.py:start():190] Started cpu monitoring
+2023-05-16 19:50:49,344 INFO    SystemMonitor:1458508 [interfaces.py:start():190] Started disk monitoring
+2023-05-16 19:50:49,345 INFO    SystemMonitor:1458508 [interfaces.py:start():190] Started gpu monitoring
+2023-05-16 19:50:49,346 INFO    SystemMonitor:1458508 [interfaces.py:start():190] Started memory monitoring
+2023-05-16 19:50:49,348 INFO    SystemMonitor:1458508 [interfaces.py:start():190] Started network monitoring
+2023-05-16 19:50:49,388 DEBUG   HandlerThread:1458508 [system_info.py:probe():195] Probing system
+2023-05-16 19:50:49,390 DEBUG   HandlerThread:1458508 [system_info.py:_probe_git():180] Probing git
+2023-05-16 19:50:49,396 DEBUG   HandlerThread:1458508 [system_info.py:_probe_git():188] Probing git done
+2023-05-16 19:50:49,396 DEBUG   HandlerThread:1458508 [system_info.py:probe():240] Probing system done
+2023-05-16 19:50:49,396 DEBUG   HandlerThread:1458508 [system_monitor.py:probe():210] {'os': 'Linux-5.15.0-71-generic-x86_64-with-glibc2.31', 'python': '3.10.0', 'heartbeatAt': '2023-05-17T02:50:49.388545', 'startedAt': '2023-05-17T02:50:48.982507', 'docker': None, 'cuda': None, 'args': (), 'state': 'running', 'program': 'train_S3DIS.py', 'codePath': 'train_S3DIS.py', 'git': {'remote': 'git@github.com:Kaola-2115/KPConv-Triplane.git', 'commit': '170345a55ca9e9e65f97a377cdf0aad7fd03df54'}, 'email': None, 'root': '/local-scratch/localhome/zla247/projects/KPConv-Triplane', 'host': 'cs-vml-51', 'username': 'zla247', 'executable': '/localhome/zla247/anaconda3/envs/4DConv/bin/python', 'cpu_count': 16, 'cpu_count_logical': 24, 'cpu_freq': {'current': 3159.9408750000002, 'min': 800.0, 'max': 2933.3333333333335}, 'cpu_freq_per_core': [{'current': 3200.0, 'min': 800.0, 'max': 3200.0}, {'current': 3200.0, 'min': 800.0, 'max': 3200.0}, {'current': 3200.0, 'min': 800.0, 'max': 3200.0}, {'current': 3200.0, 'min': 800.0, 'max': 3200.0}, {'current': 3200.0, 'min': 800.0, 'max': 3200.0}, {'current': 3200.0, 'min': 800.0, 'max': 3200.0}, {'current': 3200.0, 'min': 800.0, 'max': 3200.0}, {'current': 3200.0, 'min': 800.0, 'max': 3200.0}, {'current': 3200.0, 'min': 800.0, 'max': 3200.0}, {'current': 3200.0, 'min': 800.0, 'max': 3200.0}, {'current': 3199.998, 'min': 800.0, 'max': 3200.0}, {'current': 3200.0, 'min': 800.0, 'max': 3200.0}, {'current': 3055.118, 'min': 800.0, 'max': 3200.0}, {'current': 3200.0, 'min': 800.0, 'max': 3200.0}, {'current': 3200.0, 'min': 800.0, 'max': 3200.0}, {'current': 3200.0, 'min': 800.0, 'max': 3200.0}, {'current': 3200.0, 'min': 800.0, 'max': 2400.0}, {'current': 3200.0, 'min': 800.0, 'max': 2400.0}, {'current': 3200.0, 'min': 800.0, 'max': 2400.0}, {'current': 3200.0, 'min': 800.0, 'max': 2400.0}, {'current': 3200.0, 'min': 800.0, 'max': 2400.0}, {'current': 3200.0, 'min': 800.0, 'max': 2400.0}, {'current': 3200.0, 'min': 800.0, 'max': 2400.0}, {'current': 3200.0, 'min': 800.0, 'max': 2400.0}], 'disk': {'total': 126.90119171142578, 'used': 67.0196762084961}, 'gpu': 'NVIDIA GeForce RTX 3090', 'gpu_count': 1, 'gpu_devices': [{'name': 'NVIDIA GeForce RTX 3090', 'memory_total': 25769803776}], 'memory': {'total': 62.59612274169922}}
+2023-05-16 19:50:49,396 INFO    HandlerThread:1458508 [system_monitor.py:probe():211] Finished collecting system info
+2023-05-16 19:50:49,396 INFO    HandlerThread:1458508 [system_monitor.py:probe():214] Publishing system info
+2023-05-16 19:50:49,396 DEBUG   HandlerThread:1458508 [system_info.py:_save_pip():51] Saving list of pip packages installed into the current environment
+2023-05-16 19:50:49,396 DEBUG   HandlerThread:1458508 [system_info.py:_save_pip():67] Saving pip packages done
+2023-05-16 19:50:49,396 DEBUG   HandlerThread:1458508 [system_info.py:_save_conda():74] Saving list of conda packages installed into the current environment
+2023-05-16 19:50:50,239 INFO    Thread-17 :1458508 [dir_watcher.py:_on_file_created():278] file/dir created: /local-scratch/localhome/zla247/projects/KPConv-Triplane/wandb/run-20230516_195048-gr8vpuhw/files/conda-environment.yaml
+2023-05-16 19:50:50,240 INFO    Thread-17 :1458508 [dir_watcher.py:_on_file_created():278] file/dir created: /local-scratch/localhome/zla247/projects/KPConv-Triplane/wandb/run-20230516_195048-gr8vpuhw/files/requirements.txt
+2023-05-16 19:50:50,240 INFO    Thread-17 :1458508 [dir_watcher.py:_on_file_created():278] file/dir created: /local-scratch/localhome/zla247/projects/KPConv-Triplane/wandb/run-20230516_195048-gr8vpuhw/files/wandb-summary.json
+2023-05-16 19:50:51,661 DEBUG   HandlerThread:1458508 [system_info.py:_save_conda():86] Saving conda packages done
+2023-05-16 19:50:51,663 INFO    HandlerThread:1458508 [system_monitor.py:probe():216] Finished publishing system info
+2023-05-16 19:50:51,669 DEBUG   SenderThread:1458508 [sender.py:send():375] send: files
+2023-05-16 19:50:51,669 INFO    SenderThread:1458508 [sender.py:_save_file():1378] saving file wandb-metadata.json with policy now
+2023-05-16 19:50:51,676 DEBUG   HandlerThread:1458508 [handler.py:handle_request():144] handle_request: stop_status
+2023-05-16 19:50:51,676 DEBUG   SenderThread:1458508 [sender.py:send_request():402] send_request: stop_status
+2023-05-16 19:50:51,765 DEBUG   SenderThread:1458508 [sender.py:send():375] send: telemetry
+2023-05-16 19:50:51,765 DEBUG   SenderThread:1458508 [sender.py:send():375] send: config
+2023-05-16 19:50:52,021 INFO    wandb-upload_0:1458508 [upload_job.py:push():137] Uploaded file /tmp/tmptn2t9zbbwandb/6wlgkjpa-wandb-metadata.json
+2023-05-16 19:50:52,237 INFO    Thread-17 :1458508 [dir_watcher.py:_on_file_modified():295] file/dir modified: /local-scratch/localhome/zla247/projects/KPConv-Triplane/wandb/run-20230516_195048-gr8vpuhw/files/conda-environment.yaml
+2023-05-16 19:50:52,237 INFO    Thread-17 :1458508 [dir_watcher.py:_on_file_created():278] file/dir created: /local-scratch/localhome/zla247/projects/KPConv-Triplane/wandb/run-20230516_195048-gr8vpuhw/files/wandb-metadata.json
+2023-05-16 19:50:52,237 INFO    Thread-17 :1458508 [dir_watcher.py:_on_file_created():278] file/dir created: /local-scratch/localhome/zla247/projects/KPConv-Triplane/wandb/run-20230516_195048-gr8vpuhw/files/output.log
+2023-05-16 19:50:54,238 INFO    Thread-17 :1458508 [dir_watcher.py:_on_file_modified():295] file/dir modified: /local-scratch/localhome/zla247/projects/KPConv-Triplane/wandb/run-20230516_195048-gr8vpuhw/files/output.log
+2023-05-16 19:50:54,783 DEBUG   HandlerThread:1458508 [handler.py:handle_request():144] handle_request: status_report
+2023-05-16 19:50:56,239 INFO    Thread-17 :1458508 [dir_watcher.py:_on_file_modified():295] file/dir modified: /local-scratch/localhome/zla247/projects/KPConv-Triplane/wandb/run-20230516_195048-gr8vpuhw/files/output.log
+2023-05-16 19:51:00,241 INFO    Thread-17 :1458508 [dir_watcher.py:_on_file_modified():295] file/dir modified: /local-scratch/localhome/zla247/projects/KPConv-Triplane/wandb/run-20230516_195048-gr8vpuhw/files/output.log
+2023-05-16 19:51:00,373 DEBUG   HandlerThread:1458508 [handler.py:handle_request():144] handle_request: status_report
+2023-05-16 19:51:02,242 INFO    Thread-17 :1458508 [dir_watcher.py:_on_file_modified():295] file/dir modified: /local-scratch/localhome/zla247/projects/KPConv-Triplane/wandb/run-20230516_195048-gr8vpuhw/files/output.log
+2023-05-16 19:51:04,243 INFO    Thread-17 :1458508 [dir_watcher.py:_on_file_modified():295] file/dir modified: /local-scratch/localhome/zla247/projects/KPConv-Triplane/wandb/run-20230516_195048-gr8vpuhw/files/output.log
+2023-05-16 19:51:05,493 DEBUG   HandlerThread:1458508 [handler.py:handle_request():144] handle_request: status_report
+2023-05-16 19:51:06,676 DEBUG   HandlerThread:1458508 [handler.py:handle_request():144] handle_request: stop_status
+2023-05-16 19:51:06,677 DEBUG   SenderThread:1458508 [sender.py:send_request():402] send_request: stop_status
+2023-05-16 19:51:08,244 INFO    Thread-17 :1458508 [dir_watcher.py:_on_file_modified():295] file/dir modified: /local-scratch/localhome/zla247/projects/KPConv-Triplane/wandb/run-20230516_195048-gr8vpuhw/files/output.log
+2023-05-16 19:51:10,625 DEBUG   HandlerThread:1458508 [handler.py:handle_request():144] handle_request: status_report
+2023-05-16 19:51:12,246 INFO    Thread-17 :1458508 [dir_watcher.py:_on_file_modified():295] file/dir modified: /local-scratch/localhome/zla247/projects/KPConv-Triplane/wandb/run-20230516_195048-gr8vpuhw/files/output.log
+2023-05-16 19:51:14,247 INFO    Thread-17 :1458508 [dir_watcher.py:_on_file_modified():295] file/dir modified: /local-scratch/localhome/zla247/projects/KPConv-Triplane/wandb/run-20230516_195048-gr8vpuhw/files/output.log
+2023-05-16 19:51:16,496 DEBUG   HandlerThread:1458508 [handler.py:handle_request():144] handle_request: status_report
+2023-05-16 19:51:18,249 INFO    Thread-17 :1458508 [dir_watcher.py:_on_file_modified():295] file/dir modified: /local-scratch/localhome/zla247/projects/KPConv-Triplane/wandb/run-20230516_195048-gr8vpuhw/files/output.log
+2023-05-16 19:51:21,692 DEBUG   HandlerThread:1458508 [handler.py:handle_request():144] handle_request: status_report
+2023-05-16 19:51:21,698 DEBUG   HandlerThread:1458508 [handler.py:handle_request():144] handle_request: stop_status
+2023-05-16 19:51:21,821 DEBUG   SenderThread:1458508 [sender.py:send_request():402] send_request: stop_status
+2023-05-16 19:51:22,251 INFO    Thread-17 :1458508 [dir_watcher.py:_on_file_modified():295] file/dir modified: /local-scratch/localhome/zla247/projects/KPConv-Triplane/wandb/run-20230516_195048-gr8vpuhw/files/config.yaml
+2023-05-16 19:51:22,251 INFO    Thread-17 :1458508 [dir_watcher.py:_on_file_modified():295] file/dir modified: /local-scratch/localhome/zla247/projects/KPConv-Triplane/wandb/run-20230516_195048-gr8vpuhw/files/output.log
+2023-05-16 19:51:24,251 INFO    Thread-17 :1458508 [dir_watcher.py:_on_file_modified():295] file/dir modified: /local-scratch/localhome/zla247/projects/KPConv-Triplane/wandb/run-20230516_195048-gr8vpuhw/files/output.log
+2023-05-16 19:51:26,252 INFO    Thread-17 :1458508 [dir_watcher.py:_on_file_modified():295] file/dir modified: /local-scratch/localhome/zla247/projects/KPConv-Triplane/wandb/run-20230516_195048-gr8vpuhw/files/output.log
+2023-05-16 19:51:27,138 DEBUG   HandlerThread:1458508 [handler.py:handle_request():144] handle_request: status_report
+2023-05-16 19:51:28,253 INFO    Thread-17 :1458508 [dir_watcher.py:_on_file_modified():295] file/dir modified: /local-scratch/localhome/zla247/projects/KPConv-Triplane/wandb/run-20230516_195048-gr8vpuhw/files/output.log
+2023-05-16 19:51:32,255 INFO    Thread-17 :1458508 [dir_watcher.py:_on_file_modified():295] file/dir modified: /local-scratch/localhome/zla247/projects/KPConv-Triplane/wandb/run-20230516_195048-gr8vpuhw/files/output.log
+2023-05-16 19:51:33,095 DEBUG   HandlerThread:1458508 [handler.py:handle_request():144] handle_request: status_report
+2023-05-16 19:51:36,256 INFO    Thread-17 :1458508 [dir_watcher.py:_on_file_modified():295] file/dir modified: /local-scratch/localhome/zla247/projects/KPConv-Triplane/wandb/run-20230516_195048-gr8vpuhw/files/output.log
+2023-05-16 19:51:36,687 DEBUG   HandlerThread:1458508 [handler.py:handle_request():144] handle_request: stop_status
+2023-05-16 19:51:36,687 DEBUG   SenderThread:1458508 [sender.py:send_request():402] send_request: stop_status
+2023-05-16 19:51:38,770 DEBUG   HandlerThread:1458508 [handler.py:handle_request():144] handle_request: status_report
+2023-05-16 19:51:42,259 INFO    Thread-17 :1458508 [dir_watcher.py:_on_file_modified():295] file/dir modified: /local-scratch/localhome/zla247/projects/KPConv-Triplane/wandb/run-20230516_195048-gr8vpuhw/files/output.log
+2023-05-16 19:51:44,196 DEBUG   HandlerThread:1458508 [handler.py:handle_request():144] handle_request: status_report
+2023-05-16 19:51:46,261 INFO    Thread-17 :1458508 [dir_watcher.py:_on_file_modified():295] file/dir modified: /local-scratch/localhome/zla247/projects/KPConv-Triplane/wandb/run-20230516_195048-gr8vpuhw/files/output.log
+2023-05-16 19:51:49,348 DEBUG   SystemMonitor:1458508 [system_monitor.py:_start():159] Starting system metrics aggregation loop
+2023-05-16 19:51:49,350 DEBUG   SenderThread:1458508 [sender.py:send():375] send: stats
+2023-05-16 19:51:49,351 DEBUG   HandlerThread:1458508 [handler.py:handle_request():144] handle_request: status_report
+2023-05-16 19:51:51,687 DEBUG   HandlerThread:1458508 [handler.py:handle_request():144] handle_request: stop_status
+2023-05-16 19:51:51,688 DEBUG   SenderThread:1458508 [sender.py:send_request():402] send_request: stop_status
+2023-05-16 19:51:52,264 INFO    Thread-17 :1458508 [dir_watcher.py:_on_file_modified():295] file/dir modified: /local-scratch/localhome/zla247/projects/KPConv-Triplane/wandb/run-20230516_195048-gr8vpuhw/files/output.log
+2023-05-16 19:51:55,188 DEBUG   HandlerThread:1458508 [handler.py:handle_request():144] handle_request: status_report
+2023-05-16 19:51:56,266 INFO    Thread-17 :1458508 [dir_watcher.py:_on_file_modified():295] file/dir modified: /local-scratch/localhome/zla247/projects/KPConv-Triplane/wandb/run-20230516_195048-gr8vpuhw/files/output.log
+2023-05-16 19:52:00,268 INFO    Thread-17 :1458508 [dir_watcher.py:_on_file_modified():295] file/dir modified: /local-scratch/localhome/zla247/projects/KPConv-Triplane/wandb/run-20230516_195048-gr8vpuhw/files/output.log
+2023-05-16 19:52:00,949 DEBUG   HandlerThread:1458508 [handler.py:handle_request():144] handle_request: status_report

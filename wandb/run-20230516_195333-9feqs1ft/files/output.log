@@ -1,0 +1,116 @@
+Preparing ply files
+Done in 0.0s
+Found KDTree for cloud Area_1, subsampled at 0.030
+146.6 MB loaded in 0.1s
+Found KDTree for cloud Area_2, subsampled at 0.030
+159.1 MB loaded in 0.2s
+Found KDTree for cloud Area_3, subsampled at 0.030
+62.6 MB loaded in 0.1s
+Found KDTree for cloud Area_4, subsampled at 0.030
+144.2 MB loaded in 0.1s
+Found KDTree for cloud Area_6, subsampled at 0.030
+137.9 MB loaded in 0.1s
+Preparing potentials
+Done in 0.0s
+Preparing ply files
+Done in 0.0s
+Found KDTree for cloud Area_5, subsampled at 0.030
+260.4 MB loaded in 0.2s
+Preparing potentials
+Done in 0.0s
+Preparing reprojection indices for testing
+Area_5 done in 0.2s
+Starting Calibration (use verbose=True for more details)
+Previous calibration found:
+Check batch limit dictionary
+[92m"potentials_1.200_0.030_6": 51461
+Check neighbors limit dictionary
+[92m"0.030_0.075": 28
+[92m"0.060_0.150": 32
+[92m"0.120_0.300": 40
+[92m"0.240_1.200": 151
+[92m"0.480_2.400": 66
+Calibration done in 0.0s
+Starting Calibration (use verbose=True for more details)
+Previous calibration found:
+Check batch limit dictionary
+[92m"potentials_1.200_0.030_6": 51461
+Check neighbors limit dictionary
+[92m"0.030_0.075": 28
+[92m"0.060_0.150": 32
+[92m"0.120_0.300": 40
+[92m"0.240_1.200": 151
+[92m"0.480_2.400": 66
+Calibration done in 0.0s
+Model Preparation
+*****************
+Done in 1.0s
+Start training
+**************
+e000-i0000 => L=2.665 acc=  3% / t(ms): 3093.0 887.6 578.4)
+e000-i0002 => L=2.609 acc=  3% / t(ms):  95.8  48.9 595.7)
+e000-i0003 => L=2.572 acc=  8% / t(ms): 200.7  49.3 612.4)
+e000-i0004 => L=2.528 acc= 12% / t(ms): 219.7  49.4 622.8)
+e000-i0006 => L=2.473 acc= 31% / t(ms): 178.1  55.4 633.6)
+e000-i0008 => L=2.328 acc= 39% / t(ms): 145.6  59.3 634.7)
+e000-i0009 => L=2.339 acc= 28% / t(ms): 187.4  58.0 622.8)
+e000-i0010 => L=2.183 acc= 49% / t(ms): 223.0  57.8 642.6)
+e000-i0012 => L=2.228 acc= 27% / t(ms): 180.7  61.5 647.4)
+e000-i0014 => L=1.934 acc= 39% / t(ms): 147.7  64.5 638.6)
+e000-i0015 => L=2.028 acc= 32% / t(ms): 181.5  63.6 642.6)
+e000-i0017 => L=2.142 acc= 40% / t(ms): 148.8  66.7 645.7)
+e000-i0019 => L=1.742 acc= 50% / t(ms): 121.5  68.8 653.8)
+e000-i0021 => L=1.741 acc= 51% / t(ms): 121.3  68.3 655.9)
+e000-i0023 => L=1.580 acc= 52% / t(ms):  98.4  71.4 678.7)
+e000-i0025 => L=1.948 acc= 46% / t(ms):  80.4  72.7 682.9)
+e000-i0027 => L=1.993 acc= 49% / t(ms): 172.1  71.3 683.0)
+e000-i0029 => L=2.132 acc= 40% / t(ms): 139.6  72.8 682.0)
+e000-i0031 => L=2.222 acc= 46% / t(ms): 113.9  74.5 681.4)
+e000-i0033 => L=1.940 acc= 36% / t(ms): 105.1  72.8 678.1)
+e000-i0035 => L=1.534 acc= 56% / t(ms):  85.3  73.8 676.7)
+e000-i0037 => L=1.792 acc= 46% / t(ms):  69.8  74.4 670.8)
+e000-i0039 => L=1.896 acc= 39% / t(ms):  76.3  72.6 668.5)
+e000-i0041 => L=2.518 acc= 39% / t(ms):  62.0  74.4 680.5)
+e000-i0043 => L=1.492 acc= 62% / t(ms):  50.4  75.2 669.1)
+e000-i0045 => L=1.804 acc= 46% / t(ms):  93.5  72.7 659.3)
+e000-i0047 => L=1.500 acc= 57% / t(ms):  75.9  74.7 669.8)
+e000-i0049 => L=1.685 acc= 52% / t(ms):  62.2  76.1 668.7)
+e000-i0051 => L=1.428 acc= 62% / t(ms):  75.1  73.8 683.3)
+Traceback (most recent call last):
+  File "/localhome/zla247/anaconda3/envs/4DConv/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/localhome/zla247/anaconda3/envs/4DConv/lib/python3.10/runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "/local-scratch/localhome/zla247/.vscode-server/extensions/ms-python.python-2023.8.0/pythonFiles/lib/python/debugpy/adapter/../../debugpy/launcher/../../debugpy/__main__.py", line 39, in <module>
+    cli.main()
+  File "/local-scratch/localhome/zla247/.vscode-server/extensions/ms-python.python-2023.8.0/pythonFiles/lib/python/debugpy/adapter/../../debugpy/launcher/../../debugpy/../debugpy/server/cli.py", line 430, in main
+    run()
+  File "/local-scratch/localhome/zla247/.vscode-server/extensions/ms-python.python-2023.8.0/pythonFiles/lib/python/debugpy/adapter/../../debugpy/launcher/../../debugpy/../debugpy/server/cli.py", line 284, in run_file
+    runpy.run_path(target, run_name="__main__")
+  File "/local-scratch/localhome/zla247/.vscode-server/extensions/ms-python.python-2023.8.0/pythonFiles/lib/python/debugpy/_vendored/pydevd/_pydevd_bundle/pydevd_runpy.py", line 321, in run_path
+    return _run_module_code(code, init_globals, run_name,
+  File "/local-scratch/localhome/zla247/.vscode-server/extensions/ms-python.python-2023.8.0/pythonFiles/lib/python/debugpy/_vendored/pydevd/_pydevd_bundle/pydevd_runpy.py", line 135, in _run_module_code
+    _run_code(code, mod_globals, init_globals,
+  File "/local-scratch/localhome/zla247/.vscode-server/extensions/ms-python.python-2023.8.0/pythonFiles/lib/python/debugpy/_vendored/pydevd/_pydevd_bundle/pydevd_runpy.py", line 124, in _run_code
+    exec(code, run_globals)
+  File "train_S3DIS.py", line 372, in <module>
+    trainer.train(net, training_loader, test_loader, config)
+  File "/local-scratch/localhome/zla247/projects/KPConv-Triplane/utils/trainer.py", line 200, in train
+    outputs = net(batch, config)
+  File "/localhome/zla247/anaconda3/envs/4DConv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/local-scratch/localhome/zla247/projects/KPConv-Triplane/models/architectures.py", line 346, in forward
+    x = block_op(x, batch)
+  File "/localhome/zla247/anaconda3/envs/4DConv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/local-scratch/localhome/zla247/projects/KPConv-Triplane/models/blocks.py", line 1001, in forward
+    x = self.TriplaneConv(q_pts, s_pts, neighb_inds, neighb_r, x)
+  File "/localhome/zla247/anaconda3/envs/4DConv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/local-scratch/localhome/zla247/projects/KPConv-Triplane/models/blocks.py", line 373, in forward
+    return self.conv_with_trick(x, neighb_inds, xyz)
+  File "/local-scratch/localhome/zla247/projects/KPConv-Triplane/models/blocks.py", line 322, in conv_with_trick
+    score = self.tensor_field(xyz, self.nei_plane, self.mlp_map).view(N, k, -1) # n, k, m
+  File "/local-scratch/localhome/zla247/projects/KPConv-Triplane/models/blocks.py", line 271, in tensor_field
+    nei_coordinate_plane = torch.stack((xyz_nei[..., self.matMode[0]], xyz_nei[..., self.matMode[1]], xyz_nei[..., self.matMode[2]])).view(3, -1, 1, 2)
+KeyboardInterrupt

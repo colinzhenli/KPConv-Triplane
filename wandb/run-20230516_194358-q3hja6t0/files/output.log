@@ -1,0 +1,129 @@
+Preparing ply files
+Done in 0.0s
+Found KDTree for cloud Area_1, subsampled at 0.030
+146.6 MB loaded in 0.1s
+Found KDTree for cloud Area_2, subsampled at 0.030
+159.1 MB loaded in 0.2s
+Found KDTree for cloud Area_3, subsampled at 0.030
+62.6 MB loaded in 0.1s
+Found KDTree for cloud Area_4, subsampled at 0.030
+144.2 MB loaded in 0.1s
+Found KDTree for cloud Area_6, subsampled at 0.030
+137.9 MB loaded in 0.1s
+Preparing potentials
+Done in 0.0s
+Preparing ply files
+Done in 0.0s
+Found KDTree for cloud Area_5, subsampled at 0.030
+260.4 MB loaded in 0.2s
+Preparing potentials
+Done in 0.0s
+Preparing reprojection indices for testing
+Area_5 done in 0.2s
+Starting Calibration (use verbose=True for more details)
+Previous calibration found:
+Check batch limit dictionary
+[92m"potentials_1.200_0.030_6": 51461
+Check neighbors limit dictionary
+[92m"0.030_0.075": 28
+[92m"0.060_0.150": 32
+[92m"0.120_0.300": 40
+[92m"0.240_1.200": 151
+[92m"0.480_2.400": 66
+Calibration done in 0.0s
+Starting Calibration (use verbose=True for more details)
+Previous calibration found:
+Check batch limit dictionary
+[92m"potentials_1.200_0.030_6": 51461
+Check neighbors limit dictionary
+[92m"0.030_0.075": 28
+[92m"0.060_0.150": 32
+[92m"0.120_0.300": 40
+[92m"0.240_1.200": 151
+[92m"0.480_2.400": 66
+Calibration done in 0.0s
+Model Preparation
+*****************
+Done in 1.0s
+Start training
+**************
+e000-i0000 => L=105.176 acc=  8% / t(ms): 3305.1 900.7  73.2)
+e000-i0002 => L=85.368 acc=  6% / t(ms): 503.9  59.8  71.1)
+e000-i0003 => L=76.351 acc= 11% / t(ms): 541.0  59.9  70.8)
+e000-i0004 => L=72.402 acc= 13% / t(ms): 596.4  60.8  71.8)
+e000-i0007 => L=68.090 acc= 24% / t(ms): 493.1  62.0  71.0)
+e000-i0008 => L=64.452 acc= 38% / t(ms): 550.0  61.7  71.1)
+e000-i0010 => L=63.350 acc= 35% / t(ms): 673.3  61.4  71.0)
+e000-i0014 => L=51.032 acc= 57% / t(ms): 558.6  61.3  69.2)
+e000-i0015 => L=50.507 acc= 63% / t(ms): 593.0  61.0  69.5)
+e000-i0016 => L=49.232 acc= 27% / t(ms): 679.3  60.6  69.5)
+e000-i0019 => L=44.933 acc= 64% / t(ms): 557.0  61.0  71.0)
+e000-i0021 => L=37.902 acc= 55% / t(ms): 608.8  60.3  70.4)
+e000-i0022 => L=39.840 acc= 55% / t(ms): 682.5  60.2  70.4)
+e000-i0026 => L=37.129 acc= 49% / t(ms): 613.2  60.4  70.9)
+e000-i0027 => L=34.887 acc= 59% / t(ms): 680.3  60.8  71.1)
+e000-i0029 => L=33.095 acc= 59% / t(ms): 660.1  60.6  71.5)
+e000-i0032 => L=34.089 acc= 59% / t(ms): 641.2  61.6  71.3)
+e000-i0033 => L=40.361 acc= 41% / t(ms): 694.5  61.4  70.6)
+e000-i0035 => L=34.883 acc= 46% / t(ms): 682.8  60.8  70.1)
+e000-i0038 => L=32.422 acc= 56% / t(ms): 701.1  62.7  70.0)
+e000-i0041 => L=32.062 acc= 56% / t(ms): 649.6  61.0  70.2)
+e000-i0043 => L=32.675 acc= 54% / t(ms): 614.6  61.4  70.6)
+e000-i0044 => L=35.295 acc= 56% / t(ms): 678.8  61.1  69.9)
+e000-i0046 => L=31.008 acc= 48% / t(ms): 623.8  60.4  69.9)
+e000-i0047 => L=37.410 acc= 33% / t(ms): 676.6  60.4  70.0)
+e000-i0050 => L=24.221 acc= 50% / t(ms): 648.7  60.7  69.4)
+e000-i0051 => L=32.534 acc= 43% / t(ms): 679.1  61.7  70.2)
+e000-i0053 => L=32.401 acc= 36% / t(ms): 734.2  61.8  69.8)
+e000-i0056 => L=23.629 acc= 41% / t(ms): 628.1  63.2  69.6)
+e000-i0057 => L=26.010 acc= 59% / t(ms): 732.2  63.6  70.8)
+e000-i0059 => L=30.052 acc= 51% / t(ms): 705.8  64.4  70.8)
+e000-i0062 => L=29.196 acc= 70% / t(ms): 591.7  65.1  70.2)
+e000-i0063 => L=30.427 acc= 57% / t(ms): 701.4  64.8  69.6)
+e000-i0065 => L=23.289 acc= 63% / t(ms): 745.9  65.2  69.6)
+e000-i0069 => L=25.254 acc= 55% / t(ms): 714.1  66.4  69.2)
+e000-i0071 => L=23.317 acc= 74% / t(ms): 718.0  65.4  69.1)
+e000-i0075 => L=29.604 acc= 53% / t(ms): 712.1  65.9  69.8)
+e000-i0077 => L=20.567 acc= 51% / t(ms): 680.5  67.5  70.2)
+e000-i0081 => L=21.911 acc= 66% / t(ms): 716.6  65.1  71.7)
+e000-i0083 => L=17.731 acc= 55% / t(ms): 697.3  64.9  70.7)
+e000-i0087 => L=18.851 acc= 43% / t(ms): 740.5  65.8  74.1)
+Traceback (most recent call last):
+  File "/localhome/zla247/anaconda3/envs/4DConv/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/localhome/zla247/anaconda3/envs/4DConv/lib/python3.10/runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "/local-scratch/localhome/zla247/.vscode-server/extensions/ms-python.python-2023.8.0/pythonFiles/lib/python/debugpy/adapter/../../debugpy/launcher/../../debugpy/__main__.py", line 39, in <module>
+    cli.main()
+  File "/local-scratch/localhome/zla247/.vscode-server/extensions/ms-python.python-2023.8.0/pythonFiles/lib/python/debugpy/adapter/../../debugpy/launcher/../../debugpy/../debugpy/server/cli.py", line 430, in main
+    run()
+  File "/local-scratch/localhome/zla247/.vscode-server/extensions/ms-python.python-2023.8.0/pythonFiles/lib/python/debugpy/adapter/../../debugpy/launcher/../../debugpy/../debugpy/server/cli.py", line 284, in run_file
+    runpy.run_path(target, run_name="__main__")
+  File "/local-scratch/localhome/zla247/.vscode-server/extensions/ms-python.python-2023.8.0/pythonFiles/lib/python/debugpy/_vendored/pydevd/_pydevd_bundle/pydevd_runpy.py", line 321, in run_path
+    return _run_module_code(code, init_globals, run_name,
+  File "/local-scratch/localhome/zla247/.vscode-server/extensions/ms-python.python-2023.8.0/pythonFiles/lib/python/debugpy/_vendored/pydevd/_pydevd_bundle/pydevd_runpy.py", line 135, in _run_module_code
+    _run_code(code, mod_globals, init_globals,
+  File "/local-scratch/localhome/zla247/.vscode-server/extensions/ms-python.python-2023.8.0/pythonFiles/lib/python/debugpy/_vendored/pydevd/_pydevd_bundle/pydevd_runpy.py", line 124, in _run_code
+    exec(code, run_globals)
+  File "train_S3DIS.py", line 372, in <module>
+    trainer.train(net, training_loader, test_loader, config)
+  File "/local-scratch/localhome/zla247/projects/KPConv-Triplane/utils/trainer.py", line 170, in train
+    for batch in training_loader:
+  File "/localhome/zla247/anaconda3/envs/4DConv/lib/python3.10/site-packages/torch/utils/data/dataloader.py", line 633, in __next__
+    data = self._next_data()
+  File "/localhome/zla247/anaconda3/envs/4DConv/lib/python3.10/site-packages/torch/utils/data/dataloader.py", line 1328, in _next_data
+    idx, data = self._get_data()
+  File "/localhome/zla247/anaconda3/envs/4DConv/lib/python3.10/site-packages/torch/utils/data/dataloader.py", line 1294, in _get_data
+    success, data = self._try_get_data()
+  File "/localhome/zla247/anaconda3/envs/4DConv/lib/python3.10/site-packages/torch/utils/data/dataloader.py", line 1132, in _try_get_data
+    data = self._data_queue.get(timeout=timeout)
+  File "/localhome/zla247/anaconda3/envs/4DConv/lib/python3.10/multiprocessing/queues.py", line 113, in get
+    if not self._poll(timeout):
+  File "/localhome/zla247/anaconda3/envs/4DConv/lib/python3.10/multiprocessing/connection.py", line 262, in poll
+    return self._poll(timeout)
+  File "/localhome/zla247/anaconda3/envs/4DConv/lib/python3.10/multiprocessing/connection.py", line 429, in _poll
+    r = wait([self], timeout)
+  File "/localhome/zla247/anaconda3/envs/4DConv/lib/python3.10/multiprocessing/connection.py", line 936, in wait
+    ready = selector.select(timeout)
+  File "/localhome/zla247/anaconda3/envs/4DConv/lib/python3.10/selectors.py", line 416, in select
+    fd_event_list = self._selector.poll(timeout)

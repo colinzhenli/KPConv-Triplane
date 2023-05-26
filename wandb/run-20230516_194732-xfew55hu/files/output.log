@@ -1,0 +1,74 @@
+Preparing ply files
+Done in 0.0s
+Found KDTree for cloud Area_1, subsampled at 0.030
+146.6 MB loaded in 0.1s
+Found KDTree for cloud Area_2, subsampled at 0.030
+159.1 MB loaded in 0.2s
+Found KDTree for cloud Area_3, subsampled at 0.030
+62.6 MB loaded in 0.1s
+Found KDTree for cloud Area_4, subsampled at 0.030
+144.2 MB loaded in 0.1s
+Found KDTree for cloud Area_6, subsampled at 0.030
+137.9 MB loaded in 0.1s
+Preparing potentials
+Done in 0.0s
+Preparing ply files
+Done in 0.0s
+Found KDTree for cloud Area_5, subsampled at 0.030
+260.4 MB loaded in 0.2s
+Preparing potentials
+Done in 0.0s
+Preparing reprojection indices for testing
+Area_5 done in 0.2s
+Starting Calibration (use verbose=True for more details)
+Previous calibration found:
+Check batch limit dictionary
+[92m"potentials_1.200_0.030_6": 51461
+Check neighbors limit dictionary
+[92m"0.030_0.075": 28
+[92m"0.060_0.150": 32
+[92m"0.120_0.300": 40
+[92m"0.240_1.200": 151
+[92m"0.480_2.400": 66
+Calibration done in 0.0s
+Starting Calibration (use verbose=True for more details)
+Previous calibration found:
+Check batch limit dictionary
+[92m"potentials_1.200_0.030_6": 51461
+Check neighbors limit dictionary
+[92m"0.030_0.075": 28
+[92m"0.060_0.150": 32
+[92m"0.120_0.300": 40
+[92m"0.240_1.200": 151
+[92m"0.480_2.400": 66
+Calibration done in 0.0s
+Model Preparation
+*****************
+Done in 0.9s
+Start training
+**************
+e000-i0000 => L=2.557 acc= 10% / t(ms): 3659.0 1323.1 951.4)
+e000-i0002 => L=2.587 acc=  7% / t(ms):  43.4 133.4 789.2)
+e000-i0004 => L=2.547 acc= 13% / t(ms):  49.4 129.0 800.7)
+e000-i0005 => L=2.486 acc= 23% / t(ms):  45.2 129.3 813.0)
+e000-i0007 => L=2.465 acc= 23% / t(ms):  37.9 130.6 828.5)
+e000-i0008 => L=2.376 acc= 39% / t(ms):  34.9 131.4 832.7)
+e000-i0009 => L=2.332 acc= 46% / t(ms):  32.1 131.7 836.8)
+e000-i0010 => L=2.315 acc= 38% / t(ms):  34.3 130.3 842.9)
+e000-i0012 => L=2.176 acc= 54% / t(ms):  28.0 130.7 828.5)
+e000-i0014 => L=2.207 acc= 40% / t(ms):  24.0 130.3 832.9)
+e000-i0015 => L=2.194 acc= 33% / t(ms):  22.4 131.5 838.7)
+e000-i0016 => L=1.925 acc= 54% / t(ms):  25.0 130.8 853.3)
+e000-i0018 => L=1.892 acc= 54% / t(ms):  20.4 132.4 859.7)
+e000-i0019 => L=1.938 acc= 49% / t(ms):  19.0 133.3 859.3)
+e000-i0021 => L=2.030 acc= 28% / t(ms):  16.8 132.8 856.9)
+e000-i0023 => L=1.727 acc= 51% / t(ms):  15.4 132.8 853.1)
+e000-i0025 => L=1.905 acc= 42% / t(ms):  13.3 133.7 844.5)
+e000-i0026 => L=1.877 acc= 43% / t(ms):  12.7 133.4 848.7)
+e000-i0028 => L=1.324 acc= 58% / t(ms):  11.5 133.2 849.6)
+e000-i0029 => L=1.795 acc= 40% / t(ms):  11.7 133.5 863.3)
+e000-i0031 => L=1.937 acc= 45% / t(ms):  10.8 132.6 853.9)
+e000-i0033 => L=2.483 acc= 33% / t(ms):   9.9 132.5 838.8)
+e000-i0035 => L=1.288 acc= 57% / t(ms):   9.4 130.8 824.7)
+e000-i0037 => L=1.585 acc= 53% / t(ms):   9.1 131.3 817.2)
+e000-i0038 => L=1.777 acc= 44% / t(ms):   9.0 131.2 826.5)

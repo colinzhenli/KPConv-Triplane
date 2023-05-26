@@ -1,0 +1,58 @@
+Preparing ply files
+Done in 0.0s
+Found KDTree for cloud Area_1, subsampled at 0.030
+146.6 MB loaded in 0.1s
+Found KDTree for cloud Area_2, subsampled at 0.030
+159.1 MB loaded in 0.2s
+Found KDTree for cloud Area_3, subsampled at 0.030
+62.6 MB loaded in 0.1s
+Found KDTree for cloud Area_4, subsampled at 0.030
+144.2 MB loaded in 0.1s
+Found KDTree for cloud Area_6, subsampled at 0.030
+137.9 MB loaded in 0.1s
+Preparing potentials
+Done in 0.0s
+Preparing ply files
+Done in 0.0s
+Found KDTree for cloud Area_5, subsampled at 0.030
+260.4 MB loaded in 0.2s
+Preparing potentials
+Done in 0.0s
+Preparing reprojection indices for testing
+Area_5 done in 0.2s
+Starting Calibration (use verbose=True for more details)
+Previous calibration found:
+Check batch limit dictionary
+[92m"potentials_1.200_0.030_6": 51461
+Check neighbors limit dictionary
+[92m"0.030_0.075": 28
+[92m"0.060_0.150": 32
+[92m"0.120_0.300": 40
+[92m"0.240_1.200": 151
+[92m"0.480_2.400": 66
+Calibration done in 0.0s
+Starting Calibration (use verbose=True for more details)
+Previous calibration found:
+Check batch limit dictionary
+[92m"potentials_1.200_0.030_6": 51461
+Check neighbors limit dictionary
+[92m"0.030_0.075": 28
+[92m"0.060_0.150": 32
+[92m"0.120_0.300": 40
+[92m"0.240_1.200": 151
+[92m"0.480_2.400": 66
+Calibration done in 0.0s
+Model Preparation
+*****************
+Done in 1.2s
+Start training
+**************
+e000-i0000 => L=104.323 acc= 17% / t(ms): 3624.9 916.3  90.9)
+e000-i0002 => L=79.505 acc= 21% / t(ms): 574.5  63.7  89.9)
+e000-i0005 => L=67.050 acc= 37% / t(ms): 588.6  65.0  89.5)
+e000-i0008 => L=53.584 acc= 54% / t(ms): 682.5  69.7  89.0)
+e000-i0011 => L=41.448 acc= 54% / t(ms): 625.2  71.2  88.8)
+e000-i0014 => L=37.041 acc= 52% / t(ms): 699.2  72.0  88.8)
+e000-i0017 => L=38.505 acc= 47% / t(ms): 631.0  73.6  90.8)
+e000-i0020 => L=38.090 acc= 59% / t(ms): 709.5  76.0  91.4)
+e000-i0023 => L=28.874 acc= 52% / t(ms): 626.0  73.2  91.0)

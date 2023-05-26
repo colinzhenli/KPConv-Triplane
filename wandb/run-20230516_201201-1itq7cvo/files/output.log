@@ -1,0 +1,61 @@
+Preparing ply files
+Done in 0.0s
+Found KDTree for cloud Area_1, subsampled at 0.030
+146.6 MB loaded in 0.1s
+Found KDTree for cloud Area_2, subsampled at 0.030
+159.1 MB loaded in 0.2s
+Found KDTree for cloud Area_3, subsampled at 0.030
+62.6 MB loaded in 0.1s
+Found KDTree for cloud Area_4, subsampled at 0.030
+144.2 MB loaded in 0.1s
+Found KDTree for cloud Area_6, subsampled at 0.030
+137.9 MB loaded in 0.1s
+Preparing potentials
+Done in 0.0s
+Preparing ply files
+Done in 0.0s
+Found KDTree for cloud Area_5, subsampled at 0.030
+260.4 MB loaded in 0.2s
+Preparing potentials
+Done in 0.0s
+Preparing reprojection indices for testing
+Area_5 done in 0.2s
+Starting Calibration (use verbose=True for more details)
+Previous calibration found:
+Check batch limit dictionary
+[92m"potentials_1.200_0.030_6": 51461
+Check neighbors limit dictionary
+[92m"0.030_0.075": 28
+[92m"0.060_0.150": 32
+[92m"0.120_0.300": 40
+[92m"0.240_1.200": 151
+[92m"0.480_2.400": 66
+Calibration done in 0.0s
+Starting Calibration (use verbose=True for more details)
+Previous calibration found:
+Check batch limit dictionary
+[92m"potentials_1.200_0.030_6": 51461
+Check neighbors limit dictionary
+[92m"0.030_0.075": 28
+[92m"0.060_0.150": 32
+[92m"0.120_0.300": 40
+[92m"0.240_1.200": 151
+[92m"0.480_2.400": 66
+Calibration done in 0.0s
+Model Preparation
+*****************
+Done in 1.2s
+Start training
+**************
+e000-i0000 => L=110.278 acc= 15% / t(ms): 3080.2 914.9  90.5)
+e000-i0002 => L=80.478 acc= 13% / t(ms): 712.7  63.5  88.8)
+e000-i0005 => L=67.469 acc= 30% / t(ms): 607.0  66.9  90.4)
+e000-i0008 => L=60.082 acc= 55% / t(ms): 683.3  69.3  91.2)
+e000-i0011 => L=50.310 acc= 63% / t(ms): 621.7  69.5  90.4)
+e000-i0014 => L=50.423 acc= 68% / t(ms): 666.9  72.5  90.0)
+e000-i0017 => L=45.272 acc= 44% / t(ms): 619.6  71.7  89.9)
+e000-i0020 => L=46.158 acc= 43% / t(ms): 694.8  72.0  92.1)
+e000-i0023 => L=50.963 acc= 51% / t(ms): 708.9  73.3  92.2)
+e000-i0026 => L=46.593 acc= 43% / t(ms): 763.6  76.5  93.4)
+e000-i0029 => L=47.314 acc= 50% / t(ms): 650.5  77.8  93.2)
+e000-i0032 => L=49.604 acc= 46% / t(ms): 733.4  78.8  94.3)

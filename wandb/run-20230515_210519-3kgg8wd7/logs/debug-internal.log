@@ -1,0 +1,60 @@
+2023-05-15 21:05:19,655 INFO    StreamThr :1176217 [internal.py:wandb_internal():86] W&B internal server running at pid: 1176217, started at: 2023-05-15 21:05:19.654455
+2023-05-15 21:05:19,657 DEBUG   HandlerThread:1176217 [handler.py:handle_request():144] handle_request: status
+2023-05-15 21:05:19,659 INFO    WriterThread:1176217 [datastore.py:open_for_write():85] open: /local-scratch/localhome/zla247/projects/KPConv-Triplane/wandb/run-20230515_210519-3kgg8wd7/run-3kgg8wd7.wandb
+2023-05-15 21:05:19,663 DEBUG   SenderThread:1176217 [sender.py:send():375] send: header
+2023-05-15 21:05:19,663 DEBUG   SenderThread:1176217 [sender.py:send():375] send: run
+2023-05-15 21:05:19,946 INFO    SenderThread:1176217 [dir_watcher.py:__init__():219] watching files in: /local-scratch/localhome/zla247/projects/KPConv-Triplane/wandb/run-20230515_210519-3kgg8wd7/files
+2023-05-15 21:05:19,947 INFO    SenderThread:1176217 [sender.py:_start_run_threads():1124] run started: 3kgg8wd7 with start time 1684209919.652934
+2023-05-15 21:05:19,947 DEBUG   SenderThread:1176217 [sender.py:send_request():402] send_request: summary_record
+2023-05-15 21:05:19,947 DEBUG   HandlerThread:1176217 [handler.py:handle_request():144] handle_request: check_version
+2023-05-15 21:05:19,947 INFO    SenderThread:1176217 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-05-15 21:05:19,948 DEBUG   SenderThread:1176217 [sender.py:send_request():402] send_request: check_version
+2023-05-15 21:05:20,045 DEBUG   HandlerThread:1176217 [handler.py:handle_request():144] handle_request: run_start
+2023-05-15 21:05:20,051 DEBUG   HandlerThread:1176217 [system_info.py:__init__():31] System info init
+2023-05-15 21:05:20,051 DEBUG   HandlerThread:1176217 [system_info.py:__init__():46] System info init done
+2023-05-15 21:05:20,051 INFO    HandlerThread:1176217 [system_monitor.py:start():181] Starting system monitor
+2023-05-15 21:05:20,052 INFO    HandlerThread:1176217 [system_monitor.py:probe():201] Collecting system info
+2023-05-15 21:05:20,052 INFO    SystemMonitor:1176217 [system_monitor.py:_start():145] Starting system asset monitoring threads
+2023-05-15 21:05:20,053 INFO    SystemMonitor:1176217 [interfaces.py:start():190] Started cpu monitoring
+2023-05-15 21:05:20,055 INFO    SystemMonitor:1176217 [interfaces.py:start():190] Started disk monitoring
+2023-05-15 21:05:20,056 INFO    SystemMonitor:1176217 [interfaces.py:start():190] Started gpu monitoring
+2023-05-15 21:05:20,058 INFO    SystemMonitor:1176217 [interfaces.py:start():190] Started memory monitoring
+2023-05-15 21:05:20,059 INFO    SystemMonitor:1176217 [interfaces.py:start():190] Started network monitoring
+2023-05-15 21:05:20,120 DEBUG   HandlerThread:1176217 [system_info.py:probe():195] Probing system
+2023-05-15 21:05:20,122 DEBUG   HandlerThread:1176217 [system_info.py:_probe_git():180] Probing git
+2023-05-15 21:05:20,128 DEBUG   HandlerThread:1176217 [system_info.py:_probe_git():188] Probing git done
+2023-05-15 21:05:20,128 DEBUG   HandlerThread:1176217 [system_info.py:probe():240] Probing system done
+2023-05-15 21:05:20,128 DEBUG   HandlerThread:1176217 [system_monitor.py:probe():210] {'os': 'Linux-5.15.0-71-generic-x86_64-with-glibc2.31', 'python': '3.10.0', 'heartbeatAt': '2023-05-16T04:05:20.120613', 'startedAt': '2023-05-16T04:05:19.644094', 'docker': None, 'cuda': None, 'args': (), 'state': 'running', 'program': 'train_S3DIS.py', 'codePath': 'train_S3DIS.py', 'git': {'remote': 'git@github.com:Kaola-2115/KPConv-Triplane.git', 'commit': '170345a55ca9e9e65f97a377cdf0aad7fd03df54'}, 'email': None, 'root': '/local-scratch/localhome/zla247/projects/KPConv-Triplane', 'host': 'cs-vml-51', 'username': 'zla247', 'executable': '/localhome/zla247/anaconda3/envs/4DConv/bin/python', 'cpu_count': 16, 'cpu_count_logical': 24, 'cpu_freq': {'current': 3168.3373333333334, 'min': 800.0, 'max': 2933.3333333333335}, 'cpu_freq_per_core': [{'current': 2867.116, 'min': 800.0, 'max': 3200.0}, {'current': 3200.0, 'min': 800.0, 'max': 3200.0}, {'current': 3200.0, 'min': 800.0, 'max': 3200.0}, {'current': 3200.0, 'min': 800.0, 'max': 3200.0}, {'current': 3200.0, 'min': 800.0, 'max': 3200.0}, {'current': 3200.0, 'min': 800.0, 'max': 3200.0}, {'current': 3200.0, 'min': 800.0, 'max': 3200.0}, {'current': 3200.0, 'min': 800.0, 'max': 3200.0}, {'current': 3200.001, 'min': 800.0, 'max': 3200.0}, {'current': 3200.0, 'min': 800.0, 'max': 3200.0}, {'current': 3200.0, 'min': 800.0, 'max': 3200.0}, {'current': 3200.0, 'min': 800.0, 'max': 3200.0}, {'current': 3200.0, 'min': 800.0, 'max': 3200.0}, {'current': 3200.0, 'min': 800.0, 'max': 3200.0}, {'current': 3200.0, 'min': 800.0, 'max': 3200.0}, {'current': 3200.0, 'min': 800.0, 'max': 3200.0}, {'current': 3200.0, 'min': 800.0, 'max': 2400.0}, {'current': 3200.0, 'min': 800.0, 'max': 2400.0}, {'current': 3200.0, 'min': 800.0, 'max': 2400.0}, {'current': 3200.0, 'min': 800.0, 'max': 2400.0}, {'current': 3200.0, 'min': 800.0, 'max': 2400.0}, {'current': 3200.0, 'min': 800.0, 'max': 2400.0}, {'current': 3200.0, 'min': 800.0, 'max': 2400.0}, {'current': 3200.0, 'min': 800.0, 'max': 2400.0}], 'disk': {'total': 126.90119171142578, 'used': 66.7435531616211}, 'gpu': 'NVIDIA GeForce RTX 3090', 'gpu_count': 1, 'gpu_devices': [{'name': 'NVIDIA GeForce RTX 3090', 'memory_total': 25769803776}], 'memory': {'total': 62.59612274169922}}
+2023-05-15 21:05:20,128 INFO    HandlerThread:1176217 [system_monitor.py:probe():211] Finished collecting system info
+2023-05-15 21:05:20,128 INFO    HandlerThread:1176217 [system_monitor.py:probe():214] Publishing system info
+2023-05-15 21:05:20,128 DEBUG   HandlerThread:1176217 [system_info.py:_save_pip():51] Saving list of pip packages installed into the current environment
+2023-05-15 21:05:20,129 DEBUG   HandlerThread:1176217 [system_info.py:_save_pip():67] Saving pip packages done
+2023-05-15 21:05:20,129 DEBUG   HandlerThread:1176217 [system_info.py:_save_conda():74] Saving list of conda packages installed into the current environment
+2023-05-15 21:05:20,950 INFO    Thread-17 :1176217 [dir_watcher.py:_on_file_created():278] file/dir created: /local-scratch/localhome/zla247/projects/KPConv-Triplane/wandb/run-20230515_210519-3kgg8wd7/files/wandb-summary.json
+2023-05-15 21:05:20,951 INFO    Thread-17 :1176217 [dir_watcher.py:_on_file_created():278] file/dir created: /local-scratch/localhome/zla247/projects/KPConv-Triplane/wandb/run-20230515_210519-3kgg8wd7/files/conda-environment.yaml
+2023-05-15 21:05:20,951 INFO    Thread-17 :1176217 [dir_watcher.py:_on_file_created():278] file/dir created: /local-scratch/localhome/zla247/projects/KPConv-Triplane/wandb/run-20230515_210519-3kgg8wd7/files/requirements.txt
+2023-05-15 21:05:23,333 DEBUG   HandlerThread:1176217 [system_info.py:_save_conda():86] Saving conda packages done
+2023-05-15 21:05:23,334 INFO    HandlerThread:1176217 [system_monitor.py:probe():216] Finished publishing system info
+2023-05-15 21:05:23,340 DEBUG   SenderThread:1176217 [sender.py:send():375] send: files
+2023-05-15 21:05:23,340 INFO    SenderThread:1176217 [sender.py:_save_file():1378] saving file wandb-metadata.json with policy now
+2023-05-15 21:05:23,350 DEBUG   HandlerThread:1176217 [handler.py:handle_request():144] handle_request: stop_status
+2023-05-15 21:05:23,350 DEBUG   SenderThread:1176217 [sender.py:send_request():402] send_request: stop_status
+2023-05-15 21:05:23,452 DEBUG   SenderThread:1176217 [sender.py:send():375] send: telemetry
+2023-05-15 21:05:23,452 DEBUG   SenderThread:1176217 [sender.py:send():375] send: config
+2023-05-15 21:05:23,710 INFO    wandb-upload_0:1176217 [upload_job.py:push():137] Uploaded file /tmp/tmpeufnqsrwwandb/5mnkltmn-wandb-metadata.json
+2023-05-15 21:05:23,948 INFO    Thread-17 :1176217 [dir_watcher.py:_on_file_modified():295] file/dir modified: /local-scratch/localhome/zla247/projects/KPConv-Triplane/wandb/run-20230515_210519-3kgg8wd7/files/conda-environment.yaml
+2023-05-15 21:05:23,948 INFO    Thread-17 :1176217 [dir_watcher.py:_on_file_created():278] file/dir created: /local-scratch/localhome/zla247/projects/KPConv-Triplane/wandb/run-20230515_210519-3kgg8wd7/files/wandb-metadata.json
+2023-05-15 21:05:23,949 INFO    Thread-17 :1176217 [dir_watcher.py:_on_file_created():278] file/dir created: /local-scratch/localhome/zla247/projects/KPConv-Triplane/wandb/run-20230515_210519-3kgg8wd7/files/output.log
+2023-05-15 21:05:25,467 DEBUG   HandlerThread:1176217 [handler.py:handle_request():144] handle_request: status_report
+2023-05-15 21:05:25,949 INFO    Thread-17 :1176217 [dir_watcher.py:_on_file_modified():295] file/dir modified: /local-scratch/localhome/zla247/projects/KPConv-Triplane/wandb/run-20230515_210519-3kgg8wd7/files/output.log
+2023-05-15 21:05:27,950 INFO    Thread-17 :1176217 [dir_watcher.py:_on_file_modified():295] file/dir modified: /local-scratch/localhome/zla247/projects/KPConv-Triplane/wandb/run-20230515_210519-3kgg8wd7/files/output.log
+2023-05-15 21:05:30,473 DEBUG   HandlerThread:1176217 [handler.py:handle_request():144] handle_request: status_report
+2023-05-15 21:05:35,474 DEBUG   HandlerThread:1176217 [handler.py:handle_request():144] handle_request: status_report
+2023-05-15 21:05:38,350 DEBUG   HandlerThread:1176217 [handler.py:handle_request():144] handle_request: stop_status
+2023-05-15 21:05:38,350 DEBUG   SenderThread:1176217 [sender.py:send_request():402] send_request: stop_status
+2023-05-15 21:05:41,423 DEBUG   HandlerThread:1176217 [handler.py:handle_request():144] handle_request: status_report
+2023-05-15 21:05:46,424 DEBUG   HandlerThread:1176217 [handler.py:handle_request():144] handle_request: status_report
+2023-05-15 21:05:51,433 DEBUG   HandlerThread:1176217 [handler.py:handle_request():144] handle_request: status_report
+2023-05-15 21:05:51,958 INFO    Thread-17 :1176217 [dir_watcher.py:_on_file_modified():295] file/dir modified: /local-scratch/localhome/zla247/projects/KPConv-Triplane/wandb/run-20230515_210519-3kgg8wd7/files/config.yaml
+2023-05-15 21:05:53,350 DEBUG   HandlerThread:1176217 [handler.py:handle_request():144] handle_request: stop_status
+2023-05-15 21:05:53,350 DEBUG   SenderThread:1176217 [sender.py:send_request():402] send_request: stop_status

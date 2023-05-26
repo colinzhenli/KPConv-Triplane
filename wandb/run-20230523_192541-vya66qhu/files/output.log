@@ -1,0 +1,26 @@
+Traceback (most recent call last):
+  File "/localhome/zla247/anaconda3/envs/4DConv/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/localhome/zla247/anaconda3/envs/4DConv/lib/python3.10/runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "/local-scratch/localhome/zla247/.vscode-server/extensions/ms-python.python-2023.8.0/pythonFiles/lib/python/debugpy/adapter/../../debugpy/launcher/../../debugpy/__main__.py", line 39, in <module>
+    cli.main()
+  File "/local-scratch/localhome/zla247/.vscode-server/extensions/ms-python.python-2023.8.0/pythonFiles/lib/python/debugpy/adapter/../../debugpy/launcher/../../debugpy/../debugpy/server/cli.py", line 430, in main
+    run()
+  File "/local-scratch/localhome/zla247/.vscode-server/extensions/ms-python.python-2023.8.0/pythonFiles/lib/python/debugpy/adapter/../../debugpy/launcher/../../debugpy/../debugpy/server/cli.py", line 284, in run_file
+    runpy.run_path(target, run_name="__main__")
+  File "/local-scratch/localhome/zla247/.vscode-server/extensions/ms-python.python-2023.8.0/pythonFiles/lib/python/debugpy/_vendored/pydevd/_pydevd_bundle/pydevd_runpy.py", line 321, in run_path
+    return _run_module_code(code, init_globals, run_name,
+  File "/local-scratch/localhome/zla247/.vscode-server/extensions/ms-python.python-2023.8.0/pythonFiles/lib/python/debugpy/_vendored/pydevd/_pydevd_bundle/pydevd_runpy.py", line 135, in _run_module_code
+    _run_code(code, mod_globals, init_globals,
+  File "/local-scratch/localhome/zla247/.vscode-server/extensions/ms-python.python-2023.8.0/pythonFiles/lib/python/debugpy/_vendored/pydevd/_pydevd_bundle/pydevd_runpy.py", line 124, in _run_code
+    exec(code, run_globals)
+  File "train_SemanticKitti.py", line 277, in <module>
+    training_dataset = SemanticKittiDataset(config, set='training',
+  File "/local-scratch/localhome/zla247/projects/KPConv-Triplane/dataset/SemanticKitti.py", line 149, in __init__
+    self.load_calib_poses()
+  File "/local-scratch/localhome/zla247/projects/KPConv-Triplane/dataset/SemanticKitti.py", line 562, in load_calib_poses
+    self.calibrations.append(self.parse_calibration(join(seq_folder, "calib.txt")))
+  File "/local-scratch/localhome/zla247/projects/KPConv-Triplane/dataset/SemanticKitti.py", line 673, in parse_calibration
+    calib_file = open(filename)
+FileNotFoundError: [Errno 2] No such file or directory: '../../data/SemanticKITTI/dataset/sequences/00/calib.txt'
